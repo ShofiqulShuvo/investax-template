@@ -56,4 +56,16 @@ swiper.on('activeIndexChange', () => {
     const logo = document.getElementById('logo-img')
     logo.classList.remove('logo-visible')
   }
+
+
+  if(swiper.activeIndex !== 0 )
+  {
+    const menu = document.getElementById('navigation')
+    menu.classList.add('menu-white')
+  }
+  else
+  {
+    const menu = document.getElementById('navigation')
+    menu.classList.remove('menu-white')
+  }
 })

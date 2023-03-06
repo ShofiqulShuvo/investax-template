@@ -63,6 +63,8 @@
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-out;
 }
 
 .menu-slide-out {
@@ -80,7 +82,7 @@
   font-family: "Tilt Warp", cursive;
   text-transform: uppercase;
   letter-spacing: 8px;
-  margin-bottom: 10px !important;
+  margin-bottom: 15px !important;
 }
 
 .cta-main.hero-section {
@@ -93,6 +95,7 @@
   font-weight: 400;
   font-size: 20px;
   letter-spacing: 6px;
+  margin-bottom: 15px;
 }
 
 .cta-subtext.hero-section {
@@ -107,23 +110,16 @@
 .logo {
   height: 30px;
   width: 140px;
-  margin: 20px 10px;
+  margin: 15px 10px;
   transition-duration: 0.3s;
-  transition-delay: 0.3s;
-  width: 0px;
-}
-
-.logo-hidden {
-  scale: 0;
-  opacity: 0;
-  filter: blur(0px);
+  transition-delay: 0.6s;
+  transition-timing-function: ease-out;
+  height: 0px;
 }
 
 .logo-visible {
-  width: 140px;
-  opacity: 1;
-  scale: 1;
-  transition-timing-function: ease-out;
+  height: 30px;
+  filter: opacity(1);
 }
 
 .nav-menu > li {
@@ -186,4 +182,39 @@
 
 .mf-cursor:before {
   scale: 4;
+}
+
+a[role=button].primary {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #000;
+  border-radius: 2px;
+  color: #000;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+a[role=button].primary:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+#slide-2 {
+  background-image: url("../images/about2.jpg");
+}
+
+.menu-white {
+  color: #fff;
+}
+.menu-white .container > nav img {
+  filter: invert(100);
+}
+.menu-white .container > nav > ul > li > a {
+  color: #fff;
+}
+.menu-white .container > nav > ul > li .underline {
+  display: block;
+  height: 4px;
+  background-color: #fff;
 }/*# sourceMappingURL=styles.css.map */
