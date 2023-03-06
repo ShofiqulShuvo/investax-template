@@ -1,0 +1,49 @@
+#loader
+  width: 100vw
+  height: 100vh
+  position: absolute
+  top: 0px
+  background-color: #fff
+  z-index: 10000
+  
+
+  .loader-container
+    margin-top: 50vh
+    transform: translateY(-100%)
+
+    img:first-child
+      position: relative      
+      left: 50%
+      transform: translateX(-50%)      
+      height: 50px
+      opacity: 0.9
+      z-index: 10002
+      animation: spin 5s linear infinite
+
+    img:last-child
+      position: relative      
+      left: 50%
+      transform: translateX(-150%)
+      height: 50px
+      z-index: 10001
+      
+
+
+@keyframes spin 
+  0%  
+    transform: translateX(-150%)
+  50%  
+    transform: translateX(-50%) 
+  100%  
+    transform: translateX(-150%) 
+
+
+.loader-fade-full
+  filter: blur(0px)
+  opacity: 1
+  transition-delay: 1s
+  transition-duration: 0.6s
+
+.loader-fade-none
+  filter: blur(2px)
+  opacity: 0

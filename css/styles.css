@@ -4,6 +4,10 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.container {
+  max-width: 1350px;
+}
+
 .swiper {
   width: 100vw;
   height: 100vh;
@@ -52,14 +56,24 @@
   align-items: center;
 }
 
-.navigation {
+#navigation {
   width: 100%;
   position: fixed;
-  top: 0px;
   z-index: 1000;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.menu-slide-out {
+  top: -100px;
+  transition-delay: 1s;
+  transition-duration: 1s;
+  transition-timing-function: ease-out;
+}
+
+.menu-slide-in {
+  top: 0px;
 }
 
 .cta-main {
@@ -93,5 +107,83 @@
 .logo {
   height: 30px;
   width: 140px;
-  margin: 10px 10px;
+  margin: 20px 10px;
+  transition-duration: 0.3s;
+  transition-delay: 0.3s;
+  width: 0px;
+}
+
+.logo-hidden {
+  scale: 0;
+  opacity: 0;
+  filter: blur(0px);
+}
+
+.logo-visible {
+  width: 140px;
+  opacity: 1;
+  scale: 1;
+  transition-timing-function: ease-out;
+}
+
+.nav-menu > li {
+  margin-right: 15px;
+  height: 60px;
+  overflow: hidden;
+  transition-duration: 0.4s;
+}
+.nav-menu > li .underline {
+  display: block;
+  height: 4px;
+  background-color: #000;
+  position: relative;
+  left: 0px;
+  transform: translateX(-130%);
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+}
+
+.nav-menu > li:hover .underline {
+  filter: blur(0px);
+  transform: translateX(0%);
+}
+
+.nav-menu > li > a {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #000;
+}
+
+.nav-contacts > li {
+  height: 60px;
+  margin-left: 15px;
+}
+
+.nav-contacts > li > a {
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #000;
+}
+
+.swiper-pagination-vertical {
+  margin-right: 20px;
+}
+
+.swiper-pagination-bullet {
+  margin: 5px 0px !important;
+  height: 20px;
+  width: 4px;
+  border-radius: 2px;
+  transition-duration: 0.2s;
+}
+
+.swiper-pagination-bullet-active {
+  height: 60px;
+  background-color: #100c25;
+}
+
+.mf-cursor:before {
+  scale: 4;
 }/*# sourceMappingURL=styles.css.map */

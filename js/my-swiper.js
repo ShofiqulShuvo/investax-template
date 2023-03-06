@@ -26,7 +26,6 @@ const swiper = new Swiper('.swiper', {
 })
 
 function scrollSlider (event) {
-  event.preventDefault()
   if(event.deltaY >40) 
     swiper.slideNext()
   
@@ -37,3 +36,24 @@ function scrollSlider (event) {
 
 const el = document.querySelector('body')
 el.onwheel = scrollSlider
+
+
+// swiper.on('init', () => {
+//   const logo = document.getElementById('logo-img')
+//   console.log('hello!')
+//   logo.classList.add('logo-hidden')
+// })
+
+swiper.on('activeIndexChange', () => {
+  console.log(swiper.activeIndex)
+  if(swiper.activeIndex !== 0 )
+  {
+    const logo = document.getElementById('logo-img')
+    logo.classList.add('logo-visible')
+  }
+  else
+  {
+    const logo = document.getElementById('logo-img')
+    logo.classList.remove('logo-visible')
+  }
+})
