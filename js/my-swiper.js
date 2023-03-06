@@ -50,11 +50,15 @@ swiper.on('activeIndexChange', () => {
   {
     const logo = document.getElementById('logo-img')
     logo.classList.add('logo-visible')
+
+    document.querySelectorAll(".logo-container")[0].classList.add('logo-container-visible')
   }
   else
   {
     const logo = document.getElementById('logo-img')
     logo.classList.remove('logo-visible')
+
+    document.querySelectorAll(".logo-container")[0].classList.remove('logo-container-visible')
   }
 
 

@@ -5,7 +5,7 @@
 }
 
 .container {
-  max-width: 1350px;
+  max-width: calc(100vw - 100px);
 }
 
 .swiper {
@@ -107,12 +107,22 @@
   margin-bottom: 10px !important;
 }
 
+.logo-container {
+  width: 0px;
+  overflow: hidden;
+  transition-duration: 0.6s;
+}
+
+.logo-container-visible {
+  width: 160px;
+}
+
 .logo {
   height: 30px;
   width: 140px;
-  margin: 15px 10px;
+  margin: 10px;
+  margin-top: 15px;
   transition-duration: 0.3s;
-  transition-delay: 0.6s;
   transition-timing-function: ease-out;
   height: 0px;
 }
@@ -172,12 +182,12 @@
   height: 20px;
   width: 4px;
   border-radius: 2px;
-  transition-duration: 0.2s;
+  transition-duration: 0.6s;
 }
 
 .swiper-pagination-bullet-active {
   height: 60px;
-  background-color: #100c25;
+  background-color: rgba(0, 0, 0, 0.7647058824);
 }
 
 .mf-cursor:before {
@@ -198,10 +208,6 @@ a[role=button].primary {
 a[role=button].primary:hover {
   background-color: #000;
   color: #fff;
-}
-
-#slide-2 {
-  background-image: url("../images/about2.jpg");
 }
 
 .menu-white {

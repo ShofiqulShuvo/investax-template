@@ -1,6 +1,6 @@
 const cursor = new MouseFollower({
     className: 'mf-cursor',
-    speed: 0.5,
+    speed: 0.9,
     ease: 'expo.out',
     skewing: 3,
     skewingDelta: 0.001,
