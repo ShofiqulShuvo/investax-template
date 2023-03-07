@@ -62,12 +62,18 @@ swiper.on('activeIndexChange', () => {
   }
 
 
-  if(swiper.activeIndex !== 0 )
+  if((swiper.activeIndex !== 0))
   {
     const menu = document.getElementById('navigation')
     menu.classList.add('menu-white')
   }
   else
+  {
+    const menu = document.getElementById('navigation')
+    menu.classList.remove('menu-white')
+  }
+
+  if((swiper.activeIndex == 2))
   {
     const menu = document.getElementById('navigation')
     menu.classList.remove('menu-white')
