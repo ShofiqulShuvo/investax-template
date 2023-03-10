@@ -1,7 +1,7 @@
 var myVar
 
 function myFunction() {
-  myVar = setTimeout(fadeOut, 1500)
+  myVar = setTimeout(fadeOut, 500)
   
 }
 
@@ -11,5 +11,5 @@ function showPage() {
 function fadeOut () {
     document.getElementById("loader").classList.add('loader-fade-none')
     //document.getElementById("loader").classList.remove('loader-fade-full')
-    let xVar = setTimeout(showPage, 1600)
+    let xVar = setTimeout(showPage, 600)
 }
