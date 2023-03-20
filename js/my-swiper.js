@@ -37,6 +37,8 @@ function scrollSlider (event) {
 const el = document.querySelector('body')
 el.onwheel = scrollSlider
 
+document.getElementById('navigation').classList.add('menu-white')
+
 
 // swiper.on('init', () => {
 //   const logo = document.getElementById('logo-img')
@@ -62,20 +64,16 @@ swiper.on('activeIndexChange', () => {
   }
 
 
-  if((swiper.activeIndex !== 0))
+
+
+  if((swiper.activeIndex == 1 || swiper.activeIndex == 2 || swiper.activeIndex == 3 || swiper.activeIndex == 4 || swiper.activeIndex == 5 || swiper.activeIndex == 7))
   {
     const menu = document.getElementById('navigation')
-    menu.classList.add('menu-white')
+    menu.classList.remove('menu-white')
   }
   else
   {
     const menu = document.getElementById('navigation')
-    menu.classList.remove('menu-white')
-  }
-
-  if((swiper.activeIndex == 2 || swiper.activeIndex == 3 || swiper.activeIndex == 4 || swiper.activeIndex == 5 || swiper.activeIndex == 7))
-  {
-    const menu = document.getElementById('navigation')
-    menu.classList.remove('menu-white')
+    menu.classList.add('menu-white')
   }
 })
