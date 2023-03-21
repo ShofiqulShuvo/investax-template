@@ -51,7 +51,7 @@ $darkTextColor: #070012f5
   width: 100%
   height: 100%
   object-fit: cover
-  object-position: center
+  object-position: right
 
 .about-img
   top: 0px
@@ -100,12 +100,42 @@ $darkTextColor: #070012f5
   flex-direction: column
   justify-content: center
   align-items: center
-  height: 500px
+  height: 100%
+  width: 100%
 
 
 #section-01-container
-  background-color: #00000071
+  height: 100%
+  background-color: #000000ba
 
+
+.hero-cta
+  height: 80px
+
+  h3
+    color: #fff
+    font-family: $fontOne
+    font-size: 14px
+    letter-spacing: 2px
+    font-weight: 400
+    text-shadow: 2px 2px 15px #000
+    text-transform: uppercase
+    padding: 5px 15px
+    border-left: 10px solid $brandColorOne
+
+    &:hover
+      cursor: pointer
+
+  a
+    width: 100%
+    height: 40px !important
+    padding: 15px
+    font-weight: 100 !important
+    margin: 0px auto !important
+    font-size: 12px !important
+    line-height: 12px
+    border-radius: 20px !important
+    
 
 .cta-main
   font-family: $fontTwo
@@ -120,7 +150,7 @@ $darkTextColor: #070012f5
 .cta-subtext
   text-transform: uppercase
   font-weight: 400
-  font-size: 20px
+  font-size: 24px
   letter-spacing: 6px
   margin-bottom: 15px
   
@@ -193,10 +223,10 @@ $darkTextColor: #070012f5
   
 
 .nav-menu > li > a
-  font-size: 12px
+  font-size: 14px
   letter-spacing: 2px
   font-weight: 800
-  color: $brandColorTwo
+  color: $darkTextColor
 
 
 .nav-contacts > li
@@ -208,7 +238,7 @@ $darkTextColor: #070012f5
   font-size: 12px
   letter-spacing: 2px
   font-weight: 500
-  color: $brandColorOne
+  color: $darkTextColor
   
 
 .swiper-pagination-vertical
@@ -221,10 +251,11 @@ $darkTextColor: #070012f5
   width: 4px
   border-radius: 2px
   transition-duration: 0.6s
+  background-color: $brandColorThree
 
 .swiper-pagination-bullet-active
   height: 60px
-  background-color: #000000c3
+  background-color: $brandColorTwo
 
   
 .mf-cursor:before
@@ -441,7 +472,8 @@ a[role=button].third:hover
   flex-direction: row
   justify-content: flex-start
   align-items: center
-  transition-delay: 1.2s
+  
+
   .box
     width: 300px
     height: 450px
@@ -480,7 +512,7 @@ a[role=button].third:hover
   .box-overlay
     height: 100%
     width: 100%
-    background-color: #9e6d2d50
+    background-color: #402c1250
     display: flex
     flex-direction: column
     justify-content: flex-end
@@ -493,26 +525,36 @@ a[role=button].third:hover
       letter-spacing: 3px
       line-height: 26px
       text-transform: uppercase
-      text-shadow: 2px 2px 2px #000000
+      text-shadow: 1px 1px 10px #000000
       font-family: $fontOne
       margin-bottom: 10px
       margin-left: 10px
       width: 240px
-      transition-duration: 0.9s
+      transition: all 0.4s ease-in-out
+      
       position: relative
-      bottom: 0px
+      bottom: -70px
+
       
-      
+    a
+      background-color: $brandColorOne
+      border: none
+      width: 200px
+      position: relative
+      left: -210px
+      border-radius: 0px
 
 
   .box-overlay:hover
-    background-color: #523b1f5c
+    background-color: #845f325c
     
     h3
       color: #ffffff
-      bottom: 30px
+      bottom: 0px
     
-    
+    a
+      left: 0px
+      transition: all 0.5s ease-in-out
       
       
 
@@ -571,7 +613,7 @@ a[role=button].third:hover
 
 
   .box
-    width: 350px
+    width: 300px
     height: 450px
     margin-right: 20px
     box-shadow: 2px 2px 10px #0000008b
@@ -601,7 +643,7 @@ a[role=button].third:hover
   .box-overlay
     height: 100%
     width: 100%
-    background-color: #9e6d2d50
+    background-color: #402c1250
     display: flex
     flex-direction: column
     justify-content: flex-end
@@ -613,22 +655,36 @@ a[role=button].third:hover
       letter-spacing: 3px
       line-height: 26px
       text-transform: uppercase
+      text-shadow: 2px 2px 2px #000000
       font-family: $fontOne
-      margin-bottom: 10px
       margin-left: 10px
-      transition-duration: 0.9s
+      width: 240px
+      transition: all 0.4s ease-in-out
+      
+      position: relative
+      bottom: -80px
 
 
+    a
+      background-color: $brandColorOne
+      border: none
+      width: 200px
+     
   .box-overlay:hover
-    background-color: #523b1f5c
+    background-color: #845f325c
     
     h3
+      margin-left: 10px
       color: #ffffff
       text-shadow: 2px 2px 2px #000000
-      margin-bottom: 40px
+      margin-bottom: 10px
+      bottom: 0px
 
+    
 
-
+.serv-btn
+  width: 200px
+  margin: 20px 10px
   
 
 //SERVICES-3 STYLES------------
