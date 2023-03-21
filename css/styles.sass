@@ -7,7 +7,7 @@ $fontTwo: 'Tilt Warp', cursive
 
 $brandColorOne: #9e6d2d
 $brandColorTwo: #b88c51
-$brandColorThree: #ffc474
+$brandColorThree: #B17A4E
 $darkTextColor: #070012f5
 
 *
@@ -411,14 +411,14 @@ a[role=button].third:hover
 
   h2
     font-family: $fontTwo
-    color: $brandColorOne
-    font-size: 65px
-    line-height: 65px
+    color: $brandColorTwo
+    font-size: 45px
+    line-height: 45px
     font-weight: 400
     text-transform: uppercase
     text-align: left
     width: 500px
-    text-shadow: 2px 2px 6px #00000055
+    text-shadow: 2px 2px 10px #00000032
     margin: 40px 0px 20px 0px
 
   p
@@ -436,22 +436,21 @@ a[role=button].third:hover
 
 .services-boxes-holder
   height: 600px
-  width: 1100px
+  width: 100%
   display: flex
   flex-direction: row
   justify-content: flex-start
   align-items: center
-
+  transition-delay: 1.2s
   .box
-    width: 400px
+    width: 300px
     height: 450px
     margin-right: 20px
     box-shadow: 2px 2px 10px #0000008b
-    border-radius: 8px
     overflow: hidden
     transition-delay: 0s !important
     transition-duration: 0.5s
-
+    
   .box:hover
     width: 440px
     height: 450px
@@ -481,11 +480,12 @@ a[role=button].third:hover
   .box-overlay
     height: 100%
     width: 100%
-    background-color: #00000036
+    background-color: #9e6d2d50
     display: flex
     flex-direction: column
     justify-content: flex-end
-    transition-duration: 0.8s
+    transition-duration: 0.3s
+    
 
     h3
       color: #fff
@@ -501,12 +501,12 @@ a[role=button].third:hover
       transition-duration: 0.9s
       position: relative
       bottom: 0px
-
+      
       
 
 
   .box-overlay:hover
-    background-color: #00000073
+    background-color: #523b1f5c
     
     h3
       color: #ffffff
@@ -544,7 +544,7 @@ a[role=button].third:hover
 
   h2
     font-family: $fontTwo
-    color: $brandColorOne
+    color: $brandColorTwo
     font-size: 65px
     line-height: 65px
     font-weight: 400
@@ -571,7 +571,7 @@ a[role=button].third:hover
 
 
   .box
-    width: 400px
+    width: 350px
     height: 450px
     margin-right: 20px
     box-shadow: 2px 2px 10px #0000008b
@@ -601,7 +601,7 @@ a[role=button].third:hover
   .box-overlay
     height: 100%
     width: 100%
-    background-color: #000000aa
+    background-color: #9e6d2d50
     display: flex
     flex-direction: column
     justify-content: flex-end
@@ -620,7 +620,7 @@ a[role=button].third:hover
 
 
   .box-overlay:hover
-    background-color: #0000002f
+    background-color: #523b1f5c
     
     h3
       color: #ffffff
