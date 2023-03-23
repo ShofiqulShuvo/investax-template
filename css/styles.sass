@@ -81,6 +81,10 @@ $darkTextColor: #070012f5
   transition-duration: 0.9s
   transition-timing-function: ease-out
   
+.nav-icons
+  height: 16px
+  width: auto
+  margin-right: 5px
 
 .menu-slide-out
     top: -100px
@@ -106,7 +110,7 @@ $darkTextColor: #070012f5
 
 #section-01-container
   height: 100%
-  background-color: #000000ba
+  background-color: #00000085
 
 
 .hero-cta
@@ -264,7 +268,7 @@ $darkTextColor: #070012f5
 a[role=button].primary
   background-color: $brandColorOne
   border: none
-  border-radius: 50px
+  border-radius: 2px
   color: #ffffff
   font-size: 14px
   letter-spacing: 2px
@@ -274,7 +278,8 @@ a[role=button].primary
   transition-duration: 0.4s
   
 a[role=button].primary:hover
-  background-color: $brandColorTwo
+  background-color: $darkTextColor
+  border-radius: 2px
   color: #fff
 
 
@@ -314,6 +319,9 @@ a[role=button].third:hover
 
 .menu-white
   color: $brandColorThree
+
+  .nav-icons
+    filter: invert(1)
 
   .container > nav > ul > li > a
     color: #fff
@@ -464,6 +472,17 @@ a[role=button].third:hover
     flex-direction: row
     margin-bottom: 20px
 
+#slide-5 > div > div > div > div > div.smsf-text > div
+  a
+    margin: 10px
+    font-size: 12px !important
+    height: 40px !important
+    line-height: 12px !important
+    padding: 15px
+  a.third
+    
+    border-radius: 2px
+
 
 .services-boxes-holder
   height: 600px
@@ -512,7 +531,7 @@ a[role=button].third:hover
   .box-overlay
     height: 100%
     width: 100%
-    background-color: #402c1250
+    background-color: #402c1286
     display: flex
     flex-direction: column
     justify-content: flex-end
@@ -587,13 +606,13 @@ a[role=button].third:hover
   h2
     font-family: $fontTwo
     color: $brandColorTwo
-    font-size: 65px
-    line-height: 65px
+    font-size: 45px
+    line-height: 45px
     font-weight: 400
     text-transform: uppercase
     text-align: right
     width: 500px
-    margin: 40px 80px 20px 0px
+    margin: 40px 00px 20px 0px
     text-shadow: 2px 2px 6px #00000055
 
   p
@@ -735,7 +754,6 @@ a[role=button].third:hover
   flex-direction: row
 
 .smsf-text
-  max-width: 80%
   margin-left: 20px
   padding: 10px
   display: flex
@@ -745,7 +763,7 @@ a[role=button].third:hover
 
 .smsf-card
   position: relative !important
-  width: 60vw
+  width: 50vw
   height: 100%
   right: 0
   top: 0
@@ -754,11 +772,181 @@ a[role=button].third:hover
     width: 100%
     height: 100%
     object-fit: cover
+
+
+//TEAM STYLES------------
+
+
+#slide-7
+  // background-image: url('../images/testimonial-bg.jpg')
+  background-size: cover
+  background-position: center
+
+  .team
+    margin: 100px 0px 50px 0px !important
+    width: 100%
+    height: calc(100% - 150px)
+
+  .container
+    margin-top: 100px
+    height: calc( 100vh - 400px )
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+
+  
+    .box-row
+      width: 100%
+      display: flex
+      flex-direction: row
+      margin-bottom: 20px
+
+    .cta-holder
+      margin-right: 80px
+
+
+    .box
+      width: 200px
+      height: 350px
+      margin-right: 20px !important
+      box-shadow: 1px 1px 5px #0000008b
+      transition-delay: 0s
+      
+
+    .box:hover
+      width: 240px
+      
+      
+    .box-1
+      background-image: url('../team-img/ershad-ullah.png')
+      background-size: cover
+      background-position: center
+
+    .box-2
+      background-image: url('../team-img/defy-gunadi.png')
+      background-size: cover
+      background-position: center
+
+    .box-3
+      background-image: url('../team-img/shirin.png')
+      background-size: cover
+      background-position: center
+
+    .box-4
+      background-image: url('../team-img/aaron_hickey.png')
+      background-size: cover
+      background-position: center
+
+    .box-5
+      background-image: url('../team-img/rodel-claudio.png')
+      background-size: cover
+      background-position: center
+
+
+
+    .box-overlay
+      height: 100%
+      width: 100%
+      
+      background-color: #402c1250
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      transition-duration: 0.8s
+      overflow: hidden
+
+      h3
+        color: #fff
+        font-size: 16px
+        letter-spacing: 3px
+        line-height: 26px
+        text-transform: uppercase
+        text-shadow: 2px 2px 2px #000000
+        font-family: $fontOne
+        margin-left: 10px
+        width: 240px
+        transition: all 0.4s ease-in-out
+        
+        position: relative
+        bottom: -180px
+
+      h4
+        font-size: 14px
+        line-height: 16px
+        color: $darkTextColor
+        font-weight: 500
+        margin-left: 15px
+        width: 240px
+        transition: all 0.4s ease-in-out        
+        position: relative
+        bottom: -180px
+        height: 30px
+        text-transform: uppercase
+
+      a
+        background-color: $brandColorOne
+        border: none
+        height: 40px
+        width: 200px
+        position: relative
+        left: -210px
+        border-radius: 0px
+        transition: all 0.5s ease-in-out
+        font-size: 12px
+        line-height: 12px
+        padding: 15px
+      
+    .box-overlay:hover
+      background-color: #ffffff79
+      
+      h3
+        margin-left: 15px
+        color: $darkTextColor
+        text-shadow: 0px 0px 0px #0000
+        // text-shadow: 2px 2px 2px #000000
+        margin-bottom: 10px
+        bottom: 0px
+
+
+      h4
+        margin-left: 15px
+        margin-bottom: 10px
+        bottom: 0px
     
+      a
+        left: 0px
+        transition: all 0.5s ease-in-out
+
+      a:hover
+        background-color: $darkTextColor
+
+  
+
+  
+.section-title
+  font-family: $fontTwo
+  color: $brandColorTwo
+  font-size: 45px
+  line-height: 45px
+  font-weight: 400
+  text-transform: uppercase
+  text-align: left
+  width: 100%
+  margin: 60px 80px 20px 0px
+  text-shadow: 2px 2px 6px #00000055
+
+.section-subtitle
+  margin-top: 40px
+  font-weight: 400
+  font-size: 18px
+  font-family: $fontOne
+
+   
 
 //BLOGS STYLES------------
 #slide-6
-  background-image: url('../images/blog-bg.jpg')
+  background-image: url('../images/logo_white.png')
   background-size: cover
   background-position: center
   
@@ -777,7 +965,7 @@ a[role=button].third:hover
 
   h2
     font-family: $fontTwo
-    color: $darkTextColor
+    color: $brandColorTwo
     font-size: 65px
     line-height: 65px
     font-weight: 400
@@ -806,9 +994,10 @@ a[role=button].third:hover
 .blog-post  
   border-radius: 4px
   overflow: hidden
-  height: 200px
+  height: 300px
   width: 480px
-  background: #0a070de8
+  // background: #0a070de8
+  background-color: $brandColorTwo
   margin-right: 30px
   display: flex
   flex-direction: row
@@ -818,7 +1007,7 @@ a[role=button].third:hover
   box-shadow: 2px 2px 6px 2px #0000006c
 
 .blog-img
-  height: 200px
+  height: 300px
   width: 200px
   overflow: hidden
   z-index: 5
@@ -833,7 +1022,7 @@ a[role=button].third:hover
 .blog-text
   position: relative
   right: 0px
-  height: 200px
+  height: 300px
   width: 200px  
   transition-duration: 0.6s
   
@@ -866,6 +1055,7 @@ a[role=button].third:hover
 
 .blog-post:hover
   background-color: #000000
+  cursor: pointer
 
   
   .blog-img > img
@@ -882,100 +1072,103 @@ a[role=button].third:hover
 
     
 
-//TESTIMONIALS STYLES------------
 
 
-#slide-7
-  background-image: url('../images/testimonial-bg.jpg')
-  background-size: cover
-  background-position: center
+
+// TESTIMONIAL STYLES-------------------------------------
 
 
-  .container
-    margin-top: 100px
-    height: calc( 100vh - 400px )
+// #slide-7
+//   background-image: url('../images/testimonial-bg.jpg')
+//   background-size: cover
+//   background-position: center
+
+
+//   .container
+//     margin-top: 100px
+//     height: calc( 100vh - 400px )
 
     
 
 
-  .single-test
-    margin-bottom: 20px
-    grid-gap: 0px
-    display: flex
-    flex-direction: row
-    justify-content: flex-start
-    width: 600px
+//   .single-test
+//     margin-bottom: 20px
+//     grid-gap: 0px
+//     display: flex
+//     flex-direction: row
+//     justify-content: flex-start
+//     width: 600px
 
-    div:nth-child(1)
-      margin-top: 30px
-      height: 120px
-      width: 120px
-      border-radius: 50%
-      overflow: hidden
+//     div:nth-child(1)
+//       margin-top: 30px
+//       height: 120px
+//       width: 120px
+//       border-radius: 50%
+//       overflow: hidden
 
-      img
-        height: 100%
-        width: 100%
-        object-fit: cover
-        object-position: center
+//       img
+//         height: 100%
+//         width: 100%
+//         object-fit: cover
+//         object-position: center
 
       
-    div:nth-child(2)
-      width: 350px
-      margin-left: 20px
-      p
-        padding: 0px
-        color: #fff
-        font-size: 14px
-        margin-top: 30px
-        margin-bottom: 10px
+//     div:nth-child(2)
+//       width: 350px
+//       margin-left: 20px
+//       p
+//         padding: 0px
+//         color: #fff
+//         font-size: 14px
+//         margin-top: 30px
+//         margin-bottom: 10px
 
-      h4
-        margin: 5px 0px
-        font-size: 18px
-        line-height: 20px
-        color: #e6dffb
+//       h4
+//         margin: 5px 0px
+//         font-size: 18px
+//         line-height: 20px
+//         color: #e6dffb
 
-      .designation
-        font-size: 14px
-        color: #ffffffd8
-        font-weight: 400
+//       .designation
+//         font-size: 14px
+//         color: #ffffffd8
+//         font-weight: 400
 
   
-.section-title
-  font-family: $fontTwo
-  color: #fff
-  font-size: 65px
-  line-height: 65px
-  font-weight: 400
-  text-transform: uppercase
-  text-align: left
-  width: 100%
-  margin: 40px 80px 20px 0px
-  text-shadow: 2px 2px 6px #00000055
+// .section-title
+//   font-family: $fontTwo
+//   color: #fff
+//   font-size: 65px
+//   line-height: 65px
+//   font-weight: 400
+//   text-transform: uppercase
+//   text-align: left
+//   width: 100%
+//   margin: 40px 80px 20px 0px
+//   text-shadow: 2px 2px 6px #00000055
 
-.section-subtitle
-  margin-top: 40px
-  color: #fff
-  font-weight: 400
-  font-size: 18px
-  font-family: $fontOne
+// .section-subtitle
+//   margin-top: 40px
+//   color: #fff
+//   font-weight: 400
+//   font-size: 18px
+//   font-family: $fontOne
 
-.testimonia-dets
-  display: flex
-  flex-direction: column
-  justify-content: space-between
+// .testimonia-dets
+//   display: flex
+//   flex-direction: column
+//   justify-content: space-between
 
 
-.testimonial-button
-  margin-bottom: 40px
+// .testimonial-button
+//   margin-bottom: 40px
 
 
 //Contact STYLES------------
 
 
 #slide-8
-  background-image: url('../images/contact-bg.jpg')
+  // background-image: url('../images/contact-bg.jpg')
   background-size: cover
   background-position: center
 
@@ -988,7 +1181,7 @@ a[role=button].third:hover
 
   h2
     font-family: $fontTwo
-    color: $darkTextColor
+    color: $brandColorTwo
     font-size: 65px
     line-height: 65px
     font-weight: 400

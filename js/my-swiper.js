@@ -66,7 +66,7 @@ swiper.on('activeIndexChange', () => {
 
 
 
-  if((swiper.activeIndex == 1 || swiper.activeIndex == 2 || swiper.activeIndex == 3 || swiper.activeIndex == 4 || swiper.activeIndex == 5 || swiper.activeIndex == 7))
+  if((swiper.activeIndex == 1 || swiper.activeIndex == 2 || swiper.activeIndex == 3 || swiper.activeIndex == 4 || swiper.activeIndex == 5 || swiper.activeIndex == 6))
   {
     const menu = document.getElementById('navigation')
     menu.classList.remove('menu-white')
