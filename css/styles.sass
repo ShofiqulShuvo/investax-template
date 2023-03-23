@@ -36,6 +36,15 @@ $darkTextColor: #070012f5
 //   transition-duration: 600ms
 //   transform: translate3d(0px, 0px, 0px)
 
+.button-flex-box
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  
+
+.blog-buttons
+  width: 60%
 
 .hero-img
   position: relative
@@ -265,6 +274,9 @@ $darkTextColor: #070012f5
 .mf-cursor:before
   scale: 4
 
+a[role=button]
+  margin: 20px 0px !important 
+
 a[role=button].primary
   background-color: $brandColorOne
   border: none
@@ -278,7 +290,7 @@ a[role=button].primary
   transition-duration: 0.4s
   
 a[role=button].primary:hover
-  background-color: $darkTextColor
+  background-color: #61431c
   border-radius: 2px
   color: #fff
 
@@ -313,7 +325,7 @@ a[role=button].third
   
 a[role=button].third:hover
   border: none
-  background-color: #000
+  background-color: #61431c
   color: #fff
 
 
@@ -728,8 +740,8 @@ a[role=button].third:hover
   h2
     font-family: $fontTwo
     color: $brandColorTwo
-    font-size: 65px
-    line-height: 65px
+    font-size: 45px
+    line-height: 45px
     font-weight: 400
     text-transform: uppercase
     text-align: left
@@ -949,7 +961,13 @@ a[role=button].third:hover
   background-image: url('../images/logo_white.png')
   background-size: cover
   background-position: center
-  
+
+a[role=button].newsletter-btn
+  margin-top: 70px !important
+  border: 2px solid $brandColorOne
+  border-radius: 4px
+
+
 .blog
   margin: 100px 0px  50px 0px !important
   width: 100%
@@ -966,8 +984,8 @@ a[role=button].third:hover
   h2
     font-family: $fontTwo
     color: $brandColorTwo
-    font-size: 65px
-    line-height: 65px
+    font-size: 45px
+    line-height: 45px
     font-weight: 400
     text-transform: uppercase
     text-align: left
@@ -1182,8 +1200,8 @@ a[role=button].third:hover
   h2
     font-family: $fontTwo
     color: $brandColorTwo
-    font-size: 65px
-    line-height: 65px
+    font-size: 45px
+    line-height: 45px
     font-weight: 400
     text-transform: uppercase
     text-align: left
@@ -1277,11 +1295,52 @@ label
 
 .fine-print
   span
-    font-size: 12px
+    font-size: 10px
     line-height: 14px
     letter-spacing: 2px
     font-weight: 400
 
     display: block
     margin: 5px auto
-    color: #ffffff86
+    color: #ffffffd5
+
+
+.input-group 
+  width: 100% !important
+  display: flex
+  margin-bottom: 0
+
+
+input.form-input 
+  width: calc( 100% - 120px )
+  margin-right: 0
+  border-top-right-radius: 0px
+  border-bottom-right-radius: 0px
+  height: 40px
+  border: 1px solid $brandColorOne
+  background-color: #fff !important
+
+button.btn
+  width: 120px
+  height: 40px
+  background-color: $brandColorTwo
+  border: none
+
+  border-top-left-radius: 0px
+  border-bottom-left-radius: 0px
+
+  font-size: 18px
+  padding: 4px
+
+
+.powered-by
+  width: 100%
+  text-align: center
+  margin-top: 100px
+  font-size: 12px
+  color: #fff
+
+  img
+    height: 12px
+    width: auto
+    margin-left: 10px
