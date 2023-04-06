@@ -1,7 +1,7 @@
 var myVar
 
 function myFunction() {
-  myVar = setTimeout(fadeOut, 500)
+  myVar = setTimeout(fadeOut, 1500)
   
 }
 
