@@ -10,27 +10,36 @@ $brandColorTwo: #b88c51
 $brandColorThree: #B17A4E
 $darkTextColor: #070012f5
 
+
+h2
+  @media screen and ( max-width: 1000px)
+    font-size: 24px !important
+
+h3
+  @media screen and ( max-width: 1000px)
+    font-size: 14px !important
+    letter-spacing: 1px !important
+
 *
   font-family: $fontOne
 
 
 .container
-  max-width: calc( 100vw - 200px )
+  max-width: calc( 100vw - 100px )
   height: 100%
+
+  @media screen and ( max-width: 1100px )
+    max-width: calc( 100vw - 20px )
+    margin: 0px !important
+    padding: 20px !important
+    
 
 .swiper 
   width: 100vw
   height: 100vh
 
 
-#slide-1
-  background: red
 
-#slide-2
-  background: white
-
-#slide-3
-  background: white
 
 // .swiper-wrapper
 //   transition-duration: 600ms
@@ -125,7 +134,7 @@ $darkTextColor: #070012f5
 .hero-cta
   height: 80px
 
-  @media screen and ( max-width: 800px )
+  @media screen and ( max-width: 900px )
     height: 200px
 
   h3
@@ -145,7 +154,7 @@ $darkTextColor: #070012f5
       cursor: pointer
 
 
-    @media screen and ( max-width: 800px )
+    @media screen and ( max-width: 900px )
       font-size: 10px
       
 
@@ -183,7 +192,7 @@ $darkTextColor: #070012f5
   color: #fff
   text-shadow: 2px 2px 5px #000
 
-  @media screen and ( max-width: 800px )
+  @media screen and ( max-width: 900px )
     font-size: 16px
 
 .hero-logo
@@ -472,8 +481,15 @@ a[role=button].third:hover
   flex-direction: column
   justify-content: center
 
+
+
+
+
 //SERVICES-1 STYLES------------
-#slide-3
+
+
+
+#service-1-slide
   //background-image: url('../images/serv-1-bg1.jpg')
   background-size: cover
   background-position: center
@@ -482,6 +498,7 @@ a[role=button].third:hover
   margin: 100px 0px  50px 0px !important
   width: 100%
   height: calc( 100% - 150px )
+  overflow: hidden
   
   .container
     display: flex
@@ -501,7 +518,12 @@ a[role=button].third:hover
     text-align: left
     width: 500px
     text-shadow: 2px 2px 10px #00000032
-    margin: 40px 0px 20px 0px
+    margin: 50px 0px 20px 0px
+
+
+    @media screen and ( max-width: 900px )
+      font-size: 20px !important
+      
 
   p
     margin: 30px 0px
@@ -528,47 +550,38 @@ a[role=button].third:hover
 
 
 .services-boxes-holder
-  height: 600px
+  height: 100%
   width: 100%
   display: flex
-  flex-direction: row
+  flex-direction: column
   justify-content: flex-start
   align-items: center
+
+  .box-row
+    display: flex
+    flex-direction: row
+
+    
   
 
   .box
-    width: 300px
-    height: 450px
+    width: calc( 25vw - 70px ) !important
+    height: calc( 90vh - 200px )
     margin-right: 20px
     box-shadow: 2px 2px 10px #0000008b
     overflow: hidden
     transition-delay: 0s !important
     transition-duration: 0.5s
     
+
+   
+
+
   .box:hover
-    width: 440px
-    height: 450px
+    width: calc( 30vw - 10px ) !important
+    
      
-
-  .box-1
-    background-image: url('../images/box1.jpg')
-    background-size: cover
-    background-position: center
-
-  .box-2
-    background-image: url('../images/box2.2.jpg')
-    background-size: cover
-    background-position: center
-
-  .box-3
-    background-image: url('../images/box3.jpg')
-    background-size: cover
-    background-position: center
-
-  .box-4
-    background-image: url('../images/box4.jpg')
-    background-size: cover
-    background-position: center
+  
 
 
   .box-overlay
@@ -592,12 +605,17 @@ a[role=button].third:hover
       margin-bottom: 10px
       margin-left: 10px
       width: 240px
-      transition: all 0.4s ease-in-out
-      
+      transition: all 0.4s ease-in-out      
       position: relative
       bottom: -70px
 
-      
+
+      @media screen and ( max-width: 1000px )
+        margin-left: 4px
+        width: 120px
+        font-size: 12px !important
+        line-height: 16px
+        
     a
       background-color: $brandColorOne
       border: none
@@ -618,13 +636,32 @@ a[role=button].third:hover
       left: 0px
       transition: all 0.5s ease-in-out
       
-      
+.services-1 > .container > .services-boxes-holder > .box-row
+  .box-1
+    background-image: url('../images/box1.jpg')
+    background-size: cover
+    background-position: center
+
+  .box-2
+    background-image: url('../images/box2.2.jpg')
+    background-size: cover
+    background-position: center
+
+  .box-3
+    background-image: url('../images/box3.jpg')
+    background-size: cover
+    background-position: center
+
+  .box-4
+    background-image: url('../images/box4.jpg')
+    background-size: cover
+    background-position: center    
 
 
 
 
 //SERVICES-2 STYLES------------
-#slide-4
+#service-3-slide
   // background-image: url('../images/slide4.jpg')
   background-size: cover
   background-position: center
@@ -642,6 +679,7 @@ a[role=button].third:hover
 
     .services-boxes-holder > .box-row
       justify-content: flex-end !important
+      width: 100%
 
     
   
@@ -655,8 +693,10 @@ a[role=button].third:hover
     text-transform: uppercase
     text-align: right
     width: 500px
-    margin: 40px 00px 20px 0px
+    margin: 40px 20px 20px 0px
     text-shadow: 2px 2px 6px #00000055
+
+    
 
   p
     margin: 30px 0px
@@ -664,22 +704,12 @@ a[role=button].third:hover
     line-height: 20px
     color: $darkTextColor
 
-  .box-row
-    width: 100%
-    display: flex
-    flex-direction: row
-    margin-bottom: 20px
+  
 
   .cta-holder
     margin-right: 80px
 
 
-  .box
-    width: 300px
-    height: 450px
-    margin-left: 20px
-    margin-right: 0px !important
-    box-shadow: 2px 2px 10px #0000008b
     
 
   .box-1
@@ -703,45 +733,7 @@ a[role=button].third:hover
     background-position: center
 
 
-  .box-overlay
-    height: 100%
-    width: 100%
-    background-color: #402c1250
-    display: flex
-    flex-direction: column
-    justify-content: flex-end
-    transition-duration: 0.8s
-
-    h3
-      color: #fff
-      font-size: 18px
-      letter-spacing: 3px
-      line-height: 26px
-      text-transform: uppercase
-      text-shadow: 2px 2px 2px #000000
-      font-family: $fontOne
-      margin-left: 10px
-      width: 240px
-      transition: all 0.4s ease-in-out
-      
-      position: relative
-      bottom: -80px
-
-
-    a
-      background-color: $brandColorOne
-      border: none
-      width: 200px
-     
-  .box-overlay:hover
-    background-color: #845f325c
-    
-    h3
-      margin-left: 10px
-      color: #ffffff
-      text-shadow: 2px 2px 2px #000000
-      margin-bottom: 10px
-      bottom: 0px
+  
 
     
 
@@ -989,7 +981,7 @@ a[role=button].third:hover
 
 //BLOGS STYLES------------
 #slide-6
-  background-image: url('../images/logo_white.png')
+  // background-image: url('../images/logo_white.png')
   background-size: cover
   background-position: center
 
@@ -1277,6 +1269,7 @@ label
       flex-direction: row
       justify-content: space-evenly
       margin-bottom: 30px
+      margin-top: 100px
 
       div
         width: calc( 33% - 40px )
