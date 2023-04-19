@@ -17,13 +17,8 @@
   
   <title>Investax Home</title>
 </head>
-<body onload="myFunction()">
-  <div id="loader" class="loader-fade-full">
-    <div class="loader-container">
-      <img src="images/full_white.png" alt="">
-      <img src="images/logo_primary.png" alt="">
-    </div>
-  </div>
+<body>
+  
   <section id="navigation" class="menu-slide-out">
     <div class="container">
       <nav data-cursor="-sm -exclusion -inverse">
@@ -44,9 +39,43 @@
 
         <ul class="nav-contacts" data-cursor="-sm -exclusion">
           <li><a href="#"> <img src="images/icons8-phone-50.png" alt="" class="nav-icons"> 02 8651 8000</a></li>
-          <li><a href="#" role="button" class="primary">Complimentary Consultation</a></li>          
+          <li><a href="#" role="button" class="primary">Complimentary Consultation</a></li>      
         </ul>
       </nav>
+    </div>
+    
+  </section>
+
+  <section id="mobile-navigation" class="mobile-nav">
+    <div class="container">
+      <nav>
+        <div class="mobile-logo-container">
+          <img src="images/logo_primary.png" alt="" class="mobile-logo">
+        </div>
+        
+
+        
+
+        
+
+
+        <ul class="nav-contacts" data-cursor="-sm -exclusion">
+          <li onclick="showMobileMenu()"><a href="#"><img src="images/Menu.png" alt="" class="nav-icons hamburger-menu" "></a></li>       
+        </ul>
+      </nav>
+
+
+
+      <div class="fullscreen-menu" id="mobile-fs-menu">
+        <a class="cross" href="#"><img src="images/cross.png" alt="" onclick="hideMobileMenu()"></a>
+        <img src="images/logo_white.png" alt="">
+        <ul class="nav-menu">
+          <li><a href="#">About</a> <span class="underline"></span></li>
+          <li><a href="#">Services</a> <span class="underline"></span></li>
+          <li><a href="#">Resources</a> <span class="underline"></span></li>
+          <li><a href="#">Insights</a> <span class="underline"></span></li>
+        </ul>
+      </div>
     </div>
     
   </section>
@@ -93,10 +122,13 @@
                 <h3>
                   Retire Wealthy
                 </h3>
-              </div>
-
+              </div> 
+              
+              <a href="#" role="button" class="mobile-cta-btn">Complimentary Consultation</a>
               
             </div>
+
+            
           </div>
         </div>
         
@@ -112,6 +144,7 @@
             
             <h2 class="hide"> Accounting &amp; Tax Services</h2>
 
+            
             <div class="services-boxes-holder">
               <div class="box-row">
                 <div class="box box-1 hide">
@@ -150,12 +183,14 @@
                     <a href="#" role="button" class="primary serv-btn">
                       Learn More
                     </a>
+                    
                   </div>
                   
                 </div>
               </div>
 
             </div>
+            <a href="#" role="button" class="mobile-cta-btn">Complimentary Consultation</a>
 
           </div>
         </div>
@@ -214,6 +249,8 @@
               </div>
 
             </div>
+
+            <a href="#" role="button" class="mobile-cta-btn">Complimentary Consultation</a>
            
             
           </div>
@@ -235,7 +272,7 @@
               <div class="box-row">
                 <div class="box box-1 hide">
                   <div class="box-overlay">
-                    <h3>Retirement Planning</h3>
+                    <h3>SMSF Tax &amp; Audit Services</h3>
                     <a href="#" role="button" class="primary serv-btn">
                       Learn More
                     </a>
@@ -245,7 +282,7 @@
 
                 <div class="box box-2 hide">
                   <div class="box-overlay">
-                    <h3>Business Structure</h3>
+                    <h3>SMSF Establishment Services</h3>
                     <a href="#" role="button" class="primary serv-btn">
                       Learn More
                     </a>
@@ -257,6 +294,8 @@
               </div>
 
             </div>
+
+            <a href="#" role="button" class="mobile-cta-btn">Complimentary Consultation</a>
             
             
           </div>
@@ -356,6 +395,7 @@
               </div>
 
               <a href="#" role="button" class="primary">Learn More About Our Team</a>
+              <a href="#" role="button" class="mobile-cta-btn">Complimentary Consultation</a>
 
               
 
@@ -601,7 +641,7 @@
           
 
 
-          <div class="footer-row hide">
+          <div class="footer-row fine-print-container hide">
 
             <div class="fine-print">
               <span>Copyright © 2023 Investax Pty Ltd | Privacy Policy | Disclaimer</span>
@@ -634,14 +674,13 @@
   
 
 
-  <script src="js/loader.js"></script>
+  
   <script src="js/menu.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
   <script src="js/my-swiper.js"></script>
   <script src="js/index.js"></script>
-  <!-- <script src="js/rotatingMsgs.js"></script> -->
   <script src="js/imageSwapper.js"></script>
 </body>
 

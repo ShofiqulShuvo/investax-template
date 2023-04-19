@@ -15,6 +15,11 @@ h2
   @media screen and ( max-width: 1000px)
     font-size: 24px !important
 
+    @media screen and ( orientation: portrait )
+      font-size: 16px !important
+      font-weight: 400 !important
+      margin-bottom: 10px !important
+
 h3
   @media screen and ( max-width: 1000px)
     font-size: 14px !important
@@ -55,6 +60,12 @@ p
 //   transition-duration: 600ms
 //   transform: translate3d(0px, 0px, 0px)
 
+
+
+    
+
+
+
 .button-flex-box
   width: 100%
   display: flex
@@ -64,6 +75,9 @@ p
 
 .blog-buttons
   width: 60%
+
+  @media screen and ( orientation: portrait )
+    margin: 10px !important
 
 .hero-img
   position: relative
@@ -99,7 +113,7 @@ p
   align-items: center
 
 
-#navigation
+#navigation.menu-slide-out
   width: 100%
   position: fixed
   z-index: 10001
@@ -112,6 +126,33 @@ p
 
   @media screen and ( max-width: 1000px )
     display: none
+
+
+
+#mobile-navigation.mobile-nav
+  z-index: 1000
+  display: none
+
+  @media screen and ( max-width: 1000px )
+    display: inline-flex
+    position: fixed
+    width: 100%
+    top: 10px
+
+    .hamburger-menu
+      display: inline-block
+      margin-top: 5px
+      width: 30px
+      height: 30px
+      color: $brandColorOne
+
+    .mobile-logo
+      margin-top: 10px
+      width: 150px
+      height: 40px
+      object-fit: contain
+
+
     
   
 .nav-icons
@@ -311,15 +352,20 @@ p
   border-radius: 25px
   font-size: 10px
   margin: 0px !important
-  padding: 10px 15px
+  padding: 13px 15px
   height: 35px
    
+  &:hover
+    background-color: #61431c
+    border-radius: 25px
+    color: #fff
 
 .swiper-pagination-vertical
   margin-right: 20px
 
   @media screen and ( max-width: 600px )
     margin-right: 5px 
+    display: none
     
 
 
@@ -414,16 +460,29 @@ a[role=button].third:hover
   color: #fff
 
 
+a.mobile-cta-btn
+  display: none
+  height: 35px !important
+  padding: 10px !important
+  width: 270px !important
+  background-color: $brandColorOne
+  border: none
+  border-radius: 25px
+  text-transform: uppercase
+  letter-spacing: 1px
+  font-size: 12px !important
+
+  @media screen and ( orientation: portrait )
+    display: block
+    margin: 0px auto !important
+    margin-top: 10px !important
+    
+
 .menu-white
   color: $brandColorThree
 
   .nav-icons
     filter: invert(1)
-
-  .container > nav > ul > li > a
-    color: #fff
-
-  
 
   .container > nav > ul > li
     .underline
@@ -596,7 +655,7 @@ a[role=button].third:hover
 
       .box
         width: calc( 100vw - 40px ) !important
-        height: calc( 22vh - 40px )
+        height: calc( 23vh - 50px )
         margin-bottom: 10px
   
 
@@ -635,8 +694,8 @@ a[role=button].third:hover
 
     h3
       color: #fff
-      font-size: 18px
-      letter-spacing: 3px
+      font-size: 14px
+      letter-spacing: 2px
       line-height: 26px
       text-transform: uppercase
       text-shadow: 1px 1px 10px #000000
@@ -655,7 +714,11 @@ a[role=button].third:hover
         width: 120px
         font-size: 10px !important
         line-height: 14px
-        
+
+      @media screen and ( orientation: portrait )
+        font-size: 8px !important
+        letter-spacing: 2px !important
+        text-shadow: 2px 2px 10px #000000fd
     a
       background-color: $brandColorOne
       border: none
@@ -851,7 +914,7 @@ a[role=button].third:hover
         .box
           width: 37vw
           height: calc( 20vh - 10px ) !important
-          margin-bottom: 10px
+          margin-bottom: 8px
 
           .box-overlay
             h3
@@ -861,6 +924,11 @@ a[role=button].third:hover
 
             h4
               font-size: 12px
+              width: 80%
+
+            .serv-btn
+              font-size: 10px !important
+              width: 100% !important
         
         .box:hover
           width: 40vw
@@ -1015,7 +1083,12 @@ a[role=button].third:hover
     display: none
 
 
-   
+#slide-7 > div > div > div.team-boxes-holder > a.primary 
+  @media screen and ( orientation: portrait )
+    display: block
+    margin: 0px auto !important
+    width: 270px
+    background-color: $brandColorThree
 
 //BLOGS STYLES------------
 #slide-6
@@ -1043,10 +1116,10 @@ a[role=button].newsletter-btn
 
 
   @media screen and ( orientation: portrait )
-    margin: 20px 0px !important
+    margin: 50px 0px !important
   
   @media screen and ( max-width: 1000px )
-    margin: 20px 0px !important
+    margin: 50px 0px !important
   
   .container
     display: flex
@@ -1301,6 +1374,9 @@ a[role=button].newsletter-btn
     margin-top: 160px
     height: calc( 100vh - 400px )
 
+    @media screen and ( orientation: portrait )
+      margin-top: 60px !important
+
 
 
   h2
@@ -1324,6 +1400,9 @@ input, select
 
   @media screen and ( orientation: portrait )
     font-size: 12px !important
+    height: 20px !important
+    padding: 0px 5px !important
+    margin: 5px 0px !important
 
 label
   font-size: 14px
@@ -1374,6 +1453,26 @@ label
         letter-spacing: 2px
         text-transform: uppercase
         border-bottom: 1px solid #fff
+
+      
+      @media screen and ( max-width: 1000px )
+        flex-direction: column
+        justify-content: space-evenly
+
+        div
+          width: 100%
+
+          img
+            width: 250px !important
+            margin-bottom: 30px !important
+
+          ul > li
+            font-size: 12px !important
+            letter-spacing: 2px !important
+
+
+            
+        
 
   ul
     margin-left: -20px
@@ -1426,13 +1525,18 @@ label
   display: flex
   margin-bottom: 0
 
+  @media screen and ( max-width: 1000px )
+    width: 80% !important
+    margin: 0px auto !important
+
 
 input.form-input 
   width: calc( 100% - 120px )
   margin-right: 0
   border-top-right-radius: 0px
   border-bottom-right-radius: 0px
-  height: 40px
+  height: 40px !important
+  margin-top: 0px !important
   border: 1px solid $brandColorOne
   background-color: #fff !important
 
@@ -1448,11 +1552,15 @@ button.btn
   font-size: 18px
   padding: 4px
 
+.fine-print-container
+  margin-top: 10px !important
+  height: calc( 20vh - 30px ) !important
+  justify-content: flex-end
 
 .powered-by
   width: 100%
   text-align: center
-  margin-top: 100px
+  margin-top: 40px
   font-size: 12px
   color: #fff
 
@@ -1460,3 +1568,44 @@ button.btn
     height: 12px
     width: auto
     margin-left: 10px
+
+
+  @media screen and ( orientation: portrait )
+    margin: 0px !important
+
+
+.fullscreen-menu
+  position: fixed
+  height: 100vh
+  width: 100vw
+  left: -100%
+  top: 0px
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  align-items: center  
+  background-color: $brandColorThree
+  margin: 0px auto !important
+  padding: 0px
+  opacity: 0
+  transition-duration: 0.3s
+
+  ul > li > a
+    color: #ffff !important
+
+  img
+    width: 80vw
+
+.cross
+  position: absolute !important
+  top: 20px  !important
+  right: 10px  !important
+  height: 50px !important
+
+  img
+    width: 100%
+    height: 100%
+
+.cross-visible
+  opacity: 1
+  left: 0px

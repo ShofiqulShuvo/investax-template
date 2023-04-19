@@ -12,7 +12,7 @@ const cursor = new MouseFollower({
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    console.log(entry)
+    // console.log(entry)
     if(entry.isIntersecting)
       entry.target.classList.add('show')
     // else
@@ -24,3 +24,14 @@ const hiddenElements = document.querySelectorAll('.hide')
 hiddenElements.forEach(el => {
   observer.observe(el)
 })
+
+
+function showMobileMenu () {
+  const fullScreenMenu = document.getElementById('mobile-fs-menu')
+  fullScreenMenu.classList.add("cross-visible")
+}
+
+function hideMobileMenu () {
+  const fullScreenMenu = document.getElementById('mobile-fs-menu')
+  fullScreenMenu.classList.remove("cross-visible")
+}
