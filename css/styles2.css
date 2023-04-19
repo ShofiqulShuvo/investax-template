@@ -34,7 +34,7 @@
 
 .container {
   max-width: calc(100vw - 100px);
-  height: 100%;
+  height: calc(100% - 20px);
 }
 @media screen and (max-width: 1100px) {
   .container {
@@ -67,7 +67,7 @@
 }
 @media screen and (orientation: portrait) {
   .blog-buttons {
-    margin: 10px !important;
+    margin: 30px !important;
   }
 }
 
@@ -200,7 +200,6 @@
 }
 @media screen and (orientation: portrait) {
   .hero-cta {
-    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -675,7 +674,7 @@ a.mobile-cta-btn {
   }
   .services-boxes-holder .box-row .box {
     width: calc(100vw - 40px) !important;
-    height: calc(23vh - 50px);
+    height: calc(22vh - 60px);
     margin-bottom: 10px;
   }
 }
