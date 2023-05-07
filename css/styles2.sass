@@ -87,6 +87,33 @@ p
   z-index: 0
   height: 100%
   width: 100%
+  overflow: hidden
+
+  iframe 
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 110vw
+    height: 115vh
+    transform: translate(-50%, -50%)
+    pointer-events: none
+    
+
+
+
+    @media (min-aspect-ratio: 16/9) 
+      .video-container iframe 
+        /* height = 100 * (9 / 16) = 56.25 */
+        height: 56.25vw
+      
+    
+        
+    @media (max-aspect-ratio: 16/9) 
+      .video-container iframe 
+        /* width = 100 / (9 / 16) = 177.777777 */
+        width: 177.78vh
+      
+    
 
 .hero
   top: 0px
@@ -1608,3 +1635,9 @@ button.btn
 .cross-visible
   opacity: 1
   left: 0px
+
+
+
+//iframe styles ==============
+
+
