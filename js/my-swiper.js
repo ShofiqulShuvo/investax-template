@@ -25,6 +25,9 @@ const swiper = new Swiper('.swiper', {
   },
 })
 
+
+
+
 function scrollSlider (event) {
   if(event.deltaY >40) 
     swiper.slideNext()
