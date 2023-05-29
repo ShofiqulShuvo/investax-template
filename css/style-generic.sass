@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap')
+
+
+$fontOne: 'Montserrat', sans-serif
+$fontTwo: 'Tilt Warp', cursive
+
+$brandColorOne: #9e6d2d
+$brandColorTwo: #b88c51
+$brandColorThree: #B17A4E
+$darkTextColor: #070012f5
+
+
+h2
+
+  font-family: $fontTwo
+  color: $brandColorTwo
+  font-weight: 400
+  text-transform: uppercase
+  text-align: left
+  text-shadow: 2px 2px 10px #00000032
+
+  @media screen and ( max-width: 1000px)
+    font-size: 24px !important
+
+    @media screen and ( orientation: portrait )
+      font-size: 16px !important
+      font-weight: 400 !important
+      margin-bottom: 10px !important
+
+h3
+  @media screen and ( max-width: 1000px)
+    font-size: 14px !important
+    letter-spacing: 1px !important
+
+p
+  text-align: justify
+
+  @media screen and ( max-width: 1000px)
+    font-size: 14px !important
+    line-height: 18px !important
+    text-align: justify
+    letter-spacing: 1px !important
+
+*
+  font-family: $fontOne
+
+
+.container-menu
+  max-width: calc( 100vw - 100px )
+  height: calc( 100% - 20px )
+
+  @media screen and ( max-width: 1100px )
+    max-width: calc( 100vw - 20px )
+    margin: 0px !important
+    padding: 20px !important
+
+  @media screen and ( orientation: portrait )
+    padding: 0px !important
+    padding-left: 15px !important
+
+
+.button-flex-box
+  margin-top: 0px
+  width: 100%
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+
+#navigation
+  background-color: #fff
+  padding-bottom: 40px
+
+#navigation.menu-slide-out
+  width: 100%
+  position: fixed
+  z-index: 100
+  padding-top: 30px
+  margin-left: auto
+  margin-right: auto
+  transition-duration: 0.9s
+  transition-timing-function: ease-out
+
+
+  @media screen and ( max-width: 1000px )
+    display: none
+
+
+
+#mobile-navigation.mobile-nav
+  background-color: #fff
+  padding-bottom: 20px
+  z-index: 1000
+  display: none
+
+  @media screen and ( max-width: 1000px )
+    display: inline-flex
+    position: fixed
+    width: 100%
+    top: 0px
+    padding-top: 10px
+
+    .hamburger-menu
+      display: inline-block
+      margin-top: 5px
+      width: 30px
+      height: 30px
+      color: $brandColorOne
+
+    .mobile-logo
+      margin-top: 10px
+      width: 150px
+      height: 40px
+      object-fit: contain
+
+
+    
+  
+.nav-icons
+  height: 16px
+  width: auto
+  margin-right: 5px
+
+.menu-slide-out
+    top: -100px
+    transition-delay: 1s
+    transition-duration: 1s
+    transition-timing-function: ease-out
+
+.menu-slide-in
+  top: 0px 
+
+
+
+.logo
+  height: 30px
+  width: 120px
+  margin: 10px
+  margin-top: 15px
+  
+
+
+.nav-menu > li
+  margin-right: 15px
+  height: 60px
+  overflow: hidden
+  transition-duration: 0.4s
+
+  .underline
+    display: block
+    height: 4px
+    background-color: $brandColorThree
+    position: relative
+    left: 0px
+    transform: translateX(-130%)
+    // filter: blur(2px)
+    transition-duration: 0.2s
+    transition-timing-function: ease-out
+
+.nav-menu > li:hover
+
+  .underline
+    filter: blur(0px)
+    transform: translateX(0%)
+  
+
+.nav-menu > li > a
+  font-size: 14px
+  letter-spacing: 2px
+  font-weight: 800
+  color: $darkTextColor
+
+
+.nav-contacts > li
+  height: 60px
+  margin-left: 15px
+  
+
+.nav-contacts > li > a  
+  font-size: 14px
+  font-weight: 500
+  letter-spacing: 2px
+  color: $darkTextColor
+
+
+  
+.nav-contacts > li > a[role="button"]
+  border-radius: 25px
+  font-size: 10px
+  margin: 0px !important
+  padding: 13px 15px
+  height: 35px
+   
+  &:hover
+    background-color: #61431c
+    border-radius: 25px
+    color: #fff
+
+
+  
+.mf-cursor:before
+  scale: 4
+
+a[role=button]
+  margin: 10px 0px 0px !important 
+
+a[role=button].primary
+  background-color: $brandColorOne
+  border: none
+  border-radius: 2px
+  color: #ffffff
+  font-size: 14px
+  letter-spacing: 2px
+  font-weight: 800
+  text-transform: uppercase
+  min-height: 40px
+  max-width: 300px
+  transition-duration: 0.4s
+
+  @media screen and ( max-width: 1000px )
+    margin-bottom: 30px !important
+    font-size: 12px !important
+    line-height: 14px !important
+    margin-right: 10px !important
+    display: inline-block
+  
+a[role=button].primary:hover
+  background-color: #61431c
+  border-radius: 2px
+  color: #fff
+
+
+a[role=button].secondary
+  min-height: 40px
+  background-color: #ffffff57
+  border: none
+  border-radius: 2px
+  color: #000
+  font-size: 14px
+  letter-spacing: 2px
+  font-weight: 800
+  text-transform: uppercase
+
+  @media screen and ( max-width: 1000px )
+    font-size: 12px
+    line-height: 14px 
+    
+  
+a[role=button].secondary:hover
+  border: none
+  background-color: #000
+  color: #fff
+
+a[role=button].third
+  height: 50px
+  background-color: #2525258a
+  border: none
+  border-radius: 2px
+  color: #ffffff
+  font-size: 14px
+  letter-spacing: 2px
+  font-weight: 800
+  text-transform: uppercase
+  box-shadow: 1px 1px 16px 2px #ffffff09
+  
+a[role=button].third:hover
+  border: none
+  background-color: #61431c
+  color: #fff
+
+
+a.mobile-cta-btn
+  display: none
+  height: 35px !important
+  padding: 10px !important
+  width: 270px !important
+  background-color: $brandColorOne
+  border: none
+  border-radius: 25px
+  text-transform: uppercase
+  letter-spacing: 1px
+  font-size: 12px !important
+
+  @media screen and ( orientation: portrait )
+    display: block
+    margin: 0px auto !important
+    margin-top: 10px !important
+    
+
+.fullscreen-menu
+  position: fixed
+  height: 100vh
+  width: 100vw
+  left: -100%
+  top: 0px
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  align-items: center  
+  background-color: #fff
+  margin: 0px auto !important
+  padding: 0px
+  opacity: 0
+  transition-duration: 0.3s
+
+  ul > li > a
+    color: #262525 !important
+
+  img
+    width: 80vw
+
+.cross
+  position: absolute !important
+  top: 20px  !important
+  right: 10px  !important
+  height: 50px !important
+
+  img
+    width: 100%
+    height: 100%
+
+.cross-visible
+  opacity: 1
+  left: 0px
+
+
+footer
+  background-color: #090e12
+
+div.footer-row
+  text-align: center
+  display: flex
+  flex-direction: row
+  justify-content: space-evenly
+  margin-bottom: 30px
+  margin-top: 100px
+
+  @media screen and ( max-width: 900px )
+    margin-top: 30px 
+    margin-bottom: 5px
+
+  div
+    width: calc( 33% - 40px )
+
+  h4
+    font-family: $fontTwo
+    color: #fff
+    font-size: 22px
+    font-weight: 500
+    letter-spacing: 2px
+    text-transform: uppercase
+    border-bottom: 1px solid #fff
+
+    @media screen and ( max-width: 900px )
+      font-size: 16px 
+
+  
+  
+  @media screen and ( max-width: 900px )
+    flex-direction: column
+    justify-content: space-evenly
+
+    div
+      width: 100%
+
+      img
+        width: 250px !important
+        margin-bottom: 30px !important
+
+        @media screen and ( max-width: 900px )
+          width: 200px !important
+
+      ul > li
+        font-size: 12px 
+        letter-spacing: 2px 
+
+        @media screen and ( max-width: 900px )
+          font-size: 10px 
+  
+  ul
+    margin-left: -20px
+  ul > li
+    text-align: center
+    list-style: none
+    margin-left: 0px
+    font-size: 16px
+    color: #ffffffe5
+
+    a
+      color: #ffffffe5
+      font-family: $fontOne
+      font-size: 16px
+      text-transform: uppercase
+      line-height: 30px
+
+    a:hover
+      color: #f0f5d6
+      text-decoration: none
+
+
+.fine-print
+  width: 70% !important
+  text-align: center
+  margin: 0px auto !important
+
+  @media screen and ( max-width: 600px )
+    margin-top: 0px !important
+    line-height: 10px
+    width: 100% !important
+
+  span
+    font-size: 10px
+    line-height: 14px
+    letter-spacing: 2px
+    font-weight: 400
+
+    display: block
+    margin: 5px auto
+    color: #ffffffd5
+
+    @media screen and ( max-width: 600px )
+      font-size: 8px
+
+  
+  .trad-custodian
+    font-weight: 800 !important
+    line-height: 30px
+    margin-bottom: 20px
+    font-size: 20px !important
+
+    @media screen and ( max-width: 600px )
+      font-size: 10px !important
+      line-height: 14px !important
+      margin-bottom: 5px !important
+
+
+.input-group 
+  width: 100% !important
+  display: flex
+  margin-bottom: 0
+
+  @media screen and ( max-width: 1000px )
+    width: 80% !important
+    margin: 0px auto !important
+
+
+input.form-input 
+  width: calc( 100% - 120px )
+  margin-right: 0
+  border-top-right-radius: 0px
+  border-bottom-right-radius: 0px
+  height: 40px !important
+  margin-top: 0px !important
+  border: 1px solid $brandColorOne
+  background-color: #fff !important
+
+button.btn
+  width: 120px
+  height: 40px
+  background-color: $brandColorTwo
+  border: none
+
+  border-top-left-radius: 0px
+  border-bottom-left-radius: 0px
+
+  font-size: 18px
+  padding: 4px
+
+.fine-print-container
+  height: calc( 20vh - 30px ) !important
+  justify-content: flex-end
+
+
+
+.powered-by
+  width: 100%
+  text-align: center
+  margin-top: 40px
+  font-size: 12px
+  color: #fff
+
+  img
+    display: inline-block
+    height: 12px
+    width: auto
+    margin-left: 10px 
+
+    @media screen and ( max-width: 900px )
+      width: 20px !important
+      display: none
+      
+
+
+  @media screen and ( orientation: portrait )
+    margin: 0px !important
+
+
+
+.footer-row-1
+  @media screen and ( max-width: 900px )
+    margin-top: 100px !important
+
+
+//================================BASE CSS ENDS HERE ===================================================
+
