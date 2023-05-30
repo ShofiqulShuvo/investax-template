@@ -47,6 +47,8 @@ p {
 .container-menu {
   max-width: calc(100vw - 100px);
   height: calc(100% - 20px);
+  padding: 0px 20px !important;
+  margin: 0px auto !important;
 }
 @media screen and (max-width: 1100px) {
   .container-menu {
@@ -501,6 +503,11 @@ button.btn {
 .fine-print-container {
   height: calc(20vh - 30px) !important;
   justify-content: flex-end;
+}
+@media screen and (orientation: portrait) {
+  .fine-print-container {
+    height: auto !important;
+  }
 }
 
 .powered-by {
