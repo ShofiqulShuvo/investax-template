@@ -146,23 +146,24 @@ p
 .nav-menu > li
   margin-right: 15px
   height: 60px
-  overflow: hidden
   transition-duration: 0.4s
 
   .underline
     display: block
+    opacity: 0
     height: 4px
     background-color: $brandColorThree
     position: relative
     left: 0px
-    transform: translateX(-130%)
+    transform: translateY(-130%)
     // filter: blur(2px)
-    transition-duration: 0.2s
+    transition-duration: 0.6s
     transition-timing-function: ease-out
 
 .nav-menu > li:hover
 
   .underline
+    opacity: 1
     filter: blur(0px)
     transform: translateX(0%)
   
@@ -199,7 +200,47 @@ p
     border-radius: 25px
     color: #fff
 
+.dropdown
+  position: relative
+  
+  
+.dropdown-content
+  height: 0px
+  position: absolute
+  left: 10px
+  top: 60px
+  background-color: #ffffffd7
+  min-width: 220px
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+  z-index: 1000001
+  transition-duration: 1s
+  overflow: hidden
+  
+  
 
+  a  
+    position: relative
+    transform: translateX(-200%)
+    display: block
+    margin-left: 10px !important
+    margin-top: 10px
+    margin-bottom: 5px
+    z-index: 1001
+    transition-duration: 1s
+
+    font-size: 14px
+    letter-spacing: 2px
+    font-weight: 800
+    color: rgba(7, 0, 18, 0.9607843137)
+
+.dropdown:hover .dropdown-content 
+  height: 150px
+  
+
+  a
+    transform: translateX(0%)
+    display: block
+    opacity: 1
   
 .mf-cursor:before
   scale: 4

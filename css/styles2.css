@@ -339,23 +339,24 @@
 .nav-menu > li {
   margin-right: 15px;
   height: 60px;
-  overflow: hidden;
   transition-duration: 0.4s;
 }
 .nav-menu > li .underline {
   display: block;
+  opacity: 0;
   height: 4px;
   background-color: #B17A4E;
   position: relative;
   left: 0px;
-  transform: translateX(-130%);
-  transition-duration: 0.2s;
+  transform: translateY(-130%);
+  transition-duration: 0.6s;
   transition-timing-function: ease-out;
 }
 
 .nav-menu > li:hover .underline {
+  opacity: 1;
   filter: blur(0px);
-  transform: translateX(0%);
+  transform: translateY(0%);
 }
 
 .nav-menu > li > a {
@@ -891,6 +892,11 @@ a.mobile-cta-btn {
 }
 .services-3 .box-3 {
   background-image: url("../images/serv2-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.services-3 .box-4 {
+  background-image: url("../images/finance-loans.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -1829,4 +1835,44 @@ ul.contact-list > li:nth-child(3) > img {
   .contact-map img {
     scale: 2;
   }
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  height: 0px;
+  position: absolute;
+  left: 10px;
+  top: 60px;
+  background-color: rgba(255, 255, 255, 0.2196078431);
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000001;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+.dropdown-content a {
+  position: relative;
+  transform: translateX(-200%);
+  display: block;
+  margin-left: 10px !important;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  z-index: 1001;
+  transition-duration: 1s;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: rgba(7, 0, 18, 0.9607843137);
+}
+
+.dropdown:hover .dropdown-content {
+  height: 150px;
+}
+.dropdown:hover .dropdown-content a {
+  transform: translateX(0%);
+  display: block;
+  opacity: 1;
 }/*# sourceMappingURL=styles2.css.map */

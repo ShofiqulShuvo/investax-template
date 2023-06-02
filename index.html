@@ -27,11 +27,17 @@
         </div>
         
 
-        <ul class="nav-menu">
-          <li><a href="#">About</a> <span class="underline"></span></li>
-          <li><a href="services.html">Services</a> <span class="underline"></span></li>
-          <li><a href="#">Resources</a> <span class="underline"></span></li>
-          <li><a href="#">Insights</a> <span class="underline"></span></li>
+        <ul class="nav-menu" data-cursor="-sm -exclusion">
+          <li><a href="#" data-cursor="-sm -exclusion">About</a> <span class="underline"></span></li>
+          <li class="dropdown" data-cursor="-sm -exclusion"><a href="services.html">Services</a> <span class="underline"></span>
+            <div class="dropdown-content" data-cursor="-sm -exclusion">
+              <a href="#">Accounting &amp; Taxes</a>
+              <a href="#">Advisory Services</a>
+              <a href="#">Wealth &amp; Finance</a>
+            </div>
+          </li>
+          <li><a href="#" data-cursor="-sm -exclusion">Resources</a> <span class="underline"></span></li>
+          <li><a href="#" data-cursor="-sm -exclusion">Insights</a> <span class="underline"></span></li>
         </ul>
 
         
@@ -71,7 +77,13 @@
         <img src="images/logo_black.png" alt="">
         <ul class="nav-menu">
           <li><a href="#">About</a> <span class="underline"></span></li>
-          <li><a href="services.html">Services</a> <span class="underline"></span></li>
+          <li><a href="services.html">Services</a> <span class="underline"></span>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </li>
           <li><a href="#">Resources</a> <span class="underline"></span></li>
           <li><a href="#">Insights</a> <span class="underline"></span></li>
         </ul>
@@ -273,7 +285,7 @@
             
           <div class="container">
           
-            <h2 class="hide">Self Managing Super Funds</h2>
+            <h2 class="hide">Wealth &amp; Finance</h2>
 
             <div class="services-boxes-holder">
               <div class="box-row">
@@ -301,6 +313,17 @@
                 <div class="box box-3 hide">
                   <div class="box-overlay">
                     <h3>Retirement Planning</h3>
+                    <a href="#" role="button" class="primary serv-btn">
+                      Learn More
+                    </a>
+                  </div>
+                
+                </div>
+
+
+                <div class="box box-4 hide">
+                  <div class="box-overlay">
+                    <h3>Finance &amp; Loan</h3>
                     <a href="#" role="button" class="primary serv-btn">
                       Learn More
                     </a>
