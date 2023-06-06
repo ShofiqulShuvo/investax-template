@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+main {
+  padding: 0px !important;
+}
+
+.profile-section {
+  padding: 0px !important;
+}
+.profile-section img {
+  width: 100%;
+  border-radius: 4px;
+  margin: 30px auto !important;
+  margin-bottom: 0px !important;
+}
+.profile-section .caption {
+  margin-top: 20px !important;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile-section span.caption-text {
+  font-size: 14px;
+  margin: 0px auto !important;
+  margin-bottom: 30px !important;
+  text-align: center;
+}
+.profile-section h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: left;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1960784314);
+}
+@media screen and (max-width: 900px) {
+  .profile-section h1 {
+    font-size: 20px !important;
+  }
+}
+@media screen and (orientation: portrait) {
+  .profile-section h1 {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+  }
+}
+.profile-section h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+}
+@media screen and (orientation: portrait) {
+  .profile-section h3 {
+    font-weight: 800 !important;
+    font-size: 24px;
+  }
+}
+
+.empty-divider {
+  height: 200px !important;
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+  .empty-divider {
+    height: 0px !important;
+  }
+}
+
+.profile-banner {
+  margin: 0px !important;
+  width: 100%;
+  height: 600px;
+  margin-bottom: 0px !important;
+}
+@media screen and (max-width: 900px) {
+  .profile-banner {
+    height: 400px !important;
+  }
+}
+.profile-banner .banner-text {
+  margin: 0px !important;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(184, 139, 81, 0.4862745098));
+}
+.profile-banner .banner-text h1 {
+  color: #fff;
+  text-shadow: 3px 3px 6px #333;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.profile-banner .banner-text h3 {
+  color: #fff;
+  text-shadow: 3px 3px 6px #333;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize !important;
+  letter-spacing: 3px;
+  font-size: 20px !important;
+  text-align: left;
+}
+
+#profile-parallax-banner {
+  background-image: url("../images/profile-banner.jpg");
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media screen and (max-width: 900px) {
+  #profile-parallax-banner {
+    background-image: url("../team-img/ershad-ullah.png");
+    height: 400px !important;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.profile-name {
+  color: #333;
+  margin-left: 30px;
+}
+
+.phone, .email, .socials {
+  display: block;
+  margin-bottom: 20px;
+}
+.phone img, .email img, .socials img {
+  height: 30px;
+  margin-right: 20px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 56px !important;
+}/*# sourceMappingURL=profile.css.map */
