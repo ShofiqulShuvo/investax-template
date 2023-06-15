@@ -126,4 +126,14 @@ hr {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+}
+
+#search {
+  margin-top: 15px !important;
+}
+#search input {
+  font-size: 14px !important;
+}
+#search button[type=submit] {
+  font-size: 14px;
 }/*# sourceMappingURL=insights-archive.css.map */
