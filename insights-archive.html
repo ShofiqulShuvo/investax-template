@@ -19,68 +19,95 @@
 
 <body>
   <header>
-    <section id="navigation" class="menu-slide-out">
-      <div class="container container-menu">
-        <nav data-cursor="-sm -exclusion -inverse">
-          <div class="logo-container">
-            <a href="index.html">
-              <img src="images/logo_primary.png" alt="" class="logo logo-hidden" id="logo-img">
-            </a>
-          </div>
-    
-    
-          <ul class="nav-menu">
-            <li><a href="#">About</a> <span class="underline"></span></li>
-            <li><a href="#">Services</a> <span class="underline"></span></li>
-            <li><a href="#">Resources</a> <span class="underline"></span></li>
-            <li><a href="#">Insights</a> <span class="underline"></span></li>
-          </ul>
-    
-    
-    
-    
-          <ul class="nav-contacts" data-cursor="-sm -exclusion">
-            <li><a href="#"> <img src="images/icons8-phone-50.png" alt="" class="nav-icons"> 02 8651 8000</a></li>
-            <li><a href="#" role="button" class="primary">Complimentary Consultation</a></li>
-          </ul>
-        </nav>
-      </div>
-    
-    </section>
-    
-    <section id="mobile-navigation" class="mobile-nav">
-      <div class="container">
-        <nav>
-          <div class="mobile-logo-container">
-            <img src="images/logo_primary.png" alt="" class="mobile-logo">
-          </div>
-    
-    
-    
-    
-    
-    
-    
-          <ul class="nav-contacts" data-cursor="-sm -exclusion">
-            <li onclick="showMobileMenu()"><a href="#"><img src="images/Menu.png" alt="" class="nav-icons hamburger-menu" "></a></li>       
+      <section id="navigation" class="menu-slide-out">
+        <div class="container">
+          <nav data-cursor="-sm -exclusion -inverse">
+            <div class="logo-container">
+              <a href="index.html">
+                <img src="images/logo_primary.png" alt="" class="logo logo-hidden" id="logo-img">
+              </a>
+      
+            </div>
+      
+      
+            <ul class="nav-menu" data-cursor="-sm -exclusion">
+              <li class="dropdown" data-cursor="-sm -exclusion"><a href="#" data-cursor="-sm -exclusion">About</a> <span
+                  class="underline"></span>
+                <div class="dropdown-content" data-cursor="-sm -exclusion">
+                  <a href="about.html">Meet The Team</a>
+                  <a href="why-us.html">Why Choose Us</a>
+      
+                </div>
+              </li>
+              <li class="dropdown" data-cursor="-sm -exclusion"><a href="services.html">Services</a> <span
+                  class="underline"></span>
+                <div class="dropdown-content" data-cursor="-sm -exclusion">
+                  <a href="services-1.html">Accounting &amp; Taxes</a>
+                  <a href="services-1.html">Advisory Services</a>
+                  <a href="services-1.html">Wealth &amp; Finance</a>
+                </div>
+              </li>
+              <li><a href="#" data-cursor="-sm -exclusion">Resources</a> <span class="underline"></span></li>
+              <li><a href="insights-archive.html" data-cursor="-sm -exclusion">Insights</a> <span class="underline"></span>
+              </li>
+            </ul>
+      
+      
+      
+      
+            <ul class="nav-contacts" data-cursor="-sm -exclusion">
+              <li><a href="#"> <img src="images/icons8-phone-50.png" alt="" class="nav-icons"> 02 8651 8000</a></li>
+              <li><a href="#" role="button" class="primary">Complimentary Consultation</a></li>
             </ul>
           </nav>
+        </div>
+      
+      </section>
+      
+      <section id="mobile-navigation" class="mobile-nav">
+        <div class="container">
+          <nav>
+            <div class="mobile-logo-container">
+              <img src="images/logo_primary.png" alt="" class="mobile-logo">
+            </div>
       
       
       
-          <div class=" fullscreen-menu" id="mobile-fs-menu">
-                <a class="cross" href="#"><img src="images/cross.png" alt="" onclick="hideMobileMenu()"></a>
-                <img src="images/logo_black.png" alt="">
-                <ul class="nav-menu">
-                  <li><a href="#">About</a> <span class="underline"></span></li>
-                  <li><a href="#">Services</a> <span class="underline"></span></li>
-                  <li><a href="#">Resources</a> <span class="underline"></span></li>
-                  <li><a href="#">Insights</a> <span class="underline"></span></li>
-                </ul>
-      </div>
-      </div>
-    
-    </section>
+      
+      
+      
+      
+            <ul class="nav-contacts" data-cursor="-sm -exclusion">
+              <li onclick="showMobileMenu()"><a href="#"><img src="images/Menu.png" alt="" class="nav-icons hamburger-menu" "></a></li>       
+              </ul>
+            </nav>
+      
+      
+      
+            <div class=" fullscreen-menu" id="mobile-fs-menu">
+                  <a class="cross" href="#"><img src="images/cross.png" alt="" onclick="hideMobileMenu()"></a>
+                  <img src="images/logo_black.png" alt="">
+                  <ul class="nav-menu">
+                    <li><a href="#">About</a> <span class="underline"></span>
+                      <div class="dropdown-content">
+                        <a href="#">Meet The Team</a>
+                        <a href="#">Why Choose Us</a>
+                      </div>
+                    </li>
+                    <li><a href="services.html">Services</a> <span class="underline"></span>
+                      <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                      </div>
+                    </li>
+                    <li><a href="#">Resources</a> <span class="underline"></span></li>
+                    <li><a href="#">Insights</a> <span class="underline"></span></li>
+                  </ul>
+        </div>
+        </div>
+      
+      </section>
   </header>
 
 
@@ -331,6 +358,7 @@
 <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/index.js"></script>
+<script src="js/generic-nav.js"></script>
 </body>
 
 
