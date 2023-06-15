@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+main {
+  padding: 0px !important;
+  margin-top: -170px;
+}
+@media screen and (orientation: portrait) {
+  main {
+    margin-top: 0px !important;
+  }
+}
+
 h2 {
   font-family: "Tilt Warp", cursive;
   color: #b88c51;
@@ -73,7 +83,7 @@ p {
 }
 
 #navigation {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.3921568627);
   padding-bottom: 40px;
 }
 
@@ -81,7 +91,7 @@ p {
   width: 100%;
   position: fixed;
   z-index: 100;
-  padding-top: 30px;
+  padding-top: 20px;
   margin-left: auto;
   margin-right: auto;
   transition-duration: 0.9s;
@@ -130,7 +140,7 @@ p {
 }
 
 .menu-slide-out {
-  top: -100px;
+  top: -130px;
   transition-delay: 1s;
   transition-duration: 1s;
   transition-timing-function: ease-out;
@@ -379,6 +389,12 @@ a.mobile-cta-btn {
 .cross-visible {
   opacity: 1;
   left: 0px;
+}
+
+@media screen and (orientation: landscape) {
+  .banner-text {
+    padding-top: 150px !important;
+  }
 }
 
 footer {
