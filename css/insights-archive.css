@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
 main {
   padding: 0px !important;
@@ -12,6 +12,117 @@ main {
 hr {
   margin-bottom: 50px;
   border-top: 1px solid #9e6d2d;
+}
+
+.copm-title {
+  color: #fff;
+  background: #9e6d2d;
+  padding: 0.3rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.post-container {
+  margin-top: 2rem;
+}
+.post-container hr {
+  margin-top: 0 !important;
+}
+.post-container .featured-post {
+  margin-top: 5rem;
+}
+
+.side-content .copm-title {
+  width: 100% !important;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 0.1rem;
+}
+.side-content .content {
+  padding: 0.75rem 0.25rem;
+}
+.side-content .all-tags {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.side-content .all-tags .tag {
+  margin-bottom: 0.15rem;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.7rem;
+  color: #b88c51;
+  border: 1px solid #b88c51;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.25s;
+  font-weight: 500;
+}
+.side-content .all-tags .tag:hover {
+  opacity: 0.8;
+  color: #000;
+  border-color: #000;
+}
+.side-content .post {
+  margin-bottom: 1.2rem;
+}
+.side-content .title {
+  font-size: 0.7rem;
+  line-height: 1.5 !important;
+  margin-bottom: 0.25rem;
+  color: #000;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  text-decoration: none;
+}
+.side-content .post-status {
+  font-size: 0.7rem;
+  font-family: "Montserrat", sans-serif;
+}
+.side-content .subscribe {
+  padding: 0 0.25rem 0.75rem;
+}
+.side-content .subscribe p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.side-content .subscribe .focus {
+  font-weight: 700;
+  color: #b88c51;
+}
+.side-content .subscribe input {
+  padding: 0.35rem 0.5rem;
+  height: unset;
+  font-size: 0.85rem;
+}
+.side-content .subscribe .submit-btn {
+  background: #9e6d2d;
+  border: none;
+  border-radius: 20px;
+}
+.side-content .subscribe .submit-btn:hover {
+  background: #b88c51;
+}
+
+.main-content .blog-item {
+  height: unset;
+}
+.main-content .blog-item .blog-item-image img {
+  width: 100%;
+}
+.main-content .blog-item .title {
+  padding-top: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
 }
 
 .blog-item {

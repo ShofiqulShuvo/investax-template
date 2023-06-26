@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap')
 
 
@@ -19,6 +19,120 @@ main
 hr
   margin-bottom: 50px
   border-top: 1px solid $brandColorOne
+
+.copm-title
+  color: #fff
+  background: $brandColorOne
+  padding: .30rem 1.5rem
+  font-size: 1.1rem 
+  font-weight: 500
+  font-family: $fontOne
+  letter-spacing: 1.5px
+  text-transform: uppercase
+  width: fit-content
+
+
+.post-container
+  margin-top: 2rem
+
+  hr
+    margin-top: 0 !important
+
+  .featured-post
+    margin-top: 5rem
+
+.side-content
+
+  .copm-title
+    width: 100% !important
+    text-align: center
+    font-size: 1rem
+    letter-spacing: 1px
+    padding: .10rem
+
+  .content
+    padding: .75rem .25rem
+
+  .all-tags
+    margin-top: .5rem
+    display: flex
+    flex-wrap: wrap
+    gap: .25rem
+
+    .tag
+      margin-bottom: .15rem
+      padding: .10rem .5rem
+      font-size: .7rem
+      color: $brandColorTwo 
+      border: 1px solid $brandColorTwo
+      border-radius: 20px
+      text-decoration: none
+      transition: all .25s
+      font-weight: 500
+      &:hover
+        opacity: .8
+        color: #000
+        border-color: #000
+
+  .post
+    margin-bottom: 1.2rem
+
+  .title
+    font-size: .7rem
+    line-height: 1.5 !important
+    margin-bottom: .25rem
+    color: #000
+    font-weight: 500
+    font-family: $fontOne
+    display: block
+    text-decoration: none
+
+  .post-status
+    font-size: .7rem
+    font-family: $fontOne
+
+
+  .subscribe
+    padding: 0 .25rem .75rem
+
+    p
+      margin-top: .5rem
+      font-size: .9rem
+      line-height: 1.4
+
+    .focus
+      font-weight: 700
+      color: $brandColorTwo
+
+    input
+      padding: .35rem .50rem
+      height: unset
+      font-size: .85rem
+
+    .submit-btn
+      background: $brandColorOne
+      border: none
+      border-radius: 20px
+      &:hover
+        background: $brandColorTwo
+
+.main-content
+
+  .blog-item
+    height: unset
+
+    .blog-item-image
+      img
+        width: 100%
+
+    .title
+      padding-top: 1rem
+      font-size: 1rem
+      color: #fff
+      text-decoration: none
+
+
+
 
 
 .blog-item
