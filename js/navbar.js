@@ -23,10 +23,11 @@ navItem.forEach(item => {
     }
 
 })
+// show mega menu end
 
 
+// show sub-menu of mega menu
 const subMenuContainer = document.querySelectorAll('.sub-menu-container');
-
 const subMenuItem = document.querySelectorAll('.sub-menu-item');
 
 
@@ -70,3 +71,4 @@ subMenuContainer.forEach(container => {
     }
 
 })
+// show sub-menu of mega menu
