@@ -18,13 +18,13 @@ main
 
 hr
   margin-bottom: 50px
-  border-top: 1px solid $brandColorOne
+  border-top: 1px solid #282828
 
 .copm-title
   color: #fff
-  background: $brandColorOne
-  padding: .30rem 1.5rem
-  font-size: 1.1rem 
+  background: #282828
+  padding: .20rem 1.5rem
+  font-size: 1rem 
   font-weight: 500
   font-family: $fontOne
   letter-spacing: 1.5px
@@ -81,7 +81,7 @@ hr
     font-size: .7rem
     line-height: 1.5 !important
     margin-bottom: .25rem
-    color: #000
+    color: #282828
     font-weight: 500
     font-family: $fontOne
     display: block
@@ -108,35 +108,63 @@ hr
       padding: .35rem .50rem
       height: unset
       font-size: .85rem
+      &:active
+        border-color: $brandColorOne !important
+      &:focus
+        box-shadow: unset !important
+        border-color: $brandColorOne !important
+
 
     .submit-btn
       background: $brandColorOne
       border: none
       border-radius: 20px
       &:hover
-        background: $brandColorTwo
+        background: #282828
 
 .main-content
 
   .blog-item
     height: unset
+    margin-bottom: 1.5rem
 
     .blog-item-image
+      // width: 100%
       img
         width: 100%
 
     .title
-      padding-top: 1rem
-      font-size: 1rem
+      padding-top: .5rem !important
+      // font-size: .8rem !important
+      margin-bottom: unset
+      font-weight: 600
       color: #fff
       text-decoration: none
+      line-height: 1.4 !important
+
+    .blog-author-date
+      margin-top: .5rem
+      font-size: .7rem
+      font-weight: 500
+      color: #fff
+
+    .blog-tags
+      margin-top: .5rem
+      
+      a
+        font-size: .75rem
+        font-weight: 500
+        color: #282828
+
+    .blog-item-text
+      display: none
+      font-size: .85rem
 
 
 
 
 
 .blog-item
-  height: 400px
   overflow: hidden
   border-radius: 7px
   background-color: $brandColorTwo
@@ -144,28 +172,22 @@ hr
   margin-bottom: 50px
 
   @media screen and ( orientation: portrait )
-    height: 300px    
     margin: 40px 10px !important
 
 .blog-item-image
-  height: 100%
   padding: 0px !important
 
-  @media screen and ( orientation: portrait )
-    height: 150px
 
   img
     width: 100%
-    height: 100%
-    object-fit: cover
-    object-position: top
+    // object-fit: cover
+    // object-position: top
 
 
 .blog-item-text
   padding: 30px
 
-  @media screen and ( orientation: portrait )
-    height: 150px
+
 
   h3
     color: #fff
@@ -194,6 +216,7 @@ hr
     font-family: $fontOne
     font-size: 16px
     line-height: 20px
+    // display: none
       
 
 .insights-banner
@@ -237,8 +260,17 @@ hr
 
 #search
   margin-top: 15px !important
+
   input
     font-size: 14px !important
+    padding: .5rem !important
+    height: unset
 
   button[type="submit"]
     font-size: 14px
+    background: $brandColorOne
+    border: none
+    padding: .5rem
+
+    &:hover
+      background: #282828

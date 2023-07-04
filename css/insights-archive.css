@@ -11,14 +11,14 @@ main {
 
 hr {
   margin-bottom: 50px;
-  border-top: 1px solid #9e6d2d;
+  border-top: 1px solid #282828;
 }
 
 .copm-title {
   color: #fff;
-  background: #9e6d2d;
-  padding: 0.3rem 1.5rem;
-  font-size: 1.1rem;
+  background: #282828;
+  padding: 0.2rem 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1.5px;
@@ -76,7 +76,7 @@ hr {
   font-size: 0.7rem;
   line-height: 1.5 !important;
   margin-bottom: 0.25rem;
-  color: #000;
+  color: #282828;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   display: block;
@@ -103,30 +103,57 @@ hr {
   height: unset;
   font-size: 0.85rem;
 }
+.side-content .subscribe input:active {
+  border-color: #9e6d2d !important;
+}
+.side-content .subscribe input:focus {
+  box-shadow: unset !important;
+  border-color: #9e6d2d !important;
+}
 .side-content .subscribe .submit-btn {
   background: #9e6d2d;
   border: none;
   border-radius: 20px;
 }
 .side-content .subscribe .submit-btn:hover {
-  background: #b88c51;
+  background: #282828;
 }
 
 .main-content .blog-item {
   height: unset;
+  margin-bottom: 1.5rem;
 }
 .main-content .blog-item .blog-item-image img {
   width: 100%;
 }
 .main-content .blog-item .title {
-  padding-top: 1rem;
-  font-size: 1rem;
+  padding-top: 0.5rem !important;
+  margin-bottom: unset;
+  font-weight: 600;
   color: #fff;
   text-decoration: none;
+  line-height: 1.4 !important;
+}
+.main-content .blog-item .blog-author-date {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #fff;
+}
+.main-content .blog-item .blog-tags {
+  margin-top: 0.5rem;
+}
+.main-content .blog-item .blog-tags a {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #282828;
+}
+.main-content .blog-item .blog-item-text {
+  display: none;
+  font-size: 0.85rem;
 }
 
 .blog-item {
-  height: 400px;
   overflow: hidden;
   border-radius: 7px;
   background-color: #b88c51;
@@ -135,36 +162,19 @@ hr {
 }
 @media screen and (orientation: portrait) {
   .blog-item {
-    height: 300px;
     margin: 40px 10px !important;
   }
 }
 
 .blog-item-image {
-  height: 100%;
   padding: 0px !important;
-}
-@media screen and (orientation: portrait) {
-  .blog-item-image {
-    height: 150px;
-  }
 }
 .blog-item-image img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
 }
 
 .blog-item-text {
   padding: 30px;
-}
-@media screen and (orientation: portrait) {
-  .blog-item-text {
-    height: 150px;
-  }
 }
 .blog-item-text h3 {
   color: #fff;
@@ -244,7 +254,15 @@ hr {
 }
 #search input {
   font-size: 14px !important;
+  padding: 0.5rem !important;
+  height: unset;
 }
 #search button[type=submit] {
   font-size: 14px;
+  background: #9e6d2d;
+  border: none;
+  padding: 0.5rem;
+}
+#search button[type=submit]:hover {
+  background: #282828;
 }/*# sourceMappingURL=insights-archive.css.map */
