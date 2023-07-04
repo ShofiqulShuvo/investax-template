@@ -53,11 +53,24 @@ hr
   .blog-item
     height: unset
     margin-bottom: 1.5rem
+    &:hover
+      .image
+        transform: scale(1.1)
 
     .blog-item-image
       width: 100%
-      img
+      height: 100%
+      overflow: hidden
+      @media screen and ( max-width:  992px)
+        height: 250px
+
+      .image
+        height: 100%
         width: 100%
+        transition: all 5s ease
+        background-repeat: no-repeat
+        background-position-y: center
+        background-size: cover
 
     .blog-details
       padding-left: 1rem
@@ -94,8 +107,10 @@ hr
       
       a
         font-size: .85rem
-        font-weight: 500
-        color: #282828
+        border-radius: 6px
+        padding: 3px 12px
+        background-color: #282828
+        color: #E2E2E2
         @media screen and ( max-width: 768px )
         font-size: .75rem
 
@@ -194,11 +209,24 @@ hr
   .blog-item
     height: unset
     margin-bottom: 2rem
+    &:hover
+      .image
+        transform: scale(1.1)
 
     .blog-item-image
       width: 100%
-      img
+      height: 100%
+      overflow: hidden
+      @media screen and ( max-width:  992px)
+        height: 250px
+
+      .image
+        height: 100%
         width: 100%
+        transition: all 5s ease
+        background-repeat: no-repeat
+        background-position-y: center
+        background-size: cover
 
     
     .blog-details
@@ -230,8 +258,10 @@ hr
       
       a
         font-size: .75rem
-        font-weight: 500
-        color: #282828
+        border-radius: 6px
+        padding: 3px 12px
+        background-color: #282828
+        color: #E2E2E2
 
     .blog-item-text
       display: none
