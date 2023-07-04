@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+main {
+  padding: 0px !important;
+}
+@media screen and (orientation: portrait) {
+  main {
+    margin-top: 60px;
+  }
+}
+
+hr {
+  margin-bottom: 50px;
+  border-top: 1px solid #282828;
+}
+
+.occupation-guides .banner {
+  background-image: url("../images/insights-banner.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 350px;
+}
+@media screen and (max-width: 900px) {
+  .occupation-guides .banner {
+    height: 300px;
+  }
+}
+.occupation-guides .banner-text {
+  margin: 0px !important;
+  margin-top: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(184, 139, 81, 0.4862745098));
+}
+.occupation-guides .banner-text h1 {
+  color: #fff;
+  margin: 0px auto !important;
+  text-align: center;
+  font-size: 3rem !important;
+  font-weight: 200 !important;
+  width: 900px;
+  text-shadow: 3px 3px 5px #333;
+}
+@media screen and (max-width: 900px) {
+  .occupation-guides .banner-text h1 {
+    font-size: 30px !important;
+    width: 300px;
+  }
+}
+.occupation-guides .comp-detail {
+  margin: 2rem 0 3rem;
+}
+.occupation-guides .comp-detail h4 {
+  margin-bottom: 1rem;
+  color: #282828;
+}
+.occupation-guides .comp-detail p {
+  margin-bottom: 1rem;
+  color: rgba(51, 51, 51, 0.6549019608);
+  font-weight: 400;
+}
+.occupation-guides .all-contents {
+  margin-top: 1rem;
+}
+.occupation-guides .all-contents .single-content {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 5px 13px 0px rgba(181, 173, 173, 0.81);
+}
+.occupation-guides .all-contents .single-content:hover .bg-img {
+  transform: scale(1.1);
+}
+.occupation-guides .all-contents .image-container {
+  height: 200px;
+  width: 100%;
+}
+.occupation-guides .all-contents .image-container .bg-img {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 5s ease;
+}
+.occupation-guides .all-contents .details {
+  padding: 0.75rem 1rem 2rem;
+}
+.occupation-guides .all-contents .occupation {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.occupation-guides .all-contents .btn {
+  display: block !important;
+  margin: 0.75rem auto 0;
+  padding: 0.35rem 0.75rem;
+  background: #282828;
+  color: #fff;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 0.25s ease;
+}
+.occupation-guides .all-contents .btn:hover {
+  background: #9e6d2d;
+}/*# sourceMappingURL=occupation-guides.css.map */
