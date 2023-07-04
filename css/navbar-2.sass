@@ -20,13 +20,51 @@ header
   top: 0
   left: 0
   right: 0
-  background-color: #ffffff
+  background-color: #ffffff !important
   padding: unset !important
   margin: unset !important
+  z-index: 1000
   @media screen and ( max-width: 1000px )
       background: #fff !important
       display: block
       padding: 1rem .25rem
+
+  .upper-content
+    display: block
+    @media screen and ( max-width: 1000px )
+      display: none
+
+    .content
+      display: flex
+      align-items: center
+      justify-content: end
+      gap: .85rem
+      text-align: end
+      padding: .15rem 1rem
+      background: $brandColorOne
+    
+
+    img
+        height: 18px
+        fill: #fff
+
+    a
+      display: flex
+      justify-content: end
+      align-items: center
+      font-size: .65rem
+      gap: .5rem
+      color: #fff
+      font-weight: 500
+      font-family: $fontOne
+
+    .email
+      letter-spacing: 1px
+
+    .mobile-number
+      letter-spacing: 2px
+
+      
 
 
   nav
@@ -47,13 +85,15 @@ header
     display: flex
     align-items: center
     justify-content: space-between
-    padding-top: .25rem
-    padding-bottom: .25rem
+    // padding-top: .25rem
+    // padding-bottom: .25rem
 
     .logo
         width: 100%
         width: 150px
         transform: translateY(-9px)
+        @media screen and ( max-width: 1000px )
+          transform: translateY(0)
 
         img
             width: 100%
@@ -63,7 +103,6 @@ header
       margin-right: 5px
       padding: .1rem
       display: none
-
       @media screen and ( max-width: 1000px )
         display: block !important
 
@@ -74,13 +113,11 @@ header
   display: flex
   align-items: center
   justify-content: space-between
-  // flex-grow: 1
-  margin-left: 2rem
   
   @media screen and ( max-width: 1000px )
         display: block !important
         position: fixed
-        top: 80px
+        top: 71px
         left: 0
         width: 100vw
         bottom: 0
@@ -91,10 +128,10 @@ header
         transition: 1s
 
   @media screen and ( max-width: 768px )
-        top: 78px
+        top: 70px
 
   @media screen and ( max-width: 575px )
-        top: 75px
+        top: 67px
 
 .all-link.show
   @media screen and ( max-width: 1000px )
@@ -111,12 +148,12 @@ header
     .menu-item
         transition-duration: 0.4s
         padding: unset !important
-        padding: 1.5rem .50rem !important
+        padding: 1rem .50rem !important
         &:last-child
           margin-right: .5rem
 
         @media screen and ( max-width: 1200px )
-          padding: 1.5rem .25rem !important
+          padding: 1rem .25rem !important
           &:last-child
             margin-right: .25rem
 
@@ -160,6 +197,11 @@ header
         background: #fff
         margin-top: 1rem
         // padding: 0 .25rem 
+
+    .mobile-number
+      display: none
+      @media screen and ( max-width: 1000px )
+        display: block
 
     li
         padding: unset !important
@@ -227,7 +269,7 @@ header
   position: absolute
   left: 0
   right: 0
-  top: 94px
+  top: 98px
   padding-top: 1.5rem
   padding-bottom: 1.5rem
   background-color: #ffffff
@@ -235,6 +277,9 @@ header
   z-index: 1000001
   transition-duration: 1s
   overflow: hidden
+  @media screen and ( max-width: 1200px )
+    top: 94px
+
   @media screen and ( max-width: 1000px )
     position: unset !important
     top: unset !important
