@@ -68,7 +68,6 @@ hr {
   margin-top: 1rem;
 }
 .ebook-library .e-books .single-ebook {
-  margin-bottom: 2rem;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 5px 5px 13px 0px rgba(181, 173, 173, 0.81);
@@ -77,7 +76,7 @@ hr {
   transform: scale(1.1);
 }
 .ebook-library .e-books .image-container {
-  height: 250px;
+  height: 200px;
   width: 100%;
 }
 .ebook-library .e-books .image-container .bg-img {
