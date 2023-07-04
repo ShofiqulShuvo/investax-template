@@ -72,8 +72,7 @@ hr {
   width: 100%;
   transition: all 5s ease;
   background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: top;
+  background-position-y: center;
   background-size: cover;
 }
 .latest-post .blog-item .blog-details {
@@ -243,7 +242,6 @@ hr {
   width: 100%;
   transition: all 5s ease;
   background-repeat: no-repeat;
-  background-position-x: center;
   background-position-y: center;
   background-size: cover;
 }
