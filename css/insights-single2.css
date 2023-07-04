@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+main {
+  padding: 0px !important;
+}
+
+.insight-section {
+  font-family: "Montserrat", sans-serif;
+}
+.insight-section hr {
+  margin: 1rem 0;
+  border-top: 1px solid #282828;
+}
+.insight-section .insight-banner {
+  margin: 0px !important;
+  width: 100%;
+  height: 380px;
+  margin-bottom: 0px !important;
+}
+@media screen and (max-width: 900px) {
+  .insight-section .insight-banner {
+    height: 300px;
+  }
+}
+.insight-section .insight-banner .banner-text {
+  margin: 0px !important;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(184, 139, 81, 0.4862745098));
+  padding: 1rem;
+}
+.insight-section .insight-banner .banner-text h1 {
+  color: #fff;
+}
+.insight-section #insight-parallax-banner {
+  background-image: url("../images/insight-thumb-03.jpg");
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.insight-section .copm-title {
+  color: #fff;
+  background: #282828;
+  padding: 0.2rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.insight-section .content {
+  padding-top: 3rem;
+}
+.insight-section .side-content .copm-title {
+  width: 100% !important;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 0.1rem;
+}
+.insight-section .side-content .content {
+  padding: 0.75rem 0.25rem;
+}
+.insight-section .side-content .all-tags {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+.insight-section .side-content .all-tags .tag {
+  margin-bottom: 0.15rem;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.7rem;
+  color: #b88c51;
+  border: 1px solid #b88c51;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.25s;
+  font-weight: 500;
+}
+.insight-section .side-content .all-tags .tag:hover {
+  opacity: 0.8;
+  color: #000;
+  border-color: #000;
+}
+.insight-section .side-content .post {
+  margin-bottom: 1.2rem;
+}
+.insight-section .side-content .title {
+  font-size: 0.7rem;
+  line-height: 1.5 !important;
+  margin-bottom: 0.25rem;
+  color: #282828;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  text-decoration: none;
+}
+.insight-section .side-content .post-status {
+  font-size: 0.7rem;
+  font-family: "Montserrat", sans-serif;
+}
+.insight-section .side-content .subscribe {
+  padding: 0 0.25rem 0.75rem;
+}
+.insight-section .side-content .subscribe p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.insight-section .side-content .subscribe .focus {
+  font-weight: 700;
+  color: #b88c51;
+}
+.insight-section .side-content .subscribe input {
+  padding: 0.35rem 0.5rem;
+  height: unset;
+  font-size: 0.85rem;
+}
+.insight-section .side-content .subscribe input:active {
+  border-color: #9e6d2d !important;
+}
+.insight-section .side-content .subscribe input:focus {
+  box-shadow: unset !important;
+  border-color: #9e6d2d !important;
+}
+.insight-section .side-content .subscribe .submit-btn {
+  background: #9e6d2d;
+  border: none;
+  border-radius: 20px;
+}
+.insight-section .side-content .subscribe .submit-btn:hover {
+  background: #282828;
+}
+.insight-section .main-content {
+  margin-bottom: 2rem;
+}
+.insight-section .main-content .insight-headline .title {
+  color: #000000;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1960784314);
+}
+.insight-section .main-content .insight-headline .credits {
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+}
+.insight-section .main-content .insight-headline .credits .author {
+  font-weight: 700;
+  color: rgba(7, 0, 18, 0.9607843137);
+}
+.insight-section .main-content .insight-headline .credits .author a {
+  font-weight: bolder;
+}
+.insight-section .main-content .insight-headline .credits .date {
+  font-weight: 700;
+}
+.insight-section .main-content .insight-headline .credits .tags a {
+  font-weight: 700;
+}
+.insight-section .main-content .details {
+  width: 100%;
+}
+.insight-section .main-content .details p {
+  font-size: 0.9rem;
+  line-height: 2;
+  color: #000000;
+  font-weight: 400;
+}
+.insight-section .main-content .details .image-container {
+  width: 100%;
+  margin: 1rem 0;
+}
+.insight-section .main-content .details .image-container .caption {
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: #555;
+  text-align: center;
+  margin: 0.5rem auto;
+}
+.insight-section .main-content .details img {
+  width: 100%;
+}
+.insight-section .main-content .details ul {
+  font-size: 0.85rem;
+  font-weight: 500;
+}/*# sourceMappingURL=insights-single2.css.map */

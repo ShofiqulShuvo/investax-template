@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap')
+
+
+$fontOne: 'Montserrat', sans-serif
+$fontTwo: 'Tilt Warp', cursive
+
+$brandColorOne: #9e6d2d
+$brandColorTwo: #b88c51
+$brandColorThree: #B17A4E
+$darkTextColor: #070012f5
+
+main
+  padding: 0px !important
+
+
+
+
+.insight-section
+  font-family: $fontOne
+
+  hr
+    margin: 1rem 0
+    border-top: 1px solid #282828
+
+  .insight-banner
+    margin: 0px !important
+    width: 100%
+    height: 380px
+    margin-bottom: 0px !important
+
+    @media screen and ( max-width: 900px )
+      height: 300px
+    
+    .banner-text
+      margin: 0px !important
+      width: 100%
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      background-image: linear-gradient(180deg, #00000000, #b88b517c)
+      padding: 1rem
+
+      h1
+        color: #fff
+
+      
+        
+  #insight-parallax-banner
+    background-image: url('../images/insight-thumb-03.jpg')
+    background-repeat: no-repeat
+    background-position-y: top
+    background-position-x: center
+    background-size: cover
+    background-attachment: fixed
+
+
+
+  .copm-title
+    color: #fff
+    background: #282828
+    padding: .20rem 1.5rem
+    font-size: 1rem 
+    font-weight: 500
+    font-family: $fontOne
+    letter-spacing: 1.5px
+    text-transform: uppercase
+    width: fit-content
+
+  .content
+    padding-top: 3rem 
+  .side-content
+
+    .copm-title
+      width: 100% !important
+      text-align: center
+      font-size: 1rem
+      letter-spacing: 1px
+      padding: .10rem
+
+    .content
+      padding: .75rem .25rem
+
+    .all-tags
+      margin-top: .5rem
+      display: flex
+      flex-wrap: wrap
+      gap: .25rem
+
+      .tag
+        margin-bottom: .15rem
+        padding: .10rem .5rem
+        font-size: .7rem
+        color: $brandColorTwo 
+        border: 1px solid $brandColorTwo
+        border-radius: 20px
+        text-decoration: none
+        transition: all .25s
+        font-weight: 500
+        &:hover
+          opacity: .8
+          color: #000
+          border-color: #000
+
+    .post
+      margin-bottom: 1.2rem
+
+    .title
+      font-size: .7rem
+      line-height: 1.5 !important
+      margin-bottom: .25rem
+      color: #282828
+      font-weight: 500
+      font-family: $fontOne
+      display: block
+      text-decoration: none
+
+    .post-status
+      font-size: .7rem
+      font-family: $fontOne
+
+
+    .subscribe
+      padding: 0 .25rem .75rem
+
+      p
+        margin-top: .5rem
+        font-size: .9rem
+        line-height: 1.4
+
+      .focus
+        font-weight: 700
+        color: $brandColorTwo
+
+      input
+        padding: .35rem .50rem
+        height: unset
+        font-size: .85rem
+        &:active
+          border-color: $brandColorOne !important
+        &:focus
+          box-shadow: unset !important
+          border-color: $brandColorOne !important
+
+
+      .submit-btn
+        background: $brandColorOne
+        border: none
+        border-radius: 20px
+        &:hover
+          background: #282828
+
+  .main-content
+    margin-bottom: 2rem
+
+    .insight-headline
+
+      .title
+        color: #000000
+        font-size: 1.6rem
+        font-weight: 400
+        line-height: 1.4
+        margin-bottom: 1rem
+        font-family: $fontOne
+        text-transform: uppercase
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1960784314)
+
+      .credits
+        font-size: .8rem
+        margin-bottom: 2rem
+
+        .author
+          font-weight: 700
+          color: $darkTextColor
+
+          a
+            font-weight: bolder
+
+        .date
+          font-weight: 700
+
+        .tags
+          a
+            font-weight: 700
+      
+    .details
+      width: 100%
+
+      p
+        font-size: .9rem
+        line-height: 2
+        color: #000000
+        font-weight: 400
+
+      .image-container
+        width: 100%
+        margin: 1rem 0
+
+        .caption
+          font-weight: 400
+          font-size: .7rem
+          color: #555
+          text-align: center
+          margin: .5rem auto
+
+      img
+        width: 100%
+
+      ul
+        font-size: .85rem
+        font-weight: 500
+
