@@ -59,6 +59,11 @@ hr {
 }
 @media screen and (max-width: 992px) {
   .latest-post .blog-item .blog-item-image {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .latest-post .blog-item .blog-item-image {
     height: 250px;
   }
 }
@@ -67,7 +72,8 @@ hr {
   width: 100%;
   transition: all 5s ease;
   background-repeat: no-repeat;
-  background-position-y: center;
+  background-position-x: center;
+  background-position-y: top;
   background-size: cover;
 }
 .latest-post .blog-item .blog-details {
@@ -234,6 +240,7 @@ hr {
   width: 100%;
   transition: all 5s ease;
   background-repeat: no-repeat;
+  background-position-x: center;
   background-position-y: center;
   background-size: cover;
 }
