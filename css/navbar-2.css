@@ -486,4 +486,191 @@ header {
 
 .mf-cursor:before {
   scale: 4;
+}
+
+footer {
+  background-color: #090e12;
+}
+footer div.footer-row {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 900px) {
+  footer div.footer-row {
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+}
+footer div.footer-row div {
+  width: calc(33% - 40px);
+}
+footer div.footer-row h4 {
+  font-family: "Tilt Warp", cursive;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #fff;
+}
+@media screen and (max-width: 900px) {
+  footer div.footer-row h4 {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 900px) {
+  footer div.footer-row {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  footer div.footer-row div {
+    width: 100%;
+  }
+  footer div.footer-row div img {
+    width: 250px !important;
+    margin-bottom: 30px !important;
+  }
+}
+@media screen and (max-width: 900px) and (max-width: 900px) {
+  footer div.footer-row div img {
+    width: 200px !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  footer div.footer-row div ul > li {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+}
+@media screen and (max-width: 900px) and (max-width: 900px) {
+  footer div.footer-row div ul > li {
+    font-size: 10px;
+  }
+}
+footer div.footer-row ul {
+  margin-left: -20px;
+}
+footer div.footer-row ul > li {
+  text-align: center;
+  list-style: none;
+  margin-left: 0px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8980392157);
+}
+footer div.footer-row ul > li a {
+  color: rgba(255, 255, 255, 0.8980392157);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+footer div.footer-row ul > li a:hover {
+  color: #f0f5d6;
+  text-decoration: none;
+}
+footer .fine-print {
+  width: 70% !important;
+  text-align: center;
+  margin: 0px auto !important;
+}
+@media screen and (max-width: 600px) {
+  footer .fine-print {
+    margin-top: 0px !important;
+    line-height: 10px;
+    width: 100% !important;
+  }
+}
+footer .fine-print span {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  display: block;
+  margin: 5px auto;
+  color: rgba(255, 255, 255, 0.8352941176);
+}
+@media screen and (max-width: 600px) {
+  footer .fine-print span {
+    font-size: 8px;
+  }
+}
+footer .fine-print .trad-custodian {
+  font-weight: 800 !important;
+  line-height: 30px;
+  margin-bottom: 20px;
+  font-size: 20px !important;
+}
+@media screen and (max-width: 600px) {
+  footer .fine-print .trad-custodian {
+    font-size: 10px !important;
+    line-height: 14px !important;
+    margin-bottom: 5px !important;
+  }
+}
+footer .input-group {
+  width: 100% !important;
+  display: flex;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1000px) {
+  footer .input-group {
+    width: 80% !important;
+    margin: 0px auto !important;
+  }
+}
+footer input.form-input {
+  width: calc(100% - 120px);
+  margin-right: 0;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  height: 40px !important;
+  margin-top: 0px !important;
+  border: 1px solid #9e6d2d;
+  background-color: #fff !important;
+}
+footer button.btn {
+  width: 120px;
+  height: 40px;
+  background-color: #b88c51;
+  border: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  font-size: 18px;
+  padding: 4px;
+}
+footer .fine-print-container {
+  justify-content: flex-end;
+}
+footer .powered-by {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+  color: #fff;
+}
+footer .powered-by img {
+  display: inline-block;
+  height: 12px;
+  width: auto;
+  margin-left: 10px;
+}
+@media screen and (max-width: 900px) {
+  footer .powered-by img {
+    width: 20px !important;
+    display: none;
+  }
+}
+@media screen and (orientation: portrait) {
+  footer .powered-by {
+    margin: 0px !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  footer .footer-row-1 {
+    margin-top: 100px !important;
+  }
 }/*# sourceMappingURL=navbar-2.css.map */

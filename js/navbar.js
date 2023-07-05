@@ -1,3 +1,18 @@
+const nav = document.querySelector('#navigation')
+window.addEventListener('scroll', ()=>{
+  if(window.scrollY >= 300)
+  {    
+    console.log("moved.down ", scrollY)
+    nav.style.backgroundColor = '#fff'
+  }
+  
+  if(window.scrollY < 300)
+  {
+    nav.style.backgroundColor = "rgb(255 255 255 / 40%)"
+  }
+})
+
+
 // show mega menu
 const navItem = document.querySelectorAll('.menu-item');
 
@@ -85,39 +100,7 @@ navItem.forEach(item => {
 
 })
 
-// const navItem = document.querySelectorAll('.menu-item');
 
-// navItem.forEach(item => {
-//   const menuBtn = item.querySelector('a');
-//   const subMenu = item.querySelector('.sub-menu');
-
-//   if (menuBtn && subMenu) {
-//     if (window.innerWidth < 1000) {
-//       menuBtn.addEventListener("click", () => {
-//         item.classList.toggle('show');
-//         navItem.forEach(menu => {
-//           if (menu !== item) {
-//             menu.classList.remove('show');
-//           }
-//         });
-//       });
-//     } else {
-//       menuBtn.addEventListener("mouseover", () => {
-//         item.classList.add('show');
-//         navItem.forEach(menu => {
-//           if (menu !== item) {
-//             menu.classList.remove('show');
-//           }
-//         });
-//       });
-
-//       item.addEventListener("mouseleave", () => {
-//         item.classList.remove('show');
-//       });
-//     }
-//   }
-// });
-// show mega menu end
 
 
 // show sub-menu of mega menu
