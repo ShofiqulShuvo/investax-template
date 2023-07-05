@@ -68,7 +68,7 @@ main {
   padding: 0.1rem;
 }
 .insight-section .side-content .content {
-  padding: 0.75rem 0.25rem;
+  padding: 0.75rem 0;
 }
 .insight-section .side-content .all-tags {
   margin-top: 0.5rem;
@@ -94,10 +94,9 @@ main {
 }
 .insight-section .side-content .post {
   margin-bottom: 1rem;
-  padding-right: unset !important;
 }
 .insight-section .side-content .title {
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   line-height: 1.2 !important;
   margin: 0.25rem 0;
   color: #282828;

@@ -68,7 +68,7 @@ header {
 .all-link {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-grow: 1;
   margin-left: 2rem;
 }
 @media screen and (max-width: 1000px) {
@@ -103,11 +103,17 @@ header {
   }
 }
 
+.nav-menu {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  gap: 0.5rem;
+}
 @media screen and (max-width: 1000px) {
   .nav-menu {
     flex-direction: column;
     align-items: start;
     background: #fff;
+    gap: unset;
   }
 }
 .nav-menu .menu-item {
