@@ -232,8 +232,12 @@ main {
   background-size: cover;
   transition-duration: 5s;
 }
+.insight-section .you-may-like a {
+  text-decoration: none;
+}
 .insight-section .you-may-like .post-title {
   padding: 0.5rem 0;
   font-size: 0.85rem;
   font-weight: 600;
+  color: #282828;
 }/*# sourceMappingURL=insights-single2.css.map */
