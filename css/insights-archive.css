@@ -287,6 +287,42 @@ hr {
   font-size: 0.85rem;
 }
 
+.you-may-like {
+  margin-bottom: 0.25rem;
+}
+.you-may-like hr {
+  margin: unset;
+}
+.you-may-like .content {
+  padding-top: 1.5rem;
+}
+.you-may-like .single-post {
+  margin-bottom: 1rem;
+}
+.you-may-like .single-post:hover .bg-image {
+  transform: scale(1.2);
+}
+.you-may-like .image-container {
+  width: 100%;
+  overflow: hidden;
+}
+.you-may-like .image-container img {
+  width: 100%;
+}
+.you-may-like .image-container .bg-image {
+  width: 100%;
+  height: 170px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition-duration: 5s;
+}
+.you-may-like .post-title {
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
 .insights-banner {
   margin: 0px !important;
   width: 100%;

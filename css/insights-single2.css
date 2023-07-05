@@ -58,11 +58,12 @@ main {
 }
 .insight-section .content {
   padding-top: 3rem;
+  margin-bottom: 2rem;
 }
 .insight-section .side-content .copm-title {
   width: 100% !important;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.85rem;
   letter-spacing: 1px;
   padding: 0.1rem;
 }
@@ -92,12 +93,12 @@ main {
   border-color: #000;
 }
 .insight-section .side-content .post {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 .insight-section .side-content .title {
-  font-size: 0.7rem;
-  line-height: 1.5 !important;
-  margin-bottom: 0.25rem;
+  font-size: 0.65rem;
+  line-height: 1.2 !important;
+  margin: 0.25rem 0;
   color: #282828;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
@@ -105,7 +106,7 @@ main {
   text-decoration: none;
 }
 .insight-section .side-content .post-status {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-family: "Montserrat", sans-serif;
 }
 .insight-section .side-content .subscribe {
@@ -113,17 +114,19 @@ main {
 }
 .insight-section .side-content .subscribe p {
   margin-top: 0.5rem;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   line-height: 1.4;
+  margin-bottom: 0.75rem;
 }
 .insight-section .side-content .subscribe .focus {
   font-weight: 700;
   color: #b88c51;
 }
 .insight-section .side-content .subscribe input {
-  padding: 0.35rem 0.5rem;
+  padding: 0.15rem 0.5rem;
   height: unset;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 .insight-section .side-content .subscribe input:active {
   border-color: #9e6d2d !important;
@@ -196,4 +199,39 @@ main {
 .insight-section .main-content .details ul {
   font-size: 0.85rem;
   font-weight: 500;
+}
+.insight-section .you-may-like {
+  margin-bottom: 0.25rem;
+}
+.insight-section .you-may-like hr {
+  margin: unset;
+}
+.insight-section .you-may-like .content {
+  padding-top: 1.5rem;
+}
+.insight-section .you-may-like .single-post {
+  margin-bottom: 1rem;
+}
+.insight-section .you-may-like .single-post:hover .bg-image {
+  transform: scale(1.2);
+}
+.insight-section .you-may-like .image-container {
+  width: 100%;
+  overflow: hidden;
+}
+.insight-section .you-may-like .image-container img {
+  width: 100%;
+}
+.insight-section .you-may-like .image-container .bg-image {
+  width: 100%;
+  height: 170px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition-duration: 5s;
+}
+.insight-section .you-may-like .post-title {
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  font-weight: 600;
 }/*# sourceMappingURL=insights-single2.css.map */
