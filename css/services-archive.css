@@ -149,26 +149,44 @@ main {
   font-size: 2.5rem;
   color: #b88c51;
   text-align: center;
-  margin-bottom: 2rem;
 }
-.service-section .faq-container .faq {
-  border: 1px solid rgba(33, 33, 33, 0.2078431373);
+.service-section .faq-container .sub-title {
+  margin: 0.75rem auto 2.5rem;
+  font-size: 0.85rem;
+  max-width: 700px;
+  text-align: center;
+  color: rgba(69, 68, 66, 0.5529411765);
 }
 .service-section .faq-container details {
-  border-bottom: 1px solid rgba(33, 33, 33, 0.2078431373);
-  padding: 0.25rem 1.5rem;
-  margin-bottom: 1rem;
+  padding-bottom: unset !important;
+  color: #fff;
 }
 .service-section .faq-container details:last-child {
   border-bottom: none;
 }
+.service-section .faq-container details[open] summary {
+  margin-bottom: 0;
+  color: #fff;
+}
+.service-section .faq-container details[open] summary::after {
+  background-image: url("../images/chevron-down-solid.svg");
+}
 .service-section .faq-container summary {
   font-weight: 600;
   font-size: 0.9rem;
+  padding: 0.75rem 1rem;
   background-color: #b88c51;
+  color: #fff;
+}
+.service-section .faq-container summary::after {
+  background-image: url("../images/chevron-down-solid.svg");
 }
 .service-section .faq-container p {
   background-color: #282828;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
 }
 .service-section .button-flex-box {
   margin-top: 0px;

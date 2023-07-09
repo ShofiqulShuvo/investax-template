@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+main {
+  padding: 0px !important;
+}
+@media screen and (orientation: portrait) {
+  main {
+    margin-top: 60px;
+  }
+}
+
+hr {
+  margin-bottom: 50px;
+  border-top: 1px solid #282828;
+}
+
+.contact-us {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0;
+}
+.contact-us .map {
+  margin-top: 4rem;
+}
+.contact-us .comp-detail {
+  color: #282828;
+}
+.contact-us .consultation-form {
+  padding: 1.8rem;
+  background: #eeedf2;
+  border-radius: 10px;
+  color: #282828 !important;
+}
+.contact-us .consultation-form p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+.contact-us .consultation-form .required {
+  color: #dd0000;
+}
+.contact-us .consultation-form label {
+  font-size: 0.75rem !important;
+}
+.contact-us .consultation-form input {
+  height: unset !important;
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.75rem;
+  background-color: #fff;
+  border-color: #ccc;
+  font-size: 0.7rem;
+}
+.contact-us .consultation-form select {
+  height: unset;
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.75rem;
+  background-color: #fff;
+  border-color: #ccc;
+  font-size: 0.75rem;
+}
+.contact-us .consultation-form textarea {
+  height: unset;
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.75rem;
+  background-color: #fff;
+  border-color: #ccc;
+  font-size: 0.75rem;
+}
+.contact-us .consultation-form button {
+  margin-bottom: unset;
+  padding: 0.35rem 0.75rem;
+  background-color: #282828;
+  border: none;
+  font-size: 0.85rem;
+  transition: all 0.35s;
+}
+.contact-us .consultation-form button:hover {
+  background-color: #9e6d2d;
+}/*# sourceMappingURL=contact.css.map */
