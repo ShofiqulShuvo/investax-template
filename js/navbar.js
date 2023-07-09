@@ -44,17 +44,17 @@ navItem.forEach(item => {
 
         if(menuBtn && subMenu) {
             menuBtn.addEventListener( "mouseover", () => {
-                item.classList.add('show')
+                item.classList.add('show-sub-menu')
     
                 navItem.forEach(menu => {
                     if(menu !== item) {
-                        menu.classList.remove('show')
+                        menu.classList.remove('show-sub-menu')
                     }
                 })
             })
     
             item.addEventListener( "mouseleave", () => {
-                item.classList.remove('show')
+                item.classList.remove('show-sub-menu')
     
             })
         }

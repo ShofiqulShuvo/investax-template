@@ -12,11 +12,245 @@ $darkTextColor: #070012f5
 
 main
   padding: 0px !important
+  
+  @media screen and ( orientation: portrait )
+    margin-top: 0px !important
+
+.service-section
+  padding: 0px !important
+
+  h1
+    font-family: $fontTwo
+    color: #fff
+    font-size: 50px
+    line-height: 55px
+    font-weight: 800
+    text-transform: uppercase
+    text-align: left
+    text-shadow: 2px 2px 10px #00000032
+
+    @media screen and ( max-width: 900px )
+      font-size: 20px !important
+      
+    @media screen and ( orientation: portrait )
+      font-size: 20px !important
+
+
+  .empty-divider
+    height: 100px !important
+    width: 100%
+
+    @media screen and ( max-width: 900px )
+      height: 0px !important
+
+
+  .text-section-container
+    padding: 20px 10px !important
+    margin-top: 50px !important
+
+    @media screen and ( orientation: portrait )
+      margin-top: 0px !important
+      padding-top: 0px !important
+
+    p
+      font-size: 14px
+      font-weight: 400
+      letter-spacing: 1px
+
+      @media screen and ( orientation: portrait )
+        font-weight: 500
+
+    .service-page-header
+      font-size: 70px !important
+      line-height: 75px
+      width: 100%
+      font-family: $fontTwo
+      color: #b88c51
+      font-weight: 400
+      text-transform: uppercase
+      text-align: left
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1960784314)
+
+      .dark
+        color: #333
+        font-family: $fontOne
+
+      @media screen and ( orientation: portrait )
+        width: 100%
+        font-size: 50px !important
+        line-height: 55px !important
+        margin-top: 10px
+
+
+    h2
+      font-size: 40px !important
+      line-height: 40px
+      width: 400px
+      margin-bottom: 30px !important
+
+      @media screen and ( orientation: portrait )
+        width: 100%
+        margin-top: 30px
+
+    
+    h3
+      width: 100%
+      text-align: left
+      font-size: 20px
+      color: $brandColorTwo
+
+      .dark
+        color: $darkTextColor
+    
+        
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
+      object-position: center
+
+    hr
+      margin-bottom: 30px !important
+      border-top: 1px solid $brandColorOne
+
+
+  .page-header-container
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-end
+    @media screen and ( max-width: 992px )
+      justify-content: flex-start
+      align-items: start
+      margin-bottom: 1rem
+
+    h2
+      font-family: $fontTwo
+      color: $brandColorTwo
+      font-weight: 400
+      text-transform: uppercase
+      text-align: left
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1960784314)
+
+      .dark
+        font-family: $fontOne
+
+    
+      
+
+  .button-flex-box
+      margin-top: 0px
+      width: 100%
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+
+      .primary 
+        background-color: $brandColorOne
+        border: none
+        border-radius: 2px
+        color: #ffffff
+        font-size: 14px
+        letter-spacing: 2px
+        font-weight: 800
+        text-transform: uppercase
+        min-height: 40px
+        max-width: 300px
+        transition-duration: 0.4s
+        &:hover
+          background-color: #61431c
+          color: #fff
+
+  .serv-1-mid
+    // height: 500px !important
+    width: 100%
+    // object-fit: cover
+    // object-position: center
+    margin: 20px 0px !important
+
+
+  .bullet-heading
+    display: inline-block
+    font-size: 1rem
+    font-weight: 600 !important
+    text-transform: uppercase
+    font-family: $fontTwo
+    color: $brandColorOne
+    
+    @media screen and ( max-width: 768px )
+      font-size: .9rem
+      
+
+    .dark
+      color: $darkTextColor
+      font-family: $fontOne
+      margin-left: 20px
+
+  .related-items
+    margin-top: 3rem
+
+    .copm-title
+      color: #fff
+      background: #282828
+      padding: .20rem 1.5rem
+      font-size: 1rem 
+      font-weight: 500
+      font-family: $fontOne
+      letter-spacing: 1.5px
+      text-transform: uppercase
+      width: fit-content
+
+    hr
+        margin-top: 0
+        margin-bottom: 3rem
+        border-top: 1px solid #282828
+    
+
+    .single-item
+        overflow: hidden
+        border-radius: 10px
+        box-shadow: 5px 5px 13px 0px rgba(181,173,173,0.81)
+
+        &:hover
+            .bg-img
+                transform: scale(1.1)
+
+    .image-container
+        height: 200px
+        width: 100%
+
+        .bg-img
+            height: 100%
+            width: 100%
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            transition: all 5s ease
+
+
+    .details
+        padding: .75rem 1rem 2rem
+
+    .title
+        font-size: .9rem
+        font-weight: 600
+
+    .download-btn
+        display: block !important
+        margin: .75rem auto 0
+        padding: .35rem .75rem
+        background: #282828
+        color: #fff
+        font-size: .8rem
+        text-decoration: none
+        text-align: center
+        border-radius: 20px
+        transition: all .25s ease
+
+        &:hover
+            background: $brandColorOne
 
 
 
 
-.services-archive
 
-    .main-content
-        min-height: 100vh

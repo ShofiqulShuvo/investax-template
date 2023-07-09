@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css">
   <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
 
-  <link rel="stylesheet" href="css/style-generic.css" />
+  <link rel="stylesheet" href="css/theme-styles.css" />
   <link rel="stylesheet" href="css/about.css" />
 
 
@@ -18,113 +18,58 @@
 </head>
 
 <body data-cursor="-sm -exclusion">
-  <header>
-      <section id="navigation" class="menu-slide-out">
-        <div class="container">
-          <nav data-cursor="-sm -exclusion -inverse">
-            <div class="logo-container">
-              <a href="index.html">
-                <img src="images/logo_primary.png" alt="" class="logo logo-hidden" id="logo-img">
-              </a>
-      
-            </div>
-      
-      
-            <ul class="nav-menu" data-cursor="-sm -exclusion">
-              <li class="dropdown" data-cursor="-sm -exclusion"><a href="#" data-cursor="-sm -exclusion">About</a> <span
-                  class="underline"></span>
-                <div class="dropdown-content" data-cursor="-sm -exclusion">
-                  <a href="about.html">Meet The Team</a>
-                  <a href="why-us.html">Why Choose Us</a>
-      
-                </div>
-              </li>
-              <li class="dropdown" data-cursor="-sm -exclusion"><a href="services.html">Services</a> <span
-                  class="underline"></span>
-                <div class="dropdown-content" data-cursor="-sm -exclusion">
-                  <a href="services-1.html">Accounting &amp; Taxes</a>
-                  <a href="services-1.html">Advisory Services</a>
-                  <a href="services-1.html">Wealth &amp; Finance</a>
-                </div>
-              </li>
-              <li><a href="#" data-cursor="-sm -exclusion">Resources</a> <span class="underline"></span></li>
-              <li><a href="insights-archive.html" data-cursor="-sm -exclusion">Insights</a> <span class="underline"></span>
-              </li>
-            </ul>
-      
-      
-      
-      
-            <ul class="nav-contacts" data-cursor="-sm -exclusion">
-              <li><a href="#"> <img src="images/icons8-phone-50.png" alt="" class="nav-icons"> 02 8651 8000</a></li>
-              <li><a href="#" role="button" class="primary">Complimentary Consultation</a></li>
-            </ul>
-          </nav>
-        </div>
-      
-      </section>
-      
-      <section id="mobile-navigation" class="mobile-nav">
-        <div class="container">
-          <nav>
-            <div class="mobile-logo-container">
-              <img src="images/logo_primary.png" alt="" class="mobile-logo">
-            </div>
-      
-      
-      
-      
-      
-      
-      
-            <ul class="nav-contacts" data-cursor="-sm -exclusion">
-              <li onclick="showMobileMenu()"><a href="#"><img src="images/Menu.png" alt="" class="nav-icons hamburger-menu" "></a></li>       
-              </ul>
-            </nav>
-      
-      
-      
-            <div class=" fullscreen-menu" id="mobile-fs-menu">
-                  <a class="cross" href="#"><img src="images/cross.png" alt="" onclick="hideMobileMenu()"></a>
-                  <img src="images/logo_black.png" alt="">
-                  <ul class="nav-menu">
-                    <li><a href="#">About</a> <span class="underline"></span>
-                      <div class="dropdown-content">
-                        <a href="#">Meet The Team</a>
-                        <a href="#">Why Choose Us</a>
-                      </div>
-                    </li>
-                    <li><a href="services.html">Services</a> <span class="underline"></span>
-                      <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                      </div>
-                    </li>
-                    <li><a href="#">Resources</a> <span class="underline"></span></li>
-                    <li><a href="#">Insights</a> <span class="underline"></span></li>
-                  </ul>
-        </div>
-        </div>
-      
-      </section>
-  </header>
+  
 
 
 
   <main>
 
-    <section class="about-banner-section">
-      <div class="about-banner" id="about-parallax-banner" data-cursor="-sm -exclusion">
+    <div class="banner" style="background-image: url(./images/serv-1-bg.jpg);" id="acc-parallax-banner">
+
+      <div class="container">
+
         <div class="banner-text">
-          <div class="container" data-cursor="-sm -exclusion">
-            <h1>About Us</h1>
-            <h3>Exceptional Accountants and Industry Experts driving your success</h3>
+            <span>MEET THE </span> <span class="strong">TEAM</span>
+        </div>  
+
+        <nav aria-label="breadcrumb" class="breadcrumb">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>MEET THE TEAM</li>
+          </ul>
+        </nav> 
+
+        <div class="link">
+
+          <div class="icon">
+            <a href="#">
+              <img src="./images/facebook.svg" alt="">
+            </a>
           </div>
-    
+
+          <div class="icon">
+            <a href="#">
+              <img src="./images/youtube.svg" alt="">
+            </a>
+          </div>
+
+          <div class="icon">
+            <a href="#">
+              <img src="./images/instagram.svg" alt="">
+            </a>
+          </div>
+
+          <div class="icon">
+            <a href="#">
+              <img src="./images/print-solid.svg" alt="">
+            </a>
+          </div>
+
         </div>
+
       </div>
-    </section>
+    </div>
 
     <section class="about-us-section">
       <div class="container" data-cursor="-sm -exclusion">
@@ -357,74 +302,7 @@
   </main>
 
 
-  <footer data-theme="dark">
-    <div class="container-fluid">
-      <div class="fine-print-container">
 
-        <div class="fine-print" data-cursor="-sm -exclusion" data-cursor="-sm -exclusion">
-          <span class="trad-custodian">Investax acknowledges the Traditional Custodians of the land on which we live and
-            work. We recognise their
-            strength and pay our respects to Elders past, present and emerging.</span>
-        </div>
-
-      </div>
-
-      <div class="footer-row hide footer-row-1" data-theme="dark" data-cursor="-sm -exclusion">
-
-
-        <div>
-
-          <h4>Our Social Media</h4>
-          <img src="images/socials.png" alt="">
-
-        </div>
-
-        <div>
-          <h4>Our Office</h4>
-          <ul>
-            <li>Suite 102, Level 1</li>
-            <li>102/276 Pitt St</li>
-            <li>Small business tax</li>
-            <li>Sydney NSW 2000</li>
-          </ul>
-        </div>
-
-
-        <div>
-
-          <h4>SignUp for our Newsletter</h4>
-          <div class="input-group">
-            <input type="text" class="form-input" placeholder="Your email address here">
-            <button type="submit" class="btn">Submit</button>
-          </div>
-
-
-        </div>
-      </div>
-
-
-
-
-
-
-      <div class="footer-row fine-print-container hide" >
-
-
-        <div class="fine-print" data-cursor="-sm -exclusion">
-
-          <span>Copyright © 2023 Investax Pty Ltd | Privacy Policy | Disclaimer</span>
-          <span>Liability limited by a scheme approved under Professional Standards Legislation.</span>
-          <span class="powered-by">
-            Built with meticulous care by the folks at <img src="images/revinr-logo.png" alt=""> revinr &reg;
-          </span>
-        </div>
-      </div>
-
-
-
-    </div>
-
-  </footer>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
