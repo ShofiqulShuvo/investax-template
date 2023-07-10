@@ -232,6 +232,25 @@ a[role=button].third:hover {
   height: 25px;
 }
 
+.banner.single {
+  height: 500px;
+}
+@media screen and (max-width: 900px) {
+  .banner.single {
+    height: 300px;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner.single {
+    height: 200px;
+    margin-bottom: 10px;
+  }
+}
+.banner.single .container {
+  padding: 4rem 0.75rem 1.5rem;
+}
+
 .dropdown {
   position: relative;
 }
@@ -449,7 +468,7 @@ header .container-fluid {
   .all-link {
     display: block !important;
     position: fixed;
-    top: 80px;
+    top: 73.68px;
     left: 0;
     width: 100vw;
     bottom: 0;
@@ -462,12 +481,12 @@ header .container-fluid {
 }
 @media screen and (max-width: 768px) {
   .all-link {
-    top: 78px;
+    top: 73px;
   }
 }
 @media screen and (max-width: 575px) {
   .all-link {
-    top: 75px;
+    top: 68px;
   }
 }
 

@@ -21,6 +21,33 @@ hr {
 .contact-us .map {
   margin-top: 4rem;
 }
+.contact-us .address .image {
+  width: 100%;
+}
+.contact-us .address .image img {
+  width: 100%;
+}
+.contact-us .address .title {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+.contact-us .address .details {
+  margin: 2rem 0;
+}
+.contact-us .address .item {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+}
+.contact-us .address .item .icon {
+  height: 30px;
+  width: 30px;
+}
 .contact-us .comp-detail {
   color: #282828;
 }
