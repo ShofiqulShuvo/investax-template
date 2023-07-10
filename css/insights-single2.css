@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
-main {
-  padding: 0px !important;
-}
-
 .insight-section {
   font-family: "Montserrat", sans-serif;
 }
@@ -26,6 +22,11 @@ main {
 .insight-section .content {
   padding-top: 3rem;
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 500px) {
+  .insight-section .content {
+    padding-top: 0;
+  }
 }
 .insight-section .side-content .copm-title {
   width: 100% !important;
@@ -113,6 +114,11 @@ main {
 }
 .insight-section .main-content {
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 500px) {
+  .insight-section .main-content {
+    margin-bottom: 0.25rem;
+  }
 }
 .insight-section .main-content .insight-headline .title {
   color: #000000;
