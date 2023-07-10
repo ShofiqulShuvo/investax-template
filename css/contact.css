@@ -1,14 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
-main {
-  padding: 0px !important;
-}
-@media screen and (orientation: portrait) {
-  main {
-    margin-top: 60px;
-  }
-}
-
 hr {
   margin-bottom: 50px;
   border-top: 1px solid #282828;
@@ -28,25 +19,30 @@ hr {
   width: 100%;
 }
 .contact-us .address .title {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 600;
   font-size: 1.2rem;
   text-transform: uppercase;
+}
+.contact-us .address .sub-title {
+  color: #969696;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
 }
 .contact-us .address .details {
   margin: 2rem 0;
 }
 .contact-us .address .item {
   margin-bottom: 1rem;
-  font-size: 0.9rem;
   font-weight: 500;
   display: flex;
-  align-items: start;
-  gap: 0.5rem;
+  gap: 1rem;
+  align-items: baseline;
+  font-size: 0.8rem;
 }
 .contact-us .address .item .icon {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
 }
 .contact-us .comp-detail {
   color: #282828;
