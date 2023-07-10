@@ -41,10 +41,6 @@ p {
   }
 }
 
-main {
-  padding: 0px !important;
-}
-
 * {
   font-family: "Montserrat", sans-serif;
 }
@@ -167,8 +163,7 @@ a[role=button].third:hover {
   padding: 4rem 0.75rem 2.5rem;
 }
 .banner .banner-text {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   width: 100%;
   text-align: start;
   font-size: 4rem !important;
@@ -599,7 +594,7 @@ header .container-fluid {
   border-radius: 2px;
   color: #ffffff;
   font-size: 10px !important;
-  padding: 0.75rem 1rem !important;
+  padding: 0.5rem !important;
   font-weight: 700;
   text-transform: uppercase;
   max-width: 300px;
