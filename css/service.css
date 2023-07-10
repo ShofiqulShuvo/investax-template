@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
-main {
-  padding: 0px !important;
-  margin-top: -170px;
-}
-@media screen and (orientation: portrait) {
-  main {
-    margin-top: 0px !important;
-  }
-}
-
 .service-section, .why-us-section {
   padding: 0px !important;
 }
