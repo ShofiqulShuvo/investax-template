@@ -1,14 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
-main {
-  padding: 0px !important;
-}
-@media screen and (orientation: portrait) {
-  main {
-    margin-top: 60px;
-  }
-}
-
 hr {
   margin-bottom: 50px;
   border-top: 1px solid #282828;

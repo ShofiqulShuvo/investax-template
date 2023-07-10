@@ -41,6 +41,10 @@ p {
   }
 }
 
+main {
+  padding: 0px !important;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }
@@ -163,7 +167,8 @@ a[role=button].third:hover {
   padding: 4rem 0.75rem 2.5rem;
 }
 .banner .banner-text {
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   width: 100%;
   text-align: start;
   font-size: 4rem !important;
@@ -352,12 +357,6 @@ a.mobile-cta-btn {
 .cross-visible {
   opacity: 1;
   left: 0px;
-}
-
-@media screen and (orientation: landscape) {
-  .banner-text {
-    padding-top: 150px !important;
-  }
 }
 
 .button-flex-box {
