@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap')
+
+
+$fontOne: 'Montserrat', sans-serif
+$fontTwo: 'Tilt Warp', cursive
+
+$brandColorOne: #9e6d2d
+$brandColorTwo: #b88c51
+$brandColorThree: #B17A4E
+$darkTextColor: #070012f5
+
+
+
+
+
+.e-checklist
+
+  .main-content
+    padding-top: 1rem
+    a
+        text-decoration: underline
+        &:hover
+            color: #ffebcd
+
+  .comp-detail
+    margin: 2rem 0 3rem
+
+    h2
+        color: #374956
+        text-transform: uppercase
+        margin-bottom: 1rem
+        text-shadow: unset
+
+    .mb-1
+        margin-bottom: 1rem
+
+
+    strong
+        color: #282828 !important
+
+        a
+            color: inherit
+
+
+    .box
+        margin-top: 2rem
+        color: #fff
+
+        strong
+            a
+                color: #fff
+
+        .title
+            padding: 1.5rem
+            background: $brandColorThree
+            text-align: center
+
+            h3
+                color: #fff
+                margin-bottom: .5rem
+                font-weight: 500
+                font-size: 1.2rem
+            h4
+                font-size: 1rem
+                color: #dedede
+                margin-bottom: .5rem
+                font-weight: 400
+
+        .content
+            background: #282828
+            padding: 1rem 1.5rem
+            font-weight: 400
+
+
+            p
+                color: #fff
+                margin-bottom: .5rem
+
+            h4
+                color: #fff
+                margin-bottom: 1rem
+
+            a
+                color: #fff
+
+    .check-list
+      margin-top: 3.5rem
+
+      .title
+        font-family: $fontTwo
+        font-size: 2.2rem
+        color: #514f4c
+        text-align: center
+
+      .sub-title
+        margin: .5rem auto 1.5rem
+        font-size: 1rem
+        max-width: 800px
+        font-weight: 500
+        text-align: center
+        color: #4544428d
+        
+
+      .list
+
+        
+
+        .heading
+            h4
+                color: #fff
+                margin-bottom: .75rem
+            p
+                color: #fff
+                background: unset
+                padding: unset
+
+        .content
+            padding: .75rem 1.5rem
+            background: #282828
+            color: #fff
+
+            li
+                color: #fff
+
+            a
+                font-size: .8rem
+                color: #fff
+                &:hover
+                    color: #ffebcd
+                    
+      details
+        padding-bottom: unset !important
+        color: #fff
+
+        &:last-child
+          border-bottom: none
+
+      details[open]
+
+        summary
+          margin-bottom: 0
+          color: #fff
+
+          &::after
+            background-image: url("../images/chevron-down-solid.svg")
+
+      summary
+        font-weight: 600
+        font-size: .9rem
+        padding: .75rem 1rem
+        background-color: #b88c51
+        color: #fff
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+
+        &::after
+          background-image: url("../images/chevron-down-solid.svg")
+
+      p
+        background-color: #282828
+        color: #fff
+        padding: .75rem 1rem
+        margin-bottom: 0
+        font-size: .8rem
+
+
+
+    margin-top: 1rem
+
+    .single-ebook
+        overflow: hidden
+        border-radius: 10px
+        box-shadow: 5px 5px 13px 0px rgba(181,173,173,0.81)
+
+        &:hover
+            .bg-img
+                transform: scale(1.1)
+
+    .image-container
+        height: 200px
+        width: 100%
+
+        .bg-img
+            height: 100%
+            width: 100%
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            transition: all 5s ease
+
+
+    .details
+        padding: .75rem 1rem 2rem
+
+    .title
+        font-size: .9rem
+        font-weight: 600
+
+    .download-btn
+        display: block !important
+        margin: .75rem auto 0
+        padding: .35rem .75rem
+        background: #282828
+        color: #fff
+        font-size: .8rem
+        text-decoration: none
+        text-align: center
+        border-radius: 20px
+        transition: all .25s ease
+
+        &:hover
+            background: $brandColorOne
