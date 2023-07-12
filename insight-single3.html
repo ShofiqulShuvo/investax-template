@@ -285,32 +285,7 @@
             <div class="sidemenu-holder">
               <div class="sidemenu  sticky">
                 <h2>Table of Contents</h2>
-                <ul>
-                  <li>
-                    <a href="#bye-rent">Buy Vs. Rent: Factors to Consider</a>
-                    
-                  </li>
-              
-                  <li>
-                    <a href="#Advantages-of-Renting">Advantages of Renting: Flexibility and Financial Freedom</a>
-                    
-                  </li>
-              
-                  <li>
-                    <a href="#Advantages-of-Buying">Advantages of Buying a Property</a>
-                    
-                  </li>
-              
-                  <li>
-                    <a href="#Government-Incentives">Government Incentives</a>
-                    
-                  </li>
-              
-                  <li>
-                    <a href="#Get-Your-Capital">Get Your Capital</a>
-                    
-                  </li>
-
+                <ul id="table-of-content">
                 </ul>
               </div>
             </div>
@@ -318,7 +293,7 @@
         
           </div>
         
-          <div class="col-md-8">
+          <div class="col-md-8" id="insight-article">
 
           
 
@@ -467,6 +442,12 @@
             <p>While homeownership has its merits, renting provides a flexible and financially advantageous alternative that suits the needs and preferences of many individuals. By carefully considering the advantages and aligning them with personal circumstances, renting can offer a satisfying and rewarding living arrangement.</p>
 
 
+
+            <h2 id="Advantages-of-Buying" class="wp-block-heading">&nbsp;Ghorar Dim</h2>
+
+
+
+            <p>One of the primary benefits is the potential for long-term financial stability and wealth accumulation. Unlike renting, where monthly payments contribute solely to a landlord’s income, homeowners build equity over time. Equity represents the portion of the home’s value that the owner actually owns, and it can increase as property values appreciate or as mortgage payments reduce the principal amount owed. This equity can be tapped into for various purposes, such as home improvements, education expenses, or even as a source of retirement income.</p>
 
             <h2 id="Advantages-of-Buying" class="wp-block-heading">&nbsp;Advantages of Buying a Property –</h2>
 
@@ -728,7 +709,52 @@
 <script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/index.js"></script>
-<script src="js/generic-nav.js"></script>
+
+
+<script>
+
+  
+  const insightArticle = document.getElementById('insight-article')
+
+  const tableOfContent = document.getElementById('table-of-content')
+
+  if(insightArticle && tableOfContent) {
+
+    const contentTitle = insightArticle.querySelectorAll('h2') 
+
+    contentTitle.forEach(title => {
+
+      const titleText = title.innerText;
+
+      // making id and href text
+      const forIdAndHref = titleText.split(" ").join("-");
+
+      // adding id to content title
+      title.setAttribute('id', forIdAndHref)
+
+      // create element and appending
+     const li = document.createElement("li")
+     const a = document.createElement("a")
+
+    //  adding href to a tag
+     a.setAttribute("href", `#${forIdAndHref}`);
+
+     a.innerText = titleText;
+     li.append(a)
+
+    //  adding content in table of content
+     tableOfContent.insertAdjacentElement("beforeend", li)
+      
+    })
+
+  }
+
+
+
+
+</script>
+
+
 </body>
 
 
