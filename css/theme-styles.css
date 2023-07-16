@@ -210,7 +210,7 @@ a[role=button].third:hover {
   text-shadow: 3px 3px 5px #111;
 }
 .banner .breadcrumb li:last-child {
-  color: #9e6d2d;
+  color: #fff;
 }
 @media screen and (max-width: 500px) {
   .banner .breadcrumb li:last-child {
@@ -226,7 +226,7 @@ a[role=button].third:hover {
   }
 }
 .banner .breadcrumb a:hover {
-  color: #9e6d2d;
+  color: #fff;
 }
 .banner .breadcrumb a::after {
   color: #fff !important;
@@ -253,18 +253,18 @@ a[role=button].third:hover {
   height: 2rem;
   width: 2rem;
   text-align: center;
-  background: #fff;
+  background: #282828;
   padding: 0.2rem;
   overflow: hidden;
   border-radius: 50%;
-  animation: transformEffect 1s linear infinite;
+  animation: transformEffect 1.5s linear infinite;
 }
 @keyframes transformEffect {
   0% {
-    transform: translateX(0) scale(1);
+    transform: translateY(-0.5rem);
   }
   100% {
-    transform: translateY(1rem) scale(1.1);
+    transform: translateY(0.5rem);
   }
 }
 .banner .scroll-down img {
@@ -785,6 +785,8 @@ header .container-fluid {
   padding-right: 1rem;
   font-size: 0.7rem;
   font-weight: 500;
+  border-bottom: 3px solid #fff;
+  border-radius: 0;
 }
 @media screen and (max-width: 1000px) {
   .sub-menu .sub-menu-item .menu-btn {
@@ -795,10 +797,10 @@ header .container-fluid {
   }
 }
 .sub-menu .sub-menu-item .menu-btn:hover {
-  background: rgba(166, 214, 248, 0.8078431373);
+  border-color: #9e6d2d;
 }
 .sub-menu .sub-menu-item .menu-btn.active {
-  background: rgba(166, 214, 248, 0.8078431373);
+  border-color: #9e6d2d;
 }
 .sub-menu .sub-menu-item .menu-btn .icon {
   height: 15px;

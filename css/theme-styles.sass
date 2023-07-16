@@ -194,11 +194,12 @@ a[role=button].third:hover
       z-index: 2
       text-shadow: 3px 3px 5px #111
       
+      
         
 
       li
         &:last-child
-          color: #9e6d2d
+          color: #fff
           @media screen and ( max-width: 500px )
             font-size: 10px
 
@@ -207,7 +208,7 @@ a[role=button].third:hover
         @media screen and ( max-width: 500px )
           font-size: 10px
         &:hover
-          color: #9e6d2d
+          color: #fff
         &::after
           color: #fff !important
         
@@ -232,16 +233,16 @@ a[role=button].third:hover
       height: 2rem
       width: 2rem
       text-align: center
-      background: #fff
+      background: #282828
       padding: .2rem
       overflow: hidden
       border-radius: 50%
-      animation: transformEffect 1s linear infinite
+      animation: transformEffect 1.5s linear infinite
       @keyframes transformEffect
         0%
-          transform: translateX(0) scale(1)
+          transform: translateY(-.5rem)  
         100%
-          transform: translateY(1rem) scale(1.1)
+          transform: translateY(.5rem)
 
       img
         height: 60%
@@ -731,6 +732,8 @@ header
       padding-right: 1rem
       font-size: .7rem
       font-weight: 500
+      border-bottom: 3px solid #fff
+      border-radius: 0
       @media screen and ( max-width: 1000px )
         white-space: nowrap
         width: 100% !important
@@ -739,11 +742,11 @@ header
 
 
       &:hover
-        background: #a6d6f8ce
+        border-color: $brandColorOne
 
 
       &.active
-        background: #a6d6f8ce
+        border-color: $brandColorOne
 
       .icon
         height: 15px
