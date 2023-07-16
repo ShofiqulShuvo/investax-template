@@ -89,7 +89,7 @@ window.addEventListener('scroll', ()=>{
   
   if(window.scrollY < 300)
   {
-    nav.style.backgroundColor = "rgb(255 255 255 / 40%)";
+    nav.style.backgroundColor = "rgb(255 255 255 / 0%)";
     nav.classList.add('menu-white')
 
   }

@@ -529,16 +529,6 @@ header .container-fluid {
   }
 }
 
-#navigation.menu-white .menu-item a {
-  color: #fff;
-}
-#navigation.menu-white .sub-menu a {
-  color: #282828;
-}
-#navigation.menu-white .nav-contacts a {
-  color: #fff;
-}
-
 .nav-menu {
   margin-left: auto !important;
   margin-right: auto !important;
@@ -601,7 +591,7 @@ header .container-fluid {
 }
 
 .nav-contacts {
-  gap: 0.25rem;
+  gap: 0.75rem;
 }
 @media screen and (max-width: 1000px) {
   .nav-contacts {
@@ -615,10 +605,17 @@ header .container-fluid {
   padding: unset !important;
   margin-left: 1rem;
   letter-spacing: 2px;
+  font-weight: 700;
 }
 .nav-contacts li:first-child {
   margin-left: unset !important;
   margin-right: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-contacts li:first-child a {
+  font-weight: 600 !important;
 }
 @media screen and (max-width: 1200px) {
   .nav-contacts li {

@@ -492,18 +492,18 @@ header
   @media screen and ( max-width: 1000px )
     transform: translateX(0)
 
-#navigation.menu-white
-    .menu-item
-      a
-        color: #fff
+// #navigation.menu-white
+//     .menu-item
+//       a
+//         color: #fff
 
-    .sub-menu
-      a
-        color: #282828
+//     .sub-menu
+//       a
+//         color: #282828
 
-    .nav-contacts
-      a
-        color: #fff
+//     .nav-contacts
+//       a
+//         color: #fff
 
 
 .nav-menu 
@@ -564,7 +564,7 @@ header
             transform: translateX(0%)
 
 .nav-contacts 
-    gap: .25rem
+    gap: .75rem
     @media screen and ( max-width: 1000px )
         flex-direction: column
         align-items: start
@@ -576,10 +576,18 @@ header
         padding: unset !important
         margin-left: 1rem
         letter-spacing: 2px
+        font-weight: 700
+
 
         &:first-child
           margin-left: unset !important
           margin-right: .25rem
+          display: flex
+          justify-content: center
+          align-items: center
+          
+          a
+            font-weight: 600 !important
 
         @media screen and ( max-width: 1200px )
           margin-left: .25rem
