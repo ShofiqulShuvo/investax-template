@@ -493,6 +493,7 @@ header .container-fluid {
 .all-link {
   display: flex;
   align-items: center;
+  color: #282828 !important;
   flex-grow: 1;
   margin-left: 2rem;
 }
@@ -530,6 +531,9 @@ header .container-fluid {
 
 #navigation.menu-white .menu-item a {
   color: #fff;
+}
+#navigation.menu-white .sub-menu a {
+  color: #282828;
 }
 #navigation.menu-white .nav-contacts a {
   color: #fff;
