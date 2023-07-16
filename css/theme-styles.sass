@@ -147,7 +147,7 @@ a[role=button].third:hover
       left: 0
       right: 0
       bottom: 0
-      background: rgba(0, 0, 0 , .5)
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(68, 42, 9, 0.4862745098))
 
     .container
       height: 100% !important
@@ -228,11 +228,13 @@ a[role=button].third:hover
           height: 1.2rem
 
     .scroll-down
+      display: block
       cursor: pointer
       height: 2rem
       width: 2rem
+      text-align: center
       background: #fff
-      padding: .25rem
+      padding: .2rem
       overflow: hidden
       border-radius: 50%
       animation: transformEffect 1s linear infinite
@@ -243,8 +245,7 @@ a[role=button].third:hover
           transform: translateY(1rem) scale(1.1)
 
       img
-        height: 100%
-        width: 100%
+        height: 60%
 
 .banner.single
   height: 500px
@@ -490,6 +491,15 @@ header
   @media screen and ( max-width: 1000px )
     transform: translateX(0)
 
+#navigation.menu-white
+    .menu-item
+      a
+        color: #fff
+
+    .nav-contacts
+      a
+        color: #fff
+
 
 .nav-menu 
     margin-left: auto !important
@@ -549,6 +559,7 @@ header
             transform: translateX(0%)
 
 .nav-contacts 
+    gap: .25rem
     @media screen and ( max-width: 1000px )
         flex-direction: column
         align-items: start
@@ -584,7 +595,8 @@ header
         margin-right: 2px
     
 
-    .primary
+    .complimentary-nav
+        border-radius: 25px !important
         background-color: $brandColorOne
         border: none
         border-radius: 2px
@@ -595,6 +607,9 @@ header
         text-transform: uppercase
         max-width: 300px
         transition-duration: 0.4s
+        &:hover
+          background-color: #61431c
+        
 
     a  
         font-size: 14px

@@ -65,7 +65,6 @@ function showFirstBlogRow(){
 
 function menuSlideIn () {
   document.getElementById("navigation").classList.add('menu-slide-in')
-  // document.getElementById("navigation").classList.remove('menu-slide-out')    
   
 }
 
@@ -84,13 +83,15 @@ const nav = document.querySelector('#navigation')
 window.addEventListener('scroll', ()=>{
   if(window.scrollY >= 300)
   {    
-    console.log("moved.down ", scrollY)
-    nav.style.backgroundColor = '#fff'
+    nav.style.backgroundColor = '#fff';
+    nav.classList.remove('menu-white')
   }
   
   if(window.scrollY < 300)
   {
-    nav.style.backgroundColor = "rgb(255 255 255 / 40%)"
+    nav.style.backgroundColor = "rgb(255 255 255 / 40%)";
+    nav.classList.add('menu-white')
+
   }
 })
 

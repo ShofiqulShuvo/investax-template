@@ -31,7 +31,7 @@ hr {
 .blog-item {
   overflow: hidden;
   border-radius: 7px;
-  background-color: #b88c51;
+  box-shadow: 2px 2px 15px 1px rgba(158, 109, 45, 0.3);
   padding: 0px !important;
   margin-bottom: 50px;
 }
@@ -83,7 +83,7 @@ hr {
   font-size: 1.2rem !important;
   margin-bottom: unset;
   font-weight: 600;
-  color: #fff;
+  color: #282828;
   text-decoration: none;
   line-height: 1.3 !important;
 }
@@ -96,7 +96,7 @@ hr {
   margin-top: 0.5rem;
   font-size: 0.85rem;
   font-weight: 500;
-  color: #fff;
+  color: #282828;
 }
 @media screen and (max-width: 768px) {
   .latest-post .blog-item .blog-author-date {
@@ -118,7 +118,7 @@ hr {
   margin-top: 0.25rem;
   margin-bottom: unset;
   font-size: 0.85rem;
-  color: #fff;
+  color: #282828;
 }
 @media screen and (max-width: 992px) {
   .latest-post .blog-item .blog-item-text {
@@ -253,7 +253,7 @@ hr {
   font-size: 1rem !important;
   margin-bottom: unset;
   font-weight: 600;
-  color: #fff;
+  color: #282828;
   text-decoration: none;
   line-height: 1 !important;
 }
@@ -261,7 +261,7 @@ hr {
   margin-top: 0.5rem;
   font-size: 0.7rem;
   font-weight: 500;
-  color: #fff;
+  color: #282828;
 }
 .main-content .blog-item .blog-tags {
   margin-top: 0.5rem;
