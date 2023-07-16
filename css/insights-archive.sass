@@ -26,6 +26,7 @@ hr
   letter-spacing: 1.5px
   text-transform: uppercase
   width: fit-content
+  transform: skew(-15deg, 0deg)
 
 
 .post-container
@@ -40,10 +41,20 @@ hr
 .blog-item
   overflow: hidden
   border-radius: 7px
-  // background-color: $brandColorTwo
   box-shadow: 2px 2px 15px 1px rgba(158, 109, 45, .3)
   padding: 0px !important
-  margin-bottom: 50px
+
+  // .blog-item-image
+  //   transform: skew(-15deg, 0deg)
+
+  .blog-tags
+    transform: skew(-15deg, 0deg)
+    
+    a
+      // border-radius: 6px
+      border-radius: unset
+
+  
 
 .latest-post
   
@@ -107,7 +118,6 @@ hr
       
       a
         font-size: .85rem
-        border-radius: 6px
         padding: 3px 12px
         background-color: #282828
         color: #E2E2E2
@@ -137,6 +147,7 @@ hr
 
   .all-tags
     margin-top: .5rem
+    margin-bottom: 1rem
     display: flex
     flex-wrap: wrap
     gap: .25rem
@@ -259,7 +270,6 @@ hr
       
       a
         font-size: .75rem
-        border-radius: 6px
         padding: 3px 12px
         background-color: #282828
         color: #E2E2E2
@@ -286,6 +296,8 @@ hr
     .image-container
       width: 100%
       overflow: hidden
+      transform: skew(-15deg, 0deg)
+
 
       img
         width: 100%

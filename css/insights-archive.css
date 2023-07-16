@@ -16,6 +16,7 @@ hr {
   text-transform: uppercase;
   width: -moz-fit-content;
   width: fit-content;
+  transform: skew(-15deg, 0deg);
 }
 
 .post-container {
@@ -33,7 +34,12 @@ hr {
   border-radius: 7px;
   box-shadow: 2px 2px 15px 1px rgba(158, 109, 45, 0.3);
   padding: 0px !important;
-  margin-bottom: 50px;
+}
+.blog-item .blog-tags {
+  transform: skew(-15deg, 0deg);
+}
+.blog-item .blog-tags a {
+  border-radius: unset;
 }
 
 .latest-post .blog-item {
@@ -108,7 +114,6 @@ hr {
 }
 .latest-post .blog-item .blog-tags a {
   font-size: 0.85rem;
-  border-radius: 6px;
   padding: 3px 12px;
   background-color: #282828;
   color: #E2E2E2;
@@ -138,6 +143,7 @@ hr {
 }
 .side-content .all-tags {
   margin-top: 0.5rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
@@ -268,7 +274,6 @@ hr {
 }
 .main-content .blog-item .blog-tags a {
   font-size: 0.75rem;
-  border-radius: 6px;
   padding: 3px 12px;
   background-color: #282828;
   color: #E2E2E2;
@@ -296,6 +301,7 @@ hr {
 .you-may-like .image-container {
   width: 100%;
   overflow: hidden;
+  transform: skew(-15deg, 0deg);
 }
 .you-may-like .image-container img {
   width: 100%;

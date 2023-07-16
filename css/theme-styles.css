@@ -143,14 +143,7 @@ a[role=button].third:hover {
 }
 @media screen and (max-width: 900px) {
   .banner {
-    height: 450px;
-    margin-bottom: 10px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .banner {
-    height: 300px;
-    margin-bottom: 10px;
+    margin-bottom: unset;
   }
 }
 .banner::after {
@@ -168,7 +161,49 @@ a[role=button].third:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem 0 1.5rem;
+  padding: 2rem 0 1rem;
+}
+.banner .banner-cta {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 10;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .banner .banner-cta {
+    margin-bottom: auto;
+    width: unset;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    gap: 0.25rem;
+  }
+}
+.banner .banner-cta div {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.banner .banner-cta h3 {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-shadow: 2px 2px 15px #000 !important;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border-left: 10px solid #9e6d2d;
+  margin: 0px auto;
+}
+@media screen and (max-width: 800px) {
+  .banner .banner-cta h3 {
+    border-left: unset;
+  }
 }
 .banner .banner-text {
   margin-top: auto;
@@ -188,7 +223,7 @@ a[role=button].third:hover {
 }
 @media screen and (max-width: 768px) {
   .banner .banner-text {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-size: 30px !important;
   }
 }
@@ -247,13 +282,28 @@ a[role=button].third:hover {
 .banner .link .icon img {
   height: 1.2rem;
 }
+.banner .scroll-down-holder {
+  margin-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+@media screen and (max-width: 768px) {
+  .banner .scroll-down-holder {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
 .banner .scroll-down {
   display: block;
   cursor: pointer;
   height: 2rem;
   width: 2rem;
   text-align: center;
-  background: #282828;
+  background: #9e6d2e;
   padding: 0.2rem;
   overflow: hidden;
   border-radius: 50%;
@@ -288,6 +338,63 @@ a[role=button].third:hover {
 }
 .banner.single .container {
   padding: 4rem 0.75rem 1.5rem;
+}
+
+.essential-links {
+  margin-bottom: 3rem;
+}
+.essential-links .breadcrumb {
+  align-self: flex-start;
+  justify-self: flex-end;
+  color: #fff;
+  margin-top: 0.75rem;
+  z-index: 2;
+}
+.essential-links .breadcrumb ul {
+  background: #282828;
+  color: #fff;
+  margin: 0;
+  transform: skew(-15deg, 0deg);
+}
+.essential-links li {
+  font-size: 0.9rem !important;
+  font-weight: 500;
+  padding: 8px 15px;
+}
+@media screen and (max-width: 500px) {
+  .essential-links li:last-child {
+    font-size: 10px;
+  }
+}
+.essential-links a {
+  color: white;
+}
+@media screen and (max-width: 500px) {
+  .essential-links a {
+    font-size: 10px;
+  }
+}
+.essential-links a:hover {
+  color: #fff;
+}
+.essential-links a::after {
+  color: #fff !important;
+}
+.essential-links .link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 2;
+}
+.essential-links .link .icon {
+  padding: 0.15rem;
+  border-radius: 50%;
+}
+.essential-links .link .icon:hover {
+  transform: scale(1.1);
+}
+.essential-links .link .icon img {
+  height: 1.2rem;
 }
 
 .dropdown {
