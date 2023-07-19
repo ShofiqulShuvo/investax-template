@@ -118,10 +118,13 @@ main {
   transition: all 0.25s ease;
 }
 .knowledge-based-single .knowledge-based-headline .download-btn:last-child {
-  margin-left: 0.5rem;
+  margin-left: 0.75rem;
 }
 .knowledge-based-single .knowledge-based-headline .download-btn span {
   display: inline-block;
+}
+.knowledge-based-single .knowledge-based-headline .download-btn span img {
+  transform: translateY(-2px);
 }
 .knowledge-based-single .knowledge-based-headline .download-btn:hover {
   background: #9e6d2d;
@@ -184,9 +187,40 @@ main {
 .knowledge-based-single .you-may-like a {
   text-decoration: none;
 }
+.knowledge-based-single .you-may-like .single-link:hover .post-title {
+  color: #9e6d2d;
+}
 .knowledge-based-single .you-may-like .post-title {
   padding: 0.5rem 0;
   font-size: 0.85rem;
   font-weight: 600;
   color: #282828;
+}
+.knowledge-based-single .you-may-like .download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0.5rem auto 0.75rem;
+  padding: 0.3rem 1rem;
+  background: #282828;
+  color: #fff;
+  font-size: 0.75rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 0.25s ease;
+}
+.knowledge-based-single .you-may-like .download-btn span {
+  display: inline-block;
+}
+.knowledge-based-single .you-may-like .download-btn span img {
+  transform: translateY(-2px);
+}
+.knowledge-based-single .you-may-like .download-btn:hover {
+  background: #9e6d2d;
+}
+.knowledge-based-single .you-may-like .download-btn .download-icon {
+  height: 0.7rem;
+  margin: unset !important;
 }/*# sourceMappingURL=knowledge-based-single.css.map */
