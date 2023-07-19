@@ -7,7 +7,7 @@ main {
 .insight-single-fixed .insight-section {
   padding: 0px !important;
 }
-.insight-single-fixed img {
+.insight-single-fixed .insight-section img {
   width: 100%;
   border-radius: 4px;
   margin: 30px auto !important;
@@ -44,6 +44,7 @@ main {
   font-weight: 700;
   font-size: 24px;
   color: #333;
+  scroll-margin-top: 5.2rem;
   font-weight: 800 !important;
   font-size: 24px;
 }
@@ -55,32 +56,6 @@ main {
   .insight-single-fixed .empty-divider {
     height: 0px !important;
   }
-}
-.insight-single-fixed .insight-banner {
-  margin: 0px !important;
-  width: 100%;
-  height: 500px;
-  margin-bottom: 0px !important;
-}
-@media screen and (max-width: 900px) {
-  .insight-single-fixed .insight-banner {
-    height: 300px;
-  }
-}
-.insight-single-fixed .banner-text {
-  margin: 0px !important;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(184, 139, 81, 0.4862745098));
-}
-.insight-single-fixed #insight-parallax-banner {
-  background-image: url("../images/insight-thumb-03.jpg");
-  background-size: cover;
-  background-attachment: fixed;
 }
 .insight-single-fixed hr {
   margin-bottom: 50px;

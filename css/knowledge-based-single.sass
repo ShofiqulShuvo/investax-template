@@ -13,9 +13,9 @@ $darkTextColor: #070012f5
 main
   padding: 0px !important
 
-.insight-single-fixed
+.knowledge-based-single
 
-    .insight-section
+    .knowledge-based-section
         padding: 0px !important
 
         img
@@ -117,8 +117,45 @@ main
         position: sticky
         top: 180px
 
-    .insight-headline
-        margin-top: 80px !important
+    .knowledge-based-headline
+
+        .title
+            font-weight: 600
+            font-size: 1.3rem
+
+        hr
+            margin-bottom: unset
+
+        .download-btn
+            display: inline-block
+            margin: 1rem  0 1.5rem
+            padding: .30rem 1rem
+            background: #282828
+            color: #fff
+            font-size: .75rem
+            text-decoration: none
+            text-align: center
+            border-radius: 20px
+            transition: all .25s ease
+            &:last-child
+                margin-left: .5rem
+            
+            span
+                display: inline-block
+
+            &:hover
+                background: $brandColorOne
+
+            .download-icon
+                height: .7rem
+                margin: unset !important
+
+        .credits
+            margin-top: .5rem
+            a
+                color: $brandColorOne
+                font-weight: 600
+                font-size: .85rem
 
 
     .you-may-like

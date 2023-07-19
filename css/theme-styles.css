@@ -337,7 +337,16 @@ a[role=button].third:hover {
   }
 }
 .banner.single .container {
-  padding: 4rem 0.75rem 1.5rem;
+  padding: 1rem 0;
+}
+.banner.single .container .links-container {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner.single .container .links-container img {
+  margin: unset;
 }
 
 .essential-links {
