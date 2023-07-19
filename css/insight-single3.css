@@ -101,6 +101,13 @@ main {
 .insight-single-fixed .insight-headline {
   margin-top: 80px !important;
 }
+.insight-single-fixed .insight-headline .title {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+.insight-single-fixed .insight-headline hr {
+  margin-bottom: unset;
+}
 .insight-single-fixed .you-may-like {
   margin-bottom: 0.25rem;
 }
