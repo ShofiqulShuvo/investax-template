@@ -303,6 +303,7 @@
 .section-hero p {
   font-weight: 500;
   text-align: justify;
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 1000px) {
   .section-hero p {
