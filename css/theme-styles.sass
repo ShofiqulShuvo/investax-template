@@ -128,6 +128,7 @@ a[role=button].third:hover
     height: 100vh
     margin-bottom: 50px !important
     background-image: url('../images/acc-banner.jpg')
+    background-repeat: no-repeat
     background-size: cover
     background-position: center
     background-attachment: fixed
@@ -332,6 +333,10 @@ a[role=button].third:hover
     .links-container-full
       display: flex
       justify-content: space-between
+      @media screen and ( max-width: 500px )
+        flex-direction: column
+        gap: .5rem
+        
 
 
     .breadcrumb

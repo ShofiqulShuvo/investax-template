@@ -137,6 +137,7 @@ a[role=button].third:hover {
   height: 100vh;
   margin-bottom: 50px !important;
   background-image: url("../images/acc-banner.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -352,6 +353,12 @@ a[role=button].third:hover {
 .essential-links .links-container-full {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+  .essential-links .links-container-full {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 .essential-links .breadcrumb {
   align-self: flex-start;
