@@ -56,6 +56,11 @@ $darkTextColor: #070012f5
       @media screen and ( orientation: portrait )
         font-weight: 500
 
+    .right-align
+      margin-left: auto
+      width: 500px
+
+    
     .service-page-header
       font-size: 70px !important
       line-height: 75px
@@ -66,6 +71,7 @@ $darkTextColor: #070012f5
       text-transform: uppercase
       text-align: left
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1960784314)
+
 
       .dark
         color: #333
@@ -78,10 +84,11 @@ $darkTextColor: #070012f5
         margin-top: 10px
 
 
+
     h2
       font-size: 40px !important
       line-height: 40px
-      width: 400px
+      width: 500px
       margin-bottom: 30px !important
 
       @media screen and ( orientation: portrait )
@@ -113,7 +120,7 @@ $darkTextColor: #070012f5
   .page-header-container
     display: flex
     flex-direction: column
-    justify-content: center
+    justify-content: start
     align-items: flex-end
     @media screen and ( max-width: 992px )
       justify-content: flex-start
@@ -298,6 +305,28 @@ $darkTextColor: #070012f5
 
         &:hover
             background: $brandColorOne
+
+
+#service-details-accordion
+    padding: 1rem 0
+    font-family: $fontOne
+
+    details
+      margin-bottom: 2rem
+
+      summary
+        font-weight: 600
+        font-size: 1.1rem
+        color: $darkTextColor !important
+
+        span
+          margin-right: 1.5rem
+
+      p
+        color: $darkTextColor !important
+        font-weight: 400
+        font-size: .9rem
+        font-family: $fontOne
 
 
 

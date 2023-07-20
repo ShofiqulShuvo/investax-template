@@ -52,6 +52,10 @@
     font-weight: 500;
   }
 }
+.service-section .text-section-container .right-align {
+  margin-left: auto;
+  width: 500px;
+}
 .service-section .text-section-container .service-page-header {
   font-size: 70px !important;
   line-height: 75px;
@@ -78,7 +82,7 @@
 .service-section .text-section-container h2 {
   font-size: 40px !important;
   line-height: 40px;
-  width: 400px;
+  width: 500px;
   margin-bottom: 30px !important;
 }
 @media screen and (orientation: portrait) {
@@ -111,7 +115,7 @@
 .service-section .page-header-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: flex-end;
 }
 @media screen and (max-width: 992px) {
@@ -286,4 +290,26 @@
 }
 .service-section .related-items .download-btn:hover {
   background: #9e6d2d;
+}
+
+#service-details-accordion {
+  padding: 1rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+#service-details-accordion details {
+  margin-bottom: 2rem;
+}
+#service-details-accordion details summary {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: rgba(7, 0, 18, 0.9607843137) !important;
+}
+#service-details-accordion details summary span {
+  margin-right: 1.5rem;
+}
+#service-details-accordion details p {
+  color: rgba(7, 0, 18, 0.9607843137) !important;
+  font-weight: 400;
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
 }/*# sourceMappingURL=services-archive.css.map */

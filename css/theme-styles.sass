@@ -149,20 +149,18 @@ a[role=button].third:hover
       bottom: 0
       background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(68, 42, 9, 0.4862745098))
 
-    .container
+    .container-fluid
       height: 100% !important
-      width: 100% !important
       display: flex
       flex-direction: column
       justify-content: center
-      padding: 2rem 0 1rem
+      padding: 2rem 0 0
 
     .banner-cta 
-      // position: relative
       height: 80px
       display: flex
       flex-direction: row
-      justify-content: space-between
+      justify-content: space-evenly
       z-index: 10
       width: 100%
       @media screen and ( max-width: 768px )
@@ -172,19 +170,15 @@ a[role=button].third:hover
         justify-content: center
         text-align: start
         gap: .25rem
-        // border-left: 10px solid #9e6d2d
 
         
 
       div
-        flex: 1
-        display: flex
-        flex-direction: row
-        justify-content: center
-        align-items: center
+        min-width: 200px
         text-align: center
-
+        
       h3
+        width: fit-content
         color: #fff 
         font-size: 14px
         letter-spacing: 2px
@@ -334,6 +328,10 @@ a[role=button].third:hover
         // display: flex
         // justify-content: space-between
         // align-items: center
+
+    .links-container-full
+      display: flex
+      justify-content: space-between
 
 
     .breadcrumb
