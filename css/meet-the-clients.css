@@ -72,25 +72,27 @@ main {
 }
 .our-clients .all-clients .single-client .clients-details .short-desc {
   font-weight: 500;
+}
+.our-clients .all-clients .single-client .clients-details .short-desc p {
   font-size: 0.85rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
   text-align: justify;
+  color: #333;
 }
 .our-clients .all-clients .single-client .clients-details .client-link {
-  padding: 0.25rem 1.25rem;
-  background: #9e6d2d;
-  color: #fff;
-  font-size: 0.85rem;
-  font-family: "Tilt Warp", cursive;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 20px;
+  width: 1.8rem;
+  heigth: 1.8rem;
+  padding: 0.25rem;
   transition: all 0.35s;
+  cursor: pointer;
 }
 .our-clients .all-clients .single-client .clients-details .client-link:hover {
-  background: #7e5014;
+  transform: scale(1.1);
+}
+.our-clients .all-clients .single-client .clients-details .client-link img {
+  width: 100% !important;
+  height: 100% !important;
 }
 .our-clients .all-clients .view-more {
   margin-left: auto;
