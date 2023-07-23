@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap')
+
+
+$fontOne: 'Montserrat', sans-serif
+$fontTwo: 'Tilt Warp', cursive
+
+$brandColorOne: #9e6d2d
+$brandColorTwo: #b88c51
+$brandColorThree: #B17A4E
+$darkTextColor: #070012f5
+
+main
+  padding: 0px !important
+
+
+
+.our-clients
+    font-family: $fontOne
+
+
+    .comp-title
+        margin-top: 2rem
+        color: #fff
+        background: #282828
+        padding: .20rem 1.5rem
+        font-size: 1rem 
+        font-weight: 500
+        font-family: $fontOne
+        letter-spacing: 1.5px
+        text-transform: uppercase
+        width: fit-content
+
+    hr
+        border-top: 2px solid #282828 
+        margin-top: unset 
+
+
+    .all-clients
+        padding: 2rem 0
+
+        .single-client
+            margin-bottom: 3rem
+            &:hover
+                .bg-img
+                    transition: 10s
+                    transform: scale(1.2)
+                
+
+            .client-image
+                overflow: hidden
+                &:nth-child(odd)
+                    padding-right: unset !important
+                &:nth-child(even)
+                    padding-left: unset !important
+
+                .bg-img
+                    height: 100%
+                    background-position: center
+                    background-size: cover
+                    background-repeat: no-repeat
+                    overflow: hidden
+
+            .clients-details
+                padding: 3rem 2rem
+                display: flex
+                flex-direction: column
+                justify-content: center
+                gap: .75rem
+                &:nth-child(odd)
+                    padding-right: 3rem !important
+                &:nth-child(even)
+                    padding-left: 3rem !important
+
+                .client-title
+                    font-weight: 700
+                    font-size: 1.5rem
+                    text-align: left
+                    text-transform: capitalize
+                    color: #333333
+
+                .short-desc
+                    font-weight: 500
+                    font-size: .85rem
+                    margin-bottom: 1rem
+                    text-align: justify
+
+                .client-link
+                    padding: .25rem 1.25rem
+                    background: $brandColorOne
+                    color: #fff
+                    font-size: .85rem
+                    font-family: $fontTwo
+                    letter-spacing: 2px
+                    text-transform: uppercase
+                    width: fit-content
+                    border-radius: 20px
+                    transition: all .35s
+                    &:hover
+                        background: #7e5014
+
+        .view-more
+            margin-left: auto
+            margin-right: auto
+            padding: .5rem 2rem
+            background: $brandColorOne
+            border: none
+            width: fit-content
+            letter-spacing: 2px
+            font-weight: 600
+            transition: all .3s
+            &:hover
+                background: #714c1c

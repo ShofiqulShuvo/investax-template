@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+main {
+  padding: 0px !important;
+}
+
+.our-clients {
+  font-family: "Montserrat", sans-serif;
+}
+.our-clients .comp-title {
+  margin-top: 2rem;
+  color: #fff;
+  background: #282828;
+  padding: 0.2rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.our-clients hr {
+  border-top: 2px solid #282828;
+  margin-top: unset;
+}
+.our-clients .all-clients {
+  padding: 2rem 0;
+}
+.our-clients .all-clients .single-client {
+  margin-bottom: 3rem;
+}
+.our-clients .all-clients .single-client:hover .bg-img {
+  transition: 10s;
+  transform: scale(1.2);
+}
+.our-clients .all-clients .single-client .client-image {
+  overflow: hidden;
+}
+.our-clients .all-clients .single-client .client-image:nth-child(odd) {
+  padding-right: unset !important;
+}
+.our-clients .all-clients .single-client .client-image:nth-child(even) {
+  padding-left: unset !important;
+}
+.our-clients .all-clients .single-client .client-image .bg-img {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.our-clients .all-clients .single-client .clients-details {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.our-clients .all-clients .single-client .clients-details:nth-child(odd) {
+  padding-right: 3rem !important;
+}
+.our-clients .all-clients .single-client .clients-details:nth-child(even) {
+  padding-left: 3rem !important;
+}
+.our-clients .all-clients .single-client .clients-details .client-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-align: left;
+  text-transform: capitalize;
+  color: #333333;
+}
+.our-clients .all-clients .single-client .clients-details .short-desc {
+  font-weight: 500;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+.our-clients .all-clients .single-client .clients-details .client-link {
+  padding: 0.25rem 1.25rem;
+  background: #9e6d2d;
+  color: #fff;
+  font-size: 0.85rem;
+  font-family: "Tilt Warp", cursive;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 20px;
+  transition: all 0.35s;
+}
+.our-clients .all-clients .single-client .clients-details .client-link:hover {
+  background: #7e5014;
+}
+.our-clients .all-clients .view-more {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem 2rem;
+  background: #9e6d2d;
+  border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.our-clients .all-clients .view-more:hover {
+  background: #714c1c;
+}/*# sourceMappingURL=meet-the-clients.css.map */
