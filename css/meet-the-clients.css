@@ -29,10 +29,7 @@ main {
 }
 .our-clients .all-clients .single-client {
   margin-bottom: 3.5rem;
-}
-.our-clients .all-clients .single-client:hover .bg-img {
-  transition: 10s;
-  transform: scale(1.2);
+  line-height: 1.4;
 }
 .our-clients .all-clients .single-client .client-image {
   overflow: hidden;
