@@ -27,9 +27,6 @@ main {
 .our-clients .all-clients {
   padding: 2rem 0;
 }
-.our-clients .all-clients .single-client {
-  margin-bottom: 3rem;
-}
 .our-clients .all-clients .single-client:hover .bg-img {
   transition: 10s;
   transform: scale(1.2);
@@ -95,6 +92,7 @@ main {
   height: 100% !important;
 }
 .our-clients .all-clients .view-more {
+  margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
   padding: 0.5rem 2rem;
