@@ -27,18 +27,15 @@ main {
 .our-clients .all-clients {
   padding: 2rem 0;
 }
+.our-clients .all-clients .single-client {
+  margin-bottom: 3.5rem;
+}
 .our-clients .all-clients .single-client:hover .bg-img {
   transition: 10s;
   transform: scale(1.2);
 }
 .our-clients .all-clients .single-client .client-image {
   overflow: hidden;
-}
-.our-clients .all-clients .single-client .client-image:nth-child(odd) {
-  padding-right: unset !important;
-}
-.our-clients .all-clients .single-client .client-image:nth-child(even) {
-  padding-left: unset !important;
 }
 .our-clients .all-clients .single-client .client-image .bg-img {
   height: 100%;
@@ -47,18 +44,13 @@ main {
   background-repeat: no-repeat;
   overflow: hidden;
 }
+.our-clients .all-clients .single-client .client-image .img {
+  width: 100%;
+}
 .our-clients .all-clients .single-client .clients-details {
-  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.75rem;
-}
-.our-clients .all-clients .single-client .clients-details:nth-child(odd) {
-  padding-right: 3rem !important;
-}
-.our-clients .all-clients .single-client .clients-details:nth-child(even) {
-  padding-left: 3rem !important;
+  gap: 0.5rem;
 }
 .our-clients .all-clients .single-client .clients-details .client-title {
   font-weight: 700;

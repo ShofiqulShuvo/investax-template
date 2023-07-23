@@ -40,6 +40,7 @@ main
         padding: 2rem 0
 
         .single-client
+            margin-bottom: 3.5rem
             &:hover
                 .bg-img
                     transition: 10s
@@ -48,10 +49,6 @@ main
 
             .client-image
                 overflow: hidden
-                &:nth-child(odd)
-                    padding-right: unset !important
-                &:nth-child(even)
-                    padding-left: unset !important
 
                 .bg-img
                     height: 100%
@@ -60,16 +57,13 @@ main
                     background-repeat: no-repeat
                     overflow: hidden
 
+                .img
+                    width: 100%
+
             .clients-details
-                padding: 3rem 2rem
                 display: flex
                 flex-direction: column
-                justify-content: center
-                gap: .75rem
-                &:nth-child(odd)
-                    padding-right: 3rem !important
-                &:nth-child(even)
-                    padding-left: 3rem !important
+                gap: .5rem
 
                 .client-title
                     font-weight: 700
