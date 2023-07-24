@@ -297,12 +297,14 @@
   font-family: "Montserrat", sans-serif;
 }
 #service-details-accordion details {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 #service-details-accordion details summary {
   font-weight: 600;
   font-size: 1.1rem;
   color: rgba(7, 0, 18, 0.9607843137) !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 #service-details-accordion details summary span {
   margin-right: 1.5rem;
