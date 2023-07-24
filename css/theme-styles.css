@@ -544,6 +544,30 @@ a.mobile-cta-btn {
   }
 }
 
+#investax-accordion {
+  padding: 1rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+#investax-accordion details {
+  margin-bottom: 1.5rem;
+}
+#investax-accordion details summary {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: rgba(7, 0, 18, 0.9607843137) !important;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+#investax-accordion details summary span {
+  margin-right: 1.5rem;
+}
+#investax-accordion details p {
+  color: rgba(7, 0, 18, 0.9607843137) !important;
+  font-weight: 400;
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+}
+
 /******************* Header ********************/
 header {
   padding: unset !important;
