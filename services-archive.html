@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css" />
 
-  <link rel="stylesheet" href="css/theme-styles.css" />
   <link rel="stylesheet" href="css/services-archive.css" />
+  <link rel="stylesheet" href="css/theme-styles.css" />
 
   <title>Investax | Services Archive</title>
 </head>
@@ -413,7 +413,7 @@
             </h2>
           </div>
 
-          <div id="investax-accordion">
+          <div class="investax-accordion">
         
                     <details open>
                       <summary> <span>1. Expertise in Property Tax Accounting:</span> </summary>
@@ -456,7 +456,7 @@
             </h2>
           </div>
 
-          <div id="investax-accordion">
+          <div class="investax-accordion">
         
                     <details open>
                       <summary> <span>1. Tailored Property Investment Strategies: </span> </summary>
@@ -851,11 +851,11 @@
 <script>
 
       // service details accordion
-    const serviceDetailsAccordion = document.querySelectorAll('#investax-accordion')
+    const investaxAccordion = document.querySelectorAll('.investax-accordion')
 
-    if(serviceDetailsAccordion) {
+    if(investaxAccordion) {
 
-      serviceDetailsAccordion.forEach(accordion => {
+      investaxAccordion.forEach(accordion => {
         
                 const details = accordion.querySelectorAll('details')
         

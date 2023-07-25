@@ -148,7 +148,8 @@ a[role=button].third:hover
       left: 0
       right: 0
       bottom: 0
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(68, 42, 9, 0.4862745098))
+      // background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(68, 42, 9, 0.4862745098))
+      background: rgba(0, 0, 0, .3)
 
     .container-fluid
       height: 100% !important
@@ -156,6 +157,7 @@ a[role=button].third:hover
       flex-direction: column
       justify-content: center
       padding: 2rem 0 0
+      z-index: 10
 
     .banner-cta 
       height: 80px
@@ -515,28 +517,28 @@ a.mobile-cta-btn
       @media screen and ( max-width: 1000px )
         text-align: unset
 
-#investax-accordion
+.investax-accordion
     padding: 1rem 0
     font-family: $fontOne
 
     details
       margin-bottom: 1.5rem
+      border-bottom: unset
 
       summary
         font-weight: 600
-        font-size: 1.1rem
-        color: $darkTextColor !important
         padding-top: .5rem
         padding-bottom: .5rem
+        font-size: .9rem
 
         span
           margin-right: 1.5rem
 
       p
-        color: $darkTextColor !important
-        font-weight: 400
-        font-size: .9rem
         font-family: $fontOne
+        font-size: .85rem !important
+        line-height: 1.8
+        margin-bottom: unset !important
 
 
 /******************* Header ********************/
@@ -656,18 +658,22 @@ header
   @media screen and ( max-width: 1000px )
     transform: translateX(0)
 
-// #navigation.menu-white
-//     .menu-item
-//       a
-//         color: #fff
+#navigation.menu-white
+    .menu-item
+      a
+        color: #fff
 
-//     .sub-menu
-//       a
-//         color: #282828
+    .sub-menu
+      a
+        color: #282828
 
-//     .nav-contacts
-//       a
-//         color: #fff
+    .nav-contacts
+      a
+        color: #fff
+
+      .phone-icon
+        background-image: url('../images/phone-solid-white.svg')
+
 
 
 .nav-menu 
@@ -729,6 +735,7 @@ header
 
 .nav-contacts 
     gap: .75rem
+    align-items: center
     @media screen and ( max-width: 1000px )
         flex-direction: column
         align-items: start
@@ -741,6 +748,9 @@ header
         margin-left: 1rem
         letter-spacing: 2px
         font-weight: 700
+        display: flex
+        justify-content: center
+        align-items: center
 
 
         &:first-child
@@ -752,6 +762,8 @@ header
           
           a
             font-weight: 600 !important
+            display: flex
+            align-items: center
 
         @media screen and ( max-width: 1200px )
           margin-left: .25rem
@@ -766,10 +778,12 @@ header
             margin-left: .25rem
 
 
-    .nav-icons
-        height: 17px
-        width: auto
+    .phone-icon
+        height: 2rem
+        width: 2rem
         margin-right: 2px
+        background-image: url('../images/phone-solid-black.svg')
+        background-position: center
     
 
     .complimentary-nav

@@ -154,7 +154,7 @@ a[role=button].third:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(68, 42, 9, 0.4862745098));
+  background: rgba(0, 0, 0, 0.3);
 }
 .banner .container-fluid {
   height: 100% !important;
@@ -162,6 +162,7 @@ a[role=button].third:hover {
   flex-direction: column;
   justify-content: center;
   padding: 2rem 0 0;
+  z-index: 10;
 }
 .banner .banner-cta {
   height: 80px;
@@ -544,28 +545,28 @@ a.mobile-cta-btn {
   }
 }
 
-#investax-accordion {
+.investax-accordion {
   padding: 1rem 0;
   font-family: "Montserrat", sans-serif;
 }
-#investax-accordion details {
+.investax-accordion details {
   margin-bottom: 1.5rem;
+  border-bottom: unset;
 }
-#investax-accordion details summary {
+.investax-accordion details summary {
   font-weight: 600;
-  font-size: 1.1rem;
-  color: rgba(7, 0, 18, 0.9607843137) !important;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
-#investax-accordion details summary span {
+.investax-accordion details summary span {
   margin-right: 1.5rem;
 }
-#investax-accordion details p {
-  color: rgba(7, 0, 18, 0.9607843137) !important;
-  font-weight: 400;
-  font-size: 0.9rem;
+.investax-accordion details p {
   font-family: "Montserrat", sans-serif;
+  font-size: 0.85rem !important;
+  line-height: 1.8;
+  margin-bottom: unset !important;
 }
 
 /******************* Header ********************/
@@ -696,6 +697,19 @@ header .container-fluid {
   }
 }
 
+#navigation.menu-white .menu-item a {
+  color: #fff;
+}
+#navigation.menu-white .sub-menu a {
+  color: #282828;
+}
+#navigation.menu-white .nav-contacts a {
+  color: #fff;
+}
+#navigation.menu-white .nav-contacts .phone-icon {
+  background-image: url("../images/phone-solid-white.svg");
+}
+
 .nav-menu {
   margin-left: auto !important;
   margin-right: auto !important;
@@ -759,6 +773,7 @@ header .container-fluid {
 
 .nav-contacts {
   gap: 0.75rem;
+  align-items: center;
 }
 @media screen and (max-width: 1000px) {
   .nav-contacts {
@@ -773,6 +788,9 @@ header .container-fluid {
   margin-left: 1rem;
   letter-spacing: 2px;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .nav-contacts li:first-child {
   margin-left: unset !important;
@@ -783,6 +801,8 @@ header .container-fluid {
 }
 .nav-contacts li:first-child a {
   font-weight: 600 !important;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 1200px) {
   .nav-contacts li {
@@ -799,10 +819,12 @@ header .container-fluid {
   margin: unset;
   margin-left: 0.25rem;
 }
-.nav-contacts .nav-icons {
-  height: 17px;
-  width: auto;
+.nav-contacts .phone-icon {
+  height: 2rem;
+  width: 2rem;
   margin-right: 2px;
+  background-image: url("../images/phone-solid-black.svg");
+  background-position: center;
 }
 .nav-contacts .complimentary-nav {
   border-radius: 25px !important;
