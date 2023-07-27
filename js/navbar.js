@@ -1,189 +1,188 @@
-const nav = document.querySelector('#navigation')
-window.addEventListener('scroll', ()=>{
-  if(window.scrollY >= 250)
-  {    
-    console.log("moved.down ", scrollY)
-    nav.style.backgroundColor = '#fff'
-  }
+// const navigation = document.querySelector('#navigation')
+
+// window.addEventListener('scroll', ()=>{
+
+//   if(window.scrollY >= 200) {    
+//     navigation.style.backgroundColor = '#fff'
+//   }
   
-  if(window.scrollY < 250)
-  {
-    nav.style.backgroundColor = "rgb(255 255 255 / 40%)"
-  }
-})
+//   if(window.scrollY < 200) {
+//     navigation.style.backgroundColor = "rgb(255 255 255 / 40%)"
+//   }
+// })
 
 
-// show mega menu
-const navItem = document.querySelectorAll('.menu-item');
+// // show mega menu
+// const navItem = document.querySelectorAll('.menu-item');
 
-navItem.forEach(item => {
-    // const menuBtn = item.querySelector('a')
-    // const subMenu = item.querySelector('.sub-menu')
+// navItem.forEach(item => {
+//     // const menuBtn = item.querySelector('a')
+//     // const subMenu = item.querySelector('.sub-menu')
 
-    // if(menuBtn && subMenu) {
-    //     menuBtn.addEventListener( "mouseover", () => {
-    //         item.classList.add('show')
+//     // if(menuBtn && subMenu) {
+//     //     menuBtn.addEventListener( "mouseover", () => {
+//     //         item.classList.add('show')
 
-    //         navItem.forEach(menu => {
-    //             if(menu !== item) {
-    //                 menu.classList.remove('show')
-    //             }
-    //         })
-    //     })
+//     //         navItem.forEach(menu => {
+//     //             if(menu !== item) {
+//     //                 menu.classList.remove('show')
+//     //             }
+//     //         })
+//     //     })
 
-    //     item.addEventListener( "mouseleave", () => {
-    //         item.classList.remove('show')
+//     //     item.addEventListener( "mouseleave", () => {
+//     //         item.classList.remove('show')
 
-    //     })
-    // }
+//     //     })
+//     // }
 
-    function showMenuItemPc (item) {
+//     function showMenuItemPc (item) {
 
-        const menuBtn = item.querySelector('a')
-        const subMenu = item.querySelector('.sub-menu')
+//         const menuBtn = item.querySelector('a')
+//         const subMenu = item.querySelector('.sub-menu')
 
-        if(menuBtn && subMenu) {
-            menuBtn.addEventListener( "mouseover", () => {
-                item.classList.add('show-sub-menu')
+//         if(menuBtn && subMenu) {
+//             menuBtn.addEventListener( "mouseover", () => {
+//                 item.classList.add('show-sub-menu')
     
-                navItem.forEach(menu => {
-                    if(menu !== item) {
-                        menu.classList.remove('show-sub-menu')
-                    }
-                })
-            })
+//                 navItem.forEach(menu => {
+//                     if(menu !== item) {
+//                         menu.classList.remove('show-sub-menu')
+//                     }
+//                 })
+//             })
     
-            item.addEventListener( "mouseleave", () => {
-                item.classList.remove('show-sub-menu')
+//             item.addEventListener( "mouseleave", () => {
+//                 item.classList.remove('show-sub-menu')
     
-            })
-        }
-    }
+//             })
+//         }
+//     }
 
-    function showMenuItemMobile (item) {
+//     function showMenuItemMobile (item) {
 
-        const menuBtn = item.querySelector('a')
-        const subMenu = item.querySelector('.sub-menu')
+//         const menuBtn = item.querySelector('a')
+//         const subMenu = item.querySelector('.sub-menu')
 
-        if(menuBtn && subMenu) {
-            menuBtn.addEventListener( "click", () => {
-                item.classList.toggle('show')
+//         if(menuBtn && subMenu) {
+//             menuBtn.addEventListener( "click", () => {
+//                 item.classList.toggle('show')
     
-                navItem.forEach(menu => {
-                    if(menu !== item) {
-                        menu.classList.remove('show')
-                    }
-                })
-            })
+//                 navItem.forEach(menu => {
+//                     if(menu !== item) {
+//                         menu.classList.remove('show')
+//                     }
+//                 })
+//             })
     
-            // item.addEventListener( "click", () => {
-            //     item.classList.remove('show')
+//             // item.addEventListener( "click", () => {
+//             //     item.classList.remove('show')
     
-            // })
-        }
-    }
+//             // })
+//         }
+//     }
 
 
-    function resizeFunction() {
-        if(window.innerWidth <= 1000){
-            showMenuItemMobile(item)
+//     function resizeFunction() {
+//         if(window.innerWidth <= 1000){
+//             showMenuItemMobile(item)
 
-        } else {
-            showMenuItemPc(item)
-        }
-    }
+//         } else {
+//             showMenuItemPc(item)
+//         }
+//     }
 
-    resizeFunction();
+//     resizeFunction();
 
-    window.addEventListener("resize", resizeFunction)
-
-
-})
+//     window.addEventListener("resize", resizeFunction)
 
 
+// })
 
 
-// show sub-menu of mega menu
-const subMenuContainer = document.querySelectorAll('.sub-menu-container');
-const subMenuItem = document.querySelectorAll('.sub-menu-item');
 
 
-subMenuContainer.forEach(container => {
-    const showSubMenu = container.querySelector('.show-sub-menu');
+// // show sub-menu of mega menu
+// const subMenuContainer = document.querySelectorAll('.sub-menu-container');
+// const subMenuItem = document.querySelectorAll('.sub-menu-item');
 
-    const subMenuItem = container.querySelectorAll(".sub-menu-item");
 
-    const menuBtnAll = document.querySelectorAll(".menu-btn")
+// subMenuContainer.forEach(container => {
+//     const showSubMenu = container.querySelector('.show-sub-menu');
 
-    if(subMenuItem){
-        subMenuItem.forEach(item => {
-            const menuBtn =  item.querySelector(".menu-btn")
-            const secondSubMenuContainer = item.querySelector('.second-sub-menu-container')
+//     const subMenuItem = container.querySelectorAll(".sub-menu-item");
 
-            if(menuBtn ) {
-                menuBtn.addEventListener("mouseover",  ()=> {
+//     const menuBtnAll = document.querySelectorAll(".menu-btn")
 
-                    menuBtn.classList.add('active');
+//     if(subMenuItem){
+//         subMenuItem.forEach(item => {
+//             const menuBtn =  item.querySelector(".menu-btn")
+//             const secondSubMenuContainer = item.querySelector('.second-sub-menu-container')
+
+//             if(menuBtn ) {
+//                 menuBtn.addEventListener("mouseover",  ()=> {
+
+//                     menuBtn.classList.add('active');
 
                    
 
-                    menuBtnAll.forEach(btn => {
-                        if(menuBtn !== btn){
-                            btn.classList.remove("active");
+//                     menuBtnAll.forEach(btn => {
+//                         if(menuBtn !== btn){
+//                             btn.classList.remove("active");
                             
                             
-                        }
-                    })
+//                         }
+//                     })
 
 
-                    showSubMenu.innerHTML = "";
+//                     showSubMenu.innerHTML = "";
 
-                    if(secondSubMenuContainer && showSubMenu){
+//                     if(secondSubMenuContainer && showSubMenu){
 
-                        showSubMenu.innerHTML = secondSubMenuContainer.innerHTML;
+//                         showSubMenu.innerHTML = secondSubMenuContainer.innerHTML;
 
-                    }
-
-
-                })
-
-            }
-
-        })
-    }
-
-})
-// show sub-menu of mega menu end
+//                     }
 
 
+//                 })
 
-// show submenu in mobile device
-const secondSubMenu = document.querySelectorAll(".second-sub-menu-container");
+//             }
 
-subMenuItem.forEach(menu => {
+//         })
+//     }
 
-    const singleSecondSubMenu = menu.querySelector(".second-sub-menu-container")
-    menu.addEventListener('click', () => {
-        singleSecondSubMenu.classList.toggle('show');
-
-        secondSubMenu.forEach(item => {
-            if(singleSecondSubMenu !== item){
-                item.classList.remove('show')
-            }
-        })
-    })
-})
+// })
+// // show sub-menu of mega menu end
 
 
 
+// // show submenu in mobile device
+// const secondSubMenu = document.querySelectorAll(".second-sub-menu-container");
 
-//  hamburger mobile menu
-const allLink = document.querySelector('.all-link');
-const hamburgerMenuBtn = document.querySelector('.hamburger-menu');
+// subMenuItem.forEach(menu => {
 
-if(allLink && hamburgerMenuBtn){
-    hamburgerMenuBtn.addEventListener('click', () => {
-        allLink.classList.toggle('show')
-    })
-}
-//  hamburger mobile menu end
+//     const singleSecondSubMenu = menu.querySelector(".second-sub-menu-container")
+//     menu.addEventListener('click', () => {
+//         singleSecondSubMenu.classList.toggle('show');
+
+//         secondSubMenu.forEach(item => {
+//             if(singleSecondSubMenu !== item){
+//                 item.classList.remove('show')
+//             }
+//         })
+//     })
+// })
+
+
+
+
+// //  hamburger mobile menu
+// const allLink = document.querySelector('.all-link');
+// const hamburgerMenuBtn = document.querySelector('.hamburger-menu');
+
+// if(allLink && hamburgerMenuBtn){
+//     hamburgerMenuBtn.addEventListener('click', () => {
+//         allLink.classList.toggle('show')
+//     })
+// }
+// //  hamburger mobile menu end
