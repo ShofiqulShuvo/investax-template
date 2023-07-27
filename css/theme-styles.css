@@ -751,6 +751,14 @@ header .container-fluid {
 #navigation.menu-white .nav-contacts .phone-icon {
   background-image: url("../images/phone-solid-white.svg");
 }
+@media screen and (max-width: 1000px) {
+  #navigation.menu-white .menu-item a, #navigation.menu-white .sub-menu a, #navigation.menu-white .nav-contacts a {
+    color: #282828;
+  }
+  #navigation.menu-white .menu-item a .phone-icon, #navigation.menu-white .sub-menu a .phone-icon, #navigation.menu-white .nav-contacts a .phone-icon {
+    background-image: url("../images/phone-solid-black.svg");
+  }
+}
 
 .nav-menu {
   margin-left: auto !important;
