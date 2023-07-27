@@ -337,12 +337,26 @@ a[role=button].third:hover {
 }
 .banner.single .container {
   padding: 1rem 0;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
 }
 .banner.single .container .links-container {
-  margin-top: auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .banner.single .container .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding-left: 1rem;
+  }
+}
+.banner.single .container .links-container .breadcrumb {
+  align-self: unset;
 }
 .banner.single .container .links-container img {
   margin: unset;
