@@ -10,8 +10,8 @@ main {
 .knowledge-based-single .knowledge-based-section img {
   width: 100%;
   border-radius: 4px;
-  margin: 30px auto !important;
-  margin-bottom: 0px !important;
+  margin: 30px auto;
+  margin-bottom: 0;
 }
 .knowledge-based-single .caption {
   margin-top: 20px !important;
@@ -104,34 +104,6 @@ main {
 }
 .knowledge-based-single .knowledge-based-headline hr {
   margin-bottom: unset;
-}
-.knowledge-based-single .knowledge-based-headline .download-btn {
-  display: inline-block;
-  margin: 1rem 0 1.5rem;
-  padding: 0.3rem 1rem;
-  background: #282828;
-  color: #fff;
-  font-size: 0.75rem;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 20px;
-  transition: all 0.25s ease;
-}
-.knowledge-based-single .knowledge-based-headline .download-btn:last-child {
-  margin-left: 0.75rem;
-}
-.knowledge-based-single .knowledge-based-headline .download-btn span {
-  display: inline-block;
-}
-.knowledge-based-single .knowledge-based-headline .download-btn span img {
-  transform: translateY(-2px);
-}
-.knowledge-based-single .knowledge-based-headline .download-btn:hover {
-  background: #9e6d2d;
-}
-.knowledge-based-single .knowledge-based-headline .download-btn .download-icon {
-  height: 0.7rem;
-  margin: unset !important;
 }
 .knowledge-based-single .knowledge-based-headline .credits {
   margin-top: 0.5rem;
