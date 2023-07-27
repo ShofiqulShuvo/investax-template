@@ -13,22 +13,22 @@ $darkTextColor: #070012f5
 
 .home
 
-  #navigation
-    background-color: transparent
+  // #navigation
+  //   background-color: transparent
       
-  #navigation.menu-white
-    .menu-item
-      a
-        color: #fff
+  // #navigation.menu-white
+  //   .menu-item
+  //     a
+  //       color: #fff
 
-    .nav-contacts
-      a
-        color: #fff
+  //   .nav-contacts
+  //     a
+  //       color: #fff
 
-    .sub-menu
-      // background-color: rgba(255, 255, 255, 0.2196078431)
-      a
-        color: #282828
+  //   .sub-menu
+  //     // background-color: rgba(255, 255, 255, 0.2196078431)
+  //     a
+  //       color: #282828
 
     .logo
       height: 30px
@@ -282,12 +282,19 @@ $darkTextColor: #070012f5
     margin-bottom: 10px !important
 
   .logo-container
-    width: 0px
     overflow: hidden
-    transition-duration: 0.6s
+
+    .logo
+      width: 0
+      transition-duration: 0.6s
+      @media screen and ( max-width: 1000px )
+        width: 150px
 
   .logo-container-visible
-    width: 130px
+    
+    .logo
+      width: 150px
+
     
 
   .swiper-pagination-vertical

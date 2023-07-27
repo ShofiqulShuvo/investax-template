@@ -1,30 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
-.home #navigation {
-  background-color: transparent;
-}
-.home #navigation.menu-white .menu-item a {
-  color: #fff;
-}
-.home #navigation.menu-white .nav-contacts a {
-  color: #fff;
-}
-.home #navigation.menu-white .sub-menu a {
-  color: #282828;
-}
-.home #navigation.menu-white .logo {
-  height: 30px;
-  width: 120px;
-  margin: 10px;
-  margin-top: 15px;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-  height: 0px;
-}
-.home #navigation.menu-white .logo-visible {
-  height: 30px;
-  filter: opacity(1);
-}
 @media screen and (max-width: 1000px) {
   .home h2 {
     font-size: 24px !important;
@@ -265,12 +240,19 @@
   margin-bottom: 10px !important;
 }
 .home .logo-container {
-  width: 0px;
   overflow: hidden;
+}
+.home .logo-container .logo {
+  width: 0;
   transition-duration: 0.6s;
 }
-.home .logo-container-visible {
-  width: 130px;
+@media screen and (max-width: 1000px) {
+  .home .logo-container .logo {
+    width: 150px;
+  }
+}
+.home .logo-container-visible .logo {
+  width: 150px;
 }
 .home .swiper-pagination-vertical {
   margin-right: 20px;
