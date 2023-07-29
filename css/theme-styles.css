@@ -162,7 +162,7 @@ a[role=button].third:hover {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  padding: 10rem 1rem 0;
+  padding: 2rem 1rem 0;
   z-index: 10;
 }
 .banner .banner-cta {
