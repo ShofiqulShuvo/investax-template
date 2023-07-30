@@ -16,7 +16,7 @@ main
 .insight-single-fixed
 
     .insight-section
-        padding: 0px !important
+        padding: 2rem 0 0 !important
 
         img
             width: 100%
@@ -67,6 +67,7 @@ main
         font-size: 24px
 
 
+
     .empty-divider
         height: 200px !important
         width: 100%
@@ -83,46 +84,28 @@ main
         margin-bottom: 50px !important
 
     span.author, span.date
-        font-size: 16px !important
+        font-size: .8rem !important
+
+    span.author a, span.tags a
+        font-size: .8rem !important
+        font-weight: 600
+        text-decoration: none
+        color: $brandColorThree
+        cursor: pointer
+        &:hover
+            color: $brandColorOne
 
     .sidemenu-holder
-        background-color: $brandColorTwo
-        position: relative
-        top: 0px
-        height: 100%
-        padding: 20px
-        padding-top: 80px !important
+        @media screen and ( max-width: 991px )
+            display: none
 
-    .sidemenu
-        position: relative
-        top: 0px
-
-        h2
-            color: #fff
-
-        ul
-            padding: 0px !important
-
-        ul > li
-            list-style: none
-            margin-bottom: 20px
-
-            a
-                font-weight: 400
-                font-size: 16px
-                color: #fff
-
-    .sticky
-        position: -webkit-sticky
-        position: sticky
-        top: 180px
 
     .insight-headline
-        margin-top: 80px !important
 
         .title
             font-weight: 600
             font-size: 1.3rem
+            color: #222
 
         hr
             margin-bottom: unset
@@ -178,3 +161,7 @@ main
             font-size: .85rem
             font-weight: 600
             color: #282828
+
+
+
+            

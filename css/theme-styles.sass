@@ -263,11 +263,12 @@ a[role=button].third:hover
       color: #fff
       font-family: $fontOne
       font-weight: 500
-      font-size: .8rem
-      padding: .60rem 1rem
-      border-radius: 2rem
+      font-size: .75rem
+      padding: .60rem 1.5rem
+      border-radius: 200px
       text-decoration: none
       text-shadow: none !important
+      letter-spacing: 1px
       @media screen and ( max-width: 768px )
         margin-bottom: 1.5rem
         padding: .5rem .85rem
@@ -560,9 +561,6 @@ a.mobile-cta-btn
   opacity: 1
   left: 0px
 
-// .banner-text
-//   @media screen and ( orientation: landscape )    
-//     padding-top: 150px !important
 
 
 
@@ -637,6 +635,195 @@ a.mobile-cta-btn
 
     &:hover
         background: $brandColorOne
+
+
+#side-menu
+    position: sticky
+    top: 100px
+
+    .sidemenu-content
+        background-color: aliceblue
+        padding: 1rem 1rem
+        border-radius: unset
+        margin-bottom: 1rem
+
+    .sidemenu-cta
+        padding: 1rem 0 1.2rem
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 1rem
+        border-bottom: 1.5px solid $brandColorOne
+
+        .complimentary-consultation
+            background: $brandColorOne
+            color: #fff
+            padding: .75rem 1rem .65rem
+            text-align: center
+            text-decoration: none
+            text-transform: uppercase
+            font-weight: 600
+            font-size: .75rem
+            line-height: 1.2
+            border-radius: 1000px
+            &:hover
+                background: #61431c
+
+        .contact-number
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            gap: 1rem
+            font-size: 1.3rem
+            font-weight: 700
+            white-space: nowrap
+            color: #282828
+
+            .phone-icon
+                height: 1.3rem
+                margin-top: unset !important
+
+    .table-of-content-container
+        padding: 1rem .75rem 0
+
+        h2
+            color: $darkTextColor
+            font-size: .8rem
+            margin-bottom: 1rem
+            text-shadow: none !important
+
+        #table-of-content
+            padding: 0 .5rem 0
+            list-style: circle
+            font-size: .76rem
+
+            li
+                margin-bottom: .25rem
+                margin-left: 1rem
+                &:last-child
+                    margin-bottom: unset
+
+                a
+                    font-weight: 600
+                    font-size: .7rem !important
+                    color: $darkTextColor !important
+                    text-decoration: none
+
+    .main-contact
+        border: 1px solid rgba( 158, 109, 45, .5)
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+
+        .img-container
+            border-right: 1px solid rgba( 158, 109, 45, .5)
+
+            img
+                margin-top: unset !important
+                width: 100%
+                height: auto
+                border-radius: unset
+
+        .details
+            padding: .75rem
+            height: 100%
+            line-height: 1.2
+
+            .author-detail
+                padding-bottom: .5rem
+
+            .name
+                margin-bottom: .5rem
+                font-size: .85rem
+                font-weight: 600
+                color: $darkTextColor
+
+            .position
+                font-size: .65rem
+                font-weight: 700
+                color: $brandColorOne
+
+
+            .social-lick-box
+                margin-top: .25rem
+                border-top: 1px solid rgba( 158, 109, 45, .5)
+                padding-top: .5rem
+                display: flex
+                flex-direction: row
+                align-items: center
+                gap: .5rem
+
+                .social-link
+                    padding: .35rem
+                    background: $brandColorOne
+                    height: fit-content
+                    border-radius: 50%
+                    height: 1.5rem
+                    width: 1.5rem
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    transition: all .35s
+                    &:hover
+                        transform: scale(1.1)
+                        background: $brandColorThree
+
+                    img
+                        margin-top: unset !important
+                        height: 100%
+                        width: 100%
+
+
+
+#cta-section
+    margin-bottom: 0 !important
+    background: aliceblue
+
+    .cta-container
+        padding: 3rem 1.5rem
+        color: #282828
+        line-height: 1.4
+
+        .heading
+            font-size: 1.2rem
+            font-weight: 600
+            color: $darkTextColor
+            margin-bottom: 1rem
+
+        .sub-heading
+            font-size: .9rem
+            font-weight: 400
+
+        .cta-button-container
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            gap: 1rem
+
+        .complimentary-nav
+            background: $brandColorOne
+            color: #fff
+            padding: .5rem 1rem
+            font-size: .75rem
+            border-radius: 200px
+            letter-spacing: 1px
+            font-weight: 600
+            text-transform: uppercase
+
+        .contact-number
+            display: flex
+            flex-direction: row
+            justify-content: center
+            align-items: center
+            width: fit-content
+            gap: .6rem
+            color: $darkTextColor
+            font-size: .85rem
+            font-weight: 700
+            padding: .5rem 1rem
+
 
 
 /******************* Header ********************/
@@ -902,7 +1089,7 @@ header
         border-radius: 2px
         color: #ffffff
         font-size: 10px !important
-        padding: .5rem !important
+        padding: .5rem 1rem !important
         font-weight: 700
         text-transform: uppercase
         max-width: 300px

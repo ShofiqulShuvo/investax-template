@@ -5,7 +5,7 @@ main {
 }
 
 .insight-single-fixed .insight-section {
-  padding: 0px !important;
+  padding: 2rem 0 0 !important;
 }
 .insight-single-fixed .insight-section img {
   width: 100%;
@@ -65,45 +65,27 @@ main {
   margin-bottom: 50px !important;
 }
 .insight-single-fixed span.author, .insight-single-fixed span.date {
-  font-size: 16px !important;
+  font-size: 0.8rem !important;
 }
-.insight-single-fixed .sidemenu-holder {
-  background-color: #b88c51;
-  position: relative;
-  top: 0px;
-  height: 100%;
-  padding: 20px;
-  padding-top: 80px !important;
+.insight-single-fixed span.author a, .insight-single-fixed span.tags a {
+  font-size: 0.8rem !important;
+  font-weight: 600;
+  text-decoration: none;
+  color: #B17A4E;
+  cursor: pointer;
 }
-.insight-single-fixed .sidemenu {
-  position: relative;
-  top: 0px;
+.insight-single-fixed span.author a:hover, .insight-single-fixed span.tags a:hover {
+  color: #9e6d2d;
 }
-.insight-single-fixed .sidemenu h2 {
-  color: #fff;
-}
-.insight-single-fixed .sidemenu ul {
-  padding: 0px !important;
-}
-.insight-single-fixed .sidemenu ul > li {
-  list-style: none;
-  margin-bottom: 20px;
-}
-.insight-single-fixed .sidemenu ul > li a {
-  font-weight: 400;
-  font-size: 16px;
-  color: #fff;
-}
-.insight-single-fixed .sticky {
-  position: sticky;
-  top: 180px;
-}
-.insight-single-fixed .insight-headline {
-  margin-top: 80px !important;
+@media screen and (max-width: 991px) {
+  .insight-single-fixed .sidemenu-holder {
+    display: none;
+  }
 }
 .insight-single-fixed .insight-headline .title {
   font-weight: 600;
   font-size: 1.3rem;
+  color: #222;
 }
 .insight-single-fixed .insight-headline hr {
   margin-bottom: unset;
