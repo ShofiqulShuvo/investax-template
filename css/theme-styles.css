@@ -697,7 +697,7 @@ a.mobile-cta-btn {
   border-bottom: 1.5px solid #9e6d2d;
 }
 #side-menu .sidemenu-cta .complimentary-consultation {
-  background: #000;
+  background: seagreen;
   color: #fff;
   padding: 0.75rem 1rem 0.65rem;
   text-align: center;
@@ -709,7 +709,7 @@ a.mobile-cta-btn {
   border-radius: 1000px;
 }
 #side-menu .sidemenu-cta .complimentary-consultation:hover {
-  background: seagreen;
+  background: #000;
 }
 #side-menu .sidemenu-cta .contact-number {
   display: flex;
@@ -749,12 +749,12 @@ a.mobile-cta-btn {
   margin-bottom: unset;
 }
 #side-menu .table-of-content-container #table-of-content li:hover a {
-  color: #4737C4 !important;
+  color: seagreen !important;
   font-weight: 700;
 }
 #side-menu .table-of-content-container #table-of-content li:hover::before {
-  background-color: #4737C4;
-  border-color: #4737C4;
+  background-color: seagreen;
+  border-color: seagreen;
 }
 #side-menu .table-of-content-container #table-of-content li::before {
   position: absolute;
@@ -788,12 +788,12 @@ a.mobile-cta-btn {
   text-transform: capitalize;
 }
 #side-menu .table-of-content-container #table-of-content li.active a {
-  color: #4737C4 !important;
+  color: seagreen !important;
   font-weight: 700;
 }
 #side-menu .table-of-content-container #table-of-content li.active::before {
-  background-color: #4737C4;
-  border-color: #4737C4;
+  background-color: seagreen;
+  border-color: seagreen;
 }
 #side-menu .main-contact {
   border: 0.5px solid rgba(48, 53, 59, 0.15);
