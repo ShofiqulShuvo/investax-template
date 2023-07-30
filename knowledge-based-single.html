@@ -580,7 +580,6 @@
                    </div>
 
                    <div class="table-of-content-container">
-                       <h2>Table of Contents</h2>
                        <ul id="table-of-content">
                        </ul>
                    </div>
@@ -623,7 +622,7 @@
 
                   </div>
 
-            </div>
+                </div>
                 
             
               </div>
@@ -765,33 +764,42 @@
 
     <section id="cta-section" data-cursor="-sm -exclusion" >
 
-      <div class="container cta-container">
-        <div class="row g-3">
+      <div class="container-fluid cta-container">
 
-          <div class="col-12 col-lg-7 cta-text-container">
+        
+        <div class="cta-icon">
+          <img src="./images/phone-cta.png" alt="">
+        </div>
 
-            <div class="heading">
-              Book an obligation-free Strategic Consultation
+        <div class="cta-text-container">
+          
+
+            <div class="cta-text">
+              
+              <div class="heading">
+                Book an obligation-free Strategic Consultation
+              </div>
+  
+              <div class="sub-heading">
+                Unlock your financial potential – Contact Us today to discuss your year-ending tax return or schedule a "Complimentary Consultation" 
+              </div>
             </div>
-            <div class="sub-heading">
-              At Investax Group we offer an exclusive ten minute no obligation consultation to existing property investors, first home buyers and small business owners who are looking at property investments, business and asset protection.
-            </div>
-          </div>
 
-          <div class="col-12 col-lg-5 cta-button-container">
-
-            <a href="./complimentary-consultation.html" class="complimentary-nav">Complimentary Consultation</a>
-
-            <a href="tel:0286518000" class="contact-number"> 
-              <span>
-                <img class="phone-icon" src="./images/phone-solid-black.svg" alt="">
-              </span>
-              <span>02 8651 8000</span>
-            </a>
-
-          </div>
+              <div class="cta-button-container">
+    
+                <a href="./complimentary-consultation.html" class="complimentary-nav">Complimentary Consultation</a>
+    
+                <a href="tel:0286518000" class="contact-number"> 
+                  <span class="phone-icon">
+                  </span>
+                  <span>02 8651 8000</span>
+                </a>
+    
+              </div>
 
         </div>
+
+
       </div>
 
     </section>
@@ -915,6 +923,37 @@
 
   }
 
+
+  // add active class on click table of content
+  if(tableOfContent) {
+
+const linkParrent = tableOfContent.querySelectorAll('li')
+
+  if(linkParrent) {
+
+      linkParrent.forEach( parrent => {
+
+        parrent.addEventListener('click',  () => {
+
+          parrent.classList.add('active');
+
+          linkParrent.forEach( otherParrent => {
+
+            if ( parrent !== otherParrent) {
+              console.log(otherParrent)
+              otherParrent.classList.remove('active')
+            }
+
+          })
+          
+        })
+
+
+      })
+
+    }
+
+  }
 
 
 
