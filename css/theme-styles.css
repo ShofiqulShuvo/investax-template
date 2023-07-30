@@ -709,7 +709,7 @@ a.mobile-cta-btn {
   border-radius: 1000px;
 }
 #side-menu .sidemenu-cta .complimentary-consultation:hover {
-  background: #4737C4;
+  background: seagreen;
 }
 #side-menu .sidemenu-cta .contact-number {
   display: flex;
@@ -720,7 +720,7 @@ a.mobile-cta-btn {
   font-size: 1.3rem;
   font-weight: 700;
   white-space: nowrap;
-  color: #282828;
+  color: #000;
 }
 #side-menu .sidemenu-cta .contact-number .phone-icon {
   height: 1.3rem;
@@ -911,7 +911,7 @@ a.mobile-cta-btn {
   gap: 1rem;
 }
 #cta-section .cta-container .complimentary-nav {
-  background: #4737C4;
+  background: seagreen;
   color: #fff;
   padding: 0.75rem 1.5rem;
   font-size: 0.75rem;
@@ -948,7 +948,7 @@ a.mobile-cta-btn {
   background-repeat: no-repeat;
 }
 #cta-section .cta-container .contact-number:hover {
-  background: #4737C4;
+  background: seagreen;
   color: #fff;
 }
 #cta-section .cta-container .contact-number:hover .phone-icon {
