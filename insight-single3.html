@@ -886,25 +886,25 @@
   // add active class on click table of content
   if(tableOfContent) {
 
-    const linkParrent = tableOfContent.querySelectorAll('li')
+    const scrollLink = tableOfContent.querySelectorAll('a')
 
-    if(linkParrent) {
+    if(scrollLink) {
 
-      linkParrent.forEach( parrent => {
+      scrollLink.forEach( link => {
 
-        parrent.addEventListener('click',  () => {
+        link.addEventListener('click',  () => {
 
-          parrent.classList.add('active');
+          link.parentNode.classList.add('active');
   
-          linkParrent.forEach( otherParrent => {
+          scrollLink.forEach( otherLink => {
   
-            if ( parrent !== otherParrent) {
-              console.log(otherParrent)
-              otherParrent.classList.remove('active')
+            if ( link !== otherLink) {
+              console.log(otherLink)
+              otherLink.parentNode.classList.remove('active')
             }
   
           })
-          
+
         })
 
 
