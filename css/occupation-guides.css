@@ -21,7 +21,7 @@
 }
 .occupation-guides .all-contents .single-content {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 3px;
   box-shadow: 5px 5px 13px 0px rgba(181, 173, 173, 0.81);
 }
 .occupation-guides .all-contents .single-content:hover .bg-img {
@@ -55,7 +55,7 @@
   font-size: 0.8rem;
   text-decoration: none;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 3px;
   transition: all 0.25s ease;
 }
 .occupation-guides .all-contents .btn:hover {

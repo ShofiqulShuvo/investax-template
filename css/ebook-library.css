@@ -22,8 +22,8 @@ hr {
 }
 .ebook-library .e-books .single-ebook {
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 5px 5px 13px 0px rgba(181, 173, 173, 0.81);
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px 0px rgba(181, 173, 173, 0.81);
 }
 .ebook-library .e-books .single-ebook:hover .bg-img {
   transform: scale(1.1);
@@ -50,13 +50,13 @@ hr {
 .ebook-library .e-books .download-btn {
   display: block !important;
   margin: 0.75rem auto 0;
-  padding: 0.35rem 0.75rem;
+  padding: 0.35rem 1.75rem;
   background: #282828;
   color: #fff;
   font-size: 0.8rem;
   text-decoration: none;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 3px;
   transition: all 0.25s ease;
 }
 .ebook-library .e-books .download-btn:hover {
