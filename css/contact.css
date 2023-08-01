@@ -72,6 +72,8 @@ hr {
   gap: 1rem;
   align-items: baseline;
   font-size: 0.8rem;
+  color: #282828;
+  text-decoration: none;
 }
 .contact-us .address .item .icon {
   height: 35px;
