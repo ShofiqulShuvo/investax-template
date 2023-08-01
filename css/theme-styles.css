@@ -387,7 +387,7 @@ a[role=button].third:hover {
 }
 
 .banner.single {
-  height: 500px;
+  height: 300px;
 }
 @media screen and (max-width: 900px) {
   .banner.single {
