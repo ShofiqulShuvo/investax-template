@@ -301,7 +301,6 @@ hr {
 .you-may-like .image-container {
   width: 100%;
   overflow: hidden;
-  transform: skew(-15deg, 0deg);
 }
 .you-may-like .image-container img {
   width: 100%;

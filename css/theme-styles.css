@@ -863,7 +863,7 @@ a.mobile-cta-btn {
 #cta-section {
   margin-top: 2.5rem;
   margin-bottom: 0 !important;
-  background: aliceblue;
+  background: whitesmoke;
 }
 #cta-section .cta-container {
   display: flex;
@@ -998,7 +998,7 @@ a.mobile-cta-btn {
   transition: 0.35s;
 }
 #book-now .booking-button:hover {
-  background: #9e6d2d;
+  background: #000;
 }
 
 /******************* Header ********************/

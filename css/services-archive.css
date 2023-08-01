@@ -244,6 +244,8 @@
   text-transform: uppercase;
   width: -moz-fit-content;
   width: fit-content;
+  transform: skew(-15deg, 0deg);
+  margin-left: 5px;
 }
 .service-section .related-items hr {
   margin-top: 0;
@@ -280,7 +282,7 @@
 .service-section .related-items .download-btn {
   display: block !important;
   margin: 0.75rem auto 0;
-  padding: 0.35rem 0.75rem;
+  padding: 0.35rem 1.5rem;
   background: #282828;
   color: #fff;
   font-size: 0.8rem;
