@@ -208,12 +208,12 @@ hr {
   border-color: #9e6d2d !important;
 }
 .side-content .subscribe .submit-btn {
-  background: #9e6d2d;
+  background: #282828;
   border: none;
-  border-radius: 3px;
+  border-radius: 20px;
 }
 .side-content .subscribe .submit-btn:hover {
-  background: #282828;
+  background: #9e6d2d;
 }
 
 .main-content {
