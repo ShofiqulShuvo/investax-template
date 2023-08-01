@@ -36,9 +36,12 @@ hr {
   box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
   padding: 0px !important;
 }
+.blog-item .blog-tags {
+  transform: skew(-15deg, 0deg);
+  margin-left: 5px;
+}
 .blog-item .blog-tags a {
   border-radius: unset;
-  display: inline-block;
 }
 
 .latest-post .blog-item {
@@ -338,4 +341,4 @@ hr {
 }
 #search button[type=submit]:hover {
   background: #282828;
-}/*# sourceMappingURL=insights-archive.css.map */
+}/*# sourceMappingURL=insights-archive copy.css.map */
