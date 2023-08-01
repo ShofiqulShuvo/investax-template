@@ -158,9 +158,15 @@ hr {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
+  padding: 0.5rem 0;
+}
+.side-content .all-tags li {
+  list-style: none;
+  margin-bottom: unset;
 }
 .side-content .all-tags .tag {
-  margin-bottom: 0.15rem;
+  display: inline-block;
+  margin-bottom: unset;
   padding: 0.1rem 0.5rem;
   font-size: 0.7rem;
   color: #b88c51;
