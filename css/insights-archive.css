@@ -5,6 +5,15 @@ hr {
   border-top: 1px solid #282828;
 }
 
+.banner-text {
+  margin-bottom: 9rem !important;
+}
+@media screen and (max-width: 767px) {
+  .banner-text {
+    margin-bottom: auto !important;
+  }
+}
+
 .copm-title {
   color: #fff;
   background: #282828;
