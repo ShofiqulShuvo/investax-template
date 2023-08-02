@@ -124,6 +124,7 @@ hr {
   margin-top: 0.25rem;
 }
 .latest-post .blog-item .blog-tags a {
+  display: inline-block;
   font-size: 0.85rem;
   padding: 3px 12px;
   background-color: #282828;

@@ -10,6 +10,36 @@ $brandColorTwo: #b88c51
 $brandColorThree: #B17A4E
 $darkTextColor: #070012f5
 
+
+#insight-article
+    address, blockquote, dl, figure, form, ol, p, pre, table, ul 
+        font-size: .8rem
+        font-weight: 500
+        line-height: 1.7
+
+    h2
+        font-family: $fontOne
+        font-weight: 700
+        font-size: 1.2rem
+        color: #333
+        scroll-margin-top: 5.2rem
+        text-shadow: unset !important
+
+
+        @media screen and ( orientation: portrait )
+            font-size: 1.2rem
+
+    h3
+        font-size: .9rem
+
+    h4,h5,h6
+        font-size: .8rem
+
+
+    p, ul
+        color: #000
+
+
 main
   padding: 0px !important
 
@@ -37,15 +67,6 @@ main
         margin-bottom: 30px !important
         text-align: center
 
-    h1
-        font-family: $fontOne
-        color: #333
-        font-size: 30px
-        line-height: 40px
-        font-weight: 100
-        text-transform: uppercase
-        text-align: left
-        text-shadow: 2px 2px 10px #00000032
 
         @media screen and ( max-width: 900px )
         font-size: 20px !important
@@ -55,16 +76,8 @@ main
         font-weight: 800 !important
 
 
-    h2
-        font-family: $fontOne
-        font-weight: 700
-        font-size: 24px
-        color: #333
-        scroll-margin-top: 5.2rem
 
-        @media screen and ( orientation: portrait )
-        font-weight: 800 !important
-        font-size: 24px
+
 
 
 
@@ -81,14 +94,19 @@ main
         border-top: 1px solid $brandColorOne
 
     .credits
-        margin-bottom: 50px !important
+        margin-bottom: 2.5rem !important
+        color: #000
+        font-weight: 600
 
     span.author, span.date
         font-size: .8rem !important
 
+    span.tags 
+        font-size: .8rem
+
     span.author a, span.tags a
         font-size: .8rem !important
-        font-weight: 600
+        font-weight: 700
         text-decoration: none
         color: $brandColorThree
         cursor: pointer
@@ -102,10 +120,13 @@ main
 
     .insight-headline
 
-        .title
-            font-weight: 600
-            font-size: 1.3rem
+        h1
+            font-weight: 700 !important
+            font-size: 1.7rem !important
+            text-transform: capitalize
             color: #222
+            margin-bottom: unset
+            line-height: 1.2
 
         hr
             margin-bottom: unset
