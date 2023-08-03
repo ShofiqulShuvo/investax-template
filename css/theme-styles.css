@@ -1022,6 +1022,156 @@ a.mobile-cta-btn {
   background: #000;
 }
 
+.step-container {
+  margin: 2.2rem 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+@media screen and (max-width: 991px) {
+  .step-container {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+  .step-container .step-section-heading {
+    flex: unset !important;
+    width: 100%;
+  }
+  .step-container .step-section-content {
+    flex: unset !important;
+    width: 100%;
+  }
+}
+.step-container .step-section-heading {
+  flex: 5;
+  color: #b88c51;
+}
+.step-container .step-section-heading .heading-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+.step-container .step-section-heading .heading-text span {
+  display: block;
+}
+.step-container .step-section-heading .heading-text .light-font {
+  font-weight: 400;
+}
+.step-container .step-section-content {
+  flex: 7;
+}
+.step-container .step-section-content summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  line-height: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.step-container .step-section-content summary::after {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-left: 0.25rem;
+  padding: 0.2rem;
+  float: unset;
+}
+.step-container .step-section-content .step-title {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+.step-container .step-section-content .step-number {
+  font-weight: 800;
+  color: #9e6d2d;
+  display: block;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+}
+.step-container .step-section-content .title-text {
+  color: rgba(7, 0, 18, 0.9607843137);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.step-container .step-section-content p {
+  font-size: 0.8rem;
+  margin-bottom: 0.15rem;
+}
+.step-container .step-section-content .step-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.75rem 1rem;
+  background-color: #9e6d2d;
+  border: none;
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+.step-container .step-section-content .step-link:hover {
+  background-color: #61431c;
+  color: #fff;
+}
+
+.faq-container {
+  margin: 3rem 0 1rem;
+}
+.faq-container .title {
+  font-family: "Tilt Warp", cursive;
+  font-size: 2.5rem;
+  color: #b88c51;
+  text-align: center;
+}
+.faq-container .sub-title {
+  margin: 0.75rem auto 2.5rem;
+  font-size: 0.85rem;
+  max-width: 700px;
+  text-align: center;
+  color: rgba(69, 68, 66, 0.5529411765);
+}
+.faq-container .faq details {
+  padding-bottom: unset !important;
+  color: #fff;
+}
+.faq-container .faq details:last-child {
+  border-bottom: none;
+}
+.faq-container .faq details[open] summary {
+  margin-bottom: 0;
+  color: #fff;
+}
+.faq-container .faq details[open] summary::after {
+  background-image: url("../images/chevron-down-solid.svg");
+}
+.faq-container .faq summary {
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  background-color: #b88c51;
+  color: #fff;
+}
+.faq-container .faq summary::after {
+  background-image: url("../images/chevron-down-solid.svg");
+}
+.faq-container .faq p {
+  background-color: #282828;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+
 /******************* Header ********************/
 header {
   padding: unset !important;
