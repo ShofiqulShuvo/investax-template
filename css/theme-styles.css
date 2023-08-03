@@ -1045,26 +1045,42 @@ a.mobile-cta-btn {
     width: 100%;
   }
 }
-.step-container .step-section-heading {
+
+.step-container.title-top {
+  flex-direction: column;
+  gap: 3rem;
+  align-items: flex-start;
+}
+.step-container.title-top .step-section-heading {
+  flex: unset !important;
+  width: 100%;
+}
+.step-container.title-top .step-section-content {
+  flex: unset !important;
+  width: 100%;
+}
+
+.step-section-heading {
   flex: 5;
   color: #b88c51;
 }
-.step-container .step-section-heading .heading-text {
+.step-section-heading .heading-text {
   font-size: 1.8rem;
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -1px;
 }
-.step-container .step-section-heading .heading-text span {
+.step-section-heading .heading-text span {
   display: block;
 }
-.step-container .step-section-heading .heading-text .light-font {
+.step-section-heading .heading-text .light-font {
   font-weight: 400;
 }
-.step-container .step-section-content {
+
+.step-section-content {
   flex: 7;
 }
-.step-container .step-section-content summary {
+.step-section-content summary {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -1073,7 +1089,7 @@ a.mobile-cta-btn {
   cursor: pointer;
   font-size: 1rem;
 }
-.step-container .step-section-content summary::after {
+.step-section-content summary::after {
   display: inline-block;
   width: 1.2rem;
   height: 1.2rem;
@@ -1081,28 +1097,28 @@ a.mobile-cta-btn {
   padding: 0.2rem;
   float: unset;
 }
-.step-container .step-section-content .step-title {
+.step-section-content .step-title {
   display: flex;
   gap: 1.2rem;
   align-items: flex-start;
 }
-.step-container .step-section-content .step-number {
+.step-section-content .step-number {
   font-weight: 800;
   color: #9e6d2d;
   display: block;
   white-space: nowrap;
   letter-spacing: -0.5px;
 }
-.step-container .step-section-content .title-text {
+.step-section-content .title-text {
   color: rgba(7, 0, 18, 0.9607843137);
   font-weight: 600;
   text-transform: uppercase;
 }
-.step-container .step-section-content p {
+.step-section-content p {
   font-size: 0.8rem;
   margin-bottom: 0.15rem;
 }
-.step-container .step-section-content .step-link {
+.step-section-content .step-link {
   display: inline-block;
   margin-top: 1.2rem;
   width: -moz-fit-content;
@@ -1119,7 +1135,7 @@ a.mobile-cta-btn {
   text-decoration: none;
   transition-duration: 0.4s;
 }
-.step-container .step-section-content .step-link:hover {
+.step-section-content .step-link:hover {
   background-color: #61431c;
   color: #fff;
 }
