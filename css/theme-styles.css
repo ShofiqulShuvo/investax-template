@@ -897,10 +897,17 @@ a.mobile-cta-btn {
 #cta-section .cta-container .cta-text-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.75rem;
 }
 #cta-section .cta-container .cta-icon {
-  max-width: 200px;
+  height: 150px;
+  width: 150px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
 }
 @media screen and (max-width: 768px) {
   #cta-section .cta-container .cta-icon {
@@ -908,16 +915,16 @@ a.mobile-cta-btn {
   }
 }
 #cta-section .cta-container .cta-icon img {
-  width: 100%;
+  height: 100%;
 }
 #cta-section .cta-container .cta-text {
   max-width: 750px;
 }
 #cta-section .cta-container .heading {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Tilt Warp", cursive;
   color: rgba(7, 0, 18, 0.9607843137);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   line-height: 1.1;
 }
 #cta-section .cta-container .sub-heading {
@@ -935,7 +942,7 @@ a.mobile-cta-btn {
 #cta-section .cta-container .complimentary-nav {
   background: seagreen;
   color: #fff;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
   font-size: 0.75rem;
   border-radius: 200px;
   font-weight: 600;
@@ -958,7 +965,7 @@ a.mobile-cta-btn {
   border-radius: 200px;
   font-size: 0.85rem;
   font-weight: 700;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
 }
 #cta-section .cta-container .contact-number .phone-icon {

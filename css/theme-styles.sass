@@ -859,23 +859,30 @@ a.mobile-cta-btn
         .cta-text-container
           display: flex
           flex-direction: column
-          gap: 1.5rem
+          gap: .75rem
 
         .cta-icon
-          max-width: 200px
+          height: 150px
+          width: 150px
+          padding: 1.5rem
+          display: flex
+          justify-content: center
+          align-items: center
+          background: #fff
+          border-radius: 50%
           @media screen and ( max-width: 768px )
               display: none
           img
-            width: 100%
+            height: 100%
 
         .cta-text
           max-width: 750px
 
         .heading
-            font-size: 2rem
+            font-size: 1.5rem
             font-family: $fontTwo
             color: $darkTextColor
-            margin-bottom: 1rem
+            margin-bottom: .5rem
             line-height: 1.1
 
         .sub-heading
@@ -895,7 +902,7 @@ a.mobile-cta-btn
         .complimentary-nav
             background:  $brandAccentColor
             color: #fff
-            padding: .75rem 1.5rem
+            padding: .5rem 1rem
             font-size: .75rem
             border-radius: 200px
             font-weight: 600
@@ -916,7 +923,7 @@ a.mobile-cta-btn
             border-radius: 200px
             font-size: .85rem
             font-weight: 700
-            padding: .75rem 1.5rem
+            padding: .5rem 1rem
             text-decoration: none
 
             .phone-icon
