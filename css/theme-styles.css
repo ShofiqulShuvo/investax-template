@@ -984,6 +984,40 @@ a.mobile-cta-btn {
   background-image: url("../images/phone-solid-white.svg");
 }
 
+.short-cta {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: #282828;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.short-cta .cta-text {
+  color: #fff;
+}
+.short-cta .cta-link {
+  align-self: flex-end;
+  height: -moz-fit-content;
+  height: fit-content;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #fff;
+  color: #000;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  border-radius: 1000px;
+}
+.short-cta .cta-link:hover {
+  background: #9e6d2d;
+  color: #fff;
+}
+
 #book-now {
   background: #f5f5f5;
   padding: 2rem 1.5rem;
