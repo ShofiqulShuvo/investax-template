@@ -47,5 +47,6 @@ article {
 .main-content p {
   font-size: 0.95rem;
   margin-bottom: 0.9rem;
+  color: #444 !important;
   font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
 }/*# sourceMappingURL=default-template.css.map */
