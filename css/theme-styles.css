@@ -429,6 +429,21 @@ a[role=button].third:hover {
   margin: unset;
 }
 
+.default-single {
+  height: 400px !important;
+}
+.default-single .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.default-single .banner-text {
+  margin: unset !important;
+  margin-bottom: 3rem !important;
+  justify-self: center;
+  font-size: 3rem !important;
+}
+
 .essential-links {
   margin-bottom: 3rem;
 }
