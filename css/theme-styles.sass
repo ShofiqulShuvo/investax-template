@@ -250,7 +250,7 @@ a[role=button].third:hover
       text-shadow: 3px 3px 5px #333
       z-index: 5
       @media screen and ( max-width: 768px )
-        margin-bottom: 1.5rem
+        margin-bottom: 0
         font-size: .9rem
         letter-spacing: 1px
 
@@ -914,6 +914,11 @@ a.mobile-cta-btn
             align-items: center
             text-align: center
             gap: 1rem
+            @media screen and ( max-width: 768px )
+              gap: .5rem
+              flex-direction: column
+              justify-content: start
+              align-items: flex-start
             
 
         .complimentary-nav
@@ -965,6 +970,9 @@ a.mobile-cta-btn
     display: flex
     flex-direction: row
     gap: 2rem
+    @media screen and ( max-width: 768px )
+      gap: 1rem
+      flex-direction: column
 
     .cta-text
       color: #fff
@@ -984,6 +992,8 @@ a.mobile-cta-btn
       font-size: 0.75rem
       line-height: 1.2
       border-radius: 1000px
+      @media screen and ( max-width: 768px )
+        align-self: flex-start
       &:hover
         background: $brandColorOne
         color: #fff
