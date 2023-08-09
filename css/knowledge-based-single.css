@@ -131,6 +131,8 @@ main {
   text-transform: uppercase;
   width: -moz-fit-content;
   width: fit-content;
+  transform: skew(-15deg, 0deg);
+  margin-left: 5px;
 }
 .knowledge-based-single .you-may-like .content {
   padding-top: 1.5rem;
