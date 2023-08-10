@@ -1014,7 +1014,7 @@
 .home #slide-6 .primary:hover {
   border-color: #61431c;
 }
-.home #slide-6 .newsletter-btn {
+.home #slide-6 .newsletter-btn-2 {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
@@ -1030,7 +1030,7 @@
   min-height: 36px;
   transition-duration: 0.4s;
 }
-.home #slide-6 .newsletter-btn:hover {
+.home #slide-6 .newsletter-btn-2:hover {
   border-color: #000;
   background: #000;
   color: #fff;
