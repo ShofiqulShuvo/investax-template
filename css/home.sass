@@ -104,6 +104,10 @@ $darkTextColor: #070012f5
 
   .blog-buttons
     width: 60%
+    display: flex
+    align-items: center
+    gap: .5rem
+    flex-wrap: wrap
 
     @media screen and ( orientation: portrait )
       margin: 30px !important
@@ -1104,7 +1108,7 @@ $darkTextColor: #070012f5
       &:hover
         border-color: #61431c
 
-    .newsletter-btn-2
+    .newsletter-btn
       width: fit-content
       cursor: pointer
       background: #fff
@@ -1422,6 +1426,25 @@ $darkTextColor: #070012f5
 
       @media screen and ( orientation: portrait )
         margin-top: 60px !important
+
+    .newsletter-btn
+      width: fit-content
+      cursor: pointer
+      background: #fff
+      color: #000
+      border: 2px solid $brandColorOne
+      border-radius: 4px
+      margin: 10px 0px 0px !important
+      font-size: 14px
+      letter-spacing: 2px
+      font-weight: 800
+      text-transform: uppercase
+      min-height: 36px
+      transition-duration: 0.4s
+      &:hover
+        border-color: #000
+        background: #000
+        color: #fff
 
 
 

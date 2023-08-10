@@ -61,6 +61,10 @@
 }
 .home .blog-buttons {
   width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 @media screen and (orientation: portrait) {
   .home .blog-buttons {
@@ -1014,7 +1018,7 @@
 .home #slide-6 .primary:hover {
   border-color: #61431c;
 }
-.home #slide-6 .newsletter-btn-2 {
+.home #slide-6 .newsletter-btn {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
@@ -1030,7 +1034,7 @@
   min-height: 36px;
   transition-duration: 0.4s;
 }
-.home #slide-6 .newsletter-btn-2:hover {
+.home #slide-6 .newsletter-btn:hover {
   border-color: #000;
   background: #000;
   color: #fff;
@@ -1241,6 +1245,27 @@
   .home #slide-8 .container {
     margin-top: 60px !important;
   }
+}
+.home #slide-8 .newsletter-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+  border: 2px solid #9e6d2d;
+  border-radius: 4px;
+  margin: 10px 0px 0px !important;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+  min-height: 36px;
+  transition-duration: 0.4s;
+}
+.home #slide-8 .newsletter-btn:hover {
+  border-color: #000;
+  background: #000;
+  color: #fff;
 }
 .home #slide-8 h2 {
   font-family: "Tilt Warp", cursive;
