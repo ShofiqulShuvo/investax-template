@@ -1462,6 +1462,13 @@
     font-size: 8px;
   }
 }
+.home .fine-print span span {
+  display: inline-block;
+}
+.home .fine-print span span a {
+  color: rgba(255, 255, 255, 0.8352941176);
+  text-decoration: none;
+}
 .home .fine-print .trad-custodian {
   font-weight: 800 !important;
   line-height: 30px;

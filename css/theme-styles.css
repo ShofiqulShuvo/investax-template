@@ -1918,6 +1918,13 @@ footer .fine-print span {
     font-size: 8px;
   }
 }
+footer .fine-print span span {
+  display: inline-block;
+}
+footer .fine-print span span a {
+  color: rgba(255, 255, 255, 0.8352941176);
+  text-decoration: none;
+}
 footer .fine-print .trad-custodian {
   font-weight: 800 !important;
   line-height: 30px;
