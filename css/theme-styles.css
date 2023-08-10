@@ -1762,6 +1762,7 @@ header .container-fluid {
   border-bottom: 3px solid #fff;
   border-radius: 0px;
   transition: all 0.25s;
+  text-transform: capitalize;
 }
 .show-sub-menu ul li a:hover {
   border-color: #9e6d2d;
@@ -1821,6 +1822,25 @@ footer div.footer-row h4 {
   footer div.footer-row h4 {
     font-size: 16px;
   }
+}
+footer div.footer-row .social-link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+footer div.footer-row .social-link .icon {
+  height: 2rem;
+  width: 2rem;
+  transition: 0.25s;
+}
+footer div.footer-row .social-link .icon:hover {
+  transform: scale(1.08);
+}
+footer div.footer-row .social-link .icon img {
+  height: 100%;
+  width: 100%;
 }
 @media screen and (max-width: 900px) {
   footer div.footer-row {

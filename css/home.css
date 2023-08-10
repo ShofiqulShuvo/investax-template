@@ -151,6 +151,48 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5215686275);
 }
+.home #section-01-container .scroll-down-holder {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+@media screen and (max-width: 768px) {
+  .home #section-01-container .scroll-down-holder {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+.home #section-01-container .scroll-down-holder .scroll-down {
+  display: block;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+  background: #9e6d2e;
+  padding: 0.2rem;
+  overflow: hidden;
+  border: none;
+  border-radius: 50%;
+  animation: transformEffect 1.5s linear infinite;
+}
+@keyframes transformEffect {
+  0% {
+    transform: translateY(-0.5rem);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+.home #section-01-container .scroll-down-holder .scroll-down img {
+  height: 60%;
+}
 .home .hero-cta {
   position: relative;
   top: calc(100vh - 100px);
@@ -564,6 +606,7 @@
   }
 }
 .home .services-boxes-holder .box-overlay {
+  position: relative;
   height: 100%;
   width: 100%;
   background-color: rgba(64, 44, 18, 0.3333333333);
@@ -580,12 +623,10 @@
   text-transform: uppercase;
   text-shadow: 1px 1px 10px #000000;
   font-family: "Montserrat", sans-serif;
-  margin-bottom: 50px;
   margin-left: 15px;
   height: 30px;
   width: 240px;
   transition: all 0.4s ease-in-out;
-  position: relative;
   bottom: -70px;
 }
 @media screen and (max-width: 900px) {
@@ -618,6 +659,10 @@
 .home .services-boxes-holder .box-overlay:hover h3 {
   color: rgb(255, 255, 255);
   bottom: 0px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transition: 0.25s;
 }
 @media screen and (max-width: 1000px) {
   .home .services-boxes-holder .box-overlay:hover h3 {
@@ -965,14 +1010,65 @@
   background-size: cover;
   background-position: center;
 }
-.home a[role=button].newsletter-btn {
+.home #slide-6 .primary {
+  min-height: 36px;
+  border: 2px solid #9e6d2d;
+}
+.home #slide-6 .primary:hover {
+  border-color: #61431c;
+}
+.home #slide-6 .newsletter-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  background: #fff;
+  color: #000;
   border: 2px solid #9e6d2d;
   border-radius: 4px;
   margin: 10px 0px 0px !important;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+  min-height: 36px;
+  transition-duration: 0.4s;
 }
-.home .blog-buttons {
+.home #slide-6 .newsletter-btn:hover {
+  border-color: #000;
+  background: #000;
+  color: #fff;
+}
+.home #slide-6 .blog-buttons {
   width: 100%;
   margin-top: 50px;
+  z-index: 105;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.home #slide-6 #modal-newsletter {
+  font-family: "Montserrat", sans-serif !important;
+}
+.home #slide-6 #modal-newsletter article {
+  background: #000;
+  padding: 3rem 4rem;
+  position: relative;
+}
+.home #slide-6 #modal-newsletter article .close {
+  position: absolute;
+  top: 2.5rem;
+  right: 1.2rem;
+}
+.home #slide-6 #modal-newsletter article h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.home #slide-6 #modal-newsletter article p {
+  color: #ddd;
+}
+.home #slide-6 #modal-newsletter article form {
+  margin-top: 1.5rem;
+  margin-bottom: unset;
 }
 .home .blog {
   margin: 80px 0px 50px 0px !important;
@@ -1219,6 +1315,25 @@
 }
 .home #slide-9 .container div.footer-row div {
   width: calc(33% - 40px);
+}
+.home #slide-9 .container div.footer-row .social-link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+}
+.home #slide-9 .container div.footer-row .social-link .icon {
+  height: 2rem;
+  width: 2rem;
+  transition: 0.25s;
+}
+.home #slide-9 .container div.footer-row .social-link .icon:hover {
+  transform: scale(1.08);
+}
+.home #slide-9 .container div.footer-row .social-link .icon img {
+  height: 100%;
+  width: 100%;
 }
 .home #slide-9 .container div.footer-row h4 {
   font-family: "Tilt Warp", cursive;

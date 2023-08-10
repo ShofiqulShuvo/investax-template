@@ -195,6 +195,42 @@ $darkTextColor: #070012f5
     height: 100%
     background-color: #00000085
 
+    .scroll-down-holder
+      position: absolute
+      bottom: 100px
+      left: 0
+      right: 0
+      text-align: center
+      display: flex
+      justify-content: center
+      align-items: center
+      z-index: 20
+      @media screen and ( max-width: 768px )
+        position: absolute
+        bottom: 0
+        width: 100%
+
+      .scroll-down
+        display: block
+        cursor: pointer
+        height: 2rem
+        width: 2rem
+        text-align: center
+        background: #9e6d2e
+        padding: .2rem
+        overflow: hidden
+        border: none
+        border-radius: 50%
+        animation: transformEffect 1.5s linear infinite
+        @keyframes transformEffect
+          0%
+            transform: translateY(-.5rem)  
+          100%
+            transform: translateY(.5rem) 
+
+        img
+          height: 60%
+
 
   .hero-cta
     position: relative
@@ -621,6 +657,7 @@ $darkTextColor: #070012f5
 
 
     .box-overlay
+      position: relative
       height: 100%
       width: 100%
       background-color: #402c1255
@@ -638,12 +675,10 @@ $darkTextColor: #070012f5
         text-transform: uppercase
         text-shadow: 1px 1px 10px #000000
         font-family: $fontOne
-        margin-bottom: 50px
         margin-left: 15px
         height: 30px
         width: 240px
-        transition: all 0.4s ease-in-out      
-        position: relative
+        transition: all 0.4s ease-in-out
         bottom: -70px
 
 
@@ -673,7 +708,10 @@ $darkTextColor: #070012f5
       h3
         color: rgb(255, 255, 255)
         bottom: 0px
-
+        position: absolute
+        top: 50%
+        left: 0
+        transition: .25s
 
         @media screen and ( max-width: 1000px )
           bottom: -45px
@@ -1063,16 +1101,63 @@ $darkTextColor: #070012f5
     background-size: cover
     background-position: center
     
+    .primary
+      min-height: 36px
+      border: 2px solid $brandColorOne
+      &:hover
+        border-color: #61431c
 
-  a[role=button].newsletter-btn
+    .newsletter-btn
+      width: fit-content
+      cursor: pointer
+      background: #fff
+      color: #000
+      border: 2px solid $brandColorOne
+      border-radius: 4px
+      margin: 10px 0px 0px !important
+      font-size: 14px
+      letter-spacing: 2px
+      font-weight: 800
+      text-transform: uppercase
+      min-height: 36px
+      transition-duration: 0.4s
+      &:hover
+        border-color: #000
+        background: #000
+        color: #fff
+
+    .blog-buttons
+      width: 100%
+      margin-top: 50px
+      z-index: 105
+      display: flex
+      align-items: center
+      gap: .5rem
+
+    #modal-newsletter
+      font-family: $fontOne !important
+      article
+        background: #000
+        padding: 3rem 4rem
+        position: relative
+
+        .close
+          position: absolute
+          top: 2.5rem
+          right: 1.2rem
+
+        h3
+          color: #fff
+          margin-bottom: 1rem
+
+        p
+          color: #ddd
+
+        form
+          margin-top: 1.5rem
+          margin-bottom: unset
     
-    border: 2px solid $brandColorOne
-    border-radius: 4px
-    margin: 10px 0px 0px !important
 
-  .blog-buttons
-    width: 100%
-    margin-top: 50px
 
 
   .blog
@@ -1412,6 +1497,24 @@ $darkTextColor: #070012f5
 
         div
           width: calc( 33% - 40px )
+
+        .social-link
+          width: 100%
+          display: flex
+          align-items: center
+          justify-content: center
+          gap: 10%
+
+          .icon
+            height: 2rem
+            width: 2rem
+            transition: .25s
+            &:hover
+              transform: scale(1.08)
+
+            img
+              height: 100%
+              width: 100%
 
         h4
           font-family: $fontTwo

@@ -304,6 +304,15 @@
 
           
           <div class="container hide">
+
+            <div class="scroll-down-holder">
+                  
+              <button class="scroll-down navigation-button-next" >
+                <img src="./images/angles-down-solid.svg" alt="">
+              </button>
+
+            </div>
+
             <div class="hero-cta">
 
 
@@ -735,7 +744,31 @@
               <div class="button-flex-box">
                 <div class="blog-buttons">
                   <a href="#" role="button" class="primary"> Read All Insights</a>
-                  <a href="#" role="button" class="secondary newsletter-btn">Sign Up for Newsletter</a>
+                  <button class="secondary newsletter-btn" data-target="modal-newsletter" onClick="toggleModal(event)">Sign Up for Newsletter</button>
+                  <dialog   id="modal-newsletter">
+                    <article>
+                      <a href="#close"
+                        aria-label="Close"
+                        class="close"
+                        data-target="modal-newsletter"
+                        onClick="toggleModal(event)">
+                      </a>
+                      <h3>SignUp for our Newsletter</h3>
+                      <p>
+                        We send out weekly newsletters with the must know insights, forecasts and advise on how to manage your funds better and make the most out of it. You can opt out whenever you like.
+                      </p>
+
+                      <form action="">
+                        
+                        <div class="input-group">
+                          <input type="text" class="form-input" placeholder="Your email address here">
+                          <button type="submit" class="btn">Submit</button>
+                         </div>
+
+                      </form>
+
+                    </article>
+                  </dialog>
                 </div>
       
       
@@ -1073,7 +1106,22 @@
                 <div>
             
                   <h4>Our Social Media</h4>
-                  <img src="images/socials.png" alt="">
+                  
+                  <div class="social-link">
+
+                    <a class="icon" href="#">
+                      <img src="./images/facebook.svg" alt="">
+                    </a>
+
+                    <a class="icon" href="#">
+                      <img src="./images/instagram.svg" alt="">
+                    </a>
+
+                    <a class="icon" href="#">
+                      <img src="./images/linkedin-in-white.svg" alt="">
+                    </a>
+          
+                  </div>
             
                 </div>
             
@@ -1082,7 +1130,6 @@
                   <ul>
                     <li>Suite 102, Level 1</li>
                     <li>102/276 Pitt St</li>
-                    <li>Small business tax</li>
                     <li>Sydney NSW 2000</li>
                   </ul>
                 </div>
