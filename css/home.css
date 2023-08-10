@@ -655,14 +655,11 @@
 }
 .home .services-boxes-holder .box-overlay:hover {
   background-color: rgba(132, 95, 50, 0.262745098);
+  justify-content: center;
 }
 .home .services-boxes-holder .box-overlay:hover h3 {
   color: rgb(255, 255, 255);
   bottom: 0px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transition: 0.25s;
 }
 @media screen and (max-width: 1000px) {
   .home .services-boxes-holder .box-overlay:hover h3 {
