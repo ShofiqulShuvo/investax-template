@@ -11,7 +11,6 @@
 }
 .e-checklist .comp-detail {
   margin: 2rem 0 3rem;
-  margin-top: 1rem;
 }
 .e-checklist .comp-detail h2 {
   color: #374956;
@@ -185,4 +184,66 @@
 }
 .e-checklist .comp-detail .download-btn:hover {
   background: #9e6d2d;
+}
+.e-checklist .checklist-card {
+  margin: 1.5rem 0 2rem;
+}
+.e-checklist .checklist-card .single-card {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #999;
+  margin-bottom: 1.5rem;
+}
+.e-checklist .checklist-card .card-image {
+  height: 200px;
+  overflow: hidden;
+}
+.e-checklist .checklist-card .card-image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.e-checklist .checklist-card .card-body {
+  padding: 0.75rem 1rem;
+}
+.e-checklist .checklist-card .card-body h6 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem !important;
+}
+.e-checklist .checklist-card .card-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #9e6d2d;
+  margin-bottom: 0.25rem;
+}
+.e-checklist .checklist-card .btn {
+  display: block;
+  width: 100%;
+  margin: 0.75rem auto 0;
+  padding: 0.35rem 0.75rem;
+  background: #282828;
+  color: #fff;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3px;
+  transition: all 0.25s ease;
+}
+.e-checklist .checklist-card .btn:hover {
+  background: #9e6d2d;
+}
+.e-checklist .header {
+  background: #b88c51;
+  color: #fff;
+  padding: 0.75rem 1rem;
+}
+.e-checklist .header h4 {
+  margin-bottom: 0.25rem !important;
+  color: #fff;
+}
+.e-checklist .header p {
+  background-color: unset !important;
+  padding: unset !important;
 }/*# sourceMappingURL=e-Checklists.css.map */
