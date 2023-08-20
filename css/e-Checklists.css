@@ -235,13 +235,13 @@
   background: #9e6d2d;
 }
 .e-checklist .header {
-  background: #b88c51;
+  background: #282828;
   color: #fff;
   padding: 0.75rem 1rem;
 }
 .e-checklist .header h4 {
   margin-bottom: 0.25rem !important;
-  color: #fff;
+  color: #b88c51;
 }
 .e-checklist .header p {
   background-color: unset !important;
