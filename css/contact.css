@@ -75,8 +75,11 @@ hr {
   color: #282828;
   text-decoration: none;
 }
+.contact-us .address .item .side {
+  display: flex;
+  gap: 1rem;
+}
 .contact-us .address .item .icon {
-  height: 35px;
   width: 35px;
 }
 .contact-us .comp-detail {
