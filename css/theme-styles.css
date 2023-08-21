@@ -1267,6 +1267,32 @@ a.mobile-cta-btn {
   font-size: 0.8rem;
 }
 
+.info-graph {
+  margin: 2rem 0;
+}
+.info-graph .web-info {
+  width: 100%;
+  border-radius: unset;
+}
+@media screen and (max-width: 992px) {
+  .info-graph .web-info {
+    display: none;
+  }
+}
+.info-graph .mobile-info {
+  display: none;
+  border-radius: unset;
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .info-graph .mobile-info {
+    display: block;
+  }
+}
+.info-graph img {
+  width: 100%;
+}
+
 /******************* Header ********************/
 header {
   padding: unset !important;

@@ -246,29 +246,4 @@
 .e-checklist .header p {
   background-color: unset !important;
   padding: unset !important;
-}
-.e-checklist .info-graph {
-  margin: 2rem 0;
-}
-.e-checklist .info-graph .web-info {
-  width: 100%;
-  border-radius: unset;
-}
-@media screen and (max-width: 992px) {
-  .e-checklist .info-graph .web-info {
-    display: none;
-  }
-}
-.e-checklist .info-graph .mobile-info {
-  display: none;
-  border-radius: unset;
-  width: 100%;
-}
-@media screen and (max-width: 992px) {
-  .e-checklist .info-graph .mobile-info {
-    display: block;
-  }
-}
-.e-checklist .info-graph img {
-  width: 100%;
 }/*# sourceMappingURL=e-Checklists.css.map */
