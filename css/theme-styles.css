@@ -1644,6 +1644,11 @@ header .container-fluid {
 }
 .sub-menu .sub-menu-container .sub-menu-feature img {
   width: 100%;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .sub-menu .sub-menu-container .sub-menu-feature p {
   margin-top: 1rem;
