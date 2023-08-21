@@ -5,6 +5,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: #fff;
+}
+
 h2 {
   font-family: "Tilt Warp", cursive;
   color: #b88c51;
