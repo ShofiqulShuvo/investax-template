@@ -193,20 +193,23 @@
   overflow: hidden;
   border-radius: 5px;
   box-shadow: 2px 2px 5px #999;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 .e-checklist .checklist-card .card-image {
   height: 200px;
+  width: 100%;
   overflow: hidden;
 }
 .e-checklist .checklist-card .card-image img {
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
 }
 .e-checklist .checklist-card .card-body {
-  padding: 0.75rem 1rem;
+  padding: 0.5rem;
 }
 .e-checklist .checklist-card .card-body h6 {
   font-size: 0.9rem;
