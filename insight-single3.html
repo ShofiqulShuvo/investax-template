@@ -372,7 +372,9 @@
 
                     <figure class="wp-block-image size-full"><img decoding="async" loading="lazy" width="1024" height="678" src="https://www.investax.com.au/wp-content/uploads/2023/05/shutterstock_rent_or_buy_build_to_rent.jpg" alt="" class="wp-image-74971" srcset="https://investax-dev.revinr.work/wp-content/uploads/2023/05/shutterstock_rent_or_buy_build_to_rent.jpg 1024w, https://investax-dev.revinr.work/wp-content/uploads/2023/05/shutterstock_rent_or_buy_build_to_rent-300x199.jpg 300w, https://investax-dev.revinr.work/wp-content/uploads/2023/05/shutterstock_rent_or_buy_build_to_rent-768x509.jpg 768w, https://investax-dev.revinr.work/wp-content/uploads/2023/05/shutterstock_rent_or_buy_build_to_rent-980x649.jpg 980w, https://investax-dev.revinr.work/wp-content/uploads/2023/05/shutterstock_rent_or_buy_build_to_rent-480x318.jpg 480w" sizes="(max-width: 1024px) 100vw, 1024px"><figcaption class="wp-element-caption">You need to consider a lots of factors before deciding</figcaption></figure>
 
-
+                    <h3>
+                      1. You need to consider a lots of factors before deciding
+                    </h3>
 
                     <ul>
                       <li>What do you want to do in the long run?</li>
@@ -498,7 +500,7 @@
 
 
 
-                    <h3 id="Government-Incentives" class="wp-block-heading">Government Incentives –</h3>
+                    <h3 id="Government-Incentives" class="wp-block-heading">2. Government Incentives –</h3>
 
 
 
@@ -1463,11 +1465,22 @@
 
   if(insightArticle && tableOfContent) {
 
-    const contentTitle = insightArticle.querySelectorAll('h2') 
+    const contentTitle = insightArticle.querySelectorAll('h2, h3') 
+
 
     contentTitle.forEach(title => {
 
-      const titleText = title.innerText;
+      let titleText = title.innerText;
+
+      const  hasNumber =  /\d/;
+      const hasOnlyNumber = /^[0-9]+$/
+      const hasSpecialCaracters =  /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+
+      if(hasNumber.test(titleText.substring(0, 4)) && !hasOnlyNumber.test(titleText.substring(0, 3)) && !hasSpecialCaracters.test(titleText.substring(0, 1)) ) {
+        titleText = titleText.slice(2)
+      }
+
+
 
       // making id and href text
       const forIdAndHref = titleText.split(" ").join("-");
@@ -1535,3 +1548,26 @@
 
 
 </html>
+
+
+<!-- const insightArticle = document.getElementById('insight-article')
+const tableOfContent = document.getElementById('table-of-content')
+if (insightArticle && tableOfContent) {
+    const contentTitle = insightArticle.querySelectorAll('h2')
+    contentTitle.forEach(title => {
+        const titleText = title.innerText;
+        // making id and href text
+        const forIdAndHref = titleText.split(" ").join("-");
+        // adding id to content title
+        title.setAttribute('id', forIdAndHref)
+        // create element and appending
+        const li = document.createElement("li")
+        const a = document.createElement("a")
+        //  adding href to a tag
+        a.setAttribute("href", `#${forIdAndHref}`);
+        a.innerText = titleText.toLowerCase();
+        li.append(a)
+        //  adding content in table of content
+        tableOfContent.insertAdjacentElement("beforeend", li)
+    })
+} -->

@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+hr {
+  margin-bottom: 50px;
+  border-top: 1px solid #282828;
+}
+
+.contact-banner {
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 2px 2px 15px #000 !important;
+}
+.contact-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2), rgba(191, 111, 5, 0.486));
+}
+.contact-banner .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 3rem 0 2rem;
+}
+.contact-banner .container .banner-text {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  z-index: 5;
+}
+
+.faq-container {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}/*# sourceMappingURL=faq.css.map */
