@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap')
+
+
+$fontOne: 'Montserrat', sans-serif
+$fontTwo: 'Tilt Warp', cursive
+
+$brandColorOne: #9e6d2d
+$brandColorTwo: #b88c51
+$brandColorThree: #B17A4E
+$darkTextColor: #070012f5
+
+
+
+hr
+  margin-bottom: 50px
+  border-top: 1px solid #282828
+
+.comp-detail
+  margin-bottom: 3rem
+
+
+.post-container
+  margin-top: 2rem
+
+  hr
+    margin-top: 0 !important
+
+  .featured-post
+    margin-top: 5rem
+
+.blog-item
+  overflow: hidden
+  border-radius: 3px
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, .2 )
+  padding: 0px !important
+
+  .blog-tags
+    a
+      border-radius: unset
+      display: inline-block
+
+
+
+
+.all-contents
+  margin-top: 1rem
+
+  .single-content
+      height: 100%
+      overflow: hidden
+      border-radius: 3px
+      box-shadow: 5px 5px 13px 0px rgba(181,173,173,0.81)
+
+      &:hover
+          .bg-img
+              transform: scale(1.1)
+
+  .image-container
+      height: 200px
+      width: 100%
+
+      .bg-img
+          height: 100%
+          width: 100%
+          background-repeat: no-repeat
+          background-position: center
+          background-size: cover
+          transition: all 5s ease
+
+
+  .details
+      height: calc( 100% - 200px )
+      padding: .75rem 1rem 2rem
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
+  .occupation
+      font-size: .9rem
+      font-weight: 600
+
+  .btn
+      display: block !important
+      margin: .75rem auto 0
+      padding: .35rem .75rem
+      background: #282828
+      color: #fff
+      font-size: .8rem
+      text-decoration: none
+      text-align: center
+      border-radius: 3px
+      transition: all .25s ease
+
+      &:hover
+          background: $brandColorOne
