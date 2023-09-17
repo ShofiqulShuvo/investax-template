@@ -316,6 +316,13 @@
   border-radius: 2px;
   transition-duration: 0.6s;
   background-color: #B17A4E;
+  padding: 0.05rem;
+  border: none;
+  box-shadow: none !important;
+}
+.home .swiper-pagination-bullet:hover {
+  background-color: #b88c51 !important;
+  opacity: 1;
 }
 @media screen and (max-width: 600px) {
   .home .swiper-pagination-bullet {
