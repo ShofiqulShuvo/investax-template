@@ -34,7 +34,7 @@ hr {
   margin-bottom: 2rem;
 }
 .main-content .blog-item {
-  height: unset;
+  height: 100%;
   margin-bottom: 2rem;
 }
 .main-content .blog-item:hover .image {
@@ -59,7 +59,7 @@ hr {
   background-size: cover;
 }
 .main-content .blog-item .blog-details {
-  padding: 1rem 2rem 2rem;
+  padding: 1rem 2rem;
 }
 .main-content .blog-item .title {
   padding-top: 0.5rem !important;
