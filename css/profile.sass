@@ -79,13 +79,8 @@ main
 
   .profile-banner
     margin: 0px !important
-    width: 100%
-    height: 800px
     margin-bottom: 0px !important
 
-    @media screen and ( max-width: 900px )
-      height: 400px !important
-    
     .banner-text
       margin: 0px !important
       width: 100%
@@ -116,29 +111,52 @@ main
         text-align: left
           
   #profile-parallax-banner
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
     background-image: url('../images/profile-banner.jpg')
-    height: 800px
+    height: 100%
     background-size: cover
     background-position: center
     background-attachment: fixed
 
     @media screen and ( max-width: 900px )
       background-image: url('../team-img/ershad-ullah.png')
-      height: 400px !important
       background-position: center
-      background-size: cover         
+      background-size: cover      
+
+    @media screen and ( max-width: 768px )
+      background-size: contain 
 
   .profile-name
     color: #333
     margin-left: 30px
     
-  .phone, .email, .socials
+  .phone, .email
     display: block
     margin-bottom: 20px
+    color: $darkTextColor
+    text-decoration: none
 
     img
       height: 30px
       margin-right: 20px
+
+  .socials
+    margin-bottom: 1.5rem
+    display: flex
+    align-items: center
+    gap: 1rem
+
+    .single-social
+      padding: .15rem
+      &:hover
+        transform: scale(1.1)
+      i
+        font-size: 1.5rem
+        color: $brandColorOne
 
 
   p
@@ -147,5 +165,47 @@ main
 
   h2
     text-align: left
-    font-size: 56px !important
+    font-size: 2.5rem !important
+
+  #scroll-down-holder
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    z-index: 100
+
+  .scroll-down
+    display: block
+    height: 2rem
+    width: 2rem
+    z-index: 1000 !important
+    margin-bottom: 3rem
+    background: $brandColorOne
+    padding: .5rem
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    animation: transformEffect 1.5s linear infinite
+    @keyframes transformEffect
+      0%
+        transform: translateY(-.5rem)  
+      100%
+        transform: translateY(.5rem) 
+
+    img
+      height: 100%
+      width: 100%
+
+  .profile-banner-section
+    height: 100vh
+    position: relative
+
+    @media screen and ( max-width: 768px )
+      height: 700px
+
 

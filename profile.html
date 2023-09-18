@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css">
   <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
 
+
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="css/theme-styles.css" />
   <link rel="stylesheet" href="css/profile.css">
 
@@ -24,7 +28,7 @@
   <main class="profile-page">
 
     <section class="profile-banner-section">
-      <div class="profile-banner" id="profile-parallax-banner" data-cursor="-sm -exclusion">
+      <div class="profile-banner" id="profile-parallax-banner" >
         <div class="banner-text">
           <div class="container" data-cursor="-sm -exclusion">
             <h1>Ershad Ullah</h1>
@@ -32,23 +36,39 @@
           </div>
           
         </div>
+
+        <div id="scroll-down-holder">
+                  
+          <a class="scroll-down" href="#scroll-target">
+            <img src="./images/angles-down-solid.svg" alt="">
+          </a>
+
+        </div>
       </div>
     </section>
 
-    <section class="about-profile" data-cursor="-sm -exclusion">
+    <section class="about-profile" id="scroll-target">
       <div class="container">
         
 
         <div class="row">
-          <div class="col-md-6" data-cursor="-sm -exclusion">
+          <div class="col-md-6 col-12" >
             <h2>About <span class="profile-name">Ershad</span></h2>
-            <span class="phone"> <img src="images/image002.png" alt="">0286518000</span>
-            <span class="email"> <img src="images/image003.png" alt="">ershad@investax.com.au</span>
-            <span class="socials"><img src="images/socials-brandColors-small.png" alt=""></span>
+            <a class="phone" href="tel:0286518000"> <img src="images/image002.png" alt="">0286518000</a>
+            <a class="email" href="mailto:ershad@investax.com.au"> <img src="images/image003.png" alt="">ershad@investax.com.au</a>
 
+            <span class="socials">
+
+              <a class="single-social" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+              <a class="single-social" href="#"><i class="fa-brands fa-twitter"></i></i></a>
+
+              <a class="single-social" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+
+            </span>
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-6 col-12">
             
             <p>
               Ershad has been an accountant for more than 15 years. He is well known among his clients for delivering exceptional
