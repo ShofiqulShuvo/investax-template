@@ -129,7 +129,7 @@ main {
 @media screen and (max-width: 768px) {
   .profile-page #profile-parallax-banner {
     background-image: url("../images/1920_1080_Aron.jpg");
-    background-position: center;
+    background-position: top 50px center;
     background-size: cover;
   }
 }
