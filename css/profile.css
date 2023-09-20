@@ -27,7 +27,7 @@ main {
   justify-content: center;
 }
 .profile-page .profile-section span.caption-text {
-  font-size: 14px;
+  font-size: 0.75rem;
   margin: 0px auto !important;
   margin-bottom: 30px !important;
   text-align: center;
@@ -35,7 +35,7 @@ main {
 .profile-page .profile-section h1 {
   font-family: "Montserrat", sans-serif;
   color: #fff;
-  font-size: 30px;
+  font-size: 1.5rem;
   line-height: 40px;
   font-weight: 100;
   text-transform: uppercase;
@@ -44,25 +44,25 @@ main {
 }
 @media screen and (max-width: 900px) {
   .profile-page .profile-section h1 {
-    font-size: 20px !important;
+    font-size: 1rem !important;
   }
 }
 @media screen and (orientation: portrait) {
   .profile-page .profile-section h1 {
-    font-size: 20px !important;
+    font-size: 1rem !important;
     font-weight: 800 !important;
   }
 }
 .profile-page .profile-section h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.2rem;
   color: #fff;
 }
 @media screen and (orientation: portrait) {
   .profile-page .profile-section h3 {
     font-weight: 800 !important;
-    font-size: 24px;
+    font-size: 1.1rem;
   }
 }
 .profile-page .empty-divider {
@@ -79,14 +79,20 @@ main {
   margin-bottom: 0px !important;
 }
 .profile-page .profile-banner .banner-text {
-  margin: 0px !important;
+  margin: 0;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(184, 139, 81, 0.4862745098));
+  background: rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 900px) {
+  .profile-page .profile-banner .banner-text {
+    justify-content: flex-end;
+    padding-bottom: 5rem;
+  }
 }
 .profile-page .profile-banner .banner-text h1 {
   color: #fff;
@@ -95,7 +101,8 @@ main {
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 0.7rem;
+  font-size: 2rem;
 }
 .profile-page .profile-banner .banner-text h3 {
   color: #fff;
@@ -103,8 +110,9 @@ main {
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize !important;
   letter-spacing: 3px;
-  font-size: 20px !important;
+  font-size: 1rem !important;
   text-align: left;
+  font-size: 1.1rem;
 }
 .profile-page #profile-parallax-banner {
   position: absolute;
@@ -118,21 +126,15 @@ main {
   background-position: center;
   background-attachment: fixed;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 768px) {
   .profile-page #profile-parallax-banner {
-    background-image: url("../team-img/ershad-ullah.png");
+    background-image: url("../images/1920_1080_Aron.jpg");
     background-position: center;
     background-size: cover;
   }
 }
-@media screen and (max-width: 768px) {
-  .profile-page #profile-parallax-banner {
-    background-size: contain;
-  }
-}
 .profile-page .profile-name {
   color: #333;
-  margin-left: 30px;
 }
 .profile-page .phone, .profile-page .email {
   display: block;
@@ -162,7 +164,8 @@ main {
 }
 .profile-page p {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 0.85rem;
+  color: #000;
 }
 .profile-page h2 {
   text-align: left;

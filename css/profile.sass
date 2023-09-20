@@ -36,7 +36,7 @@ main
       justify-content: center
 
     span.caption-text    
-      font-size: 14px 
+      font-size: .75rem 
       margin: 0px auto !important
       margin-bottom: 30px !important
       text-align: center
@@ -44,7 +44,7 @@ main
     h1
       font-family: $fontOne
       color: #fff
-      font-size: 30px
+      font-size: 1.5rem
       line-height: 40px
       font-weight: 100
       text-transform: uppercase
@@ -52,22 +52,22 @@ main
       text-shadow: 2px 2px 10px #00000032
 
       @media screen and ( max-width: 900px )
-        font-size: 20px !important
+        font-size: 1rem !important
         
       @media screen and ( orientation: portrait )
-        font-size: 20px !important
+        font-size: 1rem !important
         font-weight: 800 !important
 
 
     h3
       font-family: $fontOne
       font-weight: 700
-      font-size: 24px
+      font-size: 1.2rem
       color: #fff
 
       @media screen and ( orientation: portrait )
         font-weight: 800 !important
-        font-size: 24px
+        font-size: 1.1rem
 
 
   .empty-divider
@@ -82,14 +82,17 @@ main
     margin-bottom: 0px !important
 
     .banner-text
-      margin: 0px !important
+      margin: 0
       width: 100%
       height: 100%
       display: flex
       flex-direction: column
       justify-content: center
       align-items: left
-      background-image: linear-gradient(180deg, #00000000, #b88b517c)
+      background: rgba( 0, 0, 0, .3)
+      @media screen and ( max-width: 900px )
+        justify-content: flex-end
+        padding-bottom: 5rem
       
 
       h1
@@ -99,7 +102,8 @@ main
         text-transform: uppercase
         letter-spacing: 2px
         text-align: left
-        margin-bottom: 10px
+        margin-bottom: .7rem
+        font-size: 2rem
 
       h3
         color: #fff
@@ -107,8 +111,9 @@ main
         font-family: $fontOne
         text-transform: capitalize !important
         letter-spacing: 3px
-        font-size: 20px !important
+        font-size: 1rem !important
         text-align: left
+        font-size: 1.1rem
           
   #profile-parallax-banner
     position: absolute
@@ -122,17 +127,13 @@ main
     background-position: center
     background-attachment: fixed
 
-    @media screen and ( max-width: 900px )
-      background-image: url('../team-img/ershad-ullah.png')
-      background-position: center
-      background-size: cover      
-
     @media screen and ( max-width: 768px )
-      background-size: contain 
+      background-image: url('../images/1920_1080_Aron.jpg')
+      background-position: center
+      background-size: cover       
 
   .profile-name
     color: #333
-    margin-left: 30px
     
   .phone, .email
     display: block
@@ -161,7 +162,8 @@ main
 
   p
     font-family: $fontOne
-    font-size: 16px
+    font-size: .85rem
+    color: #000
 
   h2
     text-align: left
