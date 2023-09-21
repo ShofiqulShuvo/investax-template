@@ -122,7 +122,11 @@ $darkTextColor: #070012f5
     width: 100%
     overflow: hidden
 
-    iframe 
+    video[poster]
+      object-fit: cover
+      object-position: center
+
+    video
       position: absolute
       top: 50%
       left: 50%
@@ -130,9 +134,6 @@ $darkTextColor: #070012f5
       height: 105vh
       transform: translate(-50%, -50%)
       pointer-events: none
-      
-
-
 
       @media (min-aspect-ratio: 16/9) 
           /* height = 100 * (9 / 16) = 56.25 */
@@ -680,7 +681,7 @@ $darkTextColor: #070012f5
 
       h3
         color: #fff
-        font-size: 14px
+        font-size: .75rem
         letter-spacing: 2px
         line-height: 26px
         text-transform: uppercase
@@ -688,7 +689,6 @@ $darkTextColor: #070012f5
         font-family: $fontOne
         margin-left: 15px
         height: 30px
-        width: 240px
         transition: all 0.4s ease-in-out
         bottom: -70px
         @media screen and ( max-width: 900px )
