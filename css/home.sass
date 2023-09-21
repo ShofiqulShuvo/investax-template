@@ -1113,24 +1113,6 @@ $darkTextColor: #070012f5
       &:hover
         border-color: #61431c
 
-    .newsletter-btn
-      width: fit-content
-      cursor: pointer
-      background: #fff
-      color: #000
-      border: 2px solid $brandColorOne
-      border-radius: 4px
-      margin: 10px 0px 0px !important
-      font-size: 14px
-      letter-spacing: 2px
-      font-weight: 800
-      text-transform: uppercase
-      min-height: 36px
-      transition-duration: 0.4s
-      &:hover
-        border-color: #000
-        background: #000
-        color: #fff
 
     .blog-buttons
       width: 100%
@@ -1220,8 +1202,6 @@ $darkTextColor: #070012f5
     overflow: hidden
     height: calc( 50vh - 150px )
     width: 480px
-
-    // background: #0a070de8
     background-color: $brandColorTwo
     margin-right: 30px
     display: flex
@@ -1244,69 +1224,9 @@ $darkTextColor: #070012f5
       margin: 10px 30px 0px 0px !important
       height: calc( 16vh - 10px ) 
 
-  .blog-img
-    height: 100%
-    width: 240px
-    overflow: hidden
-    z-index: 5
+  
 
-    img
-      width: 100%
-      height: 100%
-      object-fit: cover
-      object-position: center
-      transition-duration: 0.6s
-
-  .blog-text
-    position: relative
-    right: 0px
-    height: 300px
-    width: 200px  
-    margin: 10px
-    transition-duration: 0.6s
-    
-    @media screen and ( max-width: 600px )
-      height: 100%
-    
-    h3
-      font-size: 16px
-      line-height: 22px
-      margin: 20px 10px 5px 10px
-      font-family: $fontTwo
-      font-weight: 400
-      color: #fff
-      text-transform: uppercase
-
-      @media screen and ( max-width: 600px )
-        margin: 10px 0px 0px !important
-        font-size: 10px
-        line-height: 12px
-
-    .author
-      display: block
-      font-family: $fontOne
-      font-size: 12px
-      line-height: 14px
-      margin: 5px 10px 0px 10px
-      font-weight: 400
-      color: #ffffffab
-
-      @media screen and ( max-width: 600px )
-        font-size: 12px
-        line-height: 14px
-        margin: 0px !important
-
-    p
-      margin: 5px 10px 
-      font-size: 12px
-      line-height: 15px
-      width: 180px
-      color: #fff
-
-      @media screen and ( max-width: 800px )
-        display: none
-        height: 0px !important
-
+  
   .blog-post:hover
     background-color: #000000
     cursor: pointer
@@ -1318,102 +1238,6 @@ $darkTextColor: #070012f5
     .blog-text
       z-index: 2
       transform: translateX(0%)
-
-
-
-
-      
-
-
-
-
-  // TESTIMONIAL STYLES-------------------------------------
-
-
-  // #slide-7
-  //   background-image: url('../images/testimonial-bg.jpg')
-  //   background-size: cover
-  //   background-position: center
-
-
-  //   .container
-  //     margin-top: 100px
-  //     height: calc( 100vh - 400px )
-
-      
-
-
-  //   .single-test
-  //     margin-bottom: 20px
-  //     grid-gap: 0px
-  //     display: flex
-  //     flex-direction: row
-  //     justify-content: flex-start
-  //     width: 600px
-
-  //     div:nth-child(1)
-  //       margin-top: 30px
-  //       height: 120px
-  //       width: 120px
-  //       border-radius: 50%
-  //       overflow: hidden
-
-  //       img
-  //         height: 100%
-  //         width: 100%
-  //         object-fit: cover
-  //         object-position: center
-
-        
-  //     div:nth-child(2)
-  //       width: 350px
-  //       margin-left: 20px
-  //       p
-  //         padding: 0px
-  //         color: #fff
-  //         font-size: 14px
-  //         margin-top: 30px
-  //         margin-bottom: 10px
-
-  //       h4
-  //         margin: 5px 0px
-  //         font-size: 18px
-  //         line-height: 20px
-  //         color: #e6dffb
-
-  //       .designation
-  //         font-size: 14px
-  //         color: #ffffffd8
-  //         font-weight: 400
-
-    
-  // .section-title
-  //   font-family: $fontTwo
-  //   color: #fff
-  //   font-size: 65px
-  //   line-height: 65px
-  //   font-weight: 400
-  //   text-transform: uppercase
-  //   text-align: left
-  //   width: 100%
-  //   margin: 40px 80px 20px 0px
-  //   text-shadow: 2px 2px 6px #00000055
-
-  // .section-subtitle
-  //   margin-top: 40px
-  //   color: #fff
-  //   font-weight: 400
-  //   font-size: 18px
-  //   font-family: $fontOne
-
-  // .testimonia-dets
-  //   display: flex
-  //   flex-direction: column
-  //   justify-content: space-between
-
-
-  // .testimonial-button
-  //   margin-bottom: 40px
 
 
   //Contact STYLES------------
@@ -1763,105 +1587,164 @@ $darkTextColor: #070012f5
 
   //swiper styles===========
     
-  .mySlider-container
+  .home-investax-insight
     position: relative
-    top: 150px
+    padding-top: 8rem
     width: auto
-    height: 90vh
+    height: 100vh
     display: flex
     flex-direction: row
+    @media screen and ( max-width: 767px )
+      padding-top: 6rem
+      
+
+    .header-text
+      // height: 200px
 
     h2
+      margin-bottom: .75rem
       font-family: $fontTwo
       color: $brandColorTwo
-      font-size: 45px
-      line-height: 45px
+      font-size: 2.2rem
+      line-height: 1.7
       font-weight: 400
       text-transform: uppercase
       text-align: left
-      width: 500px
       text-shadow: 2px 2px 10px #00000032
-      margin: 50px 0px 20px 0px
 
       @media screen and ( max-width: 900px )
-        font-size: 20px !important
+        font-size: 1rem !important
         
       @media screen and ( orientation: portrait )
-        font-size: 20px !important
+        font-size: 1rem !important
 
-    @media screen and ( max-width: 800px )
-
-      top: 10px
+  .blog-post-container-home
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 1rem
+    justify-content: center
+    @media screen and ( max-width: 992px )
+      grid-template-columns: repeat( 1, 1fr)
       
-      
+      .blog-img, .blog-text
+        flex: 1
 
-
-  .mySlider-buttons
-    position: absolute
-    width: 100%
-    height: 100%
+  .blog-post-single
     display: flex
-    flex-direction: row
-    z-index: 101
-    justify-content: space-between
-    align-items: center
+    height: 300px
+    overflow: hidden
+    border-radius: 5px
+    width: 95%
+    cursor: pointer
+    text-decoration: none
+    &:hover
+      opacity: 1 !important
+      .blog-img
+
+        img
+          transform: scale(1.1)
+
+    @media screen and ( max-width: 767px )
+      height: 100px
+
+  .blog-img
+    flex: 3
+    height: 100%
+    overflow: hidden
+    z-index: 5
+    @media screen and ( max-width: 767px )
+      height: 100% !important
+
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      object-position: center
+      transition-duration: 1s
+
+  .blog-text
+    flex: 2
+    position: relative
+    height: 100%
+    color: #000
+    transition-duration: 0.6s
+    background: $brandColorOne
+    text-decoration: none
+    padding: 1rem .75rem .25rem
+    cursor: pointer
+    @media screen and ( max-width: 767px )
+        display: block
+        height: 100%
+        padding: .5rem !important
+        padding: 1rem
     
+    h3
+      font-size: .8rem
+      line-height: 1.4
+      margin-bottom: .5rem
+      font-family: $fontTwo
+      font-weight: 400
+      color: #fff
+      text-transform: uppercase
+      @media screen and ( max-width: 767px )
+        font-size: .7rem  !important
+        line-height: 1.2
 
-    @media screen and ( max-width: 900px )
-      align-items: flex-start
-      margin-top: calc( 50vh - 0px )
-    
+    .author
+      display: block
+      font-family: $fontOne
+      font-size: .6rem
+      line-height: 1.2
+      margin-bottom: 0
+      font-weight: 400
+      color: #ffffffab
+      margin-bottom: .5rem
 
-    .prev
-      background-color: $brandColorTwo
-      width: 80px
-      height: 80px
-      padding: 0px !important    
-      margin-left: 30px
-      transition-duration: 1.5s
-      border-radius: 50%
-      transition-timing-function: ease-out 
-      background-color: #ffffff
-      box-shadow: 3px 3px 13px 3px #3333337b
-      opacity: 0.6
-      border: none
+    p
+      font-size: .6rem
+      line-height: 1.2
+      color: #fff
 
+      @media screen and ( max-width: 800px )
+        display: none
 
-      @media screen and ( max-width: 900px )
-        height: 40px
-        width: 40px
-        margin-left: 6px
+  .blog-buttons-blog-post
+    display: flex
+    gap: 1rem
+    margin-top: 1.5rem
 
-    .next
-      background-color: $brandColorTwo
-      line-height: 10px
-      padding: 0px !important
-      width: 80px
-      height: 80px
-      transform: rotate(180deg) 
-      border-radius: 50%
-      margin-right: 30px
-      transition-duration: 1.5s
-      transition-timing-function: ease-out 
-      background-color: #fff
-      box-shadow: 3px 3px 13px 3px #3333337b
-      opacity: 0.6
-      border: none
+    .primary-btn
+      padding: .5rem .75rem
+      height: fit-content
+      margin: unset !important
+      font-size: .8rem
+      font-weight: 700
+      background: $brandColorTwo
+      border: 2px solid $brandColorTwo
+      box-shadow: none !important
+      &:focus
+        box-shadow: none
+      &:hover
+        background: #fff !important
+        color: #000
 
-      @media screen and ( max-width: 900px )
-        height: 40px
-        width: 40px
-        margin-right: 6px
-
-  .hide-button
-    scale: 0
-    transition-duration: 1.5s
-    transition-timing-function: ease-out 
-
-  .show-button
-    scale: 1
-    transition-duration: 1.5s
-    transition-timing-function: ease-out 
+    .newsletter-btn
+      padding: .5rem .75rem !important
+      height: fit-content
+      width: fit-content !important
+      margin: unset !important
+      font-size: .8rem
+      font-weight: 700
+      background: #fff
+      color: #000
+      border: 2px solid $brandColorTwo
+      box-shadow: none !important
+      &:focus
+        box-shadow: none
+      &:hover
+        background: $brandColorTwo !important
+        color: #fff
 
   .mySlide
     margin-top: 200px
