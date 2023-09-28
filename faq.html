@@ -296,28 +296,28 @@
 
           <div class="faq">
 
-            <details>
+            <details id="faq-1" class="single-faq">
               <summary>Adipisci sit quaerat incidunt?</summary>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam placeat deleniti tempora exercitationem corporis expedita dolorem tempore consectetur saepe blanditiis quibusdam, et ad architecto maiores neque adipisci sit quaerat incidunt?
               </p>
             </details>
 
-            <details>
+            <details id="faq-2" class="single-faq">
               <summary>Adipisci sit quaerat incidunt?</summary>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam placeat deleniti tempora exercitationem corporis expedita dolorem tempore consectetur saepe blanditiis quibusdam, et ad architecto maiores neque adipisci sit quaerat incidunt?
               </p>
             </details>
 
-            <details>
+            <details id="faq-3" class="single-faq">
               <summary>Adipisci sit quaerat incidunt?</summary>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam placeat deleniti tempora exercitationem corporis expedita dolorem tempore consectetur saepe blanditiis quibusdam, et ad architecto maiores neque adipisci sit quaerat incidunt?
               </p>
             </details>
 
-            <details>
+            <details id="faq-4" class="single-faq">
               <summary>Adipisci sit quaerat incidunt?</summary>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam placeat deleniti tempora exercitationem corporis expedita dolorem tempore consectetur saepe blanditiis quibusdam, et ad architecto maiores neque adipisci sit quaerat incidunt?
@@ -405,10 +405,33 @@
   </footer>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-<script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/index.js"></script>
+
+<style>
+  .single-faq {
+    scroll-margin-top: 150px;
+  }
+</style>
+
+
+<script>
+  const hashParams = window.location.hash.split('?')[0].substring(1)
+
+  
+  const allFaq =  document.querySelectorAll('details')
+  
+  allFaq.forEach((faq) => {
+
+    if(faq.id === hashParams){
+      faq.scrollIntoView()
+      faq.setAttribute('open', true)
+    }
+
+  }) 
+
+</script>
+
 </body>
 
 
