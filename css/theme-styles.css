@@ -1194,10 +1194,11 @@ a.mobile-cta-btn {
   text-transform: uppercase;
 }
 .step-section-content p {
-  font-size: 0.85rem;
-  color: #333;
+  font-size: 0.9rem;
+  color: #000;
   font-weight: 400;
   margin-bottom: 0.15rem;
+  opacity: 1;
 }
 @media screen and (max-width: 1100px) {
   .step-section-content p {
