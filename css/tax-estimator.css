@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1350px;
+  }
+}
 hr {
   margin-bottom: 50px;
   border-top: 1px solid #282828;
@@ -85,4 +90,161 @@ hr {
   .contact-banner .container .banner-sub-text {
     font-size: 1rem !important;
   }
+}
+
+#tex-estimator {
+  margin: 0;
+  padding: 3.5rem 0;
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  color: #000;
+}
+#tex-estimator .estimator {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+@media screen and (max-width: 991px) {
+  #tex-estimator .estimator {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+#tex-estimator .estimator .estimator-form {
+  height: 100%;
+  padding: 2rem 1.5rem;
+  margin: unset;
+  border-right: 2px solid #B17A4E;
+}
+@media screen and (max-width: 991px) {
+  #tex-estimator .estimator .estimator-form {
+    border: none;
+    border-bottom: 2px solid #B17A4E;
+  }
+}
+#tex-estimator .estimator .estimator-form .group-title {
+  margin: unset;
+}
+#tex-estimator .estimator .estimator-form legend, #tex-estimator .estimator .estimator-form label {
+  font-size: 0.9rem;
+  color: #000;
+  font-weight: 600;
+  margin: unset;
+}
+#tex-estimator .estimator .estimator-form input[type=number], #tex-estimator .estimator .estimator-form input[type=text] {
+  margin: unset;
+  height: unset;
+  padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+  font-size: 0.9rem;
+  border: 1.5px solid #B17A4E;
+  color: #000;
+  font-weight: 500;
+}
+#tex-estimator .estimator .estimator-form ::-moz-placeholder {
+  color: #999;
+  font-weight: 400;
+}
+#tex-estimator .estimator .estimator-form ::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+#tex-estimator .estimator .estimator-form .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+#tex-estimator .estimator .estimator-form .input-group label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#tex-estimator .estimator .estimator-form .radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: #000;
+}
+#tex-estimator .estimator .estimator-form .radio-group .radio-indivisual-input {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#tex-estimator .estimator .estimator-form .radio-group .radio-indivisual-input label {
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.2rem;
+}
+#tex-estimator .estimator .estimator-form .radio-group .radio-indivisual-input input {
+  border-color: #B17A4E;
+}
+#tex-estimator .estimator .estimator-form .error {
+  color: red;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+#tex-estimator .estimator .calculated-result {
+  height: 100%;
+  padding: 2rem 1.5rem;
+  margin: unset;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4 !important;
+}
+#tex-estimator .estimator .calculated-result p.title {
+  font-size: 1.2rem !important;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1.2rem;
+}
+#tex-estimator .estimator .calculated-result h1.amount {
+  color: #9e6d2d;
+  margin: unset;
+  font-size: 3rem;
+  display: inline-flex;
+  flex-direction: row;
+  font-weight: 500;
+  gap: 0.25rem;
+  margin-bottom: 1.2rem;
+}
+#tex-estimator .estimator .calculated-result p.description {
+  margin-bottom: 1.2rem;
+  color: #000;
+  font-weight: 500;
+  font-size: 1rem !important;
+  line-height: 1.4 !important;
+}
+#tex-estimator .estimator .calculated-result p.description strong {
+  color: #B17A4E;
+}
+#tex-estimator .estimator .calculated-result .summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#tex-estimator .estimator .calculated-result .summary .summary-head {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #B17A4E;
+  margin-bottom: 0.5rem;
+}
+#tex-estimator .estimator .calculated-result .summary .summary-data {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+#tex-estimator .estimator .calculated-result .summary .summary-data .value {
+  font-weight: 600;
+  color: #B17A4E;
 }/*# sourceMappingURL=tax-estimator.css.map */
