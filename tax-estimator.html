@@ -316,7 +316,7 @@
             <div class="row">
               <div class="col-12 col-lg-6">
                 <!-- estimator form -->
-                <form class="estimator-form row">
+                <form id="estimator-form" class="estimator-form row">
                   <div class="input-group radio-group col-12">
                     <legend>
                       Have you owned the asset for more than 12 months?
@@ -324,11 +324,11 @@
 
                     <div class="radio-indivisual-input">
                       <label>
-                        <input type="radio" name="language" checked />
+                        <input type="radio" name="more-than-year" value="true" checked />
                         Yes
                       </label>
                       <label>
-                        <input type="radio" name="language" checked />
+                        <input type="radio" name="more-than-year" value="false"  />
                         No
                       </label>
                     </div>
@@ -339,8 +339,9 @@
                       Purchase price
                       <input
                         type="number"
-                        name="prchase-price"
+                        name="purchase-price"
                         placeholder="Purchase price"
+                        required
                       />
                     </label>
                   </div>
@@ -352,6 +353,7 @@
                         type="number"
                         name="sold-price"
                         placeholder="Sold price"
+                        required
                       />
                     </label>
                   </div>
@@ -363,6 +365,7 @@
                         type="number"
                         name="cost-purchase"
                         placeholder="Cost of purchase"
+                        required
                       />
                     </label>
                   </div>
@@ -374,6 +377,7 @@
                         type="number"
                         name="cost-selling"
                         placeholder="Cost of selling"
+                        required
                       />
                     </label>
                   </div>
@@ -385,12 +389,15 @@
                         type="number"
                         name="current-taxable-income"
                         placeholder="Current taxable income"
+                        requireds
                       />
                     </label>
                   </div>
                   <p class="error">
                     * Fields highlighted in red are mandatory.
                   </p>
+
+                  <button class="calculate-btn" type="submit">Calculate</button>
                 </form>
               </div>
               <div class="col-12 col-lg-6">
@@ -405,13 +412,13 @@
 
                   <p class="description">
                     <span>Based on your income</span>
-                    <strong>$</strong><strong>100</strong>
+                    <strong>$</strong><strong class="current-income">0</strong>
                     <span>, purchase price</span>
-                    <strong>$</strong><strong>100</strong>
+                    <strong>$</strong><strong class="purchase-price">0</strong>
                     <span>and sold price </span>
-                    <strong>$</strong><strong>100</strong>
+                    <strong>$</strong><strong class="sold-price">0</strong>
                     <span>, your estimated capital gains tax payable is</span>
-                    <strong>$</strong><strong>100</strong>.
+                    <strong>$</strong><strong class="capital-gain-payable">0</strong>.
                   </p>
 
                   <!-- summery -->
@@ -421,19 +428,19 @@
                     <!-- capital gain -->
                     <div class="summary-data">
                       <span class="property">Capital gain</span>
-                      <span class="value"><span>$</span><span>100</span> </span>
+                      <span class="value capital-gain"><span>$</span><span>100</span> </span>
                     </div>
 
                     <!-- taxable capital gain -->
                     <div class="summary-data">
                       <span class="property">Taxable capital gain</span>
-                      <span class="value"><span>$</span><span>100</span> </span>
+                      <span class="value texable-capital-gain"><span>$</span><span>100</span> </span>
                     </div>
 
                     <!-- current taxable income -->
                     <div class="summary-data">
                       <span class="property">Current taxable income</span>
-                      <span class="value"><span>$</span><span>100</span> </span>
+                      <span class="value current-taxable-income"><span>$</span><span>100</span> </span>
                     </div>
 
                     <!-- capital gain tax payable -->
@@ -564,6 +571,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- tex estimator js -->
+    <script src="js/taxEstimator.js"></script>
 
     <script src="js/menu.js"></script>
     <script src="js/index.js"></script>

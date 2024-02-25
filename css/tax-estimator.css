@@ -143,6 +143,10 @@ hr {
   color: #000;
   font-weight: 500;
 }
+#tex-estimator .estimator .estimator-form .not-valid {
+  outline: 0.5px solid red;
+  border: none !important;
+}
 #tex-estimator .estimator .estimator-form ::-moz-placeholder {
   color: #999;
   font-weight: 400;
@@ -188,6 +192,13 @@ hr {
   color: red;
   font-size: 0.75rem;
   font-weight: 500;
+}
+#tex-estimator .estimator .estimator-form .calculate-btn {
+  background: #B17A4E;
+  border: none;
+  box-shadow: unset !important;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
 }
 #tex-estimator .estimator .calculated-result {
   height: 100%;
