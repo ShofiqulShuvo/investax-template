@@ -247,4 +247,43 @@ hr {
 #tex-estimator .estimator .calculated-result .summary .summary-data .value {
   font-weight: 600;
   color: #B17A4E;
+}
+#tex-estimator .how-to-use {
+  margin-top: 3.5rem;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#tex-estimator .how-to-use .main-heading {
+  text-align: left;
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-shadow: unset;
+  font-family: "Montserrat", sans-serif;
+  color: #9e6d2d;
+}
+#tex-estimator .how-to-use .details {
+  margin-top: 1.5rem;
+  color: #000;
+}
+#tex-estimator .how-to-use .details p {
+  color: #000;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.65rem;
+}
+#tex-estimator .how-to-use .details p strong {
+  color: #9e6d2d;
+}
+#tex-estimator .how-to-use .details ul {
+  padding-left: 2rem;
+}
+#tex-estimator .how-to-use .details ul li {
+  list-style-position: outside;
+  list-style: disc;
+}
+#tex-estimator .how-to-use .details ul li::marker {
+  list-style: circle;
+  font-size: 1.2rem;
+  color: #9e6d2d;
 }/*# sourceMappingURL=tax-estimator.css.map */
