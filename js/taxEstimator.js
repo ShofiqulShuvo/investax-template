@@ -79,6 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
       return 51667 + (income - 180000) * 0.45;
     }
   }
+  
+  
 
   // Function to display the calculated results
   function displayResults(capitalGain, finalTaxableCapitalGain, currentTaxableIncome, capitalGainsTaxPayable) {
