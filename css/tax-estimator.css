@@ -144,7 +144,7 @@ hr {
   font-weight: 500;
 }
 #tex-estimator .estimator .estimator-form .not-valid {
-  outline: 0.5px solid red;
+  outline: 1px solid red;
   border: none !important;
 }
 #tex-estimator .estimator .estimator-form ::-moz-placeholder {
