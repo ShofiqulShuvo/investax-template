@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Function to display the calculated results
   function displayResults(capitalGain, finalTaxableCapitalGain, currentTaxableIncome, capitalGainsTaxPayable) {
     // Get the result elements
-    const amountElement = document.querySelector('.calculated-result .amount span:last-child');
+    const amountElement = document.querySelector('.calculated-result .amount');
     const currentTaxableIncomeInParagraph = document.querySelector('.calculated-result .description .current-income');
     const purchasePriceElement = document.querySelector('.calculated-result .description .purchase-price');
     const soldPriceElement = document.querySelector('.calculated-result .description .sold-price');
@@ -94,18 +94,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const taxableCapitalGainElement = document.querySelector('#tex-estimator .calculated-result .summary .texable-capital-gain');
     const currentTaxableIncomeElement = document.querySelector('#tex-estimator .calculated-result .summary .current-taxable-income');
     const capitalGainPayableElement = document.querySelector('#tex-estimator .calculated-result .summary .capital-gain-tax-payable');
-
-    // Display results in the HTML elements
-    amountElement.textContent = capitalGainsTaxPayable.toFixed(2);
-    currentTaxableIncomeInParagraph.textContent = currentTaxableIncome.toFixed(2);
-    purchasePriceElement.textContent = purchasePrice.toFixed(2);
-    soldPriceElement.textContent = soldPrice.toFixed(2);
-    capitalGainPayableInParagraph.textContent = capitalGainsTaxPayable.toFixed(2);
-    capitalGainElement.textContent = capitalGain.toFixed(2);
-    taxableCapitalGainElement.textContent = finalTaxableCapitalGain.toFixed(2);
-    currentTaxableIncomeElement.textContent = currentTaxableIncome.toFixed(2);
-    capitalGainPayableElement.textContent = capitalGainsTaxPayable.toFixed(2);
+  
+    // Display results in the HTML elements without decimal part in Australian dollars
+    const currencyOptions = { style: 'currency', currency: 'AUD', maximumFractionDigits: 0 };
+    amountElement.textContent = capitalGainsTaxPayable.toLocaleString('en-AU', currencyOptions);
+    currentTaxableIncomeInParagraph.textContent = currentTaxableIncome.toLocaleString('en-AU', currencyOptions);
+    purchasePriceElement.textContent = purchasePrice.toLocaleString('en-AU', currencyOptions);
+    soldPriceElement.textContent = soldPrice.toLocaleString('en-AU', currencyOptions);
+    capitalGainPayableInParagraph.textContent = capitalGainsTaxPayable.toLocaleString('en-AU', currencyOptions);
+    capitalGainElement.textContent = capitalGain.toLocaleString('en-AU', currencyOptions);
+    taxableCapitalGainElement.textContent = finalTaxableCapitalGain.toLocaleString('en-AU', currencyOptions);
+    currentTaxableIncomeElement.textContent = currentTaxableIncome.toLocaleString('en-AU', currencyOptions);
+    capitalGainPayableElement.textContent = capitalGainsTaxPayable.toLocaleString('en-AU', currencyOptions);
   }
+  
+  
+  
 
   // Add event listener to the inputs for live validation
   [purchasePriceInput, soldPriceInput, costPurchaseInput, costSellingInput, currentTaxableIncomeInput].forEach(function (input) {
