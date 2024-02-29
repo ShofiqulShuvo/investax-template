@@ -267,27 +267,29 @@ hr {
 }
 #tex-estimator .how-to-use .main-heading {
   text-align: left;
-  font-size: 2.1rem;
+  font-size: 2rem;
   font-weight: 700;
   text-shadow: unset;
   font-family: "Montserrat", sans-serif;
   color: #9e6d2d;
 }
 #tex-estimator .how-to-use .details {
-  margin-top: 1.5rem;
+  margin-top: 1.2rem;
   color: #000;
+  line-height: 1.4;
 }
 #tex-estimator .how-to-use .details p {
   color: #000;
   font-size: 1.05rem;
   font-weight: 500;
-  margin-bottom: 0.65rem;
+  margin-bottom: 0.5rem;
 }
 #tex-estimator .how-to-use .details p strong {
   color: #9e6d2d;
 }
 #tex-estimator .how-to-use .details ul {
   padding-left: 2rem;
+  margin: unset;
 }
 #tex-estimator .how-to-use .details ul li {
   list-style-position: outside;
@@ -297,4 +299,7 @@ hr {
   list-style: circle;
   font-size: 1.2rem;
   color: #9e6d2d;
+}
+#tex-estimator .how-to-use .details ul p {
+  margin: unset !important;
 }/*# sourceMappingURL=tax-estimator.css.map */
