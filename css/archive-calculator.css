@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+hr {
+  margin-bottom: 50px;
+  border-top: 1px solid #282828;
+}
+
+.archive-banner {
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 2px 2px 15px #000 !important;
+}
+.archive-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.archive-banner .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.archive-banner .container .banner-text {
+  margin-top: 1.5rem;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
+  z-index: 5;
+}
+
+.essential-links {
+  margin-top: 1.5rem;
+}
+.essential-links .links-container-full {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+  .essential-links .links-container-full {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.essential-links .breadcrumb {
+  align-self: flex-start;
+  justify-self: flex-end;
+  color: #fff;
+  margin-top: 0.75rem;
+  z-index: 2;
+}
+.essential-links .breadcrumb ul {
+  background: #282828;
+  color: #fff;
+  margin: 0;
+  transform: skew(-15deg, 0deg);
+}
+.essential-links li {
+  font-size: 0.9rem !important;
+  font-weight: 500;
+  padding: 8px 15px;
+}
+@media screen and (max-width: 500px) {
+  .essential-links li:last-child {
+    font-size: 10px;
+  }
+}
+.essential-links a {
+  color: white;
+}
+@media screen and (max-width: 500px) {
+  .essential-links a {
+    font-size: 10px;
+  }
+}
+.essential-links a:hover {
+  color: #fff;
+}
+.essential-links a::after {
+  color: #fff !important;
+}
+.essential-links .link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 2;
+}
+.essential-links .link .icon {
+  padding: 0.15rem;
+  border-radius: 50%;
+}
+.essential-links .link .icon:hover {
+  transform: scale(1.1);
+}
+.essential-links .link .icon img {
+  height: 1.2rem;
+}
+
+.calculator-details {
+  margin-bottom: unset;
+  padding: 2rem 0;
+  background: #fff;
+  min-height: 550px;
+}
+.calculator-details .single-calculator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #b88c51;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+  box-shadow: unset;
+  cursor: pointer;
+}
+.calculator-details .single-calculator:hover {
+  background: rgba(7, 0, 18, 0.9607843137);
+}
+.calculator-details .single-calculator img {
+  height: 1.2rem;
+}/*# sourceMappingURL=archive-calculator.css.map */

@@ -134,6 +134,10 @@ hr {
   font-weight: 600;
   margin: unset;
 }
+#tex-estimator .estimator .estimator-form input {
+  background: #fff !important;
+  background-color: #fff !important;
+}
 #tex-estimator .estimator .estimator-form input[type=number], #tex-estimator .estimator .estimator-form input[type=text] {
   margin: unset;
   height: unset;
@@ -141,6 +145,8 @@ hr {
   font-size: 0.9rem;
   border: 1.5px solid #B17A4E;
   color: #000;
+  background: #fff !important;
+  background-color: #fff !important;
   font-weight: 500;
 }
 #tex-estimator .estimator .estimator-form .not-valid {
