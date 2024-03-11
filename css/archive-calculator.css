@@ -108,7 +108,7 @@ hr {
   margin-bottom: unset;
   padding: 2rem 0;
   background: #fff;
-  min-height: 550px;
+  min-height: 400px;
 }
 .calculator-details .single-calculator {
   display: flex;
