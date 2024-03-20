@@ -131,7 +131,7 @@ hr
         border: none
         display: flex
         flex-direction: column
-        gap: 1rem
+        gap: .75rem
 
         .short-details
           color: #000
@@ -143,7 +143,17 @@ hr
           color: rgb(0, 0, 238) !important
 
         a.faq-link
+          width: fit-content
           font-size: .8rem
+          padding-bottom: .1rem
+          border-bottom: 2px solid rgba(0, 0, 238, 0)
+          cursor: pointer
+
+          img
+                height: 1rem
+
+          &:hover
+            border-bottom: 2px solid rgb( 0, 0, 238)
 
 .featured-faq
   margin-top: 2rem
@@ -179,9 +189,20 @@ hr
       margin-bottom: .5rem
 
     .faq-link
+      display: inline-block
+      width: fit-content
       font-size: .75rem
       font-weight: 600
       color: rgb(0, 0, 238)
+      padding-bottom: .1rem
+      border-bottom: 2px solid rgba(0, 0, 238, 0)
+      cursor: pointer
+
+      img
+            height: 1rem
+
+      &:hover
+        border-bottom: 2px solid rgb( 0, 0, 238)
 
 
 #all-faq
