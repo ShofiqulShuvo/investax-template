@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap')
+
+
+$fontOne: 'Montserrat', sans-serif
+$fontTwo: 'Tilt Warp', cursive
+
+$brandColorOne: #9e6d2d
+$brandColorTwo: #b88c51
+$brandColorThree: #B17A4E
+$darkTextColor: #070012f5
+
+
+
+hr
+  margin-bottom: 50px
+  border-top: 1px solid #282828
+
+.faq-banner
+  height: 350px
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  position: relative
+  font-family: $fontOne
+  text-shadow: 2px 2px 15px #000 !important
+  &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: rgba( 0, 0, 0, .3)
+
+
+  .container
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 3rem 0 2rem
+
+    .banner-text
+      margin-top: 1.5rem
+      font-size: 2.5rem
+      font-weight: bold
+      color: #fff
+      z-index: 5
+
+
+.faq-archive-container
+  padding-top: 1.8rem
+  padding-bottom: 3rem
+  background: #fff
+
+  .title
+      font-family: $fontTwo
+      font-size: 2.5rem
+      color: $brandColorTwo
+      text-align: center
+
+  .sub-heading
+      margin: .75rem auto 3rem
+      font-size: 1.3rem
+      font-weight: 600
+      text-align: center
+      color: #000
+
+  .comp-title
+    margin-top: 2rem
+    border-bottom: 1.5px solid #282828
+
+    .main-title
+      color: #fff
+      background: #282828
+      padding: 0.2rem 1.5rem
+      font-size: 1rem
+      font-weight: 500
+      font-family: "Montserrat", sans-serif
+      letter-spacing: 1.5px
+      text-transform: uppercase
+      width: -moz-fit-content
+      width: fit-content
+      transform: skew(-15deg, 0deg)
+      margin-left: 5px
+      
+
+  .faq
+      margin-top: 2rem
+
+      details
+        padding-bottom: unset !important
+        color: #fff
+
+        &:last-child
+          border-bottom: none
+
+      details[open]
+
+        summary
+          margin-bottom: 0
+          color: #fff
+          border-radius: 5px 5px 0 0 
+
+        .details
+          border: 1px solid #999
+          border-top: none
+          border-radius: 0 0 5px 5px
+
+      summary
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        font-weight: 600
+        font-size: .9rem
+        padding: .75rem 1rem
+        background-color: #b88c51
+        color: #fff
+        border: none
+        box-shadow: unset
+        border-radius: 5px 
+
+      .details
+        background-color: #fff
+        color: #000000
+        padding: 1rem 1.2rem .5rem
+        margin-bottom: 0
+        font-size: .9rem
+        line-height: 1.5
+        border: none
+
+        a
+          font-weight: 600
+          color: rgb(0, 0, 238) !important
+
+
+#all-faq
+  margin-top: 3.5rem
+
+  .faq
+    margin-top: 0
+
+  .faq-tabs
+    margin-top: 1rem
+
+  .faq-tabs-buttons
+    padding: 1rem 0 1rem
+    display: flex
+    flex-wrap: wrap
+    gap: .5rem
+
+    button
+      padding: .5rem 1rem
+      width: unset
+      display: inline-block
+      background-color: unset
+      color: #000
+      font-weight: 600
+      font-size: .75rem
+      border: 2px solid #000
+      box-shadow: none !important
+      cursor: pointer
+
+      &:hover
+        border-color: #b88c51
+        background: #fff
+        color: #b88c51
+        
+
+    button.active
+      border-color: #9e6d2d
+      color: #fff
+      background-color: #9e6d2d
+
+
+  .faq-tab-contents
+    scroll-margin-top: 130px
+
+    .single-faq-tab-contents
+      display: none
