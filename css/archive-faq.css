@@ -110,15 +110,26 @@ hr {
 .faq-archive-container .faq .details {
   background-color: #fff;
   color: #000000;
-  padding: 1rem 1.2rem 0.5rem;
+  padding: 1rem 1rem 1.2rem;
   margin-bottom: 0;
   font-size: 0.9rem;
   line-height: 1.5;
   border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.faq-archive-container .faq .details .short-details {
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 .faq-archive-container .faq .details a {
   font-weight: 600;
   color: rgb(0, 0, 238) !important;
+}
+.faq-archive-container .faq .details a.faq-link {
+  font-size: 0.8rem;
 }
 
 .featured-faq {
@@ -153,6 +164,7 @@ hr {
 }
 .featured-faq .faq-card .faq-short-details {
   font-size: 0.9rem;
+  font-weight: 500;
   color: #000;
   margin-bottom: 0.5rem;
 }
@@ -178,7 +190,8 @@ hr {
   gap: 0.5rem;
 }
 #all-faq .faq-tabs-buttons button {
-  padding: 0.5rem 1rem;
+  margin-bottom: unset;
+  padding: 0.25rem 0.75rem;
   width: unset;
   display: inline-block;
   background-color: unset;
