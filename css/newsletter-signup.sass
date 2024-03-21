@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap')
+
+
+$fontOne: 'Montserrat', sans-serif
+$fontTwo: 'Tilt Warp', cursive
+
+$brandColorOne: #9e6d2d
+$brandColorTwo: #b88c51
+$brandColorThree: #B17A4E
+$darkTextColor: #070012f5
+
+
+
+hr
+  margin-bottom: 50px
+  border-top: 1px solid #282828
+
+.newsletter-banner
+  height: 350px
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  position: relative
+  font-family: $fontOne
+  text-shadow: 2px 3px 8px  #000 !important
+  @media screen and (max-width: 768px)
+      height: 250px 
+  &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: rgba( 0, 0, 0, .5)
+
+
+  .container
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 4rem 0 2rem
+
+    .banner-text
+      margin-top: 1rem
+      font-size: 2.5rem
+      font-weight: bold
+      color: #fff
+      z-index: 5
+      @media screen and (max-width: 768px)
+        text-align: center
+        font-size: 2rem
+        font-weight: 600
+        line-height: 1.4
+        padding: 1rem
+
+
+.main-content
+  padding: 3rem 0 6rem
+  background: #fff
+  color: #000
+  line-height: 1.5
+
+  h4.main-title
+    margin-bottom: 1.1rem
+    color: #000
+    font-size: 2.1rem
+    font-weight: 600
+    @media screen and (max-width: 768px)
+      font-size: 1.8rem
+      margin-bottom: .8rem
+
+  .sub-title
+    margin-bottom: 1rem
+    color: #333
+    font-size: 1.2rem
+    font-weight: 500
+    @media screen and (max-width: 768px)
+      font-size: 1rem
+
+  .feature-list
+    color: #000
+    margin-bottom: unset
+    
+    li
+      list-style: none
+      color: #000
+      font-weight: 500
+      font-size: 1rem
+      margin-bottom: .7rem
+      @media screen and (max-width: 768px)
+        font-size: .9rem
+
+      span
+        color: rgb(74, 255, 3)
+        font-weight: 700
+        margin-right: .5rem
+
+  .news-latter
+    margin: unset
+    border-radius: 5px
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px
+    padding: 1.8rem 1.5rem
+
+    .top-title
+      color: #282828
+      font-size: 1.2rem
+
+    form
+      margin: unset
+
+      fieldset
+        margin: unset
+
+      input
+        height: unset
+        padding: .5rem 1rem
+        font-size: .9rem
+        color: #333
+        border: 1px solid #000
+        box-shadow: unset
+
+        &:focus
+          border-color: $brandColorThree
+          box-shadow: unset
+          
+
+      button
+        margin: unset
+        height: unset
+        padding: .5rem 1rem
+        font-weight: 600
+        color: #fff
+        background: $brandColorThree
+        border: none
+        box-shadow: unset
+        cursor: pointer
+
+        &:hover
+          background: #282828
+

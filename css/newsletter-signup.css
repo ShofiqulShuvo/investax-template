@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+hr {
+  margin-bottom: 50px;
+  border-top: 1px solid #282828;
+}
+
+.newsletter-banner {
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 2px 3px 8px #000 !important;
+}
+@media screen and (max-width: 768px) {
+  .newsletter-banner {
+    height: 250px;
+  }
+}
+.newsletter-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.newsletter-banner .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 2rem;
+}
+.newsletter-banner .container .banner-text {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  z-index: 5;
+}
+@media screen and (max-width: 768px) {
+  .newsletter-banner .container .banner-text {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.4;
+    padding: 1rem;
+  }
+}
+
+.main-content {
+  padding: 3rem 0 6rem;
+  background: #fff;
+  color: #000;
+  line-height: 1.5;
+}
+.main-content h4.main-title {
+  margin-bottom: 1.1rem;
+  color: #000;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .main-content h4.main-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+}
+.main-content .sub-title {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .main-content .sub-title {
+    font-size: 1rem;
+  }
+}
+.main-content .feature-list {
+  color: #000;
+  margin-bottom: unset;
+}
+.main-content .feature-list li {
+  list-style: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+}
+@media screen and (max-width: 768px) {
+  .main-content .feature-list li {
+    font-size: 0.9rem;
+  }
+}
+.main-content .feature-list li span {
+  color: rgb(74, 255, 3);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+.main-content .news-latter {
+  margin: unset;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  padding: 1.8rem 1.5rem;
+}
+.main-content .news-latter .top-title {
+  color: #282828;
+  font-size: 1.2rem;
+}
+.main-content .news-latter form {
+  margin: unset;
+}
+.main-content .news-latter form fieldset {
+  margin: unset;
+}
+.main-content .news-latter form input {
+  height: unset;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  color: #333;
+  border: 1px solid #000;
+  box-shadow: unset;
+}
+.main-content .news-latter form input:focus {
+  border-color: #B17A4E;
+  box-shadow: unset;
+}
+.main-content .news-latter form button {
+  margin: unset;
+  height: unset;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #B17A4E;
+  border: none;
+  box-shadow: unset;
+  cursor: pointer;
+}
+.main-content .news-latter form button:hover {
+  background: #282828;
+}/*# sourceMappingURL=newsletter-signup.css.map */
