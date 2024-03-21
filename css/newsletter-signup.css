@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
-hr {
-  margin-bottom: 50px;
-  border-top: 1px solid #282828;
-}
-
 .newsletter-banner {
   height: 350px;
   background-size: cover;
@@ -52,85 +47,110 @@ hr {
   }
 }
 
-.main-content {
-  padding: 3rem 0 6rem;
+.main-container {
+  position: relative;
+  min-height: 100vh;
+  padding: 8rem 0 6rem;
   background: #fff;
   color: #000;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.main-content h4.main-title {
+.main-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(90deg, rgba(30, 28, 28, 0.82), rgba(0, 0, 0, 0.7));
+  z-index: 1;
+}
+.main-container .main-content {
+  position: relative;
+  z-index: 2;
+}
+.main-container h4.main-title {
   margin-bottom: 1.1rem;
-  color: #000;
+  color: #ededed;
   font-size: 2.1rem;
   font-weight: 600;
 }
 @media screen and (max-width: 768px) {
-  .main-content h4.main-title {
+  .main-container h4.main-title {
     font-size: 1.8rem;
     margin-bottom: 0.8rem;
   }
 }
-.main-content .sub-title {
+.main-container .sub-title {
   margin-bottom: 1rem;
-  color: #333;
+  color: #ededed;
   font-size: 1.2rem;
   font-weight: 500;
 }
 @media screen and (max-width: 768px) {
-  .main-content .sub-title {
+  .main-container .sub-title {
     font-size: 1rem;
   }
 }
-.main-content .feature-list {
-  color: #000;
+.main-container .feature-list {
+  color: #ededed;
   margin-bottom: unset;
 }
-.main-content .feature-list li {
+.main-container .feature-list li {
   list-style: none;
-  color: #000;
+  color: #ddd;
   font-weight: 500;
   font-size: 1rem;
   margin-bottom: 0.7rem;
 }
 @media screen and (max-width: 768px) {
-  .main-content .feature-list li {
+  .main-container .feature-list li {
     font-size: 0.9rem;
   }
 }
-.main-content .feature-list li span {
+.main-container .feature-list li span {
   color: rgb(74, 255, 3);
   font-weight: 700;
   margin-right: 0.5rem;
 }
-.main-content .news-latter {
+.main-container .news-latter {
   margin: unset;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   padding: 1.8rem 1.5rem;
+  background: #ededed;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border-radius: 5px;
 }
-.main-content .news-latter .top-title {
-  color: #282828;
-  font-size: 1.2rem;
+.main-container .news-latter .top-title {
+  color: #000;
+  text-align: center;
+  font-size: 1.6rem;
 }
-.main-content .news-latter form {
+.main-container .news-latter form {
   margin: unset;
 }
-.main-content .news-latter form fieldset {
+.main-container .news-latter form fieldset {
   margin: unset;
 }
-.main-content .news-latter form input {
+.main-container .news-latter form input {
   height: unset;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
-  color: #333;
-  border: 1px solid #000;
+  color: #111;
+  border: 1px solid #111;
   box-shadow: unset;
 }
-.main-content .news-latter form input:focus {
+.main-container .news-latter form input:focus {
   border-color: #B17A4E;
   box-shadow: unset;
 }
-.main-content .news-latter form button {
+.main-container .news-latter form button {
   margin: unset;
   height: unset;
   padding: 0.5rem 1rem;
@@ -141,6 +161,6 @@ hr {
   box-shadow: unset;
   cursor: pointer;
 }
-.main-content .news-latter form button:hover {
+.main-container .news-latter form button:hover {
   background: #282828;
 }/*# sourceMappingURL=newsletter-signup.css.map */

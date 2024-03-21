@@ -12,9 +12,6 @@ $darkTextColor: #070012f5
 
 
 
-hr
-  margin-bottom: 50px
-  border-top: 1px solid #282828
 
 .newsletter-banner
   height: 350px
@@ -57,15 +54,38 @@ hr
         padding: 1rem
 
 
-.main-content
-  padding: 3rem 0 6rem
+.main-container
+  position: relative
+  min-height: 100vh
+  padding: 8rem 0 6rem
   background: #fff
   color: #000
   line-height: 1.5
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background-image: linear-gradient(90deg, rgba(30, 28, 28, 0.82), rgba(0, 0, 0, 0.7))
+    z-index: 1
+
+  .main-content
+    position: relative
+    z-index: 2
 
   h4.main-title
     margin-bottom: 1.1rem
-    color: #000
+    color: #ededed
     font-size: 2.1rem
     font-weight: 600
     @media screen and (max-width: 768px)
@@ -74,19 +94,19 @@ hr
 
   .sub-title
     margin-bottom: 1rem
-    color: #333
+    color: #ededed
     font-size: 1.2rem
     font-weight: 500
     @media screen and (max-width: 768px)
       font-size: 1rem
 
   .feature-list
-    color: #000
+    color: #ededed
     margin-bottom: unset
     
     li
       list-style: none
-      color: #000
+      color: #ddd
       font-weight: 500
       font-size: 1rem
       margin-bottom: .7rem
@@ -100,13 +120,15 @@ hr
 
   .news-latter
     margin: unset
-    border-radius: 5px
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px
     padding: 1.8rem 1.5rem
+    background: #ededed
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px
+    border-radius: 5px
 
     .top-title
-      color: #282828
-      font-size: 1.2rem
+      color: #000
+      text-align: center
+      font-size: 1.6rem
 
     form
       margin: unset
@@ -118,8 +140,8 @@ hr
         height: unset
         padding: .5rem 1rem
         font-size: .9rem
-        color: #333
-        border: 1px solid #000
+        color: #111
+        border: 1px solid #111
         box-shadow: unset
 
         &:focus
