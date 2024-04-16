@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css" />
+
+    <link rel="stylesheet" href="css/simple-tax-calculator.css" />
+    <link rel="stylesheet" href="css/theme-styles.css" />
+
+    <title>Investax | Simple Tax Calculators</title>
+  </head>
+
+  <body>
+    <main>
+      <section id="tex-calculator">
+        <div class="container">
+          <!-- Simple Tax Calculator -->
+          <div class="calculator">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <!-- calculator -->
+                <div class="calculator-form row">
+
+                  <!-- Wage Income -->
+                  <div class="input-group col-6">
+                    <label>
+                      Wage Income
+                      <input
+                        type="number"
+                        name="wage-income"
+                        placeholder="Wage Income"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Deductions -->
+                  <div class="input-group col-6">
+                    <label>
+                      Deductions
+                      <input
+                        type="number"
+                        name="deductions"
+                        placeholder="Deductions"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Donation -->
+                  <div class="input-group col-6">
+                    <label>
+                      Donation
+                      <input
+                        type="number"
+                        name="donation"
+                        placeholder="Donation"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Investment Income -->
+                  <div class="input-group col-6">
+                    <label>
+                      Investment Income 
+                      <input
+                        type="number"
+                        name="investment-income "
+                        placeholder="Investment Income "
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Net Capital Gian -->
+                  <div class="input-group col-6">
+                    <label>
+                      Net Capital Gian  
+                      <input
+                        type="number"
+                        name="net-capital-gian "
+                        placeholder="Net Capital Gian  "
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Business Income -->
+                  <div class="input-group col-6">
+                    <label>
+                      Business Income  
+                      <input
+                        type="number"
+                        name="business-income"
+                        placeholder="Business Income"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Business Deductions -->
+                  <div class="input-group col-6">
+                    <label>
+                      Business Deductions 
+                      <input
+                        type="number"
+                        name="business-deductions"
+                        placeholder="Business Deductions"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <p class="error">
+                    * Fields highlighted in red are mandatory.
+                  </p>
+
+                  <button class="calculate-btn" type="submit">Calculate</button>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <!-- Calculated Result -->
+                <div class="calculated-result">
+                  <p class="title">Tax Calculation</p>
+
+                  <h1 class="amount">
+                    $0
+                  </h1>
+
+                  <p class="description">
+                    Based on your current taxable income <strong class="current-taxable-income">$0</strong> your estimated Tax Calculation is <strong class="tax-calculation">$0</strong>.
+                  </p>
+
+                  <!-- summery -->
+                  <div class="summary">
+                    <div class="summary-head">SUMMARY</div>
+
+                    <!-- Taxable Income -->
+                    <div class="summary-data">
+                      <span class="property">Taxable Income</span>
+                      <span class="value taxable-income">$0</span>
+                    </div>
+
+                    <!-- Tax Calculation  -->
+                    <div class="summary-data">
+                      <span class="property">Tax Calculation</span>
+                      <span class="value tax-calculation ">$0</span>
+                    </div>
+
+                    <!-- Medicare Levy   -->
+                    <div class="summary-data">
+                      <span class="property">Medicare Levy </span>
+                      <span class="value medicare-levy ">$0</span>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- how to use calculator -->
+          <div class="how-to-use">
+            <div class="main-heading">
+              How to use the Capital Gains Tax calculator
+            </div>
+
+            <div class="details">
+              <p>
+                To use the Capital Gains Tax calculator, you’ll need to enter
+                some details about your asset.
+              </p>
+
+              <p>
+                Capital Gains Tax is applied against investment property,
+                Shares, Gold, Cryptocurrency, essentially all assets.
+              </p>
+
+              <p>These are explained below:</p>
+
+              <ul>
+                <li>
+                  <p>
+                    <strong>Length of Ownership</strong> — Whether you have owned the asset for less than 12 months or longer than 12 months.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Purchase Price </strong> — How much you purchased the asset for.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Sold Price</strong> — How much you have sold the asset for.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Costs of Purchasing</strong> — This is the amount you have personally invested into the asset for Purchasing.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Costs of Selling</strong> — This is the amount you have personally invested into the asset before sale. For example, if your asset is a property, this may include marketing for sale or renovations, which will be used to calculate your final capital gains amount.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Current Taxable Income</strong> — Your current taxable income. This will help determine the tax rate at which the capital gain on your asset will be taxed. It's important to note that any capital gains amount will be added to your current income before calculating the tax rate — i.e. a capital gains amount could force you into a higher tax bracket.
+                  </p>
+                </li>
+              </ul>
+
+              <p>
+                Once you have entered the details about the asset and your
+                income, you can click Calculate to see how much you will need to
+                pay in Capital Gains Tax.
+              </p>
+            </div>
+          </div>
+
+          <!-- dsiclaimer -->
+          <div class="disclaimer">
+            <div class="main-heading">
+              Disclaimer 
+            </div>
+            <div class="details">
+              <p>
+                This tool is designed to specifically calculate the tax due for capital gains tax only and should not be viewed as a comprehensive assessment of your total income tax obligations. It is tailored exclusively for Australian resident taxpayers. If you are contemplating the sale of your investment property, we recommend consulting with your accountant to verify the CGT calculation. Should you not have a property accountant, <a href="https://investax.com.au/complimentary-consultation/">please consider reaching out to Investax for a professional assessment of your calculation</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- tex calculator js -->
+    <script src="js/simpleTaxCalculator.js"></script>
+
+  </body>
+</html>
