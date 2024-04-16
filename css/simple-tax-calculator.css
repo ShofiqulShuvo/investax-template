@@ -115,7 +115,7 @@ hr {
 }
 #tex-calculator .calculator .calculator-form {
   height: 100%;
-  padding: 2rem 1.5rem;
+  padding: 2rem 1.5rem 1rem;
   margin: unset;
   border-right: 2px solid #B17A4E;
 }
@@ -165,12 +165,13 @@ hr {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0 0.45rem;
 }
 #tex-calculator .calculator .calculator-form .input-group label {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 #tex-calculator .calculator .calculator-form .radio-group {
   display: flex;
@@ -218,7 +219,7 @@ hr {
   font-size: 1.2rem !important;
   font-weight: 600;
   color: #000;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 #tex-calculator .calculator .calculated-result h1.amount {
   color: #9e6d2d;
