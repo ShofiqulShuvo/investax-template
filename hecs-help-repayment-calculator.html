@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css" />
+
+    <link rel="stylesheet" href="css/hecs-help-repayment-calculator.css" />
+    <link rel="stylesheet" href="css/theme-styles.css" />
+
+    <title>Investax | HECS-HELP Repayment Calculator</title>
+  </head>
+
+  <body>
+    <main>
+      <section id="tex-calculator">
+        <div class="container">
+          <!-- hecs-help repayment Tax Calculator -->
+          <div class="calculator">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <!-- calculator -->
+                <div class="calculator-form row">
+                  <!-- Taxable Income -->
+                  <div class="input-group col-12">
+                    <label>
+                      Taxable Income
+                      <input
+                        type="number"
+                        name="taxable-income"
+                        placeholder="Taxable Income"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Net Investment Loss  -->
+                  <div class="input-group col-12">
+                    <label>
+                      Net Investment Loss
+                      <input
+                        type="number"
+                        name="net-investment-loss"
+                        placeholder="Net Investment Loss "
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Reportable Fringe Benefit  -->
+                  <div class="input-group col-12">
+                    <label>
+                      Reportable Fringe Benefit
+                      <input
+                        type="number"
+                        name="reportable-fringe-benefit"
+                        placeholder="Reportable Fringe Benefit "
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Reportable Super Contribution -->
+                  <div class="input-group col-12">
+                    <label>
+                      Reportable Super Contribution
+                      <input
+                        type="number"
+                        name="reportable-super-contribution"
+                        placeholder="Reportable Super Contribution "
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Exempt Foreign Employment Income -->
+                  <div class="input-group col-12">
+                    <label>
+                      Exempt Foreign Employment Income
+                      <input
+                        type="number"
+                        name="exempt-foreign-employment-income"
+                        placeholder="Exempt Foreign Employment Income  "
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <p class="error">
+                    * Fields highlighted in red are mandatory.
+                  </p>
+
+                  <button class="calculate-btn" type="submit">Calculate</button>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <!-- Calculated Result -->
+                <div class="calculated-result">
+                  <p class="title">Loan Repayment</p>
+
+                  <h1
+                    id="calculated-loan-repayment-in-large-size"
+                    class="amount"
+                  >
+                    $0
+                  </h1>
+
+                  <p class="description">
+                    Based on your current taxable income
+                    <strong class="current-taxable-income">$0</strong>, Net
+                    Investment Loss
+                    <strong class="net-investment-loss">$0</strong>, Reportable
+                    Fringe Benefit
+                    <strong class="reportable-fringe-benefit">$0</strong>,
+                    Reportable Super Contribution
+                    <strong class="reportable-super-contribution">$0</strong>,
+                    Exempt Foreign Employment Income
+                    <strong class="exempt-foreign-employment-income">$0</strong>
+                    your estimated Loan Repayment
+                    <strong class="calculated-loan-repayment-in-description"
+                      >$0</strong
+                    >.
+                  </p>
+
+                  <!-- summery -->
+                  <div class="summary">
+                    <div class="summary-head">SUMMARY</div>
+
+                    <!-- Repayment Income -->
+                    <div class="summary-data">
+                      <span class="property">Repayment Income</span>
+                      <span class="value repayment-income-summery">$0</span>
+                    </div>
+
+                    <!-- Loan Repayment  -->
+                    <div class="summary-data">
+                      <span class="property">Loan Repayment</span>
+                      <span class="value loan-repayment">$0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- how to use calculator -->
+          <!-- how to use calculator -->
+          <div class="how-to-use">
+            <div class="main-heading">
+              How to use the HECS-HELP Repayment Calculator
+            </div>
+
+            <div class="details">
+              <p>
+                The HECS-HELP Repayment Calculator is a tool designed to help
+                you estimate your loan repayment based on various financial
+                factors. Follow the steps below to utilize the calculator
+                effectively:
+              </p>
+
+              <ul>
+                <li>
+                  <p>
+                    <strong>Taxable Income</strong> — Enter your total taxable
+                    income, which includes income from wages, salaries, or any
+                    other sources subject to taxation.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Net Investment Loss</strong> — Input any net
+                    investment losses you may have incurred. This refers to
+                    losses from investments after accounting for gains and
+                    associated costs.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Reportable Fringe Benefit</strong> — If applicable,
+                    enter any reportable fringe benefits received, such as
+                    non-cash benefits provided by your employer.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Reportable Super Contribution</strong> — Include any
+                    reportable super contributions made throughout the tax year.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Exempt Foreign Employment Income</strong> — If you
+                    have any exempt foreign employment income, enter the total
+                    amount here.
+                  </p>
+                </li>
+              </ul>
+
+              <p>
+                Click on the "Calculate" button to estimate your loan repayment
+                based on the provided financial information.
+              </p>
+            </div>
+          </div>
+
+          <!-- dsiclaimer -->
+          <div class="disclaimer">
+            <div class="main-heading">Disclaimer</div>
+            <div class="details">
+              <p>
+                This tool is designed to assist in calculating your total
+                taxable income after factoring in various sources of income and
+                deductible expenses. However, it should not be considered a
+                comprehensive assessment of your total income tax obligations.
+                The calculator is tailored exclusively for Australian resident
+                taxpayers. If you have complex financial situations or are
+                uncertain about certain aspects of your taxes, it is recommended
+                to consult with a qualified tax professional or accountant for
+                personalized advice and verification of your calculations.
+                Should you require further assistance,
+                <a href="https://investax.com.au/complimentary-consultation/"
+                  >please consider reaching out to Investax for a professional
+                  assessment of your calculation</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- tex calculator js -->
+    <script src="js/hecs-help-repayment-calculator.js"></script>
+  </body>
+</html>
