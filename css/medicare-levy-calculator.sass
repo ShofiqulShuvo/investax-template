@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap')
+
+
+$fontOne: 'Montserrat', sans-serif
+$fontTwo: 'Tilt Warp', cursive
+
+$brandColorOne: #9e6d2d
+$brandColorTwo: #b88c51
+$brandColorThree: #B17A4E
+$darkTextColor: #070012f5
+
+@media screen and ( min-width: 1400px )
+  .container
+    max-width: 1350px
+  
+
+hr
+  margin-bottom: 50px
+  border-top: 1px solid #282828
+
+.contact-banner
+  height: 500px
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: bottom center
+  position: relative
+  font-family: $fontOne
+  z-index: 1
+  &::after
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      // background: linear-gradient(180deg, rgba(0, 0, 0, .6),rgba(0, 0, 0, .2), rgba(191, 111, 5, 0.486))
+      background: rgba( 0, 0, 0, .6 )
+      z-index: 1
+
+
+  .container
+    height: 100%
+    padding: 3rem 0 1rem
+    @media screen and ( max-width: 768px )
+      padding-left: 1rem
+      padding-right: 1rem
+
+
+    .banner-content
+      height: 100%
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      gap: .75rem
+      text-align: center
+      z-index: 2
+      @media screen and ( max-width: 992px )
+        gap: .75rem 
+
+    .banner-text
+      font-size: 2.8rem
+      font-weight: 600
+      color: #fff
+      z-index: 2
+      text-align: center
+      line-height: 1.2 !important
+      @media screen and ( max-width: 992px )
+        font-size: 2.5rem
+      @media screen and ( max-width: 768px )
+        font-size: 1.8rem
+
+    .banner-sub-text
+      font-size: 1.4rem !important
+      font-weight: 500
+      color: #ded9d9
+      text-align: center
+      z-index: 2
+      line-height: 1.4 !important
+      @media screen and ( max-width: 992px )
+        font-size: 1.2rem !important
+      @media screen and ( max-width: 768px )
+        font-size: 1rem !important
+    
+
+#tex-calculator
+  margin: 0
+  padding: 3.5rem 0
+  font-family: $fontOne
+  background: #fff
+  color: #000
+
+  .calculator
+    padding-top: .5rem
+    padding-bottom: .5rem
+    border-radius: 5px
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px
+    @media screen and ( max-width: 991px )
+      padding-top: 0
+      padding-bottom: 0
+      padding-left: .5rem
+      padding-right: .5rem
+
+    .calculator-form
+      height: 100%
+      padding: 2rem 1.5rem 1rem
+      margin: unset
+      border-right: 2px solid $brandColorThree
+      display: flex
+      flex-direction: column
+      justify-content: center
+      gap: .5rem
+      @media screen and ( max-width: 991px )
+        border: none
+        border-bottom: 2px solid $brandColorThree
+
+
+      .group-title
+        margin: unset
+
+      legend, label
+        font-size: .9rem
+        color: #000
+        font-weight: 600
+        margin: unset
+
+      input
+        background: #fff !important
+        background-color: #fff !important
+
+      input[type="number"], input[type="text"]
+        margin: unset
+        height: unset
+        padding: .25rem .25rem .25rem .75rem
+        font-size: .9rem
+        border: 1.5px solid $brandColorThree
+        color: #000
+        background: #fff !important
+        background-color: #fff !important
+        font-weight: 500
+
+      select
+        margin: unset
+        height: unset
+        padding: .25rem .25rem .25rem .75rem
+        font-size: .9rem
+        border: 1.5px solid $brandColorThree
+        color: #000
+        background-color: #fff !important
+        font-weight: 500
+
+      .not-valid
+        outline: 2px solid red
+        border: none !important
+
+      ::placeholder
+        color: #999
+        font-weight: 400
+
+
+      .input-group
+        display: flex
+        flex-direction: column
+        gap: .5rem
+        margin-bottom: 1rem
+        padding: 0 .45rem
+
+        label
+          display: flex
+          flex-direction: column
+          gap: .4rem
+
+      .radio-group
+        display: flex
+        flex-direction: column
+        gap: .75rem
+        font-size: .75rem
+        color: #000
+
+        .radio-indivisual-input
+          display: flex
+          align-items: center
+          gap: 1rem
+
+          label
+            font-weight: 600
+            display: flex
+            flex-direction: row
+            align-items: center
+            gap: .2rem
+
+          input
+            border-color: $brandColorThree
+
+      .error
+        color: red
+        font-size: .75rem
+        font-weight: 500
+
+      .calculate-btn
+        height: unset
+        padding: .5rem 1.5rem
+        background: $brandColorThree
+        border: none
+        box-shadow: unset !important
+        font-weight: 600
+        font-family: $fontOne
+
+    .calculated-result
+      height: 100%
+      padding: 2rem 1.5rem
+      margin: unset
+      display: block
+      line-height: 1.4 !important
+
+      p.title
+        font-size: 1.2rem !important
+        font-weight: 600
+        color: #000
+        margin-bottom: 1rem
+
+      h1.amount
+        color: $brandColorOne
+        margin: unset
+        font-size: 3rem
+        display: inline-flex
+        flex-direction: row
+        font-weight: 500
+        gap: .25rem
+        margin-bottom: 1.2rem
+
+      p.description
+        margin-bottom: 1.2rem
+        color: #000
+        font-weight: 500
+        font-size: 1rem !important
+        line-height: 1.4 !important
+      
+
+        strong
+          color: $brandColorThree
+
+
+      .summary
+        display: flex
+        flex-direction: column
+        gap: .5rem
+
+        .summary-head
+          color: #000
+          font-size: 1.2rem
+          font-weight: 600
+          padding-bottom: .5rem
+          border-bottom: 2px solid $brandColorThree
+          margin-bottom: .5rem
+
+        .summary-data
+          display: flex
+          flex-direction: row
+          align-items: center
+          justify-content: space-between
+          font-size: .95rem
+          font-weight: 500
+
+          .value
+            font-weight: 600
+            color: $brandColorThree
+
+  .how-to-use
+    margin-top: 3.5rem
+    max-width: 960px
+    margin-left: auto
+    margin-right: auto
+
+    .main-heading
+      text-align: left
+      font-size: 2rem
+      font-weight: 700 
+      text-shadow: unset
+      font-family: $fontOne
+      color: $brandColorOne
+
+    .details
+      margin-top: 1.2rem
+      color: #000
+      line-height: 1.4
+
+      p
+        color: #000
+        font-size: 1.05rem
+        font-weight: 500
+        margin-bottom: .5rem
+
+        strong
+          color: $brandColorOne
+
+      ul
+        padding-left: 2rem
+        margin: unset
+
+        li
+          list-style-position: outside
+          list-style: disc
+
+          &::marker 
+            list-style: circle
+            font-size: 1.2rem
+            color: $brandColorOne
+
+        p
+          margin: unset !important
+        
+
+  .disclaimer
+    margin-top: 2.5rem
+    max-width: 960px
+    margin-left: auto
+    margin-right: auto
+
+    .main-heading
+      text-align: left
+      font-size: 1.4rem
+      font-weight: 700 
+      text-shadow: unset
+      font-family: $fontOne
+      color: $brandColorOne
+
+    .details
+      margin-top: .75rem
+      color: #000
+      line-height: 1.4
+
+      p
+        color: #000
+        font-size: 1.05rem
+        font-weight: 500
+        margin-bottom: .5rem
+
+  .mls-rates
+    margin-top: 2.5rem
+    max-width: 960px
+    margin-left: auto
+    margin-right: auto
+
+    .main-heading
+      text-align: left
+      font-size: 1.4rem
+      font-weight: 700 
+      text-shadow: unset
+      font-family: $fontOne
+      color: $brandColorOne
+
+    .details
+      margin-top: .75rem
+      color: #000
+      line-height: 1.4
+
+      .table-container
+        overflow-x: auto
+
+      table
+        color: #000
+        border: 1px solid #333
+        border-collapse: collapse
+        border-spacing: 0
+        text-align: center
+
+      th
+        background: #9e6d2d
+        color: #fff !important
+        font-weight: 600
+        border: 1px solid #333
+        border-bottom: unset
+        border-top: unset
+      
+      td
+        color: #000
+        font-weight: 500
+        border: 1px solid #333
+
+

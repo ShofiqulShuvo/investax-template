@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css" />
+
+    <link rel="stylesheet" href="css/medicare-levy-calculator.css" />
+    <link rel="stylesheet" href="css/theme-styles.css" />
+
+    <title>Investax | Medicare Levy Surcharge Calculator</title>
+  </head>
+
+  <body>
+    <main>
+      <section id="tex-calculator">
+        <div class="container">
+          <!-- Medicare Levy Surcharge Calculator -->
+          <div class="calculator">
+            <div class="row">
+
+              <!-- calculator -->
+              <div class="col-12 col-lg-6">
+                <div class="calculator-form">
+                  <div class="input-group radio-group ">
+                    <legend>Type</legend>
+
+                    <select name="type-select" id="type-select">
+                      <option value="single">Single</option>
+                      <option value="family">Family</option>
+                    </select>
+                  </div>
+
+                  <!-- Annual Income -->
+                  <div class="input-group ">
+                    <label>
+                      Annual Income (Excluding Investment Losses)
+                      <input
+                        type="number"
+                        name="annual-income"
+                        placeholder="Annual Income"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <p class="error">
+                    * Fields highlighted in red are mandatory.
+                  </p>
+
+                  <button class="calculate-btn" type="submit">Calculate</button>
+                </div>
+              </div>
+
+              <!-- Calculated Result -->
+              <div class="col-12 col-lg-6">
+                <div class="calculated-result">
+                  <p class="title">How much extra tax could you pay without hospital cover</p>
+
+                  <h1
+                    id="calculated-medicare-levy-surcharge-large-size"
+                    class="amount"
+                  >
+                    $0
+                  </h1>
+
+                  <p class="description">
+                    Based on your Annual Income Excluding Investment Losses
+                    <strong class="annual-income-in-description">$0</strong>, 
+                    your estimated Medicare Levy Surcharge
+                    <strong class="medicare-levy-surcharge-in-description"
+                      >$0</strong
+                    >.
+                  </p>
+
+                  <!-- summery -->
+                  <div class="summary">
+                    <div class="summary-head">SUMMARY</div>
+
+                    <!-- Repayment Income -->
+                    <div class="summary-data">
+                      <span class="property">Annual Income</span>
+                      <span class="value anual-income-summery">$0</span>
+                    </div>
+
+                    <!-- Loan Repayment  -->
+                    <div class="summary-data">
+                      <span class="property">Medicare Levy Surcharge</span>
+                      <span class="value medicare-levy-surcharge-summery">$0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- how to use calculator -->
+          <div class="how-to-use">
+            <div class="main-heading">
+              How to use the Medicare Levy Calculator
+            </div>
+
+            <div class="details">
+              <p>
+                The Medicare Levy Calculator is a tool designed to help
+                you estimate your Medicare Levy Surcharge based on your Annual Income. Follow the steps below to utilize the calculator
+                effectively:
+              </p>
+
+              <ul>
+                <li>
+                  <p>
+                    <strong>Type</strong> — Select either single or family.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Annual Income</strong> — Your Annual Income Excluding Investment Losses.
+                  </p>
+                </li>
+              </ul>
+
+              <p>
+                Click on the "Calculate" button to estimate your loan repayment
+                based on the provided financial information.
+              </p>
+            </div>
+          </div>
+
+          <!-- MLS income thresholds and rates  -->
+          <div class="mls-rates">
+            <div class="main-heading">
+              MLS income thresholds and rates for 2024-25
+            </div>
+
+            <div class="details">
+              <div class="table-container">
+                  <table>
+                    <tHead>
+                      <tr>
+                        <th>Threshold</th>
+                        <th>Base Tier</th>
+                        <th>Tier 1</th>
+                        <th>Tier 2</th>
+                        <th>Tier 3</th>
+                      </tr>  
+                    </tHead>
+                    <tbody>
+                      <tr>
+                        <td>Single Threshold</td>
+                        <td>$97,000 or less</td>
+                        <td>$97,001 to $113,000</td>
+                        <td>$113,001 to $151,000</td>
+                        <td>$151,001 or more</td>
+                      </tr>
+                      <tr>
+                        <td>Family threshold</td>
+                        <td>$194,000 or less</td>
+                        <td>$194,001 to $226,000</td>
+                        <td>$226,001 to $302,000</td>
+                        <td>$302,001 or more</td>
+                      </tr>
+                      <tr>
+                        <td>Medicare levy surcharge</td>
+                        <td>0%</td>
+                        <td>1%</td>
+                        <td>1.25%</td>
+                        <td>1.50%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- dsiclaimer -->
+          <div class="disclaimer">
+            <div class="main-heading">Disclaimer</div>
+            <div class="details">
+              <p>
+                This tool is designed to assist in calculating your total
+                taxable income after factoring in various sources of income and
+                deductible expenses. However, it should not be considered a
+                comprehensive assessment of your total income tax obligations.
+                The calculator is tailored exclusively for Australian resident
+                taxpayers. If you have complex financial situations or are
+                uncertain about certain aspects of your taxes, it is recommended
+                to consult with a qualified tax professional or accountant for
+                personalized advice and verification of your calculations.
+                Should you require further assistance,
+                <a href="https://investax.com.au/complimentary-consultation/"
+                  >please consider reaching out to Investax for a professional
+                  assessment of your calculation</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- tex calculator js -->
+    <script src="js/medicare-levy-calculator.js"></script>
+  </body>
+</html>
