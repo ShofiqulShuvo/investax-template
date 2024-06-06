@@ -40,7 +40,7 @@ hr {
 .main-section {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 0;
-  padding: 5rem 0 0;
+  padding: 3.5rem 0 0;
 }
 .main-section .download-form {
   padding: 1.8rem;
@@ -109,7 +109,7 @@ hr {
   background-color: #9e6d2d;
 }
 .main-section .main-content {
-  padding: 0 1.8rem 2rem;
+  padding: 0 1.5rem 2rem 1rem;
   color: #000;
   font-family: "Montserrat", sans-serif;
 }
