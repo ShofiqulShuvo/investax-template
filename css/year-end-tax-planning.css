@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+hr {
+  margin-bottom: 50px;
+  border-top: 1px solid #282828;
+}
+
+.year-end-tax-planning-banner {
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 2px 2px 15px #000 !important;
+}
+.year-end-tax-planning-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.year-end-tax-planning-banner .container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5rem 0 2rem;
+}
+.year-end-tax-planning-banner .container .banner-text {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  z-index: 5;
+}
+
+.main-section {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0;
+  padding: 5rem 0 0;
+}
+.main-section .download-form {
+  padding: 1.8rem;
+  background: #eeedf2;
+  border-radius: 3px;
+  color: #282828 !important;
+}
+.main-section .download-form .top-msg {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.main-section .download-form .desclaimer-para {
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.main-section .download-form .required {
+  color: #dd0000;
+}
+.main-section .download-form label {
+  font-size: 0.8rem !important;
+  font-weight: 500;
+  color: #000;
+}
+.main-section .download-form input {
+  height: unset !important;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.75rem;
+  background-color: #fff;
+  border-color: #ccc;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #000;
+}
+.main-section .download-form select {
+  height: unset;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.75rem;
+  background-color: #fff;
+  border-color: #ccc;
+  font-size: 0.85rem;
+}
+.main-section .download-form textarea {
+  height: unset;
+  padding: 0.15rem 0.5rem;
+  margin-bottom: 0.75rem;
+  background-color: #fff;
+  border-color: #ccc;
+  font-size: 0.75rem;
+}
+.main-section .download-form button {
+  margin-bottom: unset;
+  padding: 0.5rem 0.75rem;
+  background-color: #282828;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.35s;
+}
+.main-section .download-form button:hover {
+  background-color: #9e6d2d;
+}
+.main-section .main-content {
+  padding: 0 0 2rem;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.main-section .main-content .title {
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.main-section .main-content .content {
+  margin-top: 1.3rem;
+}
+.main-section .main-content strong {
+  font-size: inherit;
+  font-weight: 700 !important;
+}
+.main-section .main-content h1, .main-section .main-content h2, .main-section .main-content h3, .main-section .main-content h4, .main-section .main-content h5, .main-section .main-content h6, .main-section .main-content p, .main-section .main-content ul, .main-section .main-content ol, .main-section .main-content li {
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+.main-section .main-content ul, .main-section .main-content ol {
+  margin-left: 1.25rem;
+}
+.main-section .main-content h1 {
+  font-size: 1.45rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.main-section .main-content h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0.75rem !important;
+  font-size: 1.325rem !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+  text-transform: unset !important;
+  text-align: unset !important;
+  text-shadow: unset !important;
+  color: #000 !important;
+}
+.main-section .main-content h3 {
+  font-size: 1.3rem !important;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.main-section .main-content h4 {
+  font-size: 1.25rem !important;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.main-section .main-content h5 {
+  font-size: 1.15rem !important;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.main-section .main-content h6 {
+  font-size: 0.95rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.main-section .main-content p {
+  font-size: 1rem !important;
+  font-weight: 500;
+  line-height: 1.4 !important;
+  margin-bottom: 0.7rem;
+}
+.main-section .main-content li {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}/*# sourceMappingURL=year-end-tax-planning.css.map */
