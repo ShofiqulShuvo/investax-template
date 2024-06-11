@@ -1,0 +1,35 @@
+#error-section {
+  background-color: rgba(161, 161, 161, 0.7019607843);
+  padding: 3rem 1.2rem;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#error-section .error-code {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #9e6d2d;
+}
+#error-section .error-mesasage {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+#error-section .error-btn {
+  margin-top: 1rem;
+  padding: 0.35rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: #9e6d2d;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+}
+#error-section .error-btn:hover {
+  background: rgba(7, 0, 18, 0.9607843137);
+}/*# sourceMappingURL=error404.css.map */

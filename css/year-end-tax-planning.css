@@ -62,6 +62,27 @@ hr {
   line-height: 1.4;
   margin-bottom: 1rem;
 }
+.main-section .download-form .checkbox-label {
+  font-size: 1rem !important;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.main-section .download-form .checkbox {
+  margin-bottom: 0.25rem;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+.main-section .download-form .checkbox:last-child {
+  margin-bottom: 1rem;
+}
+.main-section .download-form .checkbox input {
+  margin: unset !important;
+  margin-bottom: unset;
+  height: 1rem;
+  width: 1rem;
+}
 .main-section .download-form .required {
   color: #dd0000;
 }
@@ -70,7 +91,7 @@ hr {
   font-weight: 500;
   color: #000;
 }
-.main-section .download-form input {
+.main-section .download-form input:not([type=checkbox]) {
   height: unset !important;
   padding: 0.25rem 0.5rem;
   margin-bottom: 0.75rem;
