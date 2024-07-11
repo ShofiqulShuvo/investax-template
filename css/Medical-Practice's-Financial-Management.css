@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+hr {
+  margin-bottom: 50px;
+  border-top: 1px solid #282828;
+}
+
+.medical-pratice-banner {
+  background: #090E12;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+.medical-pratice-banner .container {
+  height: 100%;
+  padding: 2rem 0 2rem;
+}
+.medical-pratice-banner .container .row {
+  margin-top: 1rem;
+  align-items: flex-end;
+}
+.medical-pratice-banner .container .banner-content {
+  background: #9e6d2d;
+  padding: 3.5rem 2rem;
+  border-radius: 10px;
+  color: #fff;
+}
+.medical-pratice-banner .container .banner-content .main-text {
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 34.13px;
+}
+.medical-pratice-banner .container .banner-content hr {
+  margin: 1.5rem 0;
+  height: 2px;
+  background-color: #fff;
+  border: none;
+}
+.medical-pratice-banner .container .banner-content .desc {
+  font-size: 0.9rem;
+  line-height: 28px;
+  text-align: justify;
+}
+.medical-pratice-banner .container .banner-content .contact-link {
+  display: block;
+  margin-top: 2rem;
+  background: #fff;
+  color: #000;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.25rem 3.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 40px;
+  text-decoration: none;
+}
+.medical-pratice-banner .container .banner-content .contact-link:hover {
+  background: rgba(7, 0, 18, 0.9607843137);
+  color: #fff;
+}
+@media screen and (max-width: 992px) {
+  .medical-pratice-banner .container .banner-image-content {
+    display: none;
+  }
+}
+.medical-pratice-banner .container .banner-image {
+  width: 100%;
+}
+.medical-pratice-banner .container .banner-image img {
+  width: 100%;
+  height: auto;
+}
+
+.main-section {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 0;
+  padding: 2.5rem 0 3rem;
+}
+.main-section .title {
+  margin-bottom: 2.2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000;
+  text-align: center;
+}
+.main-section .featured-image .image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.main-section .featured-image .image img {
+  width: 100%;
+}
+.main-section .main-content {
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+}
+.main-section .main-content p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #000;
+}
+.main-section .main-content ul li p {
+  font-size: 0.9rem;
+  color: #484848;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.main-section .main-content .contact-link {
+  display: block;
+  margin-top: 2rem;
+  background: #9e6d2d;
+  color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.25rem 4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 40px;
+  text-decoration: none;
+}
+.main-section .main-content .contact-link:hover {
+  background: rgba(7, 0, 18, 0.9607843137);
+  color: #fff;
+}
+
+.why-content {
+  padding: 2rem 0 3rem;
+  margin-bottom: 0;
+}
+.why-content .heading {
+  margin-bottom: 1rem;
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #000;
+}
+.why-content .content {
+  padding: 1rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .why-content .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.why-content .single-content {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.why-content .single-content svg {
+  width: 25px;
+}
+.why-content .single-content .number {
+  font-size: 1.4rem;
+  color: #000;
+  font-weight: 700;
+}
+.why-content .single-content .text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.contact-us .content {
+  background: #000;
+  border-radius: 10px;
+  color: #fff;
+  padding: 1.5rem;
+}
+@media screen and (max-width: 992px) {
+  .contact-us .content .contact, .contact-us .content .text-content {
+    margin-top: 0;
+  }
+}
+.contact-us .content .contact-link {
+  display: block;
+  margin-top: 0;
+  background: #9e6d2d;
+  color: #fff;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.25rem 4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 40px;
+  text-decoration: none;
+}
+.contact-us .content .contact-link:hover {
+  background: #fff;
+  color: rgba(7, 0, 18, 0.9607843137);
+}/*# sourceMappingURL=Medical-Practice's-Financial-Management.css.map */

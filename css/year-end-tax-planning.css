@@ -31,7 +31,8 @@ hr {
   padding: 3.5rem 2rem 2rem;
 }
 .year-end-tax-planning-banner .container .banner-text {
-  font-size: 2rem;
+  margin-bottom: unset !important;
+  font-size: 3rem;
   font-weight: 500;
   color: #fff;
   z-index: 5;
@@ -42,66 +43,70 @@ hr {
   margin-bottom: 0;
   padding: 3.5rem 0 0;
 }
-.main-section .download-form {
+.main-section #form_year-end-tax {
   padding: 1.8rem;
   background: #eeedf2;
   border-radius: 3px;
   color: #282828 !important;
 }
-.main-section .download-form .top-msg {
+.main-section #form_year-end-tax .frm_form_title {
   color: #000;
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.4;
   margin-bottom: 1rem;
 }
-.main-section .download-form .desclaimer-para {
+.main-section #form_year-end-tax .frm_form_field {
+  margin-bottom: unset !important;
+}
+.main-section #form_year-end-tax .desclaimer-para {
   color: #000;
   font-size: 0.7rem;
   font-weight: 500;
   line-height: 1.4;
   margin-bottom: 1rem;
 }
-.main-section .download-form .checkbox-label {
+.main-section #form_year-end-tax .checkbox-label {
   font-size: 1rem !important;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
-.main-section .download-form .checkbox {
+.main-section #form_year-end-tax .checkbox {
   margin-bottom: 0.25rem;
   display: inline-flex;
   align-items: flex-start;
   gap: 0.5rem;
 }
-.main-section .download-form .checkbox:last-child {
+.main-section #form_year-end-tax .checkbox:last-child {
   margin-bottom: 1rem;
 }
-.main-section .download-form .checkbox input {
+.main-section #form_year-end-tax .checkbox input {
   margin: unset !important;
   margin-bottom: unset;
   height: 1rem;
   width: 1rem;
 }
-.main-section .download-form .required {
+.main-section #form_year-end-tax .required {
   color: #dd0000;
 }
-.main-section .download-form label {
+.main-section #form_year-end-tax label {
   font-size: 0.8rem !important;
   font-weight: 500;
   color: #000;
+  margin-bottom: 0.35rem !important;
 }
-.main-section .download-form input:not([type=checkbox]) {
+.main-section #form_year-end-tax input:not([type=checkbox]) {
   height: unset !important;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.15rem;
   margin-bottom: 0.75rem;
   background-color: #fff;
   border-color: #ccc;
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.8rem;
+  font-weight: 400;
   color: #000;
 }
-.main-section .download-form select {
+.main-section #form_year-end-tax select, .main-section #form_year-end-tax .chosen-container .chosen-single {
   height: unset;
   padding: 0.25rem 0.5rem;
   margin-bottom: 0.75rem;
@@ -109,7 +114,7 @@ hr {
   border-color: #ccc;
   font-size: 0.85rem;
 }
-.main-section .download-form textarea {
+.main-section #form_year-end-tax textarea {
   height: unset;
   padding: 0.15rem 0.5rem;
   margin-bottom: 0.75rem;
@@ -117,17 +122,18 @@ hr {
   border-color: #ccc;
   font-size: 0.75rem;
 }
-.main-section .download-form button {
+.main-section #form_year-end-tax .frm_button_submit {
   margin-bottom: unset;
-  padding: 0.5rem 0.75rem;
-  background-color: #282828;
+  padding: 0.5rem 0.75rem !important;
+  background-color: #282828 !important;
   border: none;
-  font-size: 0.9rem;
-  font-weight: 500;
+  border-radius: 5px !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
   transition: all 0.35s;
 }
-.main-section .download-form button:hover {
-  background-color: #9e6d2d;
+.main-section #form_year-end-tax .frm_button_submit:hover {
+  background-color: #9e6d2d !important;
 }
 .main-section .main-content {
   padding: 0 1.5rem 2rem 1rem;

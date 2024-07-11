@@ -43,7 +43,8 @@ hr
     padding: 3.5rem 2rem 2rem
 
     .banner-text
-      font-size: 2rem
+      margin-bottom: unset !important
+      font-size: 3rem
       font-weight: 500
       color: #fff
       z-index: 5
@@ -56,18 +57,21 @@ hr
 
 
   // download form
-  .download-form
+  #form_year-end-tax
     padding: 1.8rem
     background: #eeedf2
     border-radius: 3px
     color: #282828 !important
 
-    .top-msg
+    .frm_form_title
         color: #000
         font-size: 1.2rem
         font-weight: 600
         line-height: 1.4
         margin-bottom: 1rem
+
+    .frm_form_field
+        margin-bottom: unset !important
 
     .desclaimer-para
         color: #000
@@ -105,18 +109,19 @@ hr
         font-size: .8rem !important
         font-weight: 500
         color: #000
+        margin-bottom: .35rem !important
 
     input:not([type="checkbox"])
         height: unset !important
-        padding: .25rem .5rem
+        padding: .25rem .15rem
         margin-bottom: .75rem
         background-color: #fff
         border-color: #ccc
-        font-size: .85rem
-        font-weight: 500
+        font-size: .8rem
+        font-weight: 400
         color: #000
 
-    select
+    select, .chosen-container .chosen-single
         height: unset
         padding: .25rem .5rem
         margin-bottom: .75rem
@@ -132,16 +137,17 @@ hr
         border-color: #ccc
         font-size: .75rem
 
-    button
+    .frm_button_submit
         margin-bottom: unset
-        padding: .5rem .75rem
-        background-color: #282828
+        padding: .5rem .75rem !important
+        background-color: #282828 !important
         border: none
-        font-size: .9rem
-        font-weight: 500
+        border-radius: 5px !important
+        font-size: .9rem !important
+        font-weight: 500 !important
         transition: all .35s 
         &:hover
-            background-color: $brandColorOne
+            background-color: $brandColorOne !important
 
 
   // main content
