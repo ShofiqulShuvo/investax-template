@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  margin-bottom: 50px;
+  border-top: 1px solid #282828;
+}
+
+.contact-banner {
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  z-index: 1;
+}
+.contact-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.contact-banner .container {
+  max-width: 900px;
+  height: 100%;
+  padding: 3rem 0 1rem;
+}
+@media screen and (max-width: 768px) {
+  .contact-banner .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+.contact-banner .container .banner-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  z-index: 2;
+}
+@media screen and (max-width: 992px) {
+  .contact-banner .container .banner-content {
+    gap: 0.75rem;
+  }
+}
+.contact-banner .container .banner-text {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #fff;
+  z-index: 2;
+  text-align: center;
+  line-height: 1.2 !important;
+}
+@media screen and (max-width: 992px) {
+  .contact-banner .container .banner-text {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-banner .container .banner-text {
+    font-size: 1.8rem;
+  }
+}
+.contact-banner .container .banner-sub-text {
+  font-size: 1.4rem !important;
+  font-weight: 500;
+  color: #ded9d9;
+  text-align: center;
+  z-index: 2;
+  line-height: 1.4 !important;
+}
+@media screen and (max-width: 992px) {
+  .contact-banner .container .banner-sub-text {
+    font-size: 1.2rem !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-banner .container .banner-sub-text {
+    font-size: 1rem !important;
+  }
+}
+
+#cashflow-calculator {
+  margin: 0;
+  padding: 3.5rem 0;
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  color: #000;
+}
+#cashflow-calculator .calculator {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+@media screen and (max-width: 991px) {
+  #cashflow-calculator .calculator {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+#cashflow-calculator .calculator .calculator-form {
+  height: 100%;
+  padding: 2rem 1.5rem 1rem;
+  margin: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+@media screen and (max-width: 991px) {
+  #cashflow-calculator .calculator .calculator-form {
+    border: none;
+    border-bottom: 2px solid #B17A4E;
+  }
+}
+#cashflow-calculator .calculator .calculator-form .row {
+  align-items: flex-end !important;
+}
+#cashflow-calculator .calculator .calculator-form .form-sec-title {
+  margin-bottom: 0.5rem;
+  color: #000;
+  font-weight: 700;
+}
+#cashflow-calculator .calculator .calculator-form .income-details, #cashflow-calculator .calculator .calculator-form .income, #cashflow-calculator .calculator .calculator-form .expenses {
+  margin-bottom: 1rem;
+}
+#cashflow-calculator .calculator .calculator-form .group-title {
+  margin: unset;
+}
+#cashflow-calculator .calculator .calculator-form legend, #cashflow-calculator .calculator .calculator-form label {
+  font-size: 0.7rem;
+  color: #000;
+  font-weight: 600;
+  margin: unset;
+  gap: 0.2rem !important;
+}
+#cashflow-calculator .calculator .calculator-form input {
+  background: #fff !important;
+  background-color: #fff !important;
+  height: unset !important;
+}
+#cashflow-calculator .calculator .calculator-form input[type=number], #cashflow-calculator .calculator .calculator-form input[type=text] {
+  margin: unset;
+  height: unset;
+  padding: 0.2rem 0.2rem 0.2rem 0.75rem;
+  font-size: 0.75rem;
+  border: 1px solid #B17A4E;
+  color: #000;
+  background: #fff !important;
+  background-color: #fff !important;
+  font-weight: 400;
+}
+#cashflow-calculator .calculator .calculator-form select {
+  margin: unset;
+  height: unset;
+  padding: 0.2rem 0.2rem 0.2rem 0.75rem;
+  font-size: 0.75rem;
+  border: 1px solid #B17A4E;
+  color: #000;
+  background-color: #fff !important;
+  font-weight: 400;
+}
+#cashflow-calculator .calculator .calculator-form .not-valid {
+  outline: 2px solid red;
+  border: none !important;
+}
+#cashflow-calculator .calculator .calculator-form ::-moz-placeholder {
+  color: #999;
+  font-weight: 400;
+}
+#cashflow-calculator .calculator .calculator-form ::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+#cashflow-calculator .calculator .calculator-form .input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0;
+  padding: 0;
+}
+#cashflow-calculator .calculator .calculator-form .input-group label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+#cashflow-calculator .calculator .calculator-form .radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.75rem;
+  color: #000;
+}
+#cashflow-calculator .calculator .calculator-form .radio-group .radio-indivisual-input {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#cashflow-calculator .calculator .calculator-form .radio-group .radio-indivisual-input label {
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.2rem;
+}
+#cashflow-calculator .calculator .calculator-form .radio-group .radio-indivisual-input input {
+  border-color: #B17A4E;
+}
+#cashflow-calculator .calculator .calculator-form .error {
+  color: red;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+#cashflow-calculator .calculator .calculator-form .calculate-btn {
+  height: unset;
+  padding: 0.25rem 1.5rem;
+  background: #B17A4E;
+  border: none;
+  box-shadow: unset !important;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
+#cashflow-calculator #result {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+@media screen and (max-width: 991px) {
+  #cashflow-calculator #result {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+#cashflow-calculator #result .result-sec-title {
+  margin-bottom: 0.5rem;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+#cashflow-calculator #result .summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#cashflow-calculator #result .summary .summary-head {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #B17A4E;
+  margin-bottom: 0.5rem;
+}
+#cashflow-calculator #result .summary .summary-data {
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+#cashflow-calculator #result .summary .summary-data .value {
+  font-weight: 600;
+  color: #B17A4E;
+}
+#cashflow-calculator #result .result-table {
+  max-width: 500px;
+}
+#cashflow-calculator #result .result-table th, #cashflow-calculator #result .result-table td {
+  border: 2px solid #B17A4E;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.7rem;
+  color: #000;
+  min-width: 200px;
+}
+#cashflow-calculator #result .result-table th {
+  font-weight: 600;
+}
+#cashflow-calculator #result .result-table td {
+  text-align: right;
+  font-weight: 500;
+}
+#cashflow-calculator .how-to-use {
+  margin-top: 3.5rem;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#cashflow-calculator .how-to-use .main-heading {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: unset;
+  font-family: "Montserrat", sans-serif;
+  color: #9e6d2d;
+}
+#cashflow-calculator .how-to-use .details {
+  margin-top: 1.2rem;
+  color: #000;
+  line-height: 1.4;
+}
+#cashflow-calculator .how-to-use .details p {
+  color: #000;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+#cashflow-calculator .how-to-use .details p strong {
+  color: #9e6d2d;
+}
+#cashflow-calculator .how-to-use .details ul {
+  padding-left: 2rem;
+  margin: unset;
+}
+#cashflow-calculator .how-to-use .details ul li {
+  list-style-position: outside;
+  list-style: disc;
+}
+#cashflow-calculator .how-to-use .details ul li::marker {
+  list-style: circle;
+  font-size: 1.2rem;
+  color: #9e6d2d;
+}
+#cashflow-calculator .how-to-use .details ul p {
+  margin: unset !important;
+}
+#cashflow-calculator .disclaimer {
+  margin-top: 2.5rem;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#cashflow-calculator .disclaimer .main-heading {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-shadow: unset;
+  font-family: "Montserrat", sans-serif;
+  color: #9e6d2d;
+}
+#cashflow-calculator .disclaimer .details {
+  margin-top: 0.75rem;
+  color: #000;
+  line-height: 1.4;
+}
+#cashflow-calculator .disclaimer .details p {
+  color: #000;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+#cashflow-calculator .mls-rates {
+  margin-top: 2.5rem;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#cashflow-calculator .mls-rates .main-heading {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-shadow: unset;
+  font-family: "Montserrat", sans-serif;
+  color: #9e6d2d;
+}
+#cashflow-calculator .mls-rates .details {
+  margin-top: 0.75rem;
+  color: #000;
+  line-height: 1.4;
+}
+#cashflow-calculator .mls-rates .details .table-container {
+  overflow-x: auto;
+}
+#cashflow-calculator .mls-rates .details table {
+  color: #000;
+  border: 1px solid #333;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+}
+#cashflow-calculator .mls-rates .details th {
+  background: #9e6d2d;
+  color: #fff !important;
+  font-weight: 600;
+  border: 1px solid #333;
+  border-bottom: unset;
+  border-top: unset;
+}
+#cashflow-calculator .mls-rates .details td {
+  color: #000;
+  font-weight: 500;
+  border: 1px solid #333;
+}/*# sourceMappingURL=property-cashflow-calculator.css.map */
