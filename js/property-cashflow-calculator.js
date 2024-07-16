@@ -6,12 +6,16 @@ function getInputValue(name) {
   
   // Function to calculate land tax
   function calculateLandTax(landValue) {
+    let landTax = 0;
+
     if (landValue > 6571000) {
-      return 88036 + 0.02 * (landValue - 6571000);
+      landTax = 88036 + (0.02 * (landValue - 6571000));
+      return landTax
     } else if (landValue > 1075000) {
-      return 100 + 0.016 * (landValue - 1075000);
+      landTax =  100 + (0.016 * (landValue - 1075000));
+      return landTax
     } else {
-      return 0;
+      return landTax;
     }
   }
   
@@ -47,14 +51,16 @@ function getInputValue(name) {
     const sundryRentalExpenses = getInputValue("sundry-rental-expenses");
   
     // Calculate interest on loans
-    const interestOnMortgage = (mortgageLoanAmount * interestRateMortgageLoan).toFixed(2);
-    const interestOnLoan = (equityLoan * interestRateEquityLoan).toFixed(2);
+    const interestOnMortgage = parseFloat((mortgageLoanAmount * (interestRateMortgageLoan / 100)));
+
+    
+    const interestOnLoan = parseFloat((equityLoan * (interestRateEquityLoan / 100)));
   
     // Calculate gross rental income
-    const grossRentalIncome = (potentialRentPerWeek * projectedRentalWeeks).toFixed(2);
+    const grossRentalIncome = parseFloat((potentialRentPerWeek * projectedRentalWeeks));
   
     // Calculate total expenses
-    const totalExpenses = (
+    const totalExpenses = parseFloat(
       advertisingTenants +
       bodyCorporateFees +
       borrowingExpenses +
@@ -71,39 +77,51 @@ function getInputValue(name) {
       capitalWorkDeduction +
       stationeryTelephonePostage +
       waterCharges +
-      sundryRentalExpenses
-    ).toFixed(2);
-  
+      sundryRentalExpenses +
+      interestOnMortgage +
+      interestOnLoan
+    );
+
+
     // Calculate net rental income
-    const taxableIncomeOrLosses = (grossRentalIncome - totalExpenses).toFixed(0);
+    const taxableIncomeOrLosses = parseFloat((grossRentalIncome - totalExpenses));
 
     // Calculate tax
     const anualTaxRate = (30/100);
-    const anualTaxLiabilityRefund = (anualTaxRate * grossRentalIncome).toFixed(0);
+    const anualTaxLiabilityRefund = parseFloat((anualTaxRate * taxableIncomeOrLosses));
 
     // Calculate depreciation addback/reversal
-    const depreciationAddbackReversal = (capitalAllowances * capitalWorkDeduction).toFixed(0);
+    const depreciationAddbackReversal = parseFloat((capitalAllowances + capitalWorkDeduction));
 
     // Calculate net cashflow
-    const anualNetCashflow = (taxableIncomeOrLosses - anualTaxLiabilityRefund - depreciationAddbackReversal).toFixed(0);
+    let anualNetCashflow = parseFloat((Math.abs(taxableIncomeOrLosses) - (Math.abs(anualTaxLiabilityRefund) + Math.abs(depreciationAddbackReversal))));
+    if(taxableIncomeOrLosses < 0) {
+      anualNetCashflow *= -1
+    }
+
+    console.log("taxableIncomeOrLosses", taxableIncomeOrLosses)
+    console.log("anualTaxLiabilityRefund", anualTaxLiabilityRefund)
+    console.log("depreciationAddbackReversal", depreciationAddbackReversal)
+    console.log("anualNetCashflow", anualNetCashflow)
+
 
     // Calculate weekly net cashflow
-    const weeklyNetCashflow = (anualNetCashflow / 52).toFixed(0);
+    const weeklyNetCashflow = parseFloat((anualNetCashflow / 52));
   
     
     // show result
 
     // Annual Tax Liability/Refund
-    document.getElementById("anual-tax-liability-refund").innerHTML = anualTaxLiabilityRefund;
+    document.getElementById("anual-tax-liability-refund").innerHTML = anualTaxLiabilityRefund.toFixed(2);
 
     // Depreciation Addback/Reversal (Non Cash)
-    document.getElementById("depreciation-addback-reversal").innerHTML = depreciationAddbackReversal;
+    document.getElementById("depreciation-addback-reversal").innerHTML = depreciationAddbackReversal.toFixed(2);
 
     // Annual Net Cashflow
-    document.getElementById("annual-net-cashflow").innerHTML = anualNetCashflow;
+    document.getElementById("annual-net-cashflow").innerHTML = anualNetCashflow.toFixed(2);
 
     // Weekly Net Cashflow
-    document.getElementById("weekly-net-cashflow").innerHTML = weeklyNetCashflow;
+    document.getElementById("weekly-net-cashflow").innerHTML = weeklyNetCashflow.toFixed(2);
 
   }
   
