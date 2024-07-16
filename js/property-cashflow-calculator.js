@@ -99,10 +99,7 @@ function getInputValue(name) {
       anualNetCashflow *= -1
     }
 
-    console.log("taxableIncomeOrLosses", taxableIncomeOrLosses)
-    console.log("anualTaxLiabilityRefund", anualTaxLiabilityRefund)
-    console.log("depreciationAddbackReversal", depreciationAddbackReversal)
-    console.log("anualNetCashflow", anualNetCashflow)
+   
 
 
     // Calculate weekly net cashflow
@@ -112,16 +109,34 @@ function getInputValue(name) {
     // show result
 
     // Annual Tax Liability/Refund
-    document.getElementById("anual-tax-liability-refund").innerHTML = anualTaxLiabilityRefund.toFixed(2);
+    let anualTaxLiabilityRefundFormatted = anualTaxLiabilityRefund.toFixed(2);
+    if(anualTaxLiabilityRefund < 0) {
+      anualTaxLiabilityRefundFormatted = `-$${Math.abs(anualTaxLiabilityRefundFormatted)}`
+    } else {
+      anualTaxLiabilityRefundFormatted = `$${Math.abs(anualTaxLiabilityRefundFormatted)}`
+    }
+    document.getElementById("anual-tax-liability-refund").innerHTML = anualTaxLiabilityRefundFormatted;
 
     // Depreciation Addback/Reversal (Non Cash)
-    document.getElementById("depreciation-addback-reversal").innerHTML = depreciationAddbackReversal.toFixed(2);
+    document.getElementById("depreciation-addback-reversal").innerHTML = `$${depreciationAddbackReversal.toFixed(2)}`;
 
     // Annual Net Cashflow
-    document.getElementById("annual-net-cashflow").innerHTML = anualNetCashflow.toFixed(2);
+    let anualNetCashflowFormatted = anualNetCashflow.toFixed(2);
+    if(anualNetCashflow < 0) {
+      anualNetCashflowFormatted = `-$${Math.abs(anualNetCashflowFormatted)}`
+    } else {
+      anualNetCashflowFormatted = `$${Math.abs(anualNetCashflowFormatted)}`
+    }
+    document.getElementById("annual-net-cashflow").innerHTML = anualNetCashflowFormatted;
 
     // Weekly Net Cashflow
-    document.getElementById("weekly-net-cashflow").innerHTML = weeklyNetCashflow.toFixed(2);
+    let weeklyNetCashflowFormatted = weeklyNetCashflow.toFixed(2);
+    if(weeklyNetCashflow < 0) {
+      weeklyNetCashflowFormatted = `-$${Math.abs(weeklyNetCashflowFormatted)}`
+    } else {
+      weeklyNetCashflowFormatted = `$${Math.abs(weeklyNetCashflowFormatted)}`
+    }
+    document.getElementById("weekly-net-cashflow").innerHTML = weeklyNetCashflowFormatted;
 
   }
   
