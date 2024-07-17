@@ -49,7 +49,7 @@ function calculate() {
   const stationeryTelephonePostage = getInputValue("stationery-telephone-postage");
   const waterCharges = getInputValue("water-charges");
   const sundryRentalExpenses = getInputValue("sundry-rental-expenses");
-  const anualTaxRate = getInputValue("anual-tax-rate");
+  const anualTaxRate = getInputValue("annual-tax-rate");
 
   // Calculate interest on loans
   const interestOnMortgage = parseFloat((mortgageLoanAmount * (interestRateMortgageLoan / 100)));
@@ -88,7 +88,7 @@ function calculate() {
   const taxableIncomeOrLosses = parseFloat((grossRentalIncome - totalExpenses));
 
   // Calculate tax
-  const anualTaxRateModified = (anualTaxRate/100);
+  const anualTaxRateModified = parseFloat((anualTaxRate / 100));
   const anualTaxLiabilityRefund = parseFloat((anualTaxRateModified * taxableIncomeOrLosses));
 
   // Calculate depreciation addback/reversal
@@ -141,3 +141,14 @@ function calculate() {
   document.getElementById("weekly-net-cashflow").innerHTML = weeklyNetCashflowFormatted;
 
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -18,19 +18,32 @@
     <main>
       <section id="cashflow-calculator">
         <div class="container">
-          <!-- Medicare Levy Surcharge Calculator -->
+          <!-- Introduction Note -->
+          <div class="notes">
+            <div class="main-heading">
+              Welcome to the Investax Property Cashflow Calculator!
+            </div>
+            <div class="details">
+              <p>
+                At Investax, we pride ourselves on providing premium tax and
+                property investment planning services to our clients. This
+                calculator is a showcase of the comprehensive analysis we offer
+                when you reach out to us. While many top-tier accountants and
+                buyer’s agents charge thousands of dollars for similar
+                calculations, we are giving this to you for free. Use it to gain
+                a professional edge in your property investment journey and make
+                informed decisions with confidence.
+              </p>
+            </div>
+          </div>
 
           <div class="row g-4">
-
             <!-- calculator -->
             <div class="col-12 calculator">
               <div class="calculator-form">
-                
                 <div class="form-sec-title">General Property Information</div>
-
-                <!-- general-property-information -->
+                <!-- General Property Information -->
                 <div class="general-property-information row g-2">
-  
                   <!-- Purchase Price -->
                   <div class="col-12">
                     <div class="input-group">
@@ -45,7 +58,7 @@
                       </label>
                     </div>
                   </div>
-  
+
                   <!-- Mortgage/Loan amount  -->
                   <div class="col-12 col-md-6">
                     <div class="input-group">
@@ -60,7 +73,7 @@
                       </label>
                     </div>
                   </div>
-  
+
                   <!-- Interest Rate Mortgage/Loan amount  -->
                   <div class="col-12 col-md-6">
                     <div class="input-group">
@@ -75,7 +88,7 @@
                       </label>
                     </div>
                   </div>
-  
+
                   <!-- Equity Loan   -->
                   <div class="col-12 col-md-6">
                     <div class="input-group">
@@ -90,7 +103,7 @@
                       </label>
                     </div>
                   </div>
-  
+
                   <!-- Interest Rate Equity Loan   -->
                   <div class="col-12 col-md-6">
                     <div class="input-group">
@@ -105,18 +118,22 @@
                       </label>
                     </div>
                   </div>
-  
+
                   <!-- Property Suburb and State   -->
                   <div class="col-12 col-md-6">
                     <div class="input-group radio-group">
                       <legend>Property Suburb and State</legend>
-  
-                      <select name="property-suburb-state" id="type-select" disabled>
+
+                      <select
+                        name="property-suburb-state"
+                        id="type-select"
+                        disabled
+                      >
                         <option value="single">NSW</option>
                       </select>
                     </div>
                   </div>
-  
+
                   <!-- Land Value   -->
                   <div class="col-12 col-md-6">
                     <div class="input-group">
@@ -131,7 +148,7 @@
                       </label>
                     </div>
                   </div>
-  
+
                   <!-- Land Tax Rate  -->
                   <!-- <div class="col-12 col-md-6">
                     <div class="input-group">
@@ -146,7 +163,7 @@
                       </label>
                     </div>
                   </div> -->
-  
+
                   <!-- Potential Rent per week  -->
                   <div class="col-12 col-md-6">
                     <div class="input-group">
@@ -161,7 +178,7 @@
                       </label>
                     </div>
                   </div>
-  
+
                   <!-- Projected Rental Weeks (number of weeks/year)  -->
                   <div class="col-12 col-md-6">
                     <div class="input-group">
@@ -177,14 +194,12 @@
                     </div>
                   </div>
                 </div>
-  
+
                 <!-- EXPENSES -->
                 <div class="expenses">
-  
                   <div class="form-sec-title">Expenses</div>
-  
+
                   <div class="row g-2">
-  
                     <!-- D Advertising for tenants -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
@@ -194,12 +209,11 @@
                             type="number"
                             name="advertising-tenants"
                             placeholder="D Advertising for Tenants"
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- E Body corporate fees (Strata Levies) -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
@@ -209,12 +223,11 @@
                             type="number"
                             name="body-corporate-fees"
                             placeholder="E Body Corporate Fees (Strata Levies)"
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- F Borrowing expenses -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
@@ -224,12 +237,11 @@
                             type="number"
                             name="borrowing-expenses"
                             placeholder="F Borrowing Expenses"
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- G Cleaning -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
@@ -239,12 +251,11 @@
                             type="number"
                             name="g-cleaning"
                             placeholder="G Cleaning"
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- H Council Rates -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
@@ -254,17 +265,16 @@
                             type="number"
                             name="h-council-rates"
                             placeholder="H Council Rates"
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- I Capital allowances (depreciation)  -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
                         <label>
-                          I Capital allowances (depreciation) 
+                          I Capital allowances (depreciation)
                           <input
                             type="number"
                             name="capital-allowances"
@@ -274,205 +284,193 @@
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- J Gardening/lawn mowing  -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
                         <label>
-                          J Gardening/lawn mowing 
+                          J Gardening/lawn mowing
                           <input
                             type="number"
                             name="gardening-lawn-mowing"
                             placeholder="J Gardening/lawn mowing"
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- K Insurance  -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
                         <label>
-                          K Insurance 
+                          K Insurance
                           <input
                             type="number"
                             name="k-insurance"
                             placeholder="K Insurance"
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- M Land Tax   -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
                         <label>
-                          M Land Tax  
+                          M Land Tax
                           <input
                             type="number"
                             name="land-tax"
                             placeholder="M Land Tax "
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- N Legal fees   -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
                         <label>
-                          N Legal fees  
+                          N Legal fees
                           <input
                             type="number"
                             name="legal-fees"
                             placeholder="N Legal fees "
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- O Pest control   -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
                         <label>
-                          O Pest control  
+                          O Pest control
                           <input
                             type="number"
                             name="pest-control"
                             placeholder="O Pest control "
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- P Property agent fees/commission   -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
                         <label>
-                          P Property agent fees/commission  
+                          P Property agent fees/commission
                           <input
                             type="number"
                             name="property-agent-fees-commission"
                             placeholder="P Property agent fees/commission "
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- Q Repairs and maintenance (R & M)   -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
                         <label>
-                          Q Repairs and maintenance (R & M)  
+                          Q Repairs and maintenance (R & M)
                           <input
                             type="number"
                             name="repairs-and-maintenance"
                             placeholder="Q Repairs and maintenance (R & M) "
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- R Capital Work's Deduction (Building)   -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
                         <label>
-                          R Capital Work's Deduction (Building)  
+                          R Capital Work's Deduction (Building)
                           <input
                             type="number"
                             name="capital-work-deduction"
                             placeholder="R Capital Work's Deduction (Building) "
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- S Stationery, telephone and postage   -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
                         <label>
-                          S Stationery, Telephone and Postage  
+                          S Stationery, Telephone and Postage
                           <input
                             type="number"
                             name="stationery-telephone-postage"
                             placeholder="S Stationery, telephone and postage "
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- U Water charges   -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
                         <label>
-                          U Water Charges  
+                          U Water Charges
                           <input
                             type="number"
                             name="water-charges"
                             placeholder="U Water Charges "
-                            
                           />
                         </label>
                       </div>
                     </div>
-                    
+
                     <!-- V Sundry rental expenses   -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
                         <label>
-                          V Sundry Rental Expenses  
+                          V Sundry Rental Expenses
                           <input
                             type="number"
                             name="sundry-rental-expenses"
                             placeholder="V Sundry rental expenses "
-                            
                           />
                         </label>
                       </div>
                     </div>
-  
                   </div>
-  
                 </div>
 
-                <!-- anual tax rate -->
-                 <div class="tax-rate">
+                <!-- Annual Tax Rate -->
+                <div class="expenses">
                   <div class="form-sec-title">Tax Rate</div>
+
                   <div class="input-group">
                     <label>
-                      Anual Tax Rate (%)
+                      Annual Tax Rate (%)
                       <input
                         type="number"
-                        name="anual-tax-rate"
-                        placeholder="Anual Tax Rate"
+                        name="annual-tax-rate"
+                        placeholder="Annual Tax Rate"
                       />
                     </label>
                   </div>
-                 </div>
-  
-                <button class="calculate-btn" onclick="calculate()">Calculate</button>
-  
+                </div>
+
+                <button class="calculate-btn" onclick="calculate()">
+                  Calculate
+                </button>
               </div>
             </div>
-  
+
             <!-- result -->
-             <div class="col-12 result" id="result">
+            <div class="col-12 result" id="result">
               <div class="row">
                 <div class="col-12">
                   <div class="result-sec-title">Result</div>
-                  
+
                   <table class="result-table">
                     <tbody>
-
                       <!-- anual tax rate -->
                       <tr>
                         <th>Annual Tax Rate %</th>
@@ -488,7 +486,9 @@
                       <!-- Depreciation Addback/Reversal (Non Cash) -->
                       <tr>
                         <th>Depreciation Addback/Reversal (Non Cash)</th>
-                        <td><span id="depreciation-addback-reversal"></span></td>
+                        <td>
+                          <span id="depreciation-addback-reversal"></span>
+                        </td>
                       </tr>
 
                       <!-- Annual Net Cashflow -->
@@ -502,13 +502,36 @@
                         <th>Weekly Net Cashflow</th>
                         <td><span id="weekly-net-cashflow"></span></td>
                       </tr>
-
                     </tbody>
                   </table>
                 </div>
               </div>
-             </div>
+            </div>
+          </div>
 
+          <!-- What Now? -->
+          <div class="notes">
+            <div class="main-heading">What Now?</div>
+            <div class="details">
+              <p>
+                If you want a PDF copy of this cashflow analysis, please feel
+                free to organize a complimentary consultation with one of our
+                experienced team members. Now that you've discovered the weekly
+                and annual tax liability and cash flow effect of holding your
+                property, it's time to delve deeper. This analysis covers
+                interest payments but doesn’t reflect the full cash flow
+                picture, including principal repayments. It's also important to
+                remember that the property ownership structure plays a huge role
+                in annual income tax, land tax, and capital gains tax. To truly
+                understand the long-term financial impact, let's explore if
+                holding this property benefits you through capital appreciation.
+                Our experts at Investax can help you evaluate the potential for
+                long-term growth and overall investment performance. Schedule a
+                Strategic Consultation with us today to ensure your property
+                investment aligns with your financial goals and maximizes your
+                returns.
+              </p>
+            </div>
           </div>
 
           <!-- how to use calculator -->
