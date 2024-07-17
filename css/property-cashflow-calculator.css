@@ -255,6 +255,7 @@ hr {
   font-family: "Montserrat", sans-serif;
 }
 #cashflow-calculator #result {
+  scroll-margin: 100px;
   margin-bottom: 2.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
