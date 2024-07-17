@@ -25,9 +25,11 @@
             <!-- calculator -->
             <div class="col-12 calculator">
               <div class="calculator-form">
-  
-                <!-- income details -->
-                <div class="income-details row g-2">
+                
+                <div class="form-sec-title">General Property Information</div>
+
+                <!-- general-property-information -->
+                <div class="general-property-information row g-2">
   
                   <!-- Purchase Price -->
                   <div class="col-12">
@@ -441,6 +443,21 @@
                   </div>
   
                 </div>
+
+                <!-- anual tax rate -->
+                 <div class="tax-rate">
+                  <div class="form-sec-title">Tax Rate</div>
+                  <div class="input-group">
+                    <label>
+                      Anual Tax Rate (%)
+                      <input
+                        type="number"
+                        name="anual-tax-rate"
+                        placeholder="Anual Tax Rate"
+                      />
+                    </label>
+                  </div>
+                 </div>
   
                 <button class="calculate-btn" onclick="calculate()">Calculate</button>
   
@@ -459,7 +476,7 @@
                       <!-- anual tax rate -->
                       <tr>
                         <th>Annual Tax Rate %</th>
-                        <td><span id="anual-tax-rate">30%</span></td>
+                        <td><span id="anual-tax-rate"></span></td>
                       </tr>
 
                       <!-- Annual Tax Liability/Refund -->

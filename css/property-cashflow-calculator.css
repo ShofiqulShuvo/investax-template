@@ -128,6 +128,11 @@ hr {
     border-bottom: 2px solid #B17A4E;
   }
 }
+#cashflow-calculator .calculator .calculator-form .error-messaage {
+  font-weight: 500;
+  color: red;
+  margin-bottom: 1rem;
+}
 #cashflow-calculator .calculator .calculator-form .row {
   align-items: flex-end !important;
 }
@@ -136,7 +141,7 @@ hr {
   color: #000;
   font-weight: 700;
 }
-#cashflow-calculator .calculator .calculator-form .income-details, #cashflow-calculator .calculator .calculator-form .income, #cashflow-calculator .calculator .calculator-form .expenses {
+#cashflow-calculator .calculator .calculator-form .general-property-information, #cashflow-calculator .calculator .calculator-form .income, #cashflow-calculator .calculator .calculator-form .expenses, #cashflow-calculator .calculator .calculator-form .tax-rate {
   margin-bottom: 1rem;
 }
 #cashflow-calculator .calculator .calculator-form .group-title {
@@ -236,6 +241,7 @@ hr {
   font-family: "Montserrat", sans-serif;
 }
 #cashflow-calculator #result {
+  margin-bottom: 2.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 5px;
@@ -251,9 +257,9 @@ hr {
 }
 #cashflow-calculator #result .result-sec-title {
   margin-bottom: 0.5rem;
-  color: #000;
+  color: #9e6d2d;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 #cashflow-calculator #result .summary {
   display: flex;
@@ -282,7 +288,7 @@ hr {
   color: #B17A4E;
 }
 #cashflow-calculator #result .result-table {
-  max-width: 500px;
+  max-width: 600px;
 }
 #cashflow-calculator #result .result-table th, #cashflow-calculator #result .result-table td {
   border: 2px solid #B17A4E;
@@ -341,6 +347,31 @@ hr {
 }
 #cashflow-calculator .how-to-use .details ul p {
   margin: unset !important;
+}
+#cashflow-calculator .notes {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+#cashflow-calculator .notes .main-heading {
+  text-align: left;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-shadow: unset;
+  font-family: "Montserrat", sans-serif;
+  color: #9e6d2d;
+}
+#cashflow-calculator .notes .details {
+  margin-top: 0.75rem;
+  color: #000;
+  line-height: 1.4;
+}
+#cashflow-calculator .notes .details p {
+  color: #000;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 #cashflow-calculator .disclaimer {
   margin-top: 2.5rem;
