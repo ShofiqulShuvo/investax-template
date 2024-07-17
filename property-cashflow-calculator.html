@@ -43,17 +43,18 @@
               <div class="calculator-form">
                 <div class="form-sec-title">General Property Information</div>
                 <!-- General Property Information -->
-                <div class="general-property-information row g-2">
+                <div class="general-property-information row g-3">
                   <!-- Purchase Price -->
                   <div class="col-12">
                     <div class="input-group">
                       <label>
-                        Purchase Price
+                        <span>Purchase Price <span class="required-input">*</span></span>
                         <input
                           type="number"
                           name="purchase-price"
                           placeholder="Purchase Price"
                           value="2000000"
+                          required
                         />
                       </label>
                     </div>
@@ -63,12 +64,13 @@
                   <div class="col-12 col-md-6">
                     <div class="input-group">
                       <label>
-                        Mortgage/Loan amount
+                        <span>Mortgage/Loan Amount <span class="required-input">*</span></span>
                         <input
                           type="number"
                           name="mortgage-loan-amount"
                           placeholder="Mortgage/Loan amount"
                           value="1500000"
+                          required
                         />
                       </label>
                     </div>
@@ -78,12 +80,13 @@
                   <div class="col-12 col-md-6">
                     <div class="input-group">
                       <label>
-                        Interest Rate (%)
+                        <span>Interest Rate (%) <span class="required-input">*</span></span>
                         <input
                           type="number"
                           name="interest-rate-mordgage-loan-amount"
                           placeholder="Interest Rate "
                           value="6.15"
+                          required
                         />
                       </label>
                     </div>
@@ -93,12 +96,13 @@
                   <div class="col-12 col-md-6">
                     <div class="input-group">
                       <label>
-                        Equity Loan (i.e. Deposit, Stampduty, Legal fees etc.)
+                        <span>Equity Loan (i.e. Deposit, Stampduty, Legal fees etc.) <span class="required-input">*</span></span>
                         <input
                           type="number"
                           name="equity-loan"
                           placeholder="Equity Loan"
                           value="500000"
+                          required
                         />
                       </label>
                     </div>
@@ -108,29 +112,40 @@
                   <div class="col-12 col-md-6">
                     <div class="input-group">
                       <label>
-                        Interest Rate (%)
+                        <span>Interest Rate (%) <span class="required-input">*</span></span>
                         <input
                           type="number"
                           name="interest-rate-equity-loan"
                           placeholder="Interest Rate"
                           value="6"
+                          required
                         />
                       </label>
                     </div>
                   </div>
 
                   <!-- Property Suburb and State   -->
-                  <div class="col-12 col-md-6">
+                  <div class="col-12">
                     <div class="input-group radio-group">
                       <legend>Property Suburb and State</legend>
 
                       <select
                         name="property-suburb-state"
                         id="type-select"
-                        disabled
+                        required
                       >
-                        <option value="single">NSW</option>
+                        <option value="nsw">NSW</option>
+                        <option value="vic">VIC</option>
+                        <option value="qld">QLD</option>
+                        <option value="wa">WA</option>
+                        <option value="act">ACT</option>
+                        <option value="sa">SA</option>
+                        <option value="tas">TAS</option>
+                        <option value="nt">NT</option>
                       </select>
+                    </div>
+                    <div id="prompt-message">
+                      The Automatic Land Tax Calculator is not available for ACT, SA, TAS, and NT. Please enter the land tax amount manually in the "Land Tax" expense item.
                     </div>
                   </div>
 
@@ -138,42 +153,45 @@
                   <div class="col-12 col-md-6">
                     <div class="input-group">
                       <label>
-                        Land Value
+                        <span>Land Value <span class="required-input">*</span></span>
                         <input
                           type="number"
                           name="land-value"
                           placeholder="Land Value"
                           value="900000"
+                          required
                         />
                       </label>
                     </div>
                   </div>
 
                   <!-- Land Tax Rate  -->
-                  <!-- <div class="col-12 col-md-6">
+                  <div class="col-12 col-md-6">
                     <div class="input-group">
                       <label>
-                        Land Tax Rate (over $1.075,000 Land Tax Threshold)
+                        Land Tax Rate (%) (over $1.075,000 Land Tax Threshold)
                         <input
                           type="number"
                           name="land-tax-rate"
                           placeholder="Land Tax Rate"
                           value="1.6"
+                          disabled
                         />
                       </label>
                     </div>
-                  </div> -->
+                  </div>
 
                   <!-- Potential Rent per week  -->
                   <div class="col-12 col-md-6">
                     <div class="input-group">
                       <label>
-                        Potential Rent per week
+                        <span>Potential Rent Per Week <span class="required-input">*</span></span>
                         <input
                           type="number"
                           name="potential-rent-per-week"
                           placeholder="Potential Rent per week"
                           value="1500"
+                          required
                         />
                       </label>
                     </div>
@@ -183,12 +201,13 @@
                   <div class="col-12 col-md-6">
                     <div class="input-group">
                       <label>
-                        Projected Rental Weeks (number of weeks/year)
+                        <span>Projected Rental Weeks (number of weeks/year) <span class="required-input">*</span></span>
                         <input
                           type="number"
                           name="projected-rental-weeks"
                           placeholder="Projected Rental Weeks"
                           value="52"
+                          required
                         />
                       </label>
                     </div>
@@ -199,7 +218,7 @@
                 <div class="expenses">
                   <div class="form-sec-title">Expenses</div>
 
-                  <div class="row g-2">
+                  <div class="row g-3">
                     <!-- D Advertising for tenants -->
                     <div class="col-12 col-md-6">
                       <div class="input-group">
@@ -457,6 +476,10 @@
                   </div>
                 </div>
 
+                <div class="error-message">
+                  * Fields highlighted in red are mandatory.
+                </div>
+
                 <button class="calculate-btn" onclick="calculate()">
                   Calculate
                 </button>
@@ -510,7 +533,7 @@
           </div>
 
           <!-- What Now? -->
-          <div class="notes">
+          <div class="notes what-now">
             <div class="main-heading">What Now?</div>
             <div class="details">
               <p>

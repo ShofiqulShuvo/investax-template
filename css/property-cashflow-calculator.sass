@@ -110,14 +110,23 @@ hr
       flex-direction: column
       justify-content: center
       gap: .5rem
+      
       @media screen and ( max-width: 991px )
         border: none
         border-bottom: 2px solid $brandColorThree
 
-      .error-messaage
+      .error-message
+        display: none
         font-weight: 500
         color: red
         margin-bottom: 1rem
+
+      #prompt-message
+        font-size: .6rem
+        display: none
+        font-weight: 700
+        color: #f17500
+        margin: .5rem 0
 
       .row
         align-items: flex-end !important
@@ -134,11 +143,17 @@ hr
         margin: unset
 
       legend, label
+        display: inline-block
         font-size: .7rem
         color: #000
         font-weight: 600
         margin: unset
         gap: .2rem !important
+
+        .required-input
+          display: inline-block
+          color: red
+          font-size: .9rem
 
       input
         background: #fff !important
@@ -331,6 +346,7 @@ hr
           margin: unset !important
         
 
+
   .notes
     margin-top: 0
     margin-bottom: 2.5rem
@@ -356,6 +372,10 @@ hr
         font-weight: 500
         margin-bottom: .5rem
 
+
+  .what-now
+    margin-top: 2rem
+    margin-bottom: 0 
 
   .disclaimer
     margin-top: 2.5rem

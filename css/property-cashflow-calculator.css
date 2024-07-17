@@ -128,10 +128,18 @@ hr {
     border-bottom: 2px solid #B17A4E;
   }
 }
-#cashflow-calculator .calculator .calculator-form .error-messaage {
+#cashflow-calculator .calculator .calculator-form .error-message {
+  display: none;
   font-weight: 500;
   color: red;
   margin-bottom: 1rem;
+}
+#cashflow-calculator .calculator .calculator-form #prompt-message {
+  font-size: 0.6rem;
+  display: none;
+  font-weight: 700;
+  color: #f17500;
+  margin: 0.5rem 0;
 }
 #cashflow-calculator .calculator .calculator-form .row {
   align-items: flex-end !important;
@@ -148,11 +156,17 @@ hr {
   margin: unset;
 }
 #cashflow-calculator .calculator .calculator-form legend, #cashflow-calculator .calculator .calculator-form label {
+  display: inline-block;
   font-size: 0.7rem;
   color: #000;
   font-weight: 600;
   margin: unset;
   gap: 0.2rem !important;
+}
+#cashflow-calculator .calculator .calculator-form legend .required-input, #cashflow-calculator .calculator .calculator-form label .required-input {
+  display: inline-block;
+  color: red;
+  font-size: 0.9rem;
 }
 #cashflow-calculator .calculator .calculator-form input {
   background: #fff !important;
@@ -372,6 +386,10 @@ hr {
   font-size: 1.05rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
+}
+#cashflow-calculator .what-now {
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 #cashflow-calculator .disclaimer {
   margin-top: 2.5rem;

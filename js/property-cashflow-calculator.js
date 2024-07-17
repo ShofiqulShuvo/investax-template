@@ -1,18 +1,108 @@
+
 // Function to get the input value and parse it as a float
 function getInputValue(name) {
   const input = document.querySelector(`input[name="${name}"]`);
-  return input && input.value ? parseFloat(input.value) : 0;
+  const value = input && input.value.trim();
+
+  // Check if the input has the required attribute
+  const isRequired = input && input.hasAttribute('required');
+
+  if (isRequired && !value) {
+    input.style.borderColor = 'red'; // Highlight empty field
+    errorMessage.style.display = 'block'; // Show error message
+    return 0;
+  }
+
+  // Reset border color if input is not empty
+  // input.style.borderColor = '';
+
+  return parseFloat(value) || 0;;
 }
 
+
+// global variables
+const selectElement = document.getElementById('type-select');
+const landValueInput = document.querySelector('input[name="land-value"]')
+const landTaxRateInput = document.querySelector('input[name="land-tax-rate"]')
+const errorMessage = document.querySelector(".error-message")
+const promptMessage = document.getElementById('prompt-message');
+
+// Get all input fields
+const inputFields = document.querySelectorAll('input');
+
+// Add event listeners to all input fields
+inputFields.forEach(input => {
+  input.addEventListener('change', () => {
+    const resultElement = document.getElementById('result');
+    resultElement.style.display = "none";
+    errorMessage.style.display = 'none';
+  });
+});
+
+// add event listener for land value input
+landValueInput.addEventListener('change', (e) => {
+  const landValue = e.target.value;
+
+  const invalidStates = ['act', 'sa', 'tas', 'nt'];
+  if (invalidStates.includes(selectElement.value)) {
+    // Show a prompt message
+    promptMessage.style.display = 'block';
+    landTaxRateInput.value =  "";
+    landTaxRateInput.removeAttribute('disabled');
+    console.log(landTaxRateInput)
+  } else if (landValue > 6571000) {
+    promptMessage.style.display = 'none';
+    landTaxRateInput.value =  "2";
+    landTaxRateInput.setAttribute('disabled', 'disabled');
+  } else if (landValue > 1075000) {
+    promptMessage.style.display = 'none';
+    landTaxRateInput.value =  "1.6";
+    landTaxRateInput.setAttribute('disabled', 'disabled');
+  }
+  console.log(landValue)
+  console.log(selectElement.value)
+
+})
+
+// Add event listener for change event
+selectElement.addEventListener('change', function() {
+  promptMessage.style.display = 'none';
+  const selectedValue = this.value;
+  const landValue = parseFloat(landValueInput.value);
+
+  // Array of states where the calculator doesn't work
+  const invalidStates = ['act', 'sa', 'tas', 'nt'];
+
+  // Check if selected state is in the invalidStates array
+  if (invalidStates.includes(selectedValue)) {
+    // Show a prompt message
+    promptMessage.style.display = 'block';
+    landTaxRateInput.value =  "";
+    landTaxRateInput.removeAttribute('disabled');
+    console.log(landTaxRateInput)
+  } else if (landValue > 6571000) {
+    // Hide the prompt message
+    promptMessage.style.display = 'none';
+    landTaxRateInput.value =  "2";
+    landTaxRateInput.setAttribute('disabled', 'disabled');
+  } else if (landValue > 1075000) {
+    promptMessage.style.display = 'none';
+    landTaxRateInput.value =  "1.6";
+    landTaxRateInput.setAttribute('disabled', 'disabled');
+  }
+});
+
+
+
 // Function to calculate land tax
-function calculateLandTax(landValue) {
+function calculateLandTax(landValue, landTaxValue) {
   let landTax = 0;
 
   if (landValue > 6571000) {
-    landTax = 88036 + (0.02 * (landValue - 6571000));
+    landTax = 88036 + (landTaxValue * (landValue - 6571000));
     return landTax
   } else if (landValue > 1075000) {
-    landTax =  100 + (0.016 * (landValue - 1075000));
+    landTax =  100 + (landTaxValue * (landValue - 1075000));
     return landTax
   } else {
     return landTax;
@@ -21,6 +111,13 @@ function calculateLandTax(landValue) {
 
 // Main calculation function
 function calculate() {
+
+  const resultElement = document.getElementById("result")
+
+  resultElement.style.display = "none";
+  errorMessage.style.display = 'none';
+
+
   // Get income details input values
   const purchasePrice = getInputValue("purchase-price");
   const mortgageLoanAmount = getInputValue("mortgage-loan-amount");
@@ -51,6 +148,14 @@ function calculate() {
   const sundryRentalExpenses = getInputValue("sundry-rental-expenses");
   const anualTaxRate = getInputValue("annual-tax-rate");
 
+  // validate required field 
+  if (!purchasePrice || !mortgageLoanAmount || !interestRateMortgageLoan || !equityLoan || !interestRateEquityLoan || !landValue || !potentialRentPerWeek || !projectedRentalWeeks ) {
+    errorMessage.style.display = 'block'; // Show error message
+    return; // Exit function if validation fails
+  }
+  // validate required field  end
+
+
   // Calculate interest on loans
   const interestOnMortgage = parseFloat((mortgageLoanAmount * (interestRateMortgageLoan / 100)));
 
@@ -70,7 +175,7 @@ function calculate() {
     capitalAllowances +
     gardeningLawnMowing +
     insurance +
-    calculateLandTax(landValue) +
+    calculateLandTax(landValue, landTaxRate) +
     legalFees +
     pestControl +
     propertyAgentFeesCommission +
@@ -139,6 +244,12 @@ function calculate() {
     weeklyNetCashflowFormatted = `$${Math.abs(weeklyNetCashflowFormatted)}`
   }
   document.getElementById("weekly-net-cashflow").innerHTML = weeklyNetCashflowFormatted;
+
+  if(resultElement) {
+    resultElement.style.display = "block";
+    resultElement.scrollIntoView({ top: 500, behavior: 'smooth' });
+  }
+
 
 }
 
