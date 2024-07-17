@@ -12,6 +12,7 @@ function getInputValue(name) {
     return 0;
   }
 
+  input.style.borderColor = '#B17A4E'; // Highlight empty field
   return parseFloat(value) || 0;
 }
 
@@ -189,14 +190,10 @@ function calculate() {
   const landTax = getInputValue("land-tax");
 
   // Validate required fields
-  if (!purchasePrice || !mortgageLoanAmount || !interestRateMortgageLoan || !equityLoan || !interestRateEquityLoan || !landValue || !potentialRentPerWeek || !projectedRentalWeeks) {
+  if (!purchasePrice || !mortgageLoanAmount || !interestRateMortgageLoan || !equityLoan || !interestRateEquityLoan || !landValue || !potentialRentPerWeek || !projectedRentalWeeks || (landTaxRate === undefined || landTaxRate === null || landTaxRate < 0)) {
     errorMessage.style.display = 'block'; // Show error message
     return; // Exit function if validation fails
   }
-
-  // Calculate interest on loans
-  // const interestOnMortgage = parseFloat((mortgageLoanAmount * (interestRateMortgageLoan / 100)));
-  // const interestOnLoan = parseFloat((equityLoan * (interestRateEquityLoan / 100)));
 
   // Calculate gross rental income
   const grossRentalIncome = parseFloat((potentialRentPerWeek * projectedRentalWeeks));
@@ -224,11 +221,9 @@ function calculate() {
     interestOnLoan
   );
 
+
   // Calculate net rental income
   const taxableIncomeOrLosses = parseFloat((grossRentalIncome - totalExpenses));
-  console.log("taxableIncomeOrLosses", taxableIncomeOrLosses)
-  console.log("grossRentalIncome", grossRentalIncome)
-  console.log("totalExpenses", totalExpenses)
 
   // Calculate tax
   const anualTaxRateModified = parseFloat((anualTaxRate / 100));
