@@ -30,11 +30,21 @@ const equityLoanAmountInput = document.querySelector('input[name="equity-loan"]'
 const equityInterestRateInput = document.querySelector('input[name="interest-rate-equity-loan"]');
 const interestOnLoanInput = document.querySelector('input[name="interest-on-loan"]');
 
+const rentPerWeek = document.querySelector('input[name="potential-rent-per-week"]');
+const totalRentalWeeks = document.querySelector('input[name="projected-rental-weeks"]');
+const netRentalIncome = document.querySelector('input[name="net-rental-income"]');
+
+
+
+// calculate net rental income
+function calculateNetRentalIncome() {
+  const rentalIncome = parseFloat(rentPerWeek.value) * parseFloat(totalRentalWeeks.value);
+  netRentalIncome.value = rentalIncome.toFixed(2);
+}
+
 // Update land tax
 function updateLandTax() {
-  const landValue = parseFloat(landValueInput.value) || 0;
-  const landTaxRate = parseFloat(landTaxRateInput.value) || 0;
-  const landTax = (landValue * landTaxRate) / 100;
+  const landTax = calculateLandTax();
   landTaxInput.value = landTax.toFixed(2);
 }
 
@@ -56,12 +66,21 @@ function updateInterestOnLoan() {
 
 // Add event listeners for inputs
 function addEventListeners() {
-  landValueInput.addEventListener('input', updateLandTax);
-  landTaxRateInput.addEventListener('input', updateLandTax);
+  
+  // Add event listener for land value input
+  landValueInput.addEventListener('change', handleLandValueChange);
+
+  // Add event listener for type select change
+  selectElement.addEventListener('change', handleTypeSelectChange);
+
+  landValueInput.addEventListener('change', updateLandTax);
+  landTaxRateInput.addEventListener('change', updateLandTax);
   mortgageLoanAmountInput.addEventListener('input', updateInterestOnMortgage);
   mortgageInterestRateInput.addEventListener('input', updateInterestOnMortgage);
   equityLoanAmountInput.addEventListener('input', updateInterestOnLoan);
   equityInterestRateInput.addEventListener('input', updateInterestOnLoan);
+  rentPerWeek.addEventListener('input', updateLandTax);
+  totalRentalWeeks.addEventListener('input', updateLandTax);
 
   // Add event listener to all input fields
   document.querySelectorAll('input').forEach(input => {
@@ -70,12 +89,6 @@ function addEventListeners() {
       errorMessage.style.display = 'none';
     });
   });
-
-  // Add event listener for land value input
-  landValueInput.addEventListener('change', handleLandValueChange);
-
-  // Add event listener for type select change
-  selectElement.addEventListener('change', handleTypeSelectChange);
 }
 
 // Handle land value change
@@ -104,6 +117,7 @@ function handleTypeSelectChange() {
   if (invalidStates.includes(selectedValue)) {
     promptMessage.style.display = 'block';
     landTaxRateInput.value = "";
+    landTaxInput.value = "";
     landTaxRateInput.removeAttribute('disabled');
   } else {
     promptMessage.style.display = 'none';
@@ -130,20 +144,25 @@ function setLandTaxRate(landValue) {
 }
 
 // Calculate land tax
-function calculateLandTax(landValue, landTaxValue) {
-  if (landValue >= 3000000) {
-    return 31650 + (landTaxValue * (landValue - 6571000));
-  } else if (landValue >= 1800000) {
-    return 11850 + (landTaxValue * (landValue - 1075000));
-  } else if (landValue >= 1000000) {
-    return 4650 + (landTaxValue * (landValue - 1075000));
-  } else if (landValue >= 600000) {
-    return 2250 + (landTaxValue * (landValue - 1075000));
-  } else if (landValue >= 300000) {
-    return 1350 + (landTaxValue * (landValue - 1075000));
-  } else if (landValue >= 100000) {
+function calculateLandTax() {
+
+  const currentLandValue = parseFloat(document.querySelector('input[name="land-value"]').value) || 0;
+  const currentLandTaxValue = parseFloat(document.querySelector('input[name="land-tax-rate"]').value) || 0;
+  const currentLandTaxRate = parseFloat(currentLandTaxValue / 100);
+
+  if (currentLandValue >= 3000000) {
+    return 31650 + (currentLandTaxRate * (currentLandValue - 3000000));
+  } else if (currentLandValue >= 1800000) {
+    return 11850 + (currentLandTaxRate * (currentLandValue - 1800000));
+  } else if (currentLandValue >= 1000000) {
+    return 4650 + (currentLandTaxRate * (currentLandValue - 1000000));
+  } else if (currentLandValue >= 600000) {
+    return 2250 + (currentLandTaxRate * (currentLandValue - 600000));
+  } else if (currentLandValue >= 300000) {
+    return 1350 + (currentLandTaxRate * (currentLandValue - 300000));
+  } else if (currentLandValue >= 100000) {
     return 975;
-  } else if (landValue >= 50000) {
+  } else if (currentLandValue >= 50000) {
     return 500;
   } else {
     return 0;
@@ -190,7 +209,7 @@ function calculate() {
   const landTax = getInputValue("land-tax");
 
   // Validate required fields
-  if (!purchasePrice || !mortgageLoanAmount || !interestRateMortgageLoan || !equityLoan || !interestRateEquityLoan || !landValue || !potentialRentPerWeek || !projectedRentalWeeks || (landTaxRate === undefined || landTaxRate === null || landTaxRate < 0)) {
+  if (!purchasePrice || !mortgageLoanAmount || !interestRateMortgageLoan || !equityLoan || !interestRateEquityLoan || !landValue || !potentialRentPerWeek || !projectedRentalWeeks || (landTaxRate === undefined || landTaxRate === null || landTaxRate < 0) || (!anualTaxRate || anualTaxRate <= 0)) {
     errorMessage.style.display = 'block'; // Show error message
     return; // Exit function if validation fails
   }
@@ -242,11 +261,20 @@ function calculate() {
   const weeklyNetCashflow = parseFloat((anualNetCashflow / 52));
 
   // Display results
-  displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddbackReversal, anualNetCashflow, weeklyNetCashflow, resultElement);
+  displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddbackReversal, anualNetCashflow, weeklyNetCashflow, resultElement, grossRentalIncome, totalExpenses);
 }
 
 // Display results
-function displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddbackReversal, anualNetCashflow, weeklyNetCashflow, resultElement) {
+function displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddbackReversal, anualNetCashflow, weeklyNetCashflow, resultElement, grossRentalIncome, totalExpenses) {
+
+
+  // Net Rental Income
+  document.getElementById("net-rental-income").innerHTML = `$${grossRentalIncome}`;
+
+  // Total expenses
+  document.getElementById("total-expenses").innerHTML = `$${totalExpenses}`;
+
+  // Annual Tax Rate
   document.getElementById("anual-tax-rate").innerHTML = `${anualTaxRate}%`;
 
   // Annual Tax Liability/Refund
