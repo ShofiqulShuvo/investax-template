@@ -2082,4 +2082,22 @@ footer, .banner {
 }
 #floating-newsletter-button:hover {
   background: #9e6d2d;
+}
+
+#menu-item-industries #sub-nav-menu {
+  padding: 1rem;
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+@media screen and (max-width: 1000px) {
+  #menu-item-industries #sub-nav-menu {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#menu-item-industries #sub-nav-menu li {
+  padding: 0;
 }/*# sourceMappingURL=theme-styles.css.map */

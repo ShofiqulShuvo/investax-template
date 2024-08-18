@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
   
   <link rel="stylesheet" href="css/pico.min.css" />
   <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css">
@@ -334,6 +338,53 @@
 
           </div>
 
+          <div id="recent-faq">
+
+            <div class="comp-title">
+              <div class="main-title">
+                Recent FAQ
+              </div>
+            </div>
+
+            <!-- faq slider -->
+             <div id="faq-slider">
+               <div class="swiper faqSwiper">
+                 <div class="swiper-wrapper">
+   
+                   <!-- single faq -->
+                   <div class="swiper-slide">
+                     <div class="faq-card">
+   
+                       <div class="image">
+                         <img src="./images/faq-1.jpg" alt="">
+                       </div>
+                       <div class="content">
+                         <h4 class="faq-title">
+                           Should I claim land tax in the year I paid it or in the year I was assessed?
+                         </h4>
+                         <a href="#" class="faq-link">
+                           <img src="./images/link-icon.svg" alt="Read the FAQ">
+                         </a>
+                       </div>
+         
+                     </div>
+                   </div>
+   
+                   
+                 </div>
+                </div>
+                <div class="faq-navigation">
+                  <div class="swiper-button-next faq-next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+                  <div class="swiper-button-prev faq-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </div>
+                </div>
+             </div>
+          </div>
+
+
 
           <!-- All Faq -->
           <div id="all-faq">
@@ -646,32 +697,42 @@
   <script src="js/menu.js"></script>
   <script src="js/index.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script>
+   var faqSwiper = new Swiper(".faqSwiper", {
+      autoHeight: false,
+      slidesPerView: 1,
+      spaceBetween: 15,
+      breakpoints: {
+        640: {
+          autoHeight: true,
+          slidesPerView: 2,
+        },
+        768: {
+          autoHeight: true,
+          slidesPerView: 2,
+        },
+        992: {
+          autoHeight: true,
+          slidesPerView: 3,
+        },
+        1366: {
+          autoHeight: true,
+          slidesPerView: 4,
+        },
+      },
+      navigation: {
+        nextEl: ".faq-next",
+        prevEl: ".faq-prev",
+      },
+    });
+  </script>
   <!-- faq js -->
   <script src="js/archive-faq.js"></script>
 
-<!-- <style>
-  .single-faq {
-    scroll-margin-top: 150px;
-  }
-</style> -->
 
 
-<!-- <script>
-  const hashParams = window.location.hash.split('?')[0].substring(1)
-
-  
-  const allFaq =  document.querySelectorAll('details')
-  
-  allFaq.forEach((faq) => {
-
-    if(faq.id === hashParams){
-      faq.scrollIntoView()
-      faq.setAttribute('open', true)
-    }
-
-  }) 
-
-</script> -->
 
 </body>
 

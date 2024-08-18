@@ -38,8 +38,10 @@ const netRentalIncome = document.querySelector('input[name="net-rental-income"]'
 
 // calculate net rental income
 function calculateNetRentalIncome() {
-  const rentalIncome = parseFloat(rentPerWeek.value) * parseFloat(totalRentalWeeks.value);
-  netRentalIncome.value = rentalIncome.toFixed(2);
+  if(rentPerWeek.value && totalRentalWeeks.value) {
+    const rentalIncome = parseFloat(rentPerWeek.value) * parseFloat(totalRentalWeeks.value);
+    netRentalIncome.value = rentalIncome.toFixed(2);
+  }
 }
 
 // Update land tax
@@ -79,8 +81,9 @@ function addEventListeners() {
   mortgageInterestRateInput.addEventListener('input', updateInterestOnMortgage);
   equityLoanAmountInput.addEventListener('input', updateInterestOnLoan);
   equityInterestRateInput.addEventListener('input', updateInterestOnLoan);
-  rentPerWeek.addEventListener('input', updateLandTax);
-  totalRentalWeeks.addEventListener('input', updateLandTax);
+
+  rentPerWeek.addEventListener('input', calculateNetRentalIncome);
+  totalRentalWeeks.addEventListener('input', calculateNetRentalIncome);
 
   // Add event listener to all input fields
   document.querySelectorAll('input').forEach(input => {
@@ -167,6 +170,14 @@ function calculateLandTax() {
   } else {
     return 0;
   }
+}
+
+
+function numberToCurrency(amount) {
+  return amount.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
 }
 
 // Main calculation function
@@ -269,10 +280,10 @@ function displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddba
 
 
   // Net Rental Income
-  document.getElementById("net-rental-income").innerHTML = `$${grossRentalIncome}`;
+  document.getElementById("net-rental-income").innerHTML = `${numberToCurrency(grossRentalIncome)}`;
 
   // Total expenses
-  document.getElementById("total-expenses").innerHTML = `$${totalExpenses}`;
+  document.getElementById("total-expenses").innerHTML = `${numberToCurrency(totalExpenses)}`;
 
   // Annual Tax Rate
   document.getElementById("anual-tax-rate").innerHTML = `${anualTaxRate}%`;
@@ -284,10 +295,10 @@ function displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddba
   } else {
     anualTaxLiabilityRefundFormatted = `$${Math.abs(anualTaxLiabilityRefundFormatted)}`;
   }
-  document.getElementById("anual-tax-liability-refund").innerHTML = anualTaxLiabilityRefundFormatted;
+  document.getElementById("anual-tax-liability-refund").innerHTML = numberToCurrency(anualTaxLiabilityRefundFormatted);
 
   // Depreciation Addback/Reversal (Non Cash)
-  document.getElementById("depreciation-addback-reversal").innerHTML = `$${depreciationAddbackReversal.toFixed(2)}`;
+  document.getElementById("depreciation-addback-reversal").innerHTML = `${numberToCurrency(depreciationAddbackReversal)}`;
 
   // Annual Net Cashflow
   let anualNetCashflowFormatted = anualNetCashflow.toFixed(2);
@@ -296,7 +307,7 @@ function displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddba
   } else {
     anualNetCashflowFormatted = `$${Math.abs(anualNetCashflowFormatted)}`;
   }
-  document.getElementById("annual-net-cashflow").innerHTML = anualNetCashflowFormatted;
+  document.getElementById("annual-net-cashflow").innerHTML = numberToCurrency(anualNetCashflowFormatted);
 
   // Weekly Net Cashflow
   let weeklyNetCashflowFormatted = weeklyNetCashflow.toFixed(2);
@@ -305,7 +316,7 @@ function displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddba
   } else {
     weeklyNetCashflowFormatted = `$${Math.abs(weeklyNetCashflowFormatted)}`;
   }
-  document.getElementById("weekly-net-cashflow").innerHTML = weeklyNetCashflowFormatted;
+  document.getElementById("weekly-net-cashflow").innerHTML = numberToCurrency(weeklyNetCashflowFormatted);
 
   if (resultElement) {
     resultElement.style.display = "block";

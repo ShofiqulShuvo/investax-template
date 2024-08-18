@@ -240,4 +240,74 @@ hr {
 }
 #all-faq .faq-tab-contents .single-faq-tab-contents {
   display: none;
+}
+
+#recent-faq .faqSwiper {
+  margin-top: 2rem;
+}
+#recent-faq #faq-slider {
+  position: relative;
+}
+#recent-faq .swiper-slide {
+  height: 100% !important;
+  border: 1px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#recent-faq .faq-navigation .faq-next {
+  right: -20px;
+}
+#recent-faq .faq-navigation .faq-prev {
+  left: -20px;
+}
+#recent-faq .faq-navigation .faq-next::after, #recent-faq .faq-navigation .faq-prev::after {
+  display: none;
+}
+#recent-faq .faq-navigation .faq-next, #recent-faq .faq-navigation .faq-prev {
+  background-color: #282828;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
+}
+#recent-faq .faq-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.25rem;
+  height: 100% !important;
+  padding: 0;
+  color: #000;
+  line-height: 1.5;
+}
+#recent-faq .faq-card .image {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+#recent-faq .faq-card .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#recent-faq .faq-card .content {
+  padding: 0.5rem;
+}
+#recent-faq .faq-card .faq-title {
+  color: #000 !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+  line-height: 1.3 !important;
+}
+#recent-faq .faq-card .faq-link img {
+  height: 1rem;
 }/*# sourceMappingURL=archive-faq.css.map */
