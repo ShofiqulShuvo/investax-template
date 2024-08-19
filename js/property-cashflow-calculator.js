@@ -219,11 +219,22 @@ function calculate() {
   const interestOnLoan = getInputValue("interest-on-loan");
   const landTax = getInputValue("land-tax");
 
+  // open modal
+  const modalId = 'modal-lead-collect';
+  const modal = document.getElementById(modalId);
+  
+  if (modal) {
+    openModal(modal);
+  }
+
   // Validate required fields
   if (!purchasePrice || !mortgageLoanAmount || !interestRateMortgageLoan || !equityLoan || !interestRateEquityLoan || !landValue || !potentialRentPerWeek || !projectedRentalWeeks || (landTaxRate === undefined || landTaxRate === null || landTaxRate < 0) || (!anualTaxRate || anualTaxRate <= 0)) {
     errorMessage.style.display = 'block'; // Show error message
     return; // Exit function if validation fails
   }
+
+
+  
 
   // Calculate gross rental income
   const grossRentalIncome = parseFloat((potentialRentPerWeek * projectedRentalWeeks));
