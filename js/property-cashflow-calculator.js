@@ -219,13 +219,7 @@ function calculate() {
   const interestOnLoan = getInputValue("interest-on-loan");
   const landTax = getInputValue("land-tax");
 
-  // open modal
-  const modalId = 'modal-lead-collect';
-  const modal = document.getElementById(modalId);
-  
-  if (modal) {
-    openModal(modal);
-  }
+    
 
   // Validate required fields
   if (!purchasePrice || !mortgageLoanAmount || !interestRateMortgageLoan || !equityLoan || !interestRateEquityLoan || !landValue || !potentialRentPerWeek || !projectedRentalWeeks || (landTaxRate === undefined || landTaxRate === null || landTaxRate < 0) || (!anualTaxRate || anualTaxRate <= 0)) {
@@ -234,7 +228,13 @@ function calculate() {
   }
 
 
-  
+// open modal
+const modalId = 'modal-lead-collect';
+const modal = document.getElementById(modalId);
+
+if (modal) {
+  openModal(modal);
+}
 
   // Calculate gross rental income
   const grossRentalIncome = parseFloat((potentialRentPerWeek * projectedRentalWeeks));
@@ -289,6 +289,7 @@ function calculate() {
 // Display results
 function displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddbackReversal, anualNetCashflow, weeklyNetCashflow, resultElement, grossRentalIncome, totalExpenses) {
 
+  
 
   // Net Rental Income
   document.getElementById("net-rental-income").innerHTML = `${numberToCurrency(grossRentalIncome)}`;
@@ -333,6 +334,14 @@ function displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddba
     resultElement.style.display = "block";
     resultElement.scrollIntoView({ behavior: 'smooth' });
   }
+
+  console.log("Net Rental Income", numberToCurrency(grossRentalIncome))
+  console.log("Total expenses", numberToCurrency(totalExpenses))
+  console.log(" Annual Tax Rate", `${numberToCurrency(anualTaxRate)} %`)
+  console.log("Annual Tax Liability/Refund", anualTaxLiabilityRefundFormatted)
+  console.log("Depreciation Addback/Reversal (Non Cash)", numberToCurrency(depreciationAddbackReversal))
+  console.log("Annual Net Cashflow", numberToCurrency(anualNetCashflowFormatted))
+  console.log("Weekly Net Cashflow", numberToCurrency(weeklyNetCashflowFormatted))
 }
 
 // Initialize event listeners on page load
