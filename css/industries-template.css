@@ -78,6 +78,119 @@
   background: #9e6d2d;
 }
 
+.content-cta {
+  background: #F5EDE2;
+  padding: 1.8rem 1.2rem;
+  overflow: hidden;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.content-cta .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: 0.8rem;
+  color: #000;
+}
+.content-cta .detail {
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 1.2rem;
+  color: #000;
+}
+.content-cta .sidebar-cta-button {
+  background: #9E6D2D;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  text-align: center;
+  padding: 0.4rem 2.5rem;
+  border-radius: 20px;
+}
+
+#book-now-cta-modal {
+  z-index: 5000;
+}
+#book-now-cta-modal article {
+  background: #fff;
+  padding-bottom: 1rem;
+  width: 100%;
+  position: unset;
+  overflow-y: auto;
+}
+#book-now-cta-modal header {
+  position: relative;
+  background: transparent;
+  border: 0;
+  margin-bottom: 0.75rem;
+  height: 25px;
+}
+#book-now-cta-modal .close-btn {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  padding: 0.25rem;
+  background: transparent;
+  border: 0;
+}
+#book-now-cta-modal .content {
+  color: #000;
+  padding: 1rem 0;
+}
+#book-now-cta-modal .content .msg {
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+#book-now-cta-modal .content form {
+  margin: 0;
+}
+#book-now-cta-modal .content label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+  color: #000;
+}
+#book-now-cta-modal .content select, #book-now-cta-modal .content input, #book-now-cta-modal .content textarea {
+  margin: 0;
+  padding: 0.24rem 0.5rem;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 400;
+  height: unset !important;
+  box-shadow: none !important;
+}
+#book-now-cta-modal .content select:focus, #book-now-cta-modal .content input:focus, #book-now-cta-modal .content textarea:focus {
+  border-color: #9E6D2D !important;
+}
+#book-now-cta-modal .content .input-group {
+  margin-bottom: 0.75rem;
+}
+#book-now-cta-modal .content button[type=submit] {
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+  background: #9E6D2D;
+  border: 0;
+  font-size: 0.85rem;
+  height: unset !important;
+  padding: 0.35rem 1.5rem;
+  font-weight: 500;
+}
+
 #content {
   color: #000;
 }
