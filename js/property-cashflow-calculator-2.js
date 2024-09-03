@@ -44,12 +44,6 @@ function calculateNetRentalIncome() {
   }
 }
 
-// Update land tax
-function updateLandTax() {
-  const landTax = calculateLandTax();
-  landTaxInput.value = landTax.toFixed(2);
-}
-
 // Calculate interest on mortgage
 function updateInterestOnMortgage() {
   const loanAmount = parseFloat(mortgageLoanAmountInput.value) || 0;
@@ -65,6 +59,19 @@ function updateInterestOnLoan() {
   const interestOnLoan = (equityLoanAmount * equityInterestRate) / 100;
   interestOnLoanInput.value = parseFloat(interestOnLoan);
 }
+
+
+
+
+
+
+// Update land tax
+function updateLandTax() {
+  const landTax = calculateLandTax();
+  landTaxInput.value = landTax.toFixed(2);
+}
+
+
 
 // Add event listeners for inputs
 function addEventListeners() {
@@ -131,55 +138,135 @@ function handleTypeSelectChange() {
 
 // Set land tax rate based on land value
 function setLandTaxRate(landValue) {
-  if (landValue >= 3000000) {
-    landTaxRateInput.value = parseFloat(2.65);
-  } else if (landValue >= 1800000) {
-    landTaxRateInput.value = parseFloat(1.65);
-  } else if (landValue >= 1000000) {
-    landTaxRateInput.value = parseFloat(0.9);
-  } else if (landValue >= 600000) {
-    landTaxRateInput.value = parseFloat(0.6);
-  } else if (landValue >= 300000) {
-    landTaxRateInput.value = parseFloat(0.3);
+  const landTaxRateInput = document.querySelector('input[name="land-tax-rate"]'); // Assuming you have an input for land tax rate
+  const state =  document.getElementById('type-select').value;
+  if (state === 'qld') {
+    if (landValue >= 10000000) {
+      landTaxRateInput.value = 2.25;
+    } else if (landValue >= 5000000) {
+      landTaxRateInput.value = 1.75;
+    } else if (landValue >= 3000000) {
+      landTaxRateInput.value = 1.25;
+    } else if (landValue >= 1000000) {
+      landTaxRateInput.value = 1.65;
+    } else if (landValue >= 600000) {
+      landTaxRateInput.value = 1.00;
+    } else {
+      landTaxRateInput.value = 0;
+    }
+  } else if (state === 'wa') {
+    if (landValue >= 11000000) {
+      landTaxRateInput.value = 0.0267;
+    } else if (landValue >= 5000000) {
+      landTaxRateInput.value = 0.02;
+    } else if (landValue >= 1800000) {
+      landTaxRateInput.value = 0.018;
+    } else if (landValue >= 1000000) {
+      landTaxRateInput.value = 0.009;
+    } else if (landValue >= 420000) {
+      landTaxRateInput.value = 0.0025;
+    } else {
+      landTaxRateInput.value = 0;
+    }
+  } else if (state === 'nsw') {
+    // NSW has a different structure; rates are based on thresholds and are not directly linear.
+    if (landValue > 6571000) {
+      landTaxRateInput.value = 2.00; // This is a proxy; actual calculation is more complex.
+    } else if (landValue > 1075000) {
+      landTaxRateInput.value = 1.60; // This is a proxy; actual calculation is more complex.
+    } else {
+      landTaxRateInput.value = 0;
+    }
   } else {
-    landTaxRateInput.value = parseFloat(0);
+    landTaxRateInput.value = 0; // For states where manual entry is needed or no applicable rate
   }
 }
 
-// Calculate land tax
-function calculateLandTax() {
 
-  const currentLandValue = parseFloat(document.querySelector('input[name="land-value"]').value) || 0;
-  const currentLandTaxValue = parseFloat(document.querySelector('input[name="land-tax-rate"]').value) || 0;
-  const currentLandTaxRate = parseFloat(currentLandTaxValue / 100);
+
+// Calculate land tax based on state
+function calculateLandTax() {
+  const landValue = parseFloat(document.querySelector('input[name="land-value"]').value) || 0;
+  const state = document.getElementById('type-select').value; // Get the selected state
 
   let landTax = 0;
 
-  if (currentLandValue >= 3000000) {
-    landTax =  31650 + (currentLandTaxRate * (currentLandValue - 3000000));
-    return parseFloat(landTax.toFixed(2));
-  } else if (currentLandValue >= 1800000) {
-    landTax = 11850 + (currentLandTaxRate * (currentLandValue - 1800000));
-    return parseFloat(landTax.toFixed(2));
-  } else if (currentLandValue >= 1000000) {
-    landTax = 4650 + (currentLandTaxRate * (currentLandValue - 1000000));
-    return parseFloat(landTax.toFixed(2));
-  } else if (currentLandValue >= 600000) {
-    landTax = 2250 + (currentLandTaxRate * (currentLandValue - 600000));
-    return parseFloat(landTax.toFixed(2));
-  } else if (currentLandValue >= 300000) {
-    landTax = 1350 + (currentLandTaxRate * (currentLandValue - 300000));
-    return parseFloat(landTax.toFixed(2));
-  } else if (currentLandValue >= 100000) {
-    landTax = 975;
-    return parseFloat(landTax.toFixed(2));
-  } else if (currentLandValue >= 50000) {
-    landTax = 500;
-    return parseFloat(landTax.toFixed(2));
-  } else {
-    landTax = 0;
-    return parseFloat(landTax.toFixed(2));
+  switch (state) {
+    case 'qld':
+      if (landValue >= 10000000) {
+        landTax = 150000 + (0.0225 * (landValue - 10000000));
+      } else if (landValue >= 5000000) {
+        landTax = 62500 + (0.0175 * (landValue - 5000000));
+      } else if (landValue >= 3000000) {
+        landTax = 37500 + (0.0125 * (landValue - 3000000));
+      } else if (landValue >= 1000000) {
+        landTax = 4500 + (0.0165 * (landValue - 1000000));
+      } else if (landValue >= 600000) {
+        landTax = 500 + (0.01 * (landValue - 600000));
+      } else {
+        landTax = 0;
+      }
+      break;
+
+    case 'wa':
+      if (landValue >= 11000000) {
+        landTax = 186550 + (0.0267 * (landValue - 11000000));
+      } else if (landValue >= 5000000) {
+        landTax = 66550 + (0.02 * (landValue - 5000000));
+      } else if (landValue >= 1800000) {
+        landTax = 8950 + (0.018 * (landValue - 1800000));
+      } else if (landValue >= 1000000) {
+        landTax = 1750 + (0.009 * (landValue - 1000000));
+      } else if (landValue >= 420000) {
+        landTax = 300 + (0.0025 * (landValue - 420000));
+      } else {
+        landTax = 0;
+      }
+      break;
+
+    case 'nsw':
+      if (landValue > 6571000) {
+        landTax = 88036 + (0.02 * (landValue - 6571000));
+      } else if (landValue > 1075000) {
+        landTax = 100 + (0.016 * (landValue - 1075000));
+      } else {
+        landTax = 0;
+      }
+      break;
+
+    case 'vic':
+      if (landValue >= 3000000) {
+        landTax = 31650 + (0.0265 * (landValue - 3000000));
+      } else if (landValue >= 1800000) {
+        landTax = 11850 + (0.0165 * (landValue - 1800000));
+      } else if (landValue >= 1000000) {
+        landTax = 4650 + (0.009 * (landValue - 1000000));
+      } else if (landValue >= 600000) {
+        landTax = 2250 + (0.006 * (landValue - 600000));
+      } else if (landValue >= 300000) {
+        landTax = 1350 + (0.003 * (landValue - 300000));
+      } else if (landValue >= 100000) {
+        landTax = 975;
+      } else if (landValue >= 50000) {
+        landTax = 500;
+      } else {
+        landTax = 0;
+      }
+      break;
+
+    case 'act':
+    case 'sa':
+    case 'tas':
+    case 'nt':
+      // For these states, land tax amount needs to be entered manually
+      landTax = parseFloat(document.querySelector('input[name="land-tax"]').value) || 0;
+      break;
+
+    default:
+      landTax = 0;
   }
+
+  return parseFloat(landTax.toFixed(2));
 }
 
 

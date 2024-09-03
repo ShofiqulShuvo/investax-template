@@ -92,19 +92,19 @@ hr
   color: #000
 
   .calculator
-    padding-top: .5rem
-    padding-bottom: .5rem
-    border-radius: 5px
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px
+    // padding-top: .5rem
+    // padding-bottom: .5rem
+    // border-radius: 5px
+    // box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px
     @media screen and ( max-width: 991px )
       padding-top: 0
       padding-bottom: 0
-      padding-left: .5rem
-      padding-right: .5rem
+      // padding-left: .5rem
+      // padding-right: .5rem
 
     .calculator-form
       height: 100%
-      padding: 2rem 1.5rem 1rem
+      // padding: 2rem 1.5rem 1rem
       margin: unset
       display: flex
       flex-direction: column
@@ -132,12 +132,24 @@ hr
         align-items: flex-end !important
 
       .form-sec-title
-        margin-bottom: .5rem
-        color: #000
-        font-weight: 700
+        margin: 0
+        font-weight: 600
+        font-size: 1.2rem
+        background: $brandColorThree
+        color: #fff
+        padding: .25rem 1rem
+
+      .form-items
+        padding: 1rem
 
       .general-property-information, .income, .expenses, .tax-rate
         margin-bottom: 1rem
+        border: 1px solid $brandColorOne
+        border-radius: 5px
+
+      .tax-rate-container
+        .input-group
+          padding: 1rem
 
       .group-title
         margin: unset
