@@ -237,13 +237,16 @@ $darkTextColor: #070012f5
     margin: 2rem 0
     font-size: 1.8rem
     line-height: 40px
-    color: #9E6D2D
+    color: #000
     font-weight: 700
     @media screen and ( max-width: 992px )
       font-size: 1.6rem !important
-      color: #9E6D2D !important
+      color: #000 !important
       font-weight: 700 !important
       margin: 2rem 0 !important
+
+
+  
 
   h3
     margin: 1.4rem 0
@@ -463,3 +466,106 @@ $darkTextColor: #070012f5
           height: 25px
       &:hover
         transform: scale(1.05)
+
+
+#jigjag-content
+
+  .cta-modal-btn
+    background: #9E6D2D
+    color: #fff
+    padding: .3rem 1rem
+    margin: 1.2rem 0 0
+    border: 0
+    border-radius: 20px
+    display: block
+    width: fit-content
+    font-size: .8rem
+    font-weight: 600
+    text-align: center
+
+  .row
+    justify-content: center
+    align-items: center
+
+  h1,h2,h3,h4,h5,h6,p
+    margin-top: 0 !important
+
+  .content-title
+    margin: 2rem 0
+    font-size: 1.8rem
+    line-height: 40px
+    color: #9E6D2D
+    font-weight: 700
+    text-align: center
+    @media screen and ( max-width: 992px )
+      font-size: 1.6rem !important
+      color: #9E6D2D !important
+      font-weight: 700 !important
+      margin: 2rem 0 !important
+
+    
+    @media screen and (max-width: 991px)
+      order: 0
+
+  .single-content
+    margin-bottom: 2rem
+
+    &:nth-child(odd)
+      .image-container
+        order: 1
+    &:nth-child(even)
+      .image-container
+        order: 0
+
+    img
+      width: 100%
+      height: auto
+
+    h1
+      margin: 0 0 1rem
+      font-size: 1.6rem  // Reduced from 1.8rem
+      line-height: 1.4
+      color: #000
+
+    h2
+      margin: 0 0 1rem
+      font-size: 1.4rem  // Reduced from 1.6rem
+      line-height: 32px  // Adjusted from 36px
+      color: #000
+      font-weight: 700
+      @media screen and ( max-width: 992px )
+        font-size: 1.2rem !important  // Reduced from 1.4rem
+        color: #000 !important
+        font-weight: 700 !important
+        margin: 2rem 0 !important
+
+    h3
+      margin: 0 0 .8rem
+      font-size: 1.2rem  // Reduced from 1.4rem
+      line-height: 1.2
+      color: #000
+
+    h4
+      margin: 0 0 .75rem 
+      font-size: 1rem  // Reduced from 1.2rem
+      line-height: 1.2
+      color: #000
+
+    h5
+      margin: 0 0 .75rem
+      font-size: 0.9rem  // Reduced from 1rem
+      line-height: 1.1
+      color: #000
+
+    h6
+      margin: 0 0 .75rem
+      font-size: 0.8rem  // Reduced from 0.9rem
+      line-height: 1.1
+      color: #000
+
+    p
+      margin: 0 0 0.5rem
+      font-size: 0.9rem  // Slightly smaller paragraph font size
+      line-height: 1.4
+      color: #000
+
