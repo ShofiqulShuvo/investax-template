@@ -470,11 +470,14 @@ $darkTextColor: #070012f5
 
 #jigjag-content
 
+  .row
+    align-items: center
+
   .cta-modal-btn
     background: #9E6D2D
     color: #fff
     padding: .3rem 1rem
-    margin: 1.2rem 0 0
+    margin: 1.4rem 0 0
     border: 0
     border-radius: 20px
     display: block
@@ -483,9 +486,6 @@ $darkTextColor: #070012f5
     font-weight: 600
     text-align: center
 
-  .row
-    justify-content: center
-    align-items: center
 
   h1,h2,h3,h4,h5,h6,p
     margin-top: 0 !important
@@ -505,21 +505,26 @@ $darkTextColor: #070012f5
 
     
     @media screen and (max-width: 991px)
-      order: 0
+      order: 0 !important
 
   .single-content
-    margin-bottom: 2rem
+    margin-bottom: 3.5rem
 
     &:nth-child(odd)
       .image-container
         order: 1
+        @media screen and (max-width: 991px)
+          order: 0 !important
     &:nth-child(even)
       .image-container
         order: 0
+        @media screen and (max-width: 991px)
+          order: 0 !important
 
     img
       width: 100%
       height: auto
+      border-radius: 10px
 
     h1
       margin: 0 0 1rem
@@ -546,8 +551,8 @@ $darkTextColor: #070012f5
       color: #000
 
     h4
-      margin: 0 0 .75rem 
-      font-size: 1rem  // Reduced from 1.2rem
+      margin: 0 0 1rem 
+      font-size: 1.4rem  // Reduced from 1.2rem
       line-height: 1.2
       color: #000
 
@@ -566,6 +571,6 @@ $darkTextColor: #070012f5
     p
       margin: 0 0 0.5rem
       font-size: 0.9rem  // Slightly smaller paragraph font size
-      line-height: 1.4
+      line-height: 1.5
       color: #000
 
