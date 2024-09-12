@@ -123,28 +123,34 @@
   background: #fff;
   padding-bottom: 1rem;
   width: 100%;
-  position: unset;
   overflow-y: auto;
+  display: block;
 }
 #book-now-cta-modal header {
   position: relative;
-  background: transparent;
+  background: #9E6D2D;
   border: 0;
   margin-bottom: 0.75rem;
-  height: 25px;
+  padding: 0.5rem 20px !important;
+}
+#book-now-cta-modal header .heading {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 #book-now-cta-modal .close-btn {
-  color: #000;
+  color: #fff;
   font-size: 1.2rem;
   font-weight: 700;
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;
   right: 20px;
-  top: 5px;
+  top: 4px;
   padding: 0.25rem;
   background: transparent;
   border: 0;
+  margin-bottom: unset;
 }
 #book-now-cta-modal .content {
   color: #000;
@@ -349,15 +355,15 @@
 .industries-banner .bannner-cta-button {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-  padding: 0.3rem 2rem !important;
+  padding: 0.4rem 2rem !important;
   background: #9E6D2D;
   color: #fff;
   width: -moz-fit-content !important;
   width: fit-content !important;
   border: none;
   border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 .industries-banner .banner-slogan {
   margin-top: 1.7rem;
@@ -390,7 +396,7 @@
   border: 2px solid rgba(255, 186, 96, 0.2);
   border-radius: 20px;
   padding: 1rem;
-  width: 286px;
+  width: 230px;
 }
 @media screen and (max-width: 992px) {
   .industries-banner .banner-slogan .single-slogan {
@@ -403,7 +409,7 @@
   .industries-banner .banner-slogan .single-slogan {
     width: 100%;
     flex-direction: row;
-    gap: 1.2rem;
+    gap: 1rem;
     align-items: center;
     justify-content: flex-start;
     padding: 0.75rem 2rem;
@@ -411,53 +417,70 @@
 }
 .industries-banner .banner-slogan .single-slogan img.slogan-structure {
   margin-bottom: 0.5rem;
-  width: 71px;
-  height: 47px;
+  width: 60px;
+  height: 40px;
 }
 @media screen and (max-width: 992px) {
   .industries-banner .banner-slogan .single-slogan img.slogan-structure {
-    width: 50px;
-    height: 33.0985915493px;
+    width: 40px;
+    height: 26.6666666667px;
   }
 }
 @media screen and (max-width: 767px) {
   .industries-banner .banner-slogan .single-slogan img.slogan-structure {
-    width: 32px;
-    height: 21.1830985915px;
+    width: 28px;
+    height: 18.6666666667px;
   }
 }
 .industries-banner .banner-slogan .single-slogan img.slogan-tax {
   margin-bottom: 0.5rem;
-  width: 48px;
-  height: 51px;
+  width: 40px;
+  height: 44px;
 }
 @media screen and (max-width: 992px) {
   .industries-banner .banner-slogan .single-slogan img.slogan-tax {
-    width: 37px;
-    height: 39.3125px;
+    width: 30px;
+    height: 33px;
   }
 }
 @media screen and (max-width: 767px) {
   .industries-banner .banner-slogan .single-slogan img.slogan-tax {
-    width: 23px;
-    height: 24.4375px;
+    width: 20px;
+    height: 22px;
   }
 }
 .industries-banner .banner-slogan .single-slogan img.slogan-succession {
   margin-bottom: 0.5rem;
-  width: 39.66px;
-  height: 51px;
+  width: 32px;
+  height: 42px;
 }
 @media screen and (max-width: 992px) {
   .industries-banner .banner-slogan .single-slogan img.slogan-succession {
-    width: 30px;
-    height: 38.5779122542px;
+    width: 24px;
+    height: 31.5px;
   }
 }
 @media screen and (max-width: 767px) {
   .industries-banner .banner-slogan .single-slogan img.slogan-succession {
-    width: 22px;
-    height: 28.2904689864px;
+    width: 18px;
+    height: 23.625px;
+  }
+}
+.industries-banner .banner-slogan .single-slogan img.slogan-asset {
+  margin-bottom: 0.5rem;
+  width: 45px;
+  height: 45px;
+}
+@media screen and (max-width: 992px) {
+  .industries-banner .banner-slogan .single-slogan img.slogan-asset {
+    width: 33px;
+    height: 33px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .industries-banner .banner-slogan .single-slogan img.slogan-asset {
+    width: 18px;
+    height: 18px;
   }
 }
 .industries-banner .banner-slogan .single-slogan p {

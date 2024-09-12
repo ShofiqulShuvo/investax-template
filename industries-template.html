@@ -361,18 +361,26 @@
             
 
             <button data-target="book-now-cta-modal" onclick="toggleModal(event)" class="bannner-cta-button" href="#">
-              Book Now
+              Book a Discovery Call
             </button>
             
             <div class="banner-slogan">
-              <div class="single-slogan">
-                <img class="slogan-structure" src="https://investax.com.au/wp-content/uploads/2024/09/slogan-icon-1.png" alt="">
-                <p>Structure Planning</p>
-              </div>
+              <!-- Tax Planning -->
               <div class="single-slogan">
                 <img class="slogan-tax" src="https://investax.com.au/wp-content/uploads/2024/09/slogan-icon-2.png" alt="">
                 <p>Tax Planning</p>
               </div>
+              <!-- Structure Planning -->
+              <div class="single-slogan">
+                <img class="slogan-structure" src="https://investax.com.au/wp-content/uploads/2024/09/slogan-icon-1.png" alt="">
+                <p>Structure Planning</p>
+              </div>
+              <!-- Asset Protection -->
+              <div class="single-slogan">
+                <img class="slogan-asset" src="https://investax.com.au/wp-content/uploads/2024/09/assets-protection.png" alt="">
+                <p>Asset Protection</p>
+              </div>
+               <!--Succession Planning  -->
               <div class="single-slogan">
                 <img class="slogan-succession" src="https://investax.com.au/wp-content/uploads/2024/09/slogan-icon-3.png" alt="">
                 <p>Succession Planning</p>
@@ -460,7 +468,7 @@
                             Investax also works with licensed financial planner to offer comprehensive risk management strategies, including insurance advice and financial planning, to mitigate the impact of livestock disease and market disruptions, ensuring your business remains resilient in the face of adversity.
                           </p>
                         </div>
-                        <buton  data-target="book-now-cta-modal" onclick="toggleModal(event)"  class="cta-modal-btn" href="#">Book Now</buton>
+                        <buton  data-target="book-now-cta-modal" onclick="toggleModal(event)"  class="cta-modal-btn" href="#">Book a Discovery Call</buton>
                       </div>
 
                     </div>
@@ -487,7 +495,7 @@
                             Investax will evaluate and optimize your business structure to ensure it provides the best tax efficiency and protection against fluctuating income, tailored specifically to the primary production industry.
                           </p>
                         </div>
-                        <buton  data-target="book-now-cta-modal" onclick="toggleModal(event)"  class="cta-modal-btn" href="#">Book Now</buton>
+                        <buton  data-target="book-now-cta-modal" onclick="toggleModal(event)"  class="cta-modal-btn" href="#">Book a Discovery Call</buton>
                       </div>
 
                     </div>
@@ -514,7 +522,7 @@
                             Investax ensures you are fully informed about the FMDS and other relevant schemes, helping you maximize your tax benefits and secure your financial future.
                           </p>
                         </div>
-                        <buton  data-target="book-now-cta-modal" onclick="toggleModal(event)"  class="cta-modal-btn" href="#">Book Now</buton>
+                        <buton  data-target="book-now-cta-modal" onclick="toggleModal(event)"  class="cta-modal-btn" href="#">Book a Discovery Call</buton>
                       </div>
 
                     </div>
@@ -541,7 +549,7 @@
                             Investax provides tailored asset protection strategies to safeguard your valuable assets from potential risks. This includes structuring your business and personal assets in a way that minimizes exposure to liabilities, ensuring that your wealth and property are protected.
                           </p>
                         </div>
-                        <buton  data-target="book-now-cta-modal" onclick="toggleModal(event)"  class="cta-modal-btn" href="#">Book Now</buton>
+                        <buton  data-target="book-now-cta-modal" onclick="toggleModal(event)"  class="cta-modal-btn" href="#">Book a Discovery Call</buton>
                       </div>
 
                     </div>
@@ -558,7 +566,7 @@
                   <div class="detail">
                     Primary production businesses face significant income fluctuations due to natural disasters.
                   </div>
-                  <buton  data-target="book-now-cta-modal" onclick="toggleModal(event)"  class="sidebar-cta-button" href="#">Book Now</buton>
+                  <buton  data-target="book-now-cta-modal" onclick="toggleModal(event)"  class="sidebar-cta-button" href="#">Book a Discovery Call</buton>
                 </div>
               </div>
           </div>
@@ -568,14 +576,14 @@
 
       </section>
 
-      <!-- realated case study -->
+      <!-- realated Related Articles & Case Studies -->
       <div class="container related-items">
-        <div class="comp-title">Related Case Study</div>
+        <div class="comp-title">Related Related Articles & Case Studies</div>
         <hr />
 
         <div class="row g-3 g-lg-5">
 
-          <div class="col-lg-5 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12">
             <a href="#" class="single-item">
               <div class="image-container">
                 <div
@@ -593,7 +601,7 @@
             </a>
           </div>
 
-          <div class="col-lg-5 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12">
             <a href="#" class="single-item">
               <div class="image-container">
                 <div
@@ -611,7 +619,7 @@
             </a>
           </div>
 
-          <div class="col-lg-5 col-md-6 col-sm-12">
+          <div class="col-lg-4 col-md-6 col-sm-12">
             <a href="#" class="single-item">
               <div class="image-container">
                 <div
@@ -682,6 +690,7 @@
       <dialog id="book-now-cta-modal">
         <article>
           <header>
+            <div class="heading">Book a Discovery Call</div>
             <button
               class="close-btn"
               aria-label="Close"
@@ -698,10 +707,17 @@
               </p>
   
               <div class="input-group">
-                  <label for="i-am-a">I am a/an: <span class="required">*</span></label>
-                  <select id="i-am-a" required="">
-                      <option value="Individual" selected="">Individual</option>
-                      <option value="Business">Business</option>
+                  <label for="describe-you">Which of these bests Describe you? <span class="required">*</span></label>
+                  <select id="describe-you" required="">
+                      <option value="gym-Fitness-club" selected="">Gym/Fitness Club</option>
+                      <option value="medical-practices">Medical Practices</option>
+                      <option value="primary-production">Primary Production</option>
+                      <option value="construction">Construction</option>
+                      <option value="trades">Trades</option>
+                      <option value="real-estate-business">Real Estate Business</option>
+                      <option value="coffee-shops-restaurants">Coffee Shops & Restaurants</option>
+                      <option value="legal-practices">Legal Practices</option>
+                      <option value="retail">Retail</option>
                   </select>
               </div>
   

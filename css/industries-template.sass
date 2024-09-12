@@ -131,31 +131,38 @@ $darkTextColor: #070012f5
 
 #book-now-cta-modal
   z-index: 5000
+  
   article
     background: #fff
     padding-bottom: 1rem
     width: 100%
-    position: unset
     overflow-y: auto
+    display: block
 
   header
     position: relative
-    background: transparent
+    background: #9E6D2D
     border: 0
     margin-bottom: .75rem
-    height: 25px
+    padding: .5rem 20px !important
+
+    .heading
+      color: #fff
+      font-size: 1.2rem
+      font-weight: 600
 
   .close-btn
-    color: #000
+    color: #fff
     font-size: 1.2rem
     font-weight: 700
     width: fit-content
     position: absolute
     right: 20px
-    top: 5px
+    top: 4px
     padding: .25rem
     background: transparent
     border: 0
+    margin-bottom: unset
 
   .content
     color: #000
@@ -359,14 +366,14 @@ $darkTextColor: #070012f5
   .bannner-cta-button
     margin-top: 0 !important
     margin-bottom: 0  !important
-    padding: 0.3rem 2rem !important
+    padding: 0.4rem 2rem !important
     background: #9E6D2D
     color: #fff
     width: fit-content !important
     border: none
     border-radius: 20px
-    font-size: .85rem
-    font-weight: 500
+    font-size: .9rem
+    font-weight: 600
 
   .banner-slogan
     margin-top: 1.7rem
@@ -374,6 +381,7 @@ $darkTextColor: #070012f5
     flex-wrap: wrap
     gap: 1rem
     justify-content: start
+
     @media screen and ( max-width: 600px )
       flex-direction: column !important
       justify-content: center
@@ -396,7 +404,7 @@ $darkTextColor: #070012f5
       border: 2px solid #FFBA6033 
       border-radius: 20px
       padding: 1rem
-      width: 286px
+      width: 230px
       @media screen and ( max-width: 992px )
         padding: .75rem 1rem
         max-width: 100%
@@ -405,44 +413,54 @@ $darkTextColor: #070012f5
       @media screen and ( max-width: 767px )
         width: 100%
         flex-direction: row
-        gap: 1.2rem
+        gap: 1rem
         align-items: center
         justify-content: flex-start
         padding: .75rem 2rem
 
       img.slogan-structure
         margin-bottom: .5rem
-        width: 71px
-        height: 47px
+        width: 60px // further reduced width
+        height: 40px // further reduced height
         @media screen and ( max-width: 992px )
-          width: 50px
-          height: calc(50px * 47 / 71)
+          width: 40px
+          height: calc(40px * 40 / 60)
         @media screen and ( max-width: 767px )
-          width: 32px
-          height: calc(32px * 47 / 71)
+          width: 28px
+          height: calc(28px * 40 / 60)
 
-        
       img.slogan-tax
         margin-bottom: .5rem
-        width: 48px
-        height: 51px
-        @media screen and ( max-width: 992px )
-          width: 37px
-          height: calc(37px * 51 / 48)
-        @media screen and ( max-width: 767px )
-          width: 23px
-          height: calc(23px * 51 / 48)
-        
-      img.slogan-succession
-        margin-bottom: .5rem
-        width: 39.66px
-        height: 51px
+        width: 40px // further reduced width
+        height: 44px // further reduced height
         @media screen and ( max-width: 992px )
           width: 30px
-          height: calc(30px * 51 / 39.66)
+          height: calc(30px * 44 / 40)
         @media screen and ( max-width: 767px )
-          width: 22px
-          height: calc(22px * 51 / 39.66)
+          width: 20px
+          height: calc(20px * 44 / 40)
+
+      img.slogan-succession
+        margin-bottom: .5rem
+        width: 32px // further reduced width
+        height: 42px // further reduced height
+        @media screen and ( max-width: 992px )
+          width: 24px
+          height: calc(24px * 42 / 32)
+        @media screen and ( max-width: 767px )
+          width: 18px
+          height: calc(18px * 42 / 32)
+
+      img.slogan-asset
+        margin-bottom: .5rem
+        width: 45px // further reduced width
+        height: 45px // further reduced height
+        @media screen and ( max-width: 992px )
+          width: 33px
+          height: 33px
+        @media screen and ( max-width: 767px )
+          width: 18px
+          height: 18px
 
       p
         color: inherit
