@@ -103,9 +103,9 @@ $darkTextColor: #070012f5
   text-align: center
 
   .title
-    font-size: 1.25rem
-    font-weight: 700
-    line-height: 36px
+    font-size: 1rem
+    font-weight: 600
+    line-height: 1.5
     margin-bottom: .8rem
     color: #000
 
@@ -122,7 +122,7 @@ $darkTextColor: #070012f5
     font-weight: 700
     font-size: .9rem
     width: 100%
-    max-width: 300px
+    max-width: 320px
     display: block
     text-align: center
     padding: .4rem 2.5rem
@@ -377,15 +377,18 @@ $darkTextColor: #070012f5
 
   .banner-slogan
     margin-top: 1.7rem
-    display: flex
-    flex-wrap: wrap
+    // display: flex
+    // flex-wrap: wrap
+    // gap: 1rem
+    // justify-content: start
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
     gap: 1rem
-    justify-content: start
-
-    @media screen and ( max-width: 600px )
-      flex-direction: column !important
-      justify-content: center
-      gap: 0.5rem
+    @media screen and ( max-width: 767px )
+      grid-template-columns: repeat(2, 1fr)
+    @media screen and ( max-width: 450px )
+      grid-template-columns: repeat(1, 1fr)
+      gap: .5rem
 
     .single-slogan
       margin-top: 0
@@ -404,11 +407,11 @@ $darkTextColor: #070012f5
       border: 2px solid #FFBA6033 
       border-radius: 20px
       padding: 1rem
-      width: 230px
+      width: 100%
       @media screen and ( max-width: 992px )
         padding: .75rem 1rem
         max-width: 100%
-        width: 220px
+        // width: 220px
 
       @media screen and ( max-width: 767px )
         width: 100%

@@ -90,9 +90,9 @@
   text-align: center;
 }
 .content-cta .title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
   margin-bottom: 0.8rem;
   color: #000;
 }
@@ -109,7 +109,7 @@
   font-weight: 700;
   font-size: 0.9rem;
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   display: block;
   text-align: center;
   padding: 0.4rem 2.5rem;
@@ -367,15 +367,18 @@
 }
 .industries-banner .banner-slogan {
   margin-top: 1.7rem;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  justify-content: start;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .industries-banner .banner-slogan {
-    flex-direction: column !important;
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .industries-banner .banner-slogan {
+    grid-template-columns: repeat(1, 1fr);
     gap: 0.5rem;
   }
 }
@@ -396,13 +399,12 @@
   border: 2px solid rgba(255, 186, 96, 0.2);
   border-radius: 20px;
   padding: 1rem;
-  width: 230px;
+  width: 100%;
 }
 @media screen and (max-width: 992px) {
   .industries-banner .banner-slogan .single-slogan {
     padding: 0.75rem 1rem;
     max-width: 100%;
-    width: 220px;
   }
 }
 @media screen and (max-width: 767px) {
