@@ -309,9 +309,17 @@
   z-index: 1;
 }
 .industries-banner::after {
-  background: rgba(0, 0, 0, 0.5) !important;
+  content: "";
+  background: rgba(0, 0, 0, 0.4) !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .industries-banner .banner-content {
+  z-index: 1;
+  position: relative;
   padding: 6rem 0 3rem;
   display: flex !important;
   flex-direction: column;

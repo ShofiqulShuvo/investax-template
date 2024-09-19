@@ -180,6 +180,8 @@ function setLandTaxRate(landValue) {
   } else {
     landTaxRateInput.value = 0; // For states where manual entry is needed or no applicable rate
   }
+
+  console.log(landTaxRateInput.value);
 }
 
 
