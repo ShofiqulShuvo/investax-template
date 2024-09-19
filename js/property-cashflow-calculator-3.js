@@ -95,7 +95,6 @@ function calculate() {
     return; // Exit function if validation fails
   }
 
-  console.log(landTaxRate)
 
   // Calculate gross rental income
   const grossRentalIncome = parseFloat(
