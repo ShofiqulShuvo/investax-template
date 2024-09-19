@@ -85,15 +85,17 @@ function calculate() {
     !landValue ||
     !potentialRentPerWeek ||
     !projectedRentalWeeks ||
-    landTaxRate === undefined ||
-    landTaxRate === null || landTaxRate === "" ||
+    landTaxRateInput.value === undefined ||
+    landTaxRateInput.value === null || landTaxRateInput.value === "" ||
     landTaxRate < 0 ||
     !anualTaxRate ||
     anualTaxRate <= 0
   ) {
-    errorMessage.style.display = "block"; // Show error message
+    errorMessage.style.display = "block"; 
     return; // Exit function if validation fails
   }
+
+  console.log(landTaxRate)
 
   // Calculate gross rental income
   const grossRentalIncome = parseFloat(
@@ -123,7 +125,6 @@ function calculate() {
       interestOnLoan
   );
 
-  console.log("totalExpenses", totalExpenses)
 
   // Calculate net rental income
   const taxableIncomeOrLosses = parseFloat(grossRentalIncome - totalExpenses);
@@ -398,9 +399,6 @@ function setLandTaxRate() {
       landTax = "";
   }
 
-  console.log(landTaxRateInput.value);
-  console.log(state);
-  console.log(landValue);
 }
 
 // Calculate land tax based on state
