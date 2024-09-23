@@ -347,15 +347,15 @@ function setLandTaxRate() {
 
     case "wa":
       if (landValue >= 11000000) {
-        landTaxRateInput.value = 0.0267;
+        landTaxRateInput.value = 2.67;
       } else if (landValue >= 5000000) {
-        landTaxRateInput.value = 0.02;
+        landTaxRateInput.value = 2;
       } else if (landValue >= 1800000) {
-        landTaxRateInput.value = 0.018;
+        landTaxRateInput.value = 1.8;
       } else if (landValue >= 1000000) {
-        landTaxRateInput.value = 0.009;
+        landTaxRateInput.value = 0.9;
       } else if (landValue >= 420000) {
-        landTaxRateInput.value = 0.0025;
+        landTaxRateInput.value = 0.25;
       } else {
         landTaxRateInput.value = 0;
       }
@@ -373,15 +373,15 @@ function setLandTaxRate() {
 
     case "vic":
       if (landValue >= 3000000) {
-        landTaxRateInput.value = 0.0265;
+        landTaxRateInput.value = 2.65;
       } else if (landValue >= 1800000) {
-        landTaxRateInput.value = 0.0165;
+        landTaxRateInput.value = 1.65;
       } else if (landValue >= 1000000) {
-        landTaxRateInput.value = 0.009;
+        landTaxRateInput.value = 0.9;
       } else if (landValue >= 600000) {
-        landTaxRateInput.value = 0.0025;
+        landTaxRateInput.value = 0.6;
       } else if (landValue >= 300000) {
-        landTaxRateInput.value = 0.0015;
+        landTaxRateInput.value = 0.3;
       } else {
         landTax = 0;
       }
