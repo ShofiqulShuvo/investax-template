@@ -759,9 +759,14 @@
             x
           </button>
           <div class="main-heading">Get Your Results</div>
-          <p class="sub-heading">
-            Please provide your contact details to receive your calculation
-            results.
+
+          <div id="result-net-cashflow">
+            <strong>Annual Net Cashflow</strong>:
+            <span id="result-annual-net-cashflow"></span>
+          </div>
+
+          <p class="message">
+            If you want a PDF copy of this cashflow analysis, please feel free to organize a complimentary consultation with one of our experienced team members. Now that you've discovered the weekly and annual tax liability and cash flow effect of holding your property, it's time to delve deeper. This analysis covers interest payments but doesn’t reflect the full cash flow picture, including principal repayments. It's also important to remember that the property ownership structure plays a huge role in annual income tax, land tax, and capital gains tax. To truly understand the long-term financial impact, let's explore if holding this property benefits you through capital appreciation. Our experts at Investax can help you evaluate the potential for long-term growth and overall investment performance. Schedule a Strategic Consultation with us today to ensure your property investment aligns with your financial goals and maximizes your returns.
           </p>
 
           <form class="lead-form">
@@ -911,14 +916,36 @@
 
       .lead-dialog .main-heading {
         margin-bottom: 0.5rem;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 600;
-        color: #000;
+        color: #9e6d2d;
+      }
+
+      .lead-dialog #result-net-cashflow {
+          font-size: 1rem;
+          margin-bottom: .5rem;
+      }
+
+      .lead-dialog #result-net-cashflow strong  {
+          font-weight: 600;
+          color: #000;
+      }
+
+      .lead-dialog #result-net-cashflow span  {
+          font-weight: 400;
+          color: #000;
       }
 
       .lead-dialog .sub-heading {
         margin-bottom: 1rem;
         font-size: 0.9rem;
+        font-weight: 600;
+        color: #000;
+      }
+
+      .lead-dialog .message {
+        margin-bottom: 1rem;
+        font-size: 0.7rem;
         font-weight: 600;
         color: #000;
       }

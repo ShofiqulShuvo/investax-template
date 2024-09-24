@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css" />
+
+    <link rel="stylesheet" href="css/hecs-help-repayment-calculator.css" />
+    <link rel="stylesheet" href="css/theme-styles.css" />
+
+    <title>Investax | NSW Land Tax Calculator</title>
+  </head>
+
+  <body>
+    <main>
+      <section id="tex-calculator">
+        <div class="container">
+          <!-- NSW Land Tax Calculator -->
+          <div class="calculator">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <!-- calculator -->
+                <div class="calculator-form row">
+
+                  <!-- Land Value  -->
+                  <div class="input-group col-12">
+                    <label>
+                      Land Value*
+                      <input
+                        type="number"
+                        name="land-value"
+                        placeholder="Land Value"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Land Tax Rate (%)  -->
+                  <div class="input-group col-12">
+                    <label>
+                      Land Tax Rate (%)*
+                      <input
+                        type="number"
+                        name="land-tax-rate"
+                        placeholder="Land Tax Rate (%)"
+                        disabled
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <p class="error">
+                    * Fields highlighted in red are mandatory.
+                  </p>
+
+                  <button class="calculate-btn" type="submit">Calculate</button>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <!-- Calculated Result -->
+                <div class="calculated-result">
+                  <p class="title">Land Tax</p>
+
+                  <h1
+                    id="calculated-land-tax-in-large-size"
+                    class="amount"
+                  >
+                    $0
+                  </h1>
+
+                  <p class="description">
+                    Based on your current Land Value
+                    <strong class="land-value">$0</strong> & Land Tax Rate
+                    <strong class="land-tax-rate">$0</strong>%,
+                    your estimated Land Tax
+                    <strong class="calculated-land-tax-in-description"
+                      >$0</strong
+                    >.
+                  </p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- how to use calculator -->
+          <!-- how to use calculator -->
+          <div class="how-to-use">
+            <div class="main-heading">
+              How to use the Land Tax Calculator
+            </div>
+
+            <div class="details">
+              <p>
+                The Land Tax Calculator is a tool designed to help you calculate your land tax based on the taxable value of your land. Follow the steps below to use the calculator effectively and estimate your land tax liability.
+              </p>
+
+              <ul>
+                <li>
+                  <p>
+                    <strong>Land Value</strong> — Enter the total taxable value of the land.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Land Tax Rate (%)</strong> — The applicable land tax rate will be automatically calculated based on the land value you enter.
+                  </p>
+                </li>
+              </ul>
+
+              <p>
+                Click on the "Calculate" button to calculate your Land Tax based on the provided land value.
+              </p>
+            </div>
+          </div>
+
+          <!-- dsiclaimer -->
+          <div class="disclaimer">
+            <div class="main-heading">Disclaimer</div>
+            <div class="details">
+              <p>
+                This tool is designed to assist in calculating your land tax based on the taxable value of your land. However, it should not be considered a comprehensive assessment of your total income tax obligations. The calculator is tailored exclusively for Australian resident taxpayers. If you have complex financial situations or are uncertain about certain aspects of your taxes, it is recommended to consult with a qualified tax professional or accountant for personalized advice and verification of your calculations. Should you require further assistance,
+                <a href="https://investax.com.au/complimentary-consultation/"
+                  >please consider reaching out to Investax for a professional
+                  assessment of your calculation</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- tex calculator js -->
+    <script src="js/landtax-calculator-nsw.js"></script>
+  </body>
+</html>

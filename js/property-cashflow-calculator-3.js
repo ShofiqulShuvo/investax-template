@@ -95,6 +95,14 @@ function calculate() {
     return; // Exit function if validation fails
   }
 
+    // open modal
+  const modalId = 'modal-lead-collect';
+  const modal = document.getElementById(modalId);
+
+  if (modal) {
+    openModal(modal);
+  }
+
 
   // Calculate gross rental income
   const grossRentalIncome = parseFloat(

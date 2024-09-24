@@ -63,7 +63,7 @@ function updateInterestOnLoan() {
   const equityLoanAmount = parseFloat(equityLoanAmountInput.value) || 0;
   const equityInterestRate = parseFloat(equityInterestRateInput.value) || 0;
   const interestOnLoan = (equityLoanAmount * equityInterestRate) / 100;
-  interestOnLoanInput.value = parseFloat(interestOnLoan);
+  interestOnLoanInput.value = interestOnLoan.toFixed(2);
 }
 
 // Add event listeners for inputs
@@ -88,7 +88,6 @@ function addEventListeners() {
   // Add event listener to all input fields
   document.querySelectorAll('input').forEach(input => {
     input.addEventListener('change', () => {
-      document.getElementById('result').style.display = "none";
       errorMessage.style.display = 'none';
     });
   });
@@ -132,17 +131,17 @@ function handleTypeSelectChange() {
 // Set land tax rate based on land value
 function setLandTaxRate(landValue) {
   if (landValue >= 3000000) {
-    landTaxRateInput.value = parseFloat(2.65);
+    landTaxRateInput.value = "2.65";
   } else if (landValue >= 1800000) {
-    landTaxRateInput.value = parseFloat(1.65);
+    landTaxRateInput.value = "1.65";
   } else if (landValue >= 1000000) {
-    landTaxRateInput.value = parseFloat(0.9);
+    landTaxRateInput.value = "0.9";
   } else if (landValue >= 600000) {
-    landTaxRateInput.value = parseFloat(0.6);
+    landTaxRateInput.value = "0.6";
   } else if (landValue >= 300000) {
-    landTaxRateInput.value = parseFloat(0.3);
+    landTaxRateInput.value = "0.3";
   } else {
-    landTaxRateInput.value = parseFloat(0);
+    landTaxRateInput.value = "0";
   }
 }
 
@@ -153,32 +152,22 @@ function calculateLandTax() {
   const currentLandTaxValue = parseFloat(document.querySelector('input[name="land-tax-rate"]').value) || 0;
   const currentLandTaxRate = parseFloat(currentLandTaxValue / 100);
 
-  let landTax = 0;
-
   if (currentLandValue >= 3000000) {
-    landTax =  31650 + (currentLandTaxRate * (currentLandValue - 3000000));
-    return parseFloat(landTax.toFixed(2));
+    return 31650 + (currentLandTaxRate * (currentLandValue - 3000000));
   } else if (currentLandValue >= 1800000) {
-    landTax = 11850 + (currentLandTaxRate * (currentLandValue - 1800000));
-    return parseFloat(landTax.toFixed(2));
+    return 11850 + (currentLandTaxRate * (currentLandValue - 1800000));
   } else if (currentLandValue >= 1000000) {
-    landTax = 4650 + (currentLandTaxRate * (currentLandValue - 1000000));
-    return parseFloat(landTax.toFixed(2));
+    return 4650 + (currentLandTaxRate * (currentLandValue - 1000000));
   } else if (currentLandValue >= 600000) {
-    landTax = 2250 + (currentLandTaxRate * (currentLandValue - 600000));
-    return parseFloat(landTax.toFixed(2));
+    return 2250 + (currentLandTaxRate * (currentLandValue - 600000));
   } else if (currentLandValue >= 300000) {
-    landTax = 1350 + (currentLandTaxRate * (currentLandValue - 300000));
-    return parseFloat(landTax.toFixed(2));
+    return 1350 + (currentLandTaxRate * (currentLandValue - 300000));
   } else if (currentLandValue >= 100000) {
-    landTax = 975;
-    return parseFloat(landTax.toFixed(2));
+    return 975;
   } else if (currentLandValue >= 50000) {
-    landTax = 500;
-    return parseFloat(landTax.toFixed(2));
+    return 500;
   } else {
-    landTax = 0;
-    return parseFloat(landTax.toFixed(2));
+    return 0;
   }
 }
 
@@ -192,9 +181,6 @@ function numberToCurrency(amount) {
 
 // Main calculation function
 function calculate() {
-  const resultElement = document.getElementById("result");
-  resultElement.style.display = "none";
-  errorMessage.style.display = 'none';
 
   // Get income details input values
   const purchasePrice = getInputValue("purchase-price");
@@ -231,11 +217,11 @@ function calculate() {
 
     
 
-  // Validate required fields
-  if (!purchasePrice || !mortgageLoanAmount || !interestRateMortgageLoan || !equityLoan || !interestRateEquityLoan || !landValue || !potentialRentPerWeek || !projectedRentalWeeks || (landTaxRate === undefined || landTaxRate === null || landTaxRate < 0) || (!anualTaxRate || anualTaxRate <= 0)) {
-    errorMessage.style.display = 'block'; // Show error message
-    return; // Exit function if validation fails
-  }
+// Validate required fields
+if (!purchasePrice || !mortgageLoanAmount || !interestRateMortgageLoan || !equityLoan || !interestRateEquityLoan || !landValue || !potentialRentPerWeek || !projectedRentalWeeks || (landTaxRate === undefined || landTaxRate === null || landTaxRate < 0) || (!anualTaxRate || anualTaxRate <= 0)) {
+errorMessage.style.display = 'block'; // Show error message
+return; // Exit function if validation fails
+}
 
 
 // open modal
@@ -293,66 +279,79 @@ if (modal) {
   const weeklyNetCashflow = parseFloat((anualNetCashflow / 52));
 
   // Display results
-  displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddbackReversal, anualNetCashflow, weeklyNetCashflow, resultElement, grossRentalIncome, totalExpenses);
+  displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddbackReversal, anualNetCashflow, weeklyNetCashflow, grossRentalIncome, totalExpenses);
 }
 
 // Display results
-function displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddbackReversal, anualNetCashflow, weeklyNetCashflow, resultElement, grossRentalIncome, totalExpenses) {
+function displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddbackReversal, anualNetCashflow, weeklyNetCashflow, grossRentalIncome, totalExpenses) {
 
   
 
   // Net Rental Income
-  document.getElementById("net-rental-income").innerHTML = `${numberToCurrency(grossRentalIncome)}`;
+  document.getElementById("field_net-rental-income2").value = `${numberToCurrency(grossRentalIncome)}`;
 
   // Total expenses
-  document.getElementById("total-expenses").innerHTML = `${numberToCurrency(totalExpenses)}`;
+  document.getElementById("field_total-expenses2").value = `${numberToCurrency(totalExpenses)}`;
 
   // Annual Tax Rate
-  document.getElementById("anual-tax-rate").innerHTML = `${anualTaxRate}%`;
+  document.getElementById("field_anual-tax-rate2").value = `${anualTaxRate}%`;
 
   // Annual Tax Liability/Refund
   let anualTaxLiabilityRefundFormatted = anualTaxLiabilityRefund.toFixed(2);
   if (anualTaxLiabilityRefund < 0) {
-    anualTaxLiabilityRefundFormatted = `-$${Math.abs(anualTaxLiabilityRefundFormatted)}`;
+    anualTaxLiabilityRefundFormatted = `-${Math.abs(anualTaxLiabilityRefundFormatted)}`;
   } else {
-    anualTaxLiabilityRefundFormatted = `$${Math.abs(anualTaxLiabilityRefundFormatted)}`;
+    anualTaxLiabilityRefundFormatted = `${Math.abs(anualTaxLiabilityRefundFormatted)}`;
   }
-  document.getElementById("anual-tax-liability-refund").innerHTML = numberToCurrency(anualTaxLiabilityRefundFormatted);
+  document.getElementById("field_anual-tax-liability-refund2").value = numberToCurrency(anualTaxLiabilityRefundFormatted);
 
   // Depreciation Addback/Reversal (Non Cash)
-  document.getElementById("depreciation-addback-reversal").innerHTML = `${numberToCurrency(depreciationAddbackReversal)}`;
+  document.getElementById("field_depreciation-addback-reversal2").value = `${numberToCurrency(depreciationAddbackReversal)}`;
 
   // Annual Net Cashflow
   let anualNetCashflowFormatted = anualNetCashflow.toFixed(2);
   if (anualNetCashflow < 0) {
-    anualNetCashflowFormatted = `-$${Math.abs(anualNetCashflowFormatted)}`;
+    anualNetCashflowFormatted = `-${Math.abs(anualNetCashflowFormatted)}`;
   } else {
-    anualNetCashflowFormatted = `$${Math.abs(anualNetCashflowFormatted)}`;
+    anualNetCashflowFormatted = `${Math.abs(anualNetCashflowFormatted)}`;
   }
-  document.getElementById("annual-net-cashflow").innerHTML = numberToCurrency(anualNetCashflowFormatted);
+  document.getElementById("field_annual-net-cashflow2").value = numberToCurrency(anualNetCashflowFormatted);
 
   // Weekly Net Cashflow
   let weeklyNetCashflowFormatted = weeklyNetCashflow.toFixed(2);
   if (weeklyNetCashflow < 0) {
-    weeklyNetCashflowFormatted = `-$${Math.abs(weeklyNetCashflowFormatted)}`;
+    weeklyNetCashflowFormatted = `-${Math.abs(weeklyNetCashflowFormatted)}`;
   } else {
-    weeklyNetCashflowFormatted = `$${Math.abs(weeklyNetCashflowFormatted)}`;
+    weeklyNetCashflowFormatted = `${Math.abs(weeklyNetCashflowFormatted)}`;
   }
-  document.getElementById("weekly-net-cashflow").innerHTML = numberToCurrency(weeklyNetCashflowFormatted);
+  document.getElementById("field_weekly-net-cashflow2").value = numberToCurrency(weeklyNetCashflowFormatted);
 
-  if (resultElement) {
-    resultElement.style.display = "block";
-    resultElement.scrollIntoView({ behavior: 'smooth' });
-  }
-
-  console.log("Net Rental Income", numberToCurrency(grossRentalIncome))
-  console.log("Total expenses", numberToCurrency(totalExpenses))
-  console.log(" Annual Tax Rate", `${numberToCurrency(anualTaxRate)} %`)
-  console.log("Annual Tax Liability/Refund", anualTaxLiabilityRefundFormatted)
-  console.log("Depreciation Addback/Reversal (Non Cash)", numberToCurrency(depreciationAddbackReversal))
-  console.log("Annual Net Cashflow", numberToCurrency(anualNetCashflowFormatted))
-  console.log("Weekly Net Cashflow", numberToCurrency(weeklyNetCashflowFormatted))
 }
 
 // Initialize event listeners on page load
 addEventListeners();
+//  jQuery(document).ready(function($){
+//     $(".frm_button_submit").on( 'click', function( ) {
+//         // Clear all inputs in the modal form
+//         // $('.lead-form')[0].reset();
+//         // Clear all inputs in the calculator form
+//         $('.calculator-form')[0].reset();
+//   });
+// });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const submitButton = document.querySelector("#frm_field_241_container .frm_final_submit");
+  const allInput = document.querySelectorAll(".calculator-form input");
+
+  submitButton.addEventListener("click", (event) => {
+      console.log("ok")
+        // Clear all input values
+    allInput.forEach(input => {
+      input.value = "";
+    });
+  });
+});
+
+
+
