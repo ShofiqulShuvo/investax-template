@@ -11,19 +11,34 @@
     <link rel="stylesheet" href="css/hecs-help-repayment-calculator.css" />
     <link rel="stylesheet" href="css/theme-styles.css" />
 
-    <title>Investax | NSW Land Tax Calculator</title>
+    <title>Investax | QLD Land Tax Calculator</title>
   </head>
 
   <body>
     <main>
       <section id="tex-calculator">
         <div class="container">
-          <!-- NSW Land Tax Calculator -->
+          <!-- qld Land Tax Calculator -->
           <div class="calculator">
             <div class="row">
               <div class="col-12 col-lg-6">
                 <!-- calculator -->
                 <div class="calculator-form row">
+
+                  <!-- Question: Individual or Company/Trust -->
+                  <div class="input-group col-12">
+                    <label>
+                      Are you calculating land tax as an individual or on behalf of a company or trust?
+                    </label>
+                    <div class="radio-answer-group">
+                      <label class="radio-label">
+                        <input type="radio" name="entity-type" value="individual" required checked /> Individual
+                      </label>
+                      <label class="radio-label">
+                        <input type="radio" name="entity-type" value="company-trust" required /> Company/Trust
+                      </label>
+                    </div>
+                  </div>
 
                   <!-- Land Value  -->
                   <div class="input-group col-12">
@@ -87,7 +102,6 @@
           </div>
 
           <!-- how to use calculator -->
-          <!-- how to use calculator -->
           <div class="how-to-use">
             <div class="main-heading">
               How to use the Land Tax Calculator
@@ -116,6 +130,92 @@
               </p>
             </div>
           </div>
+          
+           <!-- land tax rates individuals -->
+          <div class="repayment-rates">
+            <div class="main-heading">
+              Land tax rates for individuals
+            </div>
+
+            <div class="details">
+              <div class="table-container">
+                  <table>
+                    <tHead>
+                      <tr>
+                        <th>Total taxable value</th>
+                        <th>Rate of tax</th>
+                    </tHead>
+                    <tbody>
+                      <tr>
+                        <td>$0-$599,999</td>
+                        <td>$0</td>
+                      </tr>
+                      <tr>
+                        <td>$600,000-$999,999</td>
+                        <td>$500 plus 1 cent for each $1 more than $600,000</td>
+                      </tr>
+                      <tr>
+                        <td>$1,000,000-$2,999,999</td>
+                        <td>$4,500 plus 1.65 cents for each $1 more than $1,000,000</td>
+                      </tr>
+                      <tr>
+                        <td>$3,000,000-$4,999,999</td>
+                        <td>$37,500 plus 1.25 cents for each $1 more than $3,000,000</td>
+                      </tr>
+                      <tr>
+                        <td>$5,000,000-$9,999,999</td>
+                        <td>$62,500 plus 1.75 cents for each $1 more than $5,000,000</td>
+                      </tr>
+                      <tr>
+                        <td>$10,000,000 or more</td>
+                        <td>$150,000 plus 2.25 cents for each $1 more than $10,000,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+          </div>
+          
+           <!-- land tax rates companies and trusts -->
+          <div class="repayment-rates">
+            <div class="main-heading">
+              Land tax rates for companies and trusts
+            </div>
+
+            <div class="details">
+              <div class="table-container">
+                  <table>
+                    <tHead>
+                      <tr>
+                        <th>Total taxable value</th>
+                        <th>Rate of tax</th>
+                    </tHead>
+                    <tbody>
+                      <tr>
+                        <td>$0-$349,999</td>
+                        <td>$0</td>
+                      </tr>
+                      <tr>
+                        <td>$350,000-$2,249,999</td>
+                        <td>$1,450 plus 1.7 cents for each $1 more than $350,000</td>
+                      </tr>
+                      <tr>
+                        <td>$2,250,000-$4,999,999</td>
+                        <td>$33,750 plus 1.5 cents for each $1 more than $2,250,000</td>
+                      </tr>
+                      <tr>
+                        <td>$5,000,000-$9,999,999</td>
+                        <td>$75,000 plus 2.25 cents for each $1 more than $5,000,000</td>
+                      </tr>
+                      <tr>
+                        <td>$10,000,000 or more</td>
+                        <td>$187,500 plus 2.75 cents for each $1 more than $10,000,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+          </div>
 
           <!-- dsiclaimer -->
           <div class="disclaimer">
@@ -134,7 +234,29 @@
       </section>
     </main>
 
+    <style>
+
+      .radio-answer-group {
+        display: inline-flex;
+        gap: 1rem;
+      }
+
+      .radio-label {
+        display: inline-block !important;
+        gap: .5rem !important;
+      }
+
+      .radio-label input {
+        margin-right: .2rem;
+      }
+
+      .radio-label input:checked, .radio-label input:checked:active, .radio-label input:checked:focus {
+        border-color: #B17A4E;
+        box-shadow: 0 0 0 3px #b17b4e65;
+      }
+    </style>
+
     <!-- tex calculator js -->
-    <script src="js/landtax-calculator-nsw.js"></script>
+    <script src="js/landtax-calculator-qld.js"></script>
   </body>
 </html>
