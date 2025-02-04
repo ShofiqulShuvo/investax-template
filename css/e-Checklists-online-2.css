@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+.e-checklist .main-content {
+  padding-top: 1rem;
+}
+.e-checklist .main-content a {
+  text-decoration: underline;
+}
+.e-checklist .main-content a:hover {
+  color: #ffebcd;
+}
+.e-checklist .comp-detail {
+  margin: 2rem 0 3rem;
+}
+.e-checklist .comp-detail h2 {
+  color: #374956;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-shadow: unset;
+}
+.e-checklist .comp-detail .mb-1 {
+  margin-bottom: 1rem;
+}
+.e-checklist .comp-detail strong {
+  color: #282828 !important;
+}
+.e-checklist .comp-detail strong a {
+  color: inherit;
+}
+.e-checklist .comp-detail .box {
+  margin-top: 2rem;
+  color: #fff;
+}
+.e-checklist .comp-detail .box strong a {
+  color: #fff;
+}
+.e-checklist .comp-detail .box .title {
+  padding: 1.5rem;
+  background: #B17A4E;
+  text-align: center;
+}
+.e-checklist .comp-detail .box .title h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.e-checklist .comp-detail .box .title h4 {
+  font-size: 1rem;
+  color: #dedede;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+.e-checklist .comp-detail .box .content {
+  background: #282828;
+  padding: 1rem 1.5rem;
+  font-weight: 400;
+}
+.e-checklist .comp-detail .box .content p {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+.e-checklist .comp-detail .box .content h4 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.e-checklist .comp-detail .box .content a {
+  color: #fff;
+}
+.e-checklist .comp-detail .check-list {
+  margin-top: 3.5rem;
+}
+.e-checklist .comp-detail .check-list .title {
+  font-family: "Tilt Warp", cursive;
+  font-size: 2.2rem;
+  color: #514f4c;
+  text-align: center;
+}
+.e-checklist .comp-detail .check-list .sub-title {
+  margin: 0.5rem auto 1.5rem;
+  font-size: 1rem;
+  max-width: 800px;
+  font-weight: 500;
+  text-align: center;
+  color: rgba(69, 68, 66, 0.5529411765);
+}
+.e-checklist .comp-detail .check-list .list .heading h4 {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+.e-checklist .comp-detail .check-list .list .heading p {
+  color: #fff;
+  background: unset;
+  padding: unset;
+}
+.e-checklist .comp-detail .check-list .list .content {
+  padding: 0.75rem 1.5rem;
+  background: #282828;
+  color: #fff;
+}
+.e-checklist .comp-detail .check-list .list .content li {
+  color: #fff;
+}
+.e-checklist .comp-detail .check-list .list .content a {
+  font-size: 0.8rem;
+  color: #fff;
+}
+.e-checklist .comp-detail .check-list .list .content a:hover {
+  color: #ffebcd;
+}
+.e-checklist .comp-detail .check-list details {
+  padding-bottom: unset !important;
+  color: #fff;
+}
+.e-checklist .comp-detail .check-list details:last-child {
+  border-bottom: none;
+}
+.e-checklist .comp-detail .check-list details[open] summary {
+  margin-bottom: 0;
+  color: #fff;
+}
+.e-checklist .comp-detail .check-list details[open] summary::after {
+  background-image: url("../images/chevron-down-solid.svg");
+}
+.e-checklist .comp-detail .check-list summary {
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  background-color: #b88c51;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.e-checklist .comp-detail .check-list summary::after {
+  background-image: url("../images/chevron-down-solid.svg");
+}
+.e-checklist .comp-detail .check-list p {
+  background-color: #282828;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+}
+.e-checklist .comp-detail .single-ebook {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 5px 5px 13px 0px rgba(181, 173, 173, 0.81);
+}
+.e-checklist .comp-detail .single-ebook:hover .bg-img {
+  transform: scale(1.1);
+}
+.e-checklist .comp-detail .image-container {
+  height: 200px;
+  width: 100%;
+}
+.e-checklist .comp-detail .image-container .bg-img {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 5s ease;
+}
+.e-checklist .comp-detail .details {
+  padding: 0.75rem 1rem 2rem;
+}
+.e-checklist .comp-detail .title {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.e-checklist .comp-detail .download-btn {
+  display: block !important;
+  margin: 0.75rem auto 0;
+  padding: 0.35rem 0.75rem;
+  background: #282828;
+  color: #fff;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 20px;
+  transition: all 0.25s ease;
+}
+.e-checklist .comp-detail .download-btn:hover {
+  background: #9e6d2d;
+}
+.e-checklist .checklist-card {
+  margin: 1.5rem 0 2rem;
+}
+.e-checklist .checklist-card .single-card {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #999;
+  margin-bottom: 0.5rem;
+}
+.e-checklist .checklist-card .card-image {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+.e-checklist .checklist-card .card-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.e-checklist .checklist-card .card-body {
+  padding: 0.5rem;
+}
+.e-checklist .checklist-card .card-body h6 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem !important;
+}
+.e-checklist .checklist-card .card-date {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #9e6d2d;
+  margin-bottom: 0.25rem;
+}
+.e-checklist .checklist-card .btn {
+  display: block;
+  width: 100%;
+  margin: 0.75rem auto 0;
+  padding: 0.35rem 0.75rem;
+  background: #282828;
+  color: #fff;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 3px;
+  transition: all 0.25s ease;
+}
+.e-checklist .checklist-card .btn:hover {
+  background: #9e6d2d;
+}
+.e-checklist .header {
+  background: #282828;
+  color: #fff;
+  padding: 0.75rem 1rem;
+}
+.e-checklist .header h4 {
+  margin-bottom: 0.25rem !important;
+  color: #b88c51;
+}
+.e-checklist .header p {
+  background-color: unset !important;
+  padding: unset !important;
+}/*# sourceMappingURL=e-Checklists-online-2.css.map */

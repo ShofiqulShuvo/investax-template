@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+hr {
+  margin-bottom: 50px;
+  border-top: 1px solid #282828;
+}
+
+#csr-banner {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  aspect-ratio: 19/6;
+}
+#csr-banner .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#csr-banner .container .heading {
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.social-share {
+  margin-top: 1.2rem;
+}
+.social-share .link {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+.social-share .link .icon img {
+  height: 1.2rem;
+}
+
+.main-content {
+  margin: 1.2rem 0;
+}
+.main-content .sec-heading {
+  color: #222;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.main-content .sec-desc {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.csr-post-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.csr-post-card .card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.csr-post-card .card-details .card-img {
+  width: 100%;
+  aspect-ratio: 21/9;
+  overflow: hidden;
+}
+.csr-post-card .card-details .card-img img {
+  height: 100%;
+  width: 100%;
+}
+.csr-post-card .card-details .date {
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 26px;
+}
+.csr-post-card .card-details .heading {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.csr-post-card .card-details .desc {
+  color: #494949;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.csr-post-card .view-more {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.35rem 2rem;
+  color: #fff;
+  background: #9e6d2d;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 50px;
+}/*# sourceMappingURL=csr.css.map */
