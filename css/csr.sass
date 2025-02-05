@@ -24,6 +24,11 @@ hr
   background-size: cover
   background-position: center
   aspect-ratio: 19 / 6
+  @media screen and ( max-width: 1000px )
+    margin-top: 75px
+
+  @media screen and ( max-width: 767px )
+    margin-top: 68px
 
   .container
     height: 100%
@@ -34,11 +39,14 @@ hr
 
     .heading
       color: #fff
-      font-size: 3rem
+      font-size: 3.5rem
       line-height: 1.2
       text-align: center
       font-weight: 700
       text-shadow: 1px 1px 1px #000
+
+      @media screen and ( max-width: 767px )
+        font-size: 1.5rem
 
 .social-share
   margin-top: 1.2rem
@@ -57,7 +65,7 @@ hr
   margin: 1.2rem 0
 
   .sec-heading
-    color: #222
+    color: #121212
     font-size: 1.6rem
     font-weight: 700
     margin-bottom: .5rem

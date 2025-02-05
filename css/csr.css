@@ -13,6 +13,16 @@ hr {
   background-position: center;
   aspect-ratio: 19/6;
 }
+@media screen and (max-width: 1000px) {
+  #csr-banner {
+    margin-top: 75px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #csr-banner {
+    margin-top: 68px;
+  }
+}
 #csr-banner .container {
   height: 100%;
   display: flex;
@@ -22,11 +32,16 @@ hr {
 }
 #csr-banner .container .heading {
   color: #fff;
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 1.2;
   text-align: center;
   font-weight: 700;
   text-shadow: 1px 1px 1px #000;
+}
+@media screen and (max-width: 767px) {
+  #csr-banner .container .heading {
+    font-size: 1.5rem;
+  }
 }
 
 .social-share {
@@ -45,7 +60,7 @@ hr {
   margin: 1.2rem 0;
 }
 .main-content .sec-heading {
-  color: #222;
+  color: #121212;
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 0.5rem;

@@ -10,6 +10,16 @@ hr {
   aspect-ratio: 21/8;
   overflow: hidden;
 }
+@media screen and (max-width: 1000px) {
+  .csr-single .feture-image {
+    margin-top: 75px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .csr-single .feture-image {
+    margin-top: 68px;
+  }
+}
 .csr-single .feture-image img {
   width: 100%;
   height: 100%;
@@ -34,6 +44,16 @@ hr {
   font-weight: 700;
   line-height: normal;
 }
+@media screen and (max-width: 1000px) {
+  .csr-content .heading {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .csr-content .heading {
+    font-size: 1.4rem;
+  }
+}
 .csr-content .content {
   margin-top: 1rem;
 }
@@ -41,6 +61,13 @@ hr {
   font-size: 0.85rem;
   color: #000;
   margin-bottom: 0.75rem;
+  text-align: left;
+  line-height: 1.7;
+}
+@media screen and (max-width: 767px) {
+  .csr-content .content p {
+    font-size: 0.75rem;
+  }
 }
 .csr-content .content .image-container {
   overflow: hidden;
