@@ -66,21 +66,71 @@ hr {
   margin: 2rem 0;
 }
 .contact-us .address .item {
-  margin-bottom: 1rem;
   font-weight: 500;
   display: flex;
-  gap: 1rem;
-  align-items: baseline;
-  font-size: 0.8rem;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.75rem;
   color: #282828;
   text-decoration: none;
+  font-weight: 500;
+  line-height: 1.3;
 }
 .contact-us .address .item .side {
   display: flex;
   gap: 1rem;
 }
 .contact-us .address .item .icon {
-  width: 35px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.contact-us .address .item .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.contact-us .getting-here {
+  font-size: 1rem;
+}
+.contact-us .getting-here h5 {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  color: #b88c51;
+  margin-bottom: 0.5rem;
+}
+.contact-us .getting-here h6 {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  color: #b88c51;
+  display: inline-flex;
+  gap: 0.5rem;
+}
+.contact-us .getting-here h6 img {
+  height: 1rem;
+}
+.contact-us .getting-here ul {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+  padding-left: 2rem !important;
+  line-height: 1.4;
+}
+.contact-us .getting-here ul li {
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  color: #282828;
+  font-weight: 500;
+}
+.contact-us .getting-here ul li a {
+  color: #282828;
+  text-decoration: underline;
+  font-weight: 600;
 }
 .contact-us .comp-detail {
   color: #282828;

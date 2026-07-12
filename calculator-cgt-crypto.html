@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css" />
+
+    <link rel="stylesheet" href="css/tax-estimator.css" />
+    <link rel="stylesheet" href="css/theme-styles.css" />
+
+    <title>Investax | Capital Gains Tax Calculator for Crypto</title>
+  </head>
+
+  <body>
+    <main>
+      <section id="tex-estimator">
+        <div class="container">
+          <!-- calculator -->
+          <div class="estimator">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <!-- estimator calculator -->
+                <form
+                  id="estimator-calculator"
+                  class="estimator-form row"
+                  novalidate
+                >
+                  <!-- >12 months -->
+                  <div class="input-group radio-group col-12">
+                    <legend>
+                      Have you owned the crypto for more than 12 months?
+                    </legend>
+                    <div class="radio-indivisual-input">
+                      <label>
+                        <input
+                          type="radio"
+                          name="more-than-year"
+                          value="true"
+                          checked
+                        />
+                        Yes
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          name="more-than-year"
+                          value="false"
+                        />
+                        No
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Crypto investments container -->
+                  <div class="col-12">
+                    <legend>Crypto transactions</legend>
+                    <div id="crypto-lots"></div>
+
+                    <button
+                      class="secondary"
+                      type="button"
+                      id="add-lot"
+                      style="margin-top: 0.75rem;"
+                    >
+                      + Add another crypto transaction
+                    </button>
+                  </div>
+
+                  <!-- carry-forward losses -->
+                  <div class="input-group col-6">
+                    <label>
+                      Carried Forward Losses
+                      <input
+                        type="number"
+                        name="carried-losses"
+                        placeholder="0"
+                        value="0"
+                        min="0"
+                        step="0.01"
+                      />
+                    </label>
+                  </div>
+
+                  <!-- current taxable income -->
+                  <div class="input-group col-6">
+                    <label>
+                      Current Taxable Income
+                      <input
+                        type="number"
+                        name="current-taxable-income"
+                        placeholder="Current taxable income"
+                        required
+                        min="0"
+                        step="0.01"
+                      />
+                    </label>
+                  </div>
+
+                  <p class="error">
+                    * Fields highlighted in red are mandatory.
+                  </p>
+
+                  <button class="calculate-btn" type="submit">Calculate</button>
+                </form>
+              </div>
+
+              <div class="col-12 col-lg-6">
+                <!-- Calculated Result -->
+                <div class="calculated-result">
+                  <p class="title">Estimated results</p>
+
+                  <h1 class="amount total-tax">$0</h1>
+
+                  <p class="description">
+                    Based on your current taxable income
+                    <strong class="current-income">$0</strong> and the details
+                    of your crypto transactions, your estimated capital gains
+                    tax payable is
+                    <strong class="capital-gain-payable">$0</strong>.
+                  </p>
+
+                  <!-- summary -->
+                  <div class="summary">
+                    <div class="summary-head">SUMMARY</div>
+
+                    <div class="summary-data">
+                      <span class="property">Capital Gain</span>
+                      <span class="value capital-gain">$0</span>
+                    </div>
+
+                    <div class="summary-data">
+                      <span class="property">Taxable Capital Gain</span>
+                      <span class="value taxable-capital-gain">$0</span>
+                    </div>
+
+                    <div class="summary-data">
+                      <span class="property">Current Taxable Income</span>
+                      <span class="value current-taxable-income">$0</span>
+                    </div>
+
+                    <div class="summary-data summary-data-result">
+                      <span class="property">Capital Gains Tax Payable</span>
+                      <span class="value capital-gain-tax-payable">$0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- how to use calculator -->
+          <div class="how-to-use">
+            <div class="main-heading">
+              How to use the Capital Gains Tax Calculator for Crypto
+            </div>
+
+            <div class="details">
+              <p>
+                To use the calculator, enter the following details about the
+                crypto you disposed of:
+              </p>
+
+              <ul>
+                <li>
+                  <p>
+                    <strong>Ownership &gt; 12 months</strong> — enables the 50%
+                    CGT discount if the crypto has been held for more than 12
+                    months.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Purchase price</strong> — The total amount (in AUD)
+                    you paid for each crypto parcel, including any initial
+                    acquisition costs.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Sold price</strong> — The total amount (in AUD) you
+                    received when disposing of that crypto parcel.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Costs of Purchase/Selling</strong> — Transaction
+                    fees, exchange fees, gas fees and other incidental costs of
+                    buying and selling.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Carried Forward Capital Losses</strong> — Capital
+                    losses from prior income years that can be applied before
+                    any CGT discount.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Current Taxable Income</strong> — Your taxable
+                    income before adding the crypto capital gain.
+                  </p>
+                </li>
+              </ul>
+
+              <p>
+                Click <strong>Calculate</strong> to estimate how much Capital
+                Gains Tax may be payable on your crypto disposals.
+              </p>
+            </div>
+          </div>
+
+          <!-- disclaimer -->
+          <div class="disclaimer">
+            <div class="main-heading">Disclaimer</div>
+            <div class="details">
+              <p>
+                The calculator provided on this page is for general information
+                only and is not intended to be a substitute for tailored
+                professional advice. The results are estimates based on the
+                inputs you provide and are designed for Australian-resident
+                taxpayers under the current capital gains tax rules for crypto
+                assets. The calculator does not consider complex scenarios such
+                as foreign-resident investors, assets held on revenue account,
+                decentralised finance (DeFi) arrangements, small business CGT
+                concessions, or other special tax treatments. Before making any
+                financial or tax decisions, please seek advice from a qualified
+                tax professional. Investax Pty Ltd accepts no responsibility for
+                any loss, error or consequence arising from reliance on the
+                calculator’s results without obtaining personalised advice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- crypto CGT js -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("estimator-calculator");
+        const cryptoLots = document.getElementById("crypto-lots");
+        const addLotBtn = document.getElementById("add-lot");
+        const moreThanYearRadios = document.querySelectorAll(
+          'input[name="more-than-year"]'
+        );
+        const carriedLossesInput = document.querySelector(
+          'input[name="carried-losses"]'
+        );
+        const currentTaxableIncomeInput = document.querySelector(
+          'input[name="current-taxable-income"]'
+        );
+
+        // Result elements
+        const amountElement = document.querySelector(
+          ".calculated-result .amount"
+        );
+        const currentTaxableIncomeInParagraph = document.querySelector(
+          ".calculated-result .description .current-income"
+        );
+        const capitalGainPayableInParagraph = document.querySelector(
+          ".calculated-result .description .capital-gain-payable"
+        );
+        const capitalGainElement = document.querySelector(
+          "#tex-estimator .calculated-result .summary .capital-gain"
+        );
+        const taxableCapitalGainElement = document.querySelector(
+          "#tex-estimator .calculated-result .summary .taxable-capital-gain"
+        );
+        const currentTaxableIncomeElement = document.querySelector(
+          "#tex-estimator .calculated-result .summary .current-taxable-income"
+        );
+        const capitalGainPayableElement = document.querySelector(
+          "#tex-estimator .calculated-result .summary .capital-gain-tax-payable"
+        );
+
+        const currencyOptions = {
+          style: "currency",
+          currency: "AUD",
+          maximumFractionDigits: 0,
+        };
+
+        // Helper: create one crypto transaction lot
+        function createCryptoLot() {
+          const lot = document.createElement("div");
+          lot.className = "crypto-lot";
+
+          lot.innerHTML = `
+            <div class="row">
+              <div class="input-group col-6">
+                <label>
+                  Purchase price
+                  <input
+                    type="number"
+                    name="purchase-price"
+                    placeholder="Purchase price (AUD)"
+                    required
+                    min="0"
+                    step="0.01"
+                  />
+                </label>
+              </div>
+
+              <div class="input-group col-6">
+                <label>
+                  Sold price
+                  <input
+                    type="number"
+                    name="sold-price"
+                    placeholder="Sold price (AUD)"
+                    required
+                    min="0"
+                    step="0.01"
+                  />
+                </label>
+              </div>
+
+              <div class="input-group col-6">
+                <label>
+                  Cost of purchase
+                  <input
+                    type="number"
+                    name="cost-purchase"
+                    placeholder="Costs of purchase (fees)"
+                    required
+                    min="0"
+                    step="0.01"
+                  />
+                </label>
+              </div>
+
+              <div class="input-group col-6">
+                <label>
+                  Cost of selling
+                  <input
+                    type="number"
+                    name="cost-selling"
+                    placeholder="Costs of selling (fees)"
+                    required
+                    min="0"
+                    step="0.01"
+                  />
+                </label>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom: 0.5rem;">
+              <div class="col-12">
+                <button type="button" class="remove-lot">
+                  Remove transaction
+                </button>
+              </div>
+            </div>
+          `;
+
+          const removeBtn = lot.querySelector(".remove-lot");
+          removeBtn.addEventListener("click", function () {
+            if (cryptoLots.children.length > 1) {
+              cryptoLots.removeChild(lot);
+            }
+          });
+
+          // live validation for inputs in this lot
+          lot.querySelectorAll('input[type="number"]').forEach((input) => {
+            input.addEventListener("input", function () {
+              validateInput(input);
+            });
+          });
+
+          cryptoLots.appendChild(lot);
+        }
+
+        // Ensure at least one lot on load
+        createCryptoLot();
+
+        // Add another crypto transaction
+        addLotBtn.addEventListener("click", function () {
+          createCryptoLot();
+        });
+
+        // Validation helper
+        function validateInput(input, required = true) {
+          const value = input.value.trim();
+          const isValid = !required || value !== "";
+          if (isValid) {
+            input.classList.remove("not-valid");
+          } else {
+            input.classList.add("not-valid");
+          }
+          return isValid;
+        }
+
+        // Tax function (same brackets as original)
+        function calculateCapitalGainsTax(income) {
+          if (income <= 18200) {
+            return 0;
+          } else if (income <= 45000) {
+            return (income - 18200) * 0.19;
+          } else if (income <= 120000) {
+            return 5092 + (income - 45000) * 0.325;
+          } else if (income <= 180000) {
+            return 29467 + (income - 120000) * 0.37;
+          } else {
+            return 51667 + (income - 180000) * 0.45;
+          }
+        }
+
+        // Main calculate
+        function validateAndCalculate(e) {
+          e.preventDefault();
+
+          let allValid = true;
+
+          // Validate common inputs
+          if (!validateInput(currentTaxableIncomeInput)) allValid = false;
+          // carried losses is optional: do not mark as invalid if empty
+          validateInput(carriedLossesInput, false);
+
+          // Read radio
+          const moreThanYear =
+            moreThanYearRadios[0] && moreThanYearRadios[0].checked;
+
+          // Collect lots
+          const lots = Array.from(
+            cryptoLots.querySelectorAll(".crypto-lot")
+          );
+          const rawGains = [];
+
+          if (lots.length === 0) {
+            createCryptoLot();
+          }
+
+          lots.forEach((lot) => {
+            const purchaseInput = lot.querySelector(
+              'input[name="purchase-price"]'
+            );
+            const soldInput = lot.querySelector('input[name="sold-price"]');
+            const costPurchaseInput = lot.querySelector(
+              'input[name="cost-purchase"]'
+            );
+            const costSellingInput = lot.querySelector(
+              'input[name="cost-selling"]'
+            );
+
+            [purchaseInput, soldInput, costPurchaseInput, costSellingInput].forEach(
+              (input) => {
+                if (!validateInput(input)) allValid = false;
+              }
+            );
+
+            if (!allValid) return;
+
+            const purchasePrice = parseFloat(purchaseInput.value.trim()) || 0;
+            const soldPrice = parseFloat(soldInput.value.trim()) || 0;
+            const costPurchase =
+              parseFloat(costPurchaseInput.value.trim()) || 0;
+            const costSelling = parseFloat(costSellingInput.value.trim()) || 0;
+
+            const rawGain =
+              soldPrice - costSelling - (purchasePrice + costPurchase);
+            rawGains.push(rawGain);
+          });
+
+          if (!allValid) return;
+
+          const currentTaxableIncome = parseFloat(
+            currentTaxableIncomeInput.value.trim()
+          );
+          const carriedLosses =
+            parseFloat(carriedLossesInput.value.trim() || "0") || 0;
+
+          calculateAndDisplay(
+            rawGains,
+            currentTaxableIncome,
+            carriedLosses,
+            moreThanYear
+          );
+        }
+
+        function calculateAndDisplay(
+          rawGains,
+          currentTaxableIncome,
+          carriedLosses,
+          moreThanYear
+        ) {
+          // Separate gains and losses
+          let totalPositiveGains = 0;
+          let currentYearLosses = 0;
+
+          rawGains.forEach((g) => {
+            if (g >= 0) totalPositiveGains += g;
+            else currentYearLosses += Math.abs(g);
+          });
+
+          const totalLosses = currentYearLosses + carriedLosses;
+
+          // Capital gain (for display) = total positive gains (pre-loss, pre-discount)
+          const capitalGain = Math.max(totalPositiveGains, 0);
+
+          // Net capital gain before discount (after applying all losses)
+          const netBeforeDiscount = Math.max(
+            totalPositiveGains - totalLosses,
+            0
+          );
+
+          // Apply 50% discount if held > 12 months
+          const taxableCapitalGain = moreThanYear
+            ? netBeforeDiscount / 2
+            : netBeforeDiscount;
+
+          // Updated taxable income
+          const updatedTaxableIncome =
+            currentTaxableIncome + taxableCapitalGain;
+
+          // Tax difference
+          const taxBefore =
+            calculateCapitalGainsTax(currentTaxableIncome) || 0;
+          const taxAfter = calculateCapitalGainsTax(updatedTaxableIncome) || 0;
+          const capitalGainsTaxPayable = Math.max(taxAfter - taxBefore, 0);
+
+          displayResults(
+            capitalGain,
+            taxableCapitalGain,
+            currentTaxableIncome,
+            capitalGainsTaxPayable
+          );
+        }
+
+        // Display the calculated results
+        function displayResults(
+          capitalGain,
+          taxableCapitalGain,
+          currentTaxableIncome,
+          capitalGainsTaxPayable
+        ) {
+          amountElement.textContent = capitalGainsTaxPayable.toLocaleString(
+            "en-AU",
+            currencyOptions
+          );
+          currentTaxableIncomeInParagraph.textContent =
+            currentTaxableIncome.toLocaleString("en-AU", currencyOptions);
+          capitalGainPayableInParagraph.textContent =
+            capitalGainsTaxPayable.toLocaleString("en-AU", currencyOptions);
+          capitalGainElement.textContent = capitalGain.toLocaleString(
+            "en-AU",
+            currencyOptions
+          );
+          taxableCapitalGainElement.textContent =
+            taxableCapitalGain.toLocaleString("en-AU", currencyOptions);
+          currentTaxableIncomeElement.textContent =
+            currentTaxableIncome.toLocaleString("en-AU", currencyOptions);
+          capitalGainPayableElement.textContent =
+            capitalGainsTaxPayable.toLocaleString("en-AU", currencyOptions);
+        }
+
+        // Hook up submit
+        form.addEventListener("submit", validateAndCalculate);
+      });
+    </script>
+
+    <!-- style -->
+    <style>
+      .crypto-lot {
+        border: 1px solid #ccc;
+        padding: 0.8rem 0.8rem 0.25rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 4px;
+      }
+
+      #add-lot {
+        margin-left: auto;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+        background-color: #b17a4e;
+        color: white;
+        border: none;
+        padding: 0.35rem 0.75rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        font-weight: 500;
+        width: fit-content;
+      }
+
+      #add-lot:hover {
+        background-color: #9e6d2d;
+      }
+
+      .remove-lot {
+        margin-left: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 0.25rem 0.75rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.75rem;
+        font-weight: 500;
+        width: fit-content;
+      }
+
+      .remove-lot:hover {
+        background-color: #c0392b;
+      }
+    </style>
+  </body>
+</html>

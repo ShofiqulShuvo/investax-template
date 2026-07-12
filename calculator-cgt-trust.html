@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/pico.min.css" />
+    <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css" />
+
+    <link rel="stylesheet" href="css/tax-estimator.css" />
+    <link rel="stylesheet" href="css/theme-styles.css" />
+
+    <title>Investax | Trust Capital Gains Tax (2025)</title>
+  </head>
+
+  <body>
+    <main>
+      <section id="tex-estimator">
+        <div class="container">
+          <!-- calculator -->
+          <div class="estimator">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <!-- estimator calculator -->
+                <form
+                  id="estimator-calculator"
+                  class="estimator-form row"
+                  novalidate
+                >
+                  <!-- >12 months -->
+                  <div class="input-group radio-group col-12">
+                    <legend>
+                      Has the Trust owned the asset for more than 12 months?
+                    </legend>
+                    <div class="radio-indivisual-input">
+                      <label>
+                        <input
+                          type="radio"
+                          name="more-than-year"
+                          value="true"
+                          checked
+                        />
+                        Yes
+                      </label>
+                      <label>
+                        <input
+                          type="radio"
+                          name="more-than-year"
+                          value="false"
+                        />
+                        No
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Property fields -->
+                  <div class="input-group col-12">
+                    <h6 style="margin-bottom: 0.25rem;">Property</h6>
+                  </div>
+
+                  <div class="input-group col-6">
+                    <label>
+                      Property Purchase Price
+                      <input
+                        type="number"
+                        name="property-purchase-price"
+                        placeholder="Property Purchase Price"
+                        required
+                        min="0"
+                        step="0.01"
+                      />
+                    </label>
+                  </div>
+
+                  <div class="input-group col-6">
+                    <label>
+                      Sale Proceed
+                      <input
+                        type="number"
+                        name="property-sale-proceed"
+                        placeholder="Sale Proceed"
+                        required
+                        min="0"
+                        step="0.01"
+                      />
+                    </label>
+                  </div>
+
+                  <div class="input-group col-6">
+                    <label>
+                      Cost of Purchase
+                      <input
+                        type="number"
+                        name="property-cost-purchase"
+                        placeholder="Cost of Purchase"
+                        required
+                        min="0"
+                        step="0.01"
+                      />
+                    </label>
+                  </div>
+
+                  <div class="input-group col-6">
+                    <label>
+                      Cost of Sale
+                      <input
+                        type="number"
+                        name="property-cost-sale"
+                        placeholder="Cost of Sale"
+                        required
+                        min="0"
+                        step="0.01"
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Share fields -->
+                  <div class="input-group col-12" style="margin-top: 0.5rem;">
+                    <h6 style="margin-bottom: 0.25rem;">Shares</h6>
+                  </div>
+
+                  <div class="input-group col-6">
+                    <label>
+                      Share Purchase Price
+                      <input
+                        type="number"
+                        name="share-purchase-price"
+                        placeholder="Share Purchase Price"
+                        min="0"
+                        step="0.01"
+                      />
+                    </label>
+                  </div>
+
+                  <div class="input-group col-6">
+                    <label>
+                      Sale Proceed
+                      <input
+                        type="number"
+                        name="share-sale-proceed"
+                        placeholder="Sale Proceed"
+                        min="0"
+                        step="0.01"
+                      />
+                    </label>
+                  </div>
+
+                  <div class="input-group col-6">
+                    <label>
+                      Cost of Purchase
+                      <input
+                        type="number"
+                        name="share-cost-purchase"
+                        placeholder="Cost of Purchase"
+                        min="0"
+                        step="0.01"
+                      />
+                    </label>
+                  </div>
+
+                  <div class="input-group col-6">
+                    <label>
+                      Cost of Sale
+                      <input
+                        type="number"
+                        name="share-cost-sale"
+                        placeholder="Cost of Sale"
+                        min="0"
+                        step="0.01"
+                      />
+                    </label>
+                  </div>
+
+                  <!-- carried-forward losses -->
+                  <div class="input-group col-12">
+                    <label>
+                      Carried Forward Losses
+                      <input
+                        type="number"
+                        name="carried-losses"
+                        placeholder="0"
+                        value="0"
+                        min="0"
+                        step="0.01"
+                      />
+                    </label>
+                  </div>
+
+                  <!-- tax treatment -->
+                  <div class="input-group col-12">
+                    <label>
+                      Tax Treatment
+                      <select
+                        name="tax-treatment"
+                        id="tax-treatment"
+                        style="
+                          margin: unset;
+                          height: unset;
+                          padding: 0.25rem 0.25rem 0.25rem 0.75rem;
+                          font-size: 0.9rem;
+                          border: 1.5px solid #b17a4e;
+                          color: #000;
+                          background-color: #fff !important;
+                          font-weight: 500;
+                        "
+                      >
+                        <option value="distributed" selected>
+                          Distributed to beneficiary
+                        </option>
+                        <option value="undistributed">
+                          Undistributed (taxed in trust)
+                        </option>
+                      </select>
+                    </label>
+                  </div>
+
+                  <!-- beneficiary income (only if distributed) -->
+                  <div class="input-group col-12" id="beneficiary-income-wrap">
+                    <label>
+                      Beneficiary’s Current Taxable Income
+                      <input
+                        type="number"
+                        name="beneficiary-income"
+                        placeholder="Beneficiary’s current taxable income"
+                        min="0"
+                        step="0.01"
+                      />
+                    </label>
+                  </div>
+
+                  <p class="error">
+                    * Fields highlighted in red are mandatory.
+                  </p>
+
+                  <button class="calculate-btn" type="submit">Calculate</button>
+                </form>
+              </div>
+
+              <div class="col-12 col-lg-6">
+                <!-- Calculated Result -->
+                <div class="calculated-result">
+                  <p class="title">Estimated results</p>
+
+                  <h1 class="amount total-tax">$0</h1>
+
+                  <p class="description">
+                    Based on the Trust’s inputs, the estimated capital gains tax
+                    payable is
+                    <strong class="capital-gain-payable">$0</strong>.
+                  </p>
+
+                  <!-- summary -->
+                  <div class="summary">
+                    <div class="summary-head">SUMMARY</div>
+
+                    <!-- capital gain -->
+                    <div class="summary-data">
+                      <span class="property">Capital Gain</span>
+                      <span class="value capital-gain">$0</span>
+                    </div>
+
+                    <!-- taxable capital gain -->
+                    <div class="summary-data">
+                      <span class="property">Taxable Capital Gain</span>
+                      <span class="value taxable-capital-gain">$0</span>
+                    </div>
+
+                    <!-- carry-forward loss after this event -->
+                    <div class="summary-data">
+                      <span class="property">
+                        Carried Forward Loss (After This Event)
+                      </span>
+                      <span class="value carry-forward-loss">$0</span>
+                    </div>
+
+                    <!-- beneficiary income (only when distributed) -->
+                    <div
+                      class="summary-data"
+                      id="summary-current-income"
+                      style="display: none"
+                    >
+                      <span class="property">
+                        Beneficiary Current Taxable Income
+                      </span>
+                      <span class="value current-taxable-income">$0</span>
+                    </div>
+
+                    <!-- capital gain tax payable -->
+                    <div class="summary-data summary-data-result">
+                      <span class="property">Capital Gains Tax Payable</span>
+                      <span class="value capital-gain-tax-payable">$0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- how to use calculator -->
+          <div class="how-to-use">
+            <div class="main-heading">
+              How to use the Trust Capital Gains Tax calculator
+            </div>
+
+            <div class="details">
+              <p>
+                Enter the Trust’s asset details for both property and shares and
+                select how the gain is treated:
+              </p>
+
+              <ul>
+                <li>
+                  <p>
+                    <strong>Ownership &gt; 12 months</strong> — enables the 50%
+                    CGT discount.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Property Purchase Price / Sale Proceed</strong> —
+                    amounts paid and received for the property.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Property Cost of Purchase / Cost of Sale</strong> —
+                    incidental costs added to the cost base / deducted from sale
+                    proceeds.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Share Purchase Price / Sale Proceed</strong> —
+                    amounts paid and received for shares (optional).
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Share Cost of Purchase / Cost of Sale</strong> —
+                    incidental costs on share purchases and disposals (optional).
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Carried Forward Losses</strong> — capital losses from
+                    prior years that reduce the Taxable Capital Gain.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Tax Treatment</strong> — “Distributed to beneficiary”
+                    (uses the beneficiary’s marginal tax rates) or “Undistributed
+                    (taxed in trust)”.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Beneficiary’s Current Taxable Income</strong> —
+                    required only when “Distributed to beneficiary” is selected.
+                  </p>
+                </li>
+              </ul>
+
+              <p>
+                Click <strong>Calculate</strong> to see the Trust’s Taxable
+                Capital Gain and estimated Capital Gains Tax Payable.
+              </p>
+            </div>
+          </div>
+
+          <!-- disclaimer -->
+          <div class="disclaimer">
+            <div class="main-heading">Disclaimer</div>
+            <div class="details">
+              <p>
+                This tool estimates CGT for trusts only and is not a full tax
+                assessment. It assumes Australian-resident taxpayers and
+                excludes small business concessions and foreign-resident rules.
+                For a professional review,
+                <a href="https://investax.com.au/complimentary-consultation/">
+                  contact Investax
+                </a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- trust CGT js -->
+    <script>
+      // -----------------------------
+      // TRUST CGT CALCULATOR (2025)
+      // -----------------------------
+      document.addEventListener("DOMContentLoaded", function () {
+        // Input elements
+        const propertyPurchasePriceInput = document.querySelector(
+          'input[name="property-purchase-price"]'
+        );
+        const propertySaleProceedInput = document.querySelector(
+          'input[name="property-sale-proceed"]'
+        );
+        const propertyCostPurchaseInput = document.querySelector(
+          'input[name="property-cost-purchase"]'
+        );
+        const propertyCostSaleInput = document.querySelector(
+          'input[name="property-cost-sale"]'
+        );
+
+        const sharePurchasePriceInput = document.querySelector(
+          'input[name="share-purchase-price"]'
+        );
+        const shareSaleProceedInput = document.querySelector(
+          'input[name="share-sale-proceed"]'
+        );
+        const shareCostPurchaseInput = document.querySelector(
+          'input[name="share-cost-purchase"]'
+        );
+        const shareCostSaleInput = document.querySelector(
+          'input[name="share-cost-sale"]'
+        );
+
+        const carriedLossesInput = document.querySelector(
+          'input[name="carried-losses"]'
+        );
+        const taxTreatmentSelect = document.querySelector(
+          'select[name="tax-treatment"]'
+        );
+        const beneficiaryIncomeInput = document.querySelector(
+          'input[name="beneficiary-income"]'
+        );
+        const moreThanYearRadio = document.querySelectorAll(
+          'input[name="more-than-year"]'
+        );
+        const calculateButton = document.querySelector(".calculate-btn");
+
+        // Toggle beneficiary input visibility
+        function toggleBeneficiaryInput() {
+          const wrap = document.getElementById("beneficiary-income-wrap");
+          if (taxTreatmentSelect.value === "distributed") {
+            wrap.style.display = "";
+          } else {
+            wrap.style.display = "none";
+            beneficiaryIncomeInput.value = "";
+          }
+        }
+        taxTreatmentSelect.addEventListener("change", toggleBeneficiaryInput);
+        toggleBeneficiaryInput();
+
+        // Validation helper
+        function validateInput(input, required = true) {
+          const value = input.value.trim();
+          const isValid = !required || value !== "";
+          if (isValid) input.classList.remove("not-valid");
+          else input.classList.add("not-valid");
+          return isValid;
+        }
+
+        // Stage-3 resident tax brackets (2024-25 / 2025-26)
+        function residentTaxAU(income) {
+          if (income <= 18200) return 0;
+          if (income <= 45000) return (income - 18200) * 0.16;
+          if (income <= 135000) return 4288 + (income - 45000) * 0.3;
+          if (income <= 190000) return 31288 + (income - 135000) * 0.37;
+          return 51638 + (income - 190000) * 0.45;
+        }
+
+        function parseNumber(input) {
+          const v = input.value.trim();
+          if (v === "") return 0;
+          const n = parseFloat(v);
+          return isNaN(n) ? 0 : n;
+        }
+
+        // Main calculation
+        function calculateResults() {
+          // Property values (required)
+          const propertyPurchasePrice = parseFloat(
+            propertyPurchasePriceInput.value.trim()
+          );
+          const propertySaleProceed = parseFloat(
+            propertySaleProceedInput.value.trim()
+          );
+          const propertyCostPurchase = parseFloat(
+            propertyCostPurchaseInput.value.trim()
+          );
+          const propertyCostSale = parseFloat(
+            propertyCostSaleInput.value.trim()
+          );
+
+          // Shares values (optional)
+          const sharePurchasePrice = parseNumber(sharePurchasePriceInput);
+          const shareSaleProceed = parseNumber(shareSaleProceedInput);
+          const shareCostPurchase = parseNumber(shareCostPurchaseInput);
+          const shareCostSale = parseNumber(shareCostSaleInput);
+
+          // Carried Forward Losses (optional)
+          const carriedLosses = parseNumber(carriedLossesInput);
+
+          const taxTreatment = taxTreatmentSelect.value;
+          const beneficiaryIncome = parseNumber(beneficiaryIncomeInput);
+          const owned12m =
+            [...moreThanYearRadio].find((r) => r.checked)?.value === "true";
+
+          // Capital gains for property and shares
+          const propertyGain =
+            propertySaleProceed -
+            propertyCostSale -
+            (propertyPurchasePrice + propertyCostPurchase);
+
+          const shareGain =
+            shareSaleProceed -
+            shareCostSale -
+            (sharePurchasePrice + shareCostPurchase);
+
+          const capitalGainTotal = propertyGain + shareGain;
+
+          // If total result is loss or zero -> no tax, increase carried losses
+          if (capitalGainTotal <= 0) {
+            const extraLoss = -capitalGainTotal;
+            const carryForwardLossAfter = carriedLosses + extraLoss;
+
+            displayResults(
+              0, // Capital Gain shown (no positive gain)
+              0, // Taxable Capital Gain
+              0, // Tax Payable
+              carryForwardLossAfter,
+              beneficiaryIncome
+            );
+            return;
+          }
+
+          // Apply 50% discount if owned > 12 months
+          const discountedGain = owned12m
+            ? capitalGainTotal * 0.5
+            : capitalGainTotal;
+
+          // Apply Carried Forward Losses to Taxable Capital Gain
+          const taxableGainBeforeLoss = discountedGain;
+          const taxableGain = Math.max(
+            0,
+            taxableGainBeforeLoss - carriedLosses
+          );
+          const carryForwardLossAfter = Math.max(
+            0,
+            carriedLosses - taxableGainBeforeLoss
+          );
+
+          // Tax calculation
+          let taxPayable = 0;
+          if (taxTreatment === "distributed") {
+            const baseTax = residentTaxAU(beneficiaryIncome);
+            const totalTax = residentTaxAU(beneficiaryIncome + taxableGain);
+            taxPayable = totalTax - baseTax;
+          } else {
+            // Undistributed: trust taxed at 47% flat (45% + 2% Medicare levy)
+            taxPayable = taxableGain * 0.47;
+          }
+
+          displayResults(
+            capitalGainTotal,
+            taxableGain,
+            taxPayable,
+            carryForwardLossAfter,
+            beneficiaryIncome
+          );
+        }
+
+        // Display results
+        function displayResults(
+          capitalGain,
+          taxableGain,
+          taxPayable,
+          carryForwardLoss,
+          beneficiaryIncome = 0
+        ) {
+          const amountElement = document.querySelector(
+            ".calculated-result .amount"
+          );
+          const capitalGainElement = document.querySelector(".capital-gain");
+          const taxableCapitalGainElement = document.querySelector(
+            ".taxable-capital-gain"
+          );
+          const carryForwardLossElement = document.querySelector(
+            ".carry-forward-loss"
+          );
+          const capitalGainTaxPayableElement = document.querySelector(
+            ".capital-gain-tax-payable"
+          );
+          const capitalGainPayableInParagraph = document.querySelector(
+            ".capital-gain-payable"
+          );
+          const beneficiaryIncomeElement = document.querySelector(
+            ".current-taxable-income"
+          );
+          const beneRow = document.getElementById("summary-current-income");
+
+          const currency = new Intl.NumberFormat("en-AU", {
+            style: "currency",
+            currency: "AUD",
+            maximumFractionDigits: 0,
+          });
+
+          amountElement.textContent = currency.format(taxPayable);
+          capitalGainElement.textContent = currency.format(capitalGain);
+          taxableCapitalGainElement.textContent = currency.format(taxableGain);
+          carryForwardLossElement.textContent =
+            currency.format(carryForwardLoss);
+          capitalGainTaxPayableElement.textContent =
+            currency.format(taxPayable);
+          capitalGainPayableInParagraph.textContent =
+            currency.format(taxPayable);
+
+          if (taxTreatmentSelect.value === "distributed") {
+            beneRow.style.display = "";
+            beneficiaryIncomeElement.textContent =
+              currency.format(beneficiaryIncome);
+          } else {
+            beneRow.style.display = "none";
+          }
+        }
+
+        // Validate all before calculating
+        function validateAndCalculate(e) {
+          e.preventDefault();
+
+          const requiredInputs = [
+            propertyPurchasePriceInput,
+            propertySaleProceedInput,
+            propertyCostPurchaseInput,
+            propertyCostSaleInput,
+          ];
+
+          if (taxTreatmentSelect.value === "distributed") {
+            requiredInputs.push(beneficiaryIncomeInput);
+          }
+
+          const allValid = requiredInputs.every((input) =>
+            validateInput(input)
+          );
+          if (allValid) calculateResults();
+        }
+
+        // Live validation for required inputs
+        [
+          propertyPurchasePriceInput,
+          propertySaleProceedInput,
+          propertyCostPurchaseInput,
+          propertyCostSaleInput,
+          beneficiaryIncomeInput,
+        ].forEach((input) => {
+          input.addEventListener("input", () => validateInput(input));
+        });
+
+        // Optional fields: just remove red when user types
+        [
+          sharePurchasePriceInput,
+          shareSaleProceedInput,
+          shareCostPurchaseInput,
+          shareCostSaleInput,
+          carriedLossesInput,
+        ].forEach((input) => {
+          input.addEventListener("input", () => validateInput(input, false));
+        });
+
+        // Calculate button
+        calculateButton.addEventListener("click", validateAndCalculate);
+      });
+    </script>
+  </body>
+</html>
