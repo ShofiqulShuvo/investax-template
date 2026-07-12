@@ -244,6 +244,130 @@ function displayResults(anualTaxRate, anualTaxLiabilityRefund, depreciationAddba
   console.log("Depreciation Addback/Reversal (Non Cash)", depreciationAddbackReversal)
   console.log("Annual Net Cashflow", numberToCurrency(anualNetCashflowFormatted))
   console.log("Weekly Net Cashflow", numberToCurrency(weeklyNetCashflowFormatted))
+
+
+  // data from the form
+
+  // Purchase Price
+const purchasePrice = getTrimmedInputValue("purchase-price");
+console.log("Purchase Price:", purchasePrice);
+
+
+// Mortgage/Loan Amount
+const mortgageLoanAmount = getTrimmedInputValue("mortgage-loan-amount");
+console.log("Mortgage/Loan Amount:", mortgageLoanAmount);
+
+// Mortgage/Loan Interest Rate (%)
+const mortgageLoanInterestRate = getTrimmedInputValue("mortgage-loan-amount");
+console.log("Mortgage/Loan Interest Rate (%):", mortgageLoanInterestRate);
+
+// Equity Loan
+const equityLoan = getTrimmedInputValue("equity-loan");
+console.log("Equity Loan:", equityLoan);
+
+// Equity Loan Interest Rate (%)
+const equityLoanInterestRate = getTrimmedInputValue("interest-rate-equity-loan");
+console.log("Equity Loan Interest Rate (%):", equityLoanInterestRate);
+
+// Property Suburb
+const propertySuburb = getSelectedValue("property-suburb-state");
+console.log("Property Suburb:", propertySuburb);
+
+// Land Value
+const landValue = getTrimmedInputValue("land-value");
+console.log("Land Value:", landValue);
+
+// Land Tax Rate
+const landTaxRate = getTrimmedInputValue("land-tax-rate");
+console.log("Land Tax Rate:", landTaxRate);
+
+// Potential Rent Per Week
+const potentialRentPerWeek = getTrimmedInputValue("potential-rent-per-week");
+console.log("Potential Rent Per Week:", potentialRentPerWeek);
+
+// Projected Rental Weeks
+const projectedRentalWeeks = getTrimmedInputValue("projected-rental-weeks");
+console.log("Projected Rental Weeks:", projectedRentalWeeks);
+
+// Advertising for Tenants
+const advertisingTenants = getTrimmedInputValue("advertising-tenants");
+console.log("Advertising for Tenants:", advertisingTenants);
+
+// Body Corporate Fees
+const bodyCorporateFees = getTrimmedInputValue("body-corporate-fees");
+console.log("Body Corporate Fees:", bodyCorporateFees);
+
+// Borrowing Expenses
+const borrowingExpenses = getTrimmedInputValue("borrowing-expenses");
+console.log("Borrowing Expenses:", borrowingExpenses);
+
+// Cleaning
+const cleaning = getTrimmedInputValue("g-cleaning");
+console.log("Cleaning:", cleaning);
+
+// Council Rates
+const councilRates = getTrimmedInputValue("h-council-rates");
+console.log("Council Rates:", councilRates);
+
+// Capital Allowances
+const capitalAllowances = getTrimmedInputValue("capital-allowances");
+console.log("Capital Allowances:", capitalAllowances);
+
+// Gardening/Lawn Mowing
+const gardeningLawnMowing = getTrimmedInputValue("gardening-lawn-mowing");
+console.log("Gardening/Lawn Mowing:", gardeningLawnMowing);
+
+// Insurance
+const insurance = getTrimmedInputValue("k-insurance");
+console.log("Insurance:", insurance);
+
+// L Interest on Mortgage
+const interestOnMortgage = getTrimmedInputValue("interest-on-Mortgage");
+console.log("Interest on Mortgage:", interestOnMortgage);
+
+// L Interest on Loan
+const interestOnLoan = getTrimmedInputValue("interest-on-loan");
+console.log("L Interest on Loan:", interestOnLoan);
+
+// M Land Tax
+const mLandTax = getTrimmedInputValue("interest-on-loan");
+console.log("M Land Tax:", mLandTax);
+
+// Legal Fees
+const legalFees = getTrimmedInputValue("legal-fees");
+console.log("Legal Fees:", legalFees);
+
+// Pest Control
+const pestControl = getTrimmedInputValue("pest-control");
+console.log("Pest Control:", pestControl);
+
+// Property Agent Fees/Commission
+const propertyAgentFeesCommission = getTrimmedInputValue("property-agent-fees-commission");
+console.log("Property Agent Fees/Commission:", propertyAgentFeesCommission);
+
+// Repairs and Maintenance (R & M)
+const repairsAndMaintenance = getTrimmedInputValue("repairs-and-maintenance");
+console.log("Repairs and Maintenance (R & M):", repairsAndMaintenance);
+
+
+// Capital Work Deduction
+const capitalWorkDeduction = getTrimmedInputValue("capital-work-deduction");
+console.log("Capital Work Deduction:", capitalWorkDeduction);
+
+// Stationery/Telephone/Postage
+const stationeryTelephonePostage = getTrimmedInputValue("stationery-telephone-postage");
+console.log("Stationery/Telephone/Postage:", stationeryTelephonePostage);
+
+// Water Charges
+const waterCharges = getTrimmedInputValue("water-charges");
+console.log("Water Charges:", waterCharges);
+
+// Sundry Rental Expenses
+const sundryRentalExpenses = getTrimmedInputValue("sundry-rental-expenses");
+console.log("Sundry Rental Expenses:", sundryRentalExpenses);
+
+
+
 }
 
 
@@ -537,3 +661,16 @@ function numberToCurrency(amount) {
   }
   
 }
+
+// get in put value no validation
+function getTrimmedInputValue(name) {
+  const input = document.querySelector(`input[name="${name}"]`);
+  return input ? input.value.trim() : "";
+}
+
+function getSelectedValue(name) {
+  const select = document.querySelector(`select[name="${name}"]`);
+  return select ? select.value : "";
+}
+
+

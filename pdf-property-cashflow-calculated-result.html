@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Property Cashflow Analysis - Investax</title>
+    <style>
+      body {
+        font-family: "Montserrat", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #9e6d2d;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      td {
+        text-align: right;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        display: block;
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+      "
+    >
+      <!-- header -->
+      <div
+        style="
+          padding: 16px 32px;
+          background-color: #9e6d2d;
+          
+        "
+      >
+        <img
+          style="width: 230px; margin: 0 auto;"
+          src="https://investax.com.au/wp-content/uploads/2025/03/logo_white.png"
+          alt="Investax Logo"
+        />
+      </div>
+
+      
+
+      
+      <!-- content -->
+      <div style="padding: 32px; background: #f9f9f9">
+        
+        <!-- user info -->
+        <div
+          style="
+            margin-bottom: 32px;
+            border: 1px solid #9e6d2d;
+            border-radius: 5px;
+            overflow: hidden;
+          "
+        >
+          <div
+            style="
+              padding: 8px 20px;
+              background: #9e6d2d;
+              color: #fff;
+              font-size: 20px;
+              font-weight: 600;
+              border-radius: 5px 5px 0 0;
+            "
+          >
+            Client Information
+          </div>
+          <table style="text-align: left;">
+            <tr>
+              <th style="text-align: left;">Name</th>
+              <td style="text-align: left;">Lorem ipsum dolor</td>
+              <th style="text-align: left;">Date</th>
+              <td style="text-align: left;">30 feb 2023</td>
+            </tr>
+            <tr>
+              <th style="text-align: left;">Email</th>
+              <td style="text-align: left;">email@gmail.com</td>
+              <th style="text-align: left;">Phone</th>
+              <td style="text-align: left;">0123456787</td>
+            </tr>
+          </table>
+        </div>
+        
+
+        <!-- title -->
+        <h1
+          style="
+            color: #9e6d2d;
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-align: center;
+          "
+        >
+          Property Cashflow Calculation Report
+        </h1>
+
+        <!-- general property info -->
+        <div
+          style="
+            border: 1px solid #9e6d2d;
+            border-radius: 5px;
+            overflow: hidden;
+          "
+        >
+          <div
+            style="
+              padding: 8px 20px;
+              background: #9e6d2d;
+              color: #fff;
+              font-size: 20px;
+              font-weight: 600;
+              border-radius: 5px 5px 0 0;
+            "
+          >
+            General Property Information
+          </div>
+          <table>
+            <tr>
+              <th>Purchase Price</th>
+              <td>$500,000</td>
+            </tr>
+            <tr>
+              <th>Mortgage/Loan Amount</th>
+              <td>$400,000</td>
+            </tr>
+            <tr>
+              <th>Mortgage/Loan Interest Rate (%)</th>
+              <td>3.5%</td>
+            </tr>
+            <tr>
+              <th>Equity Loan</th>
+              <td>$100,000</td>
+            </tr>
+            <tr>
+              <th>Equity Loan Interest Rate (%)</th>
+              <td>4.0%</td>
+            </tr>
+            <tr>
+              <th>Property Suburb and State</th>
+              <td>NSW</td>
+            </tr>
+            <tr>
+              <th>Land Value</th>
+              <td>$300,000</td>
+            </tr>
+            <tr>
+              <th>Land Tax Rate (%)</th>
+              <td>1.6%</td>
+            </tr>
+            <tr>
+              <th>Potential Rent Per Week</th>
+              <td>$500</td>
+            </tr>
+            <tr>
+              <th>Projected Rental Weeks (per year)</th>
+              <td>48</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Expenses -->
+        <div
+          style="
+            margin-top: 32px;
+            border: 1px solid #9e6d2d;
+            border-radius: 5px;
+            overflow: hidden;
+          "
+        >
+          <div
+            style="
+              padding: 8px 20px;
+              background: #9e6d2d;
+              color: #fff;
+              font-size: 20px;
+              font-weight: 600;
+              border-radius: 5px 5px 0 0;
+            "
+          >
+            Expenses
+          </div>
+          <table>
+            <tr>
+              <th>Advertising for Tenants</th>
+              <td>$500</td>
+            </tr>
+            <tr>
+              <th>Body Corporate Fees (Strata Levies)</th>
+              <td>$2,000</td>
+            </tr>
+            <tr>
+              <th>Borrowing Expenses</th>
+              <td>$1,000</td>
+            </tr>
+            <tr>
+              <th>Cleaning</th>
+              <td>$300</td>
+            </tr>
+            <tr>
+              <th>Council Rates</th>
+              <td>$1,200</td>
+            </tr>
+            <tr>
+              <th>Capital Allowances (Depreciation)</th>
+              <td>$5,000</td>
+            </tr>
+            <tr>
+              <th>Gardening/Lawn Mowing</th>
+              <td>$600</td>
+            </tr>
+            <tr>
+              <th>Insurance</th>
+              <td>$800</td>
+            </tr>
+            <tr>
+              <th>Interest on Mortgage</th>
+              <td>$14,000</td>
+            </tr>
+            <tr>
+              <th>Interest on Loan</th>
+              <td>$4,000</td>
+            </tr>
+            <tr>
+              <th>Land Tax</th>
+              <td>$4,800</td>
+            </tr>
+            <tr>
+              <th>Legal Fees</th>
+              <td>$500</td>
+            </tr>
+            <tr>
+              <th>Pest Control</th>
+              <td>$200</td>
+            </tr>
+            <tr>
+              <th>Property Agent Fees/Commission</th>
+              <td>$2,500</td>
+            </tr>
+            <tr>
+              <th>Repairs and Maintenance</th>
+              <td>$1,000</td>
+            </tr>
+            <tr>
+              <th>Capital Works Deduction (Building)</th>
+              <td>$2,000</td>
+            </tr>
+            <tr>
+              <th>Stationery, Telephone, and Postage</th>
+              <td>$150</td>
+            </tr>
+            <tr>
+              <th>Water Charges</th>
+              <td>$600</td>
+            </tr>
+            <tr>
+              <th>Sundry Rental Expenses</th>
+              <td>$300</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Tax Information -->
+        <div
+          style="
+            margin-top: 32px;
+            border: 1px solid #9e6d2d;
+            border-radius: 5px;
+            overflow: hidden;
+          "
+        >
+          <div
+            style="
+              padding: 8px 20px;
+              background: #9e6d2d;
+              color: #fff;
+              font-size: 20px;
+              font-weight: 600;
+              border-radius: 5px 5px 0 0;
+            "
+          >
+            Tax Information
+          </div>
+          <table>
+            <tr>
+              <th>Annual Tax Rate (%)</th>
+              <td>37%</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Results -->
+        <div
+          style="
+            margin-top: 32px;
+            border: 1px solid #9e6d2d;
+            border-radius: 5px;
+            overflow: hidden;
+          "
+        >
+          <div
+            style="
+              padding: 8px 20px;
+              background: #9e6d2d;
+              color: #fff;
+              font-size: 20px;
+              font-weight: 600;
+              border-radius: 5px 5px 0 0;
+            "
+          >
+            Results
+          </div>
+          <table>
+            <tr>
+              <th>Net Rental Income</th>
+              <td>-$2,500</td>
+            </tr>
+            <tr>
+              <th>Total Expenses</th>
+              <td>-$48.08</td>
+            </tr>
+            <tr>
+              <th>Annual Tax Rate %</th>
+              <td>-$48.08</td>
+            </tr>
+            <tr>
+              <th>Annual Tax Liability/Refund</th>
+              <td>-$48.08</td>
+            </tr>
+            <tr>
+              <th>Depreciation Addback/Reversal (Non Cash)</th>
+              <td>-$48.08</td>
+            </tr>
+            <tr>
+              <th>Annual Net Cashflow</th>
+              <td>-$48.08</td>
+            </tr>
+            <tr>
+              <th>Weekly Net Cashflow</th>
+              <td>-$48.08</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div
+        style="
+          padding: 16px 20px;
+          background-color: #9e6d2d;
+        "
+      >
+        <a
+          href="https://investax.com.au/"
+          target="_blank"
+          style="
+            display: block;
+            text-decoration: none;
+            color: #ffffff;
+            text-align: center;
+            font-weight: 500;
+          "
+          >Investax® Pty Ltd</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
